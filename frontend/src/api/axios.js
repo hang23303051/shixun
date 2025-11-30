@@ -19,10 +19,7 @@ function getCookie(name) {
 const instance = axios.create({
   baseURL: '/api',
   timeout: 30000,
-  withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json'
-  }
+  withCredentials: true
 })
 
 // 请求拦截器
@@ -35,6 +32,13 @@ instance.interceptors.request.use(
         config.headers['X-CSRFToken'] = csrftoken
       }
     }
+    
+    // 如果是FormData，让浏览器自动设置Content-Type（包含boundary）
+    // 否则设置为application/json
+    if (!(config.data instanceof FormData)) {
+      config.headers['Content-Type'] = 'application/json'
+    }
+    
     return config
   },
   error => {

@@ -28,10 +28,6 @@ export const accountAPI = {
 
   // 更新用户信息
   updateProfile(data) {
-    return request.put('/account/profile/', data, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    })
+    return request.put('/account/profile/', data)
   }
 }

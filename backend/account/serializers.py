@@ -4,10 +4,19 @@ from .models import User
 
 class UserSerializer(serializers.ModelSerializer):
     """用户序列化器"""
+    avatar = serializers.SerializerMethodField()
+    
     class Meta:
         model = User
         fields = ['email', 'username', 'avatar', 'created_at']
         read_only_fields = ['created_at']
+    
+    def get_avatar(self, obj):
+        """返回头像URL，如果有的话"""
+        if obj.avatar:
+            # 只返回相对于MEDIA_ROOT的路径，不包含media/前缀
+            return obj.avatar.name
+        return None
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):

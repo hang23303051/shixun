@@ -33,6 +33,17 @@
         <!-- User Menu -->
         <div class="flex items-center space-x-4">
           <template v-if="isLoggedIn">
+            <div class="flex items-center space-x-3">
+              <router-link to="/profile" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                <div v-if="user?.avatar" class="w-8 h-8 rounded-full overflow-hidden">
+                  <img :src="getAvatarUrl(user.avatar)" alt="头像" class="w-full h-full object-cover">
+                </div>
+                <div v-else class="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  {{ getUserInitial() }}
+                </div>
+                <span class="text-sm font-medium text-gray-700">{{ user?.username }}</span>
+              </router-link>
+            </div>
             <router-link
               to="/profile"
               class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -116,6 +127,18 @@ export default {
     ]
 
     const isLoggedIn = computed(() => store.getters.isLoggedIn)
+    const user = computed(() => store.getters.user)
+
+    const getUserInitial = () => {
+      return user.value?.username?.charAt(0).toUpperCase() || 'U'
+    }
+
+    const getAvatarUrl = (avatarPath) => {
+      if (!avatarPath) return ''
+      if (avatarPath.startsWith('http')) return avatarPath
+      // 拼接media路径（后端返回的是相对于MEDIA_ROOT的路径）
+      return `/media/${avatarPath}`
+    }
 
     const isActive = (path) => {
       if (path === '/') {
@@ -136,8 +159,11 @@ export default {
     return {
       navItems,
       isLoggedIn,
+      user,
       mobileMenuOpen,
       isActive,
+      getUserInitial,
+      getAvatarUrl,
       handleLogout
     }
   }

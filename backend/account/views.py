@@ -1,7 +1,7 @@
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.utils.decorators import method_decorator
 from .models import User
@@ -58,7 +58,7 @@ class LogoutView(APIView):
 
 class UserProfileView(APIView):
     """获取和更新用户信息"""
-    parser_classes = (MultiPartParser, FormParser)
+    parser_classes = (JSONParser, MultiPartParser, FormParser)
     
     def get(self, request):
         """获取当前用户信息"""
@@ -90,6 +90,10 @@ class UserProfileView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except User.DoesNotExist:
             return Response({'error': '用户不存在'}, status=status.HTTP_404_NOT_FOUND)
+    
+    def patch(self, request):
+        """部分更新用户信息（别名）"""
+        return self.put(request)
 
 
 class CheckLoginView(APIView):
