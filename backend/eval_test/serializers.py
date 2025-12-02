@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from datetime import date
 
 
 class EvalRequestSerializer(serializers.Serializer):
@@ -14,6 +15,12 @@ class EvalRequestSerializer(serializers.Serializer):
     is_open_source = serializers.BooleanField(required=False, default=False)
     release_date = serializers.DateField(required=False)
     official_website = serializers.URLField(max_length=500, required=False, allow_blank=True)
+    
+    def validate_release_date(self, value):
+        """验证发布时间不能超过当前时间"""
+        if value and value > date.today():
+            raise serializers.ValidationError('发布时间不能超过当前时间')
+        return value
 
 
 class EvalStatusSerializer(serializers.Serializer):

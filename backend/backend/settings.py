@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'model_eval',
     'eval_test',
     'account',
+    'task_list',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ref4d',
         'USER': 'root',
-        'PASSWORD': '8892297.qh',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '3306',
     }

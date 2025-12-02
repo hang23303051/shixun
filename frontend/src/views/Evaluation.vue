@@ -66,6 +66,7 @@
               <input
                 v-model="form.release_date"
                 type="date"
+                :max="getTodayDate()"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -119,9 +120,29 @@
       <div v-else class="bg-white rounded-xl shadow-sm p-8">
         <div class="text-center">
           <div v-if="evalStatus.status !== 'completed'" class="mb-6">
-            <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">{{ evalStatus.message }}</h2>
-            <p class="text-gray-600">任务ID: {{ taskId }}</p>
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">任务已成功提交</h2>
+            <p class="text-gray-600 mb-6">任务ID: {{ taskId }}</p>
+            <p class="text-gray-600 mb-8">您的评测任务已提交，具体内容请点击"任务列表"查看</p>
+            
+            <div class="space-x-4">
+              <button
+                @click="$router.push('/tasks')"
+                class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+              >
+                任务列表
+              </button>
+              <button
+                @click="reset"
+                class="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors"
+              >
+                继续提交
+              </button>
+            </div>
           </div>
 
           <div v-else class="mb-6">
@@ -239,6 +260,14 @@ export default {
       }
     }
 
+    const getTodayDate = () => {
+      const today = new Date()
+      const year = today.getFullYear()
+      const month = String(today.getMonth() + 1).padStart(2, '0')
+      const day = String(today.getDate()).padStart(2, '0')
+      return `${year}-${month}-${day}`
+    }
+
     onUnmounted(() => {
       if (statusTimer) clearInterval(statusTimer)
     })
@@ -250,7 +279,8 @@ export default {
       taskId,
       evalStatus,
       handleSubmit,
-      reset
+      reset,
+      getTodayDate
     }
   }
 }

@@ -17,7 +17,8 @@
 
     <!-- Chart Container -->
     <div class="chart-container" :style="{ height: chartHeight }">
-      <v-chart :option="chartOption" autoresize />
+      <v-chart v-if="currentTab === 'radar'" :key="'radar'" :option="radarOption" autoresize />
+      <v-chart v-if="currentTab === 'bar'" :key="'bar'" :option="barOption" autoresize />
     </div>
   </div>
 </template>
@@ -78,118 +79,121 @@ export default {
       { key: 'reality', label: '真实性', max: 100 }
     ]
 
-    const chartOption = computed(() => {
+    const radarOption = computed(() => {
       const scoreData = dimensions.map(d => props.scores[d.key] || 0)
-
-      if (currentTab.value === 'radar') {
-        return {
-          tooltip: {
-            trigger: 'item'
+      
+      return {
+        tooltip: {
+          trigger: 'item'
+        },
+        radar: {
+          indicator: dimensions.map(d => ({
+            name: d.label,
+            max: d.max
+          })),
+          radius: '65%',
+          axisName: {
+            color: '#6b7280',
+            fontSize: 12
           },
-          radar: {
-            indicator: dimensions.map(d => ({
-              name: d.label,
-              max: d.max
-            })),
-            radius: '65%',
-            axisName: {
-              color: '#6b7280',
-              fontSize: 12
-            },
-            splitArea: {
-              areaStyle: {
-                color: ['rgba(59, 130, 246, 0.05)', 'rgba(59, 130, 246, 0.1)']
-              }
-            },
-            splitLine: {
-              lineStyle: {
-                color: 'rgba(59, 130, 246, 0.2)'
-              }
+          splitArea: {
+            areaStyle: {
+              color: ['rgba(59, 130, 246, 0.05)', 'rgba(59, 130, 246, 0.1)']
             }
           },
-          series: [
-            {
-              type: 'radar',
-              data: [
-                {
-                  value: scoreData,
-                  name: props.modelName || '评分',
-                  areaStyle: {
-                    color: 'rgba(59, 130, 246, 0.2)'
-                  },
-                  lineStyle: {
-                    color: '#3b82f6',
-                    width: 2
-                  },
-                  itemStyle: {
-                    color: '#3b82f6'
-                  }
+          splitLine: {
+            lineStyle: {
+              color: 'rgba(59, 130, 246, 0.2)'
+            }
+          }
+        },
+        series: [
+          {
+            type: 'radar',
+            data: [
+              {
+                value: scoreData,
+                name: props.modelName || '评分',
+                areaStyle: {
+                  color: 'rgba(59, 130, 246, 0.2)'
+                },
+                lineStyle: {
+                  color: '#3b82f6',
+                  width: 2
+                },
+                itemStyle: {
+                  color: '#3b82f6'
                 }
-              ]
-            }
-          ]
-        }
-      } else {
-        return {
-          tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-              type: 'shadow'
-            }
+              }
+            ]
+          }
+        ]
+      }
+    })
+
+    const barOption = computed(() => {
+      const scoreData = dimensions.map(d => props.scores[d.key] || 0)
+      
+      return {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          data: dimensions.map(d => d.label),
+          axisLabel: {
+            color: '#6b7280',
+            fontSize: 11,
+            rotate: 15
+          }
+        },
+        yAxis: {
+          type: 'value',
+          max: 100,
+          axisLabel: {
+            color: '#6b7280'
           },
-          grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-          },
-          xAxis: {
-            type: 'category',
-            data: dimensions.map(d => d.label),
-            axisLabel: {
-              color: '#6b7280',
-              fontSize: 11,
-              rotate: 15
+          splitLine: {
+            lineStyle: {
+              color: 'rgba(59, 130, 246, 0.1)'
             }
-          },
-          yAxis: {
-            type: 'value',
-            max: 100,
-            axisLabel: {
-              color: '#6b7280'
+          }
+        },
+        series: [
+          {
+            name: '评分',
+            type: 'bar',
+            data: scoreData,
+            itemStyle: {
+              color: '#3b82f6',
+              borderRadius: [4, 4, 0, 0]
             },
-            splitLine: {
-              lineStyle: {
-                color: 'rgba(59, 130, 246, 0.1)'
-              }
+            barWidth: '40%',
+            label: {
+              show: true,
+              position: 'top',
+              color: '#3b82f6',
+              fontWeight: 'bold'
             }
-          },
-          series: [
-            {
-              name: '评分',
-              type: 'bar',
-              data: scoreData,
-              itemStyle: {
-                color: '#3b82f6',
-                borderRadius: [4, 4, 0, 0]
-              },
-              barWidth: '40%',
-              label: {
-                show: true,
-                position: 'top',
-                color: '#3b82f6',
-                fontWeight: 'bold'
-              }
-            }
-          ]
-        }
+          }
+        ]
       }
     })
 
     return {
       currentTab,
       tabs,
-      chartOption
+      radarOption,
+      barOption
     }
   }
 }

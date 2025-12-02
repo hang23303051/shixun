@@ -123,7 +123,8 @@ export default {
       { name: '数据集', path: '/dataset' },
       { name: '模型', path: '/models' },
       { name: '排行榜', path: '/ranking' },
-      { name: '评测试用', path: '/evaluation' }
+      { name: '评测试用', path: '/evaluation' },
+      { name: '任务列表', path: '/tasks' }
     ]
 
     const isLoggedIn = computed(() => store.getters.isLoggedIn)

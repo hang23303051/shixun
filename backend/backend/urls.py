@@ -25,6 +25,7 @@ urlpatterns = [
     path('api/data/', include('ref_data.urls')),
     path('api/model/', include('model_eval.urls')),
     path('api/eval/', include('eval_test.urls')),
+    path('api/task/', include('task_list.urls')),
 ]
 
 # 开发环境下提供媒体文件服务
