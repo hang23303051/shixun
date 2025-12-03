@@ -67,6 +67,18 @@ const routes = [
     name: 'Register',
     component: () => import('@/views/Register.vue'),
     meta: { requiresAuth: false }
+  },
+  {
+    path: '/activate/:email/:token',
+    name: 'Activate',
+    component: () => import('@/views/Activate.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
+    path: '/forgot-password',
+    name: 'ForgotPassword',
+    component: () => import('@/views/ForgotPassword.vue'),
+    meta: { requiresAuth: false }
   }
 ]
 

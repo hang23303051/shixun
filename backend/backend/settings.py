@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ref4d',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': '8892297.qh',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -158,4 +158,15 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
+
 }
+
+# 邮箱服务器配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = '2377355798@qq.com'
+EMAIL_HOST_PASSWORD = 'ygcqbeitbnnvechf'
+DEFAULT_FROM_EMAIL = 'Ref4D <2377355798@qq.com>'
+
