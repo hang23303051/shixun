@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'backend.middleware.DynamicCSRFTrustedOriginsMiddleware',  # 动态添加CSRF信任域名（局域网支持）
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -150,12 +151,16 @@ CORS_ALLOW_ALL_ORIGINS = True  # 允许所有来源（开发环境）
 CORS_ALLOW_CREDENTIALS = True
 
 # CSRF settings (局域网访问)
+# 动态中间件会自动添加局域网IP，这里只需要配置基础的
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
     'http://127.0.0.1:8080',
-    'http://192.168.*:8080',  # 允许局域网访问
-    'http://10.0.*:8080',     # 允许局域网访问
 ]
+
+# Session settings (支持局域网访问)
+SESSION_COOKIE_SAMESITE = 'Lax'  # 允许跨站点访问
+SESSION_COOKIE_SECURE = False  # 开发环境使用HTTP
+SESSION_COOKIE_DOMAIN = None  # 不限制域名
 
 # REST Framework settings
 REST_FRAMEWORK = {

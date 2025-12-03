@@ -11,13 +11,13 @@
         <!-- Form -->
         <form @submit.prevent="handleLogin" class="space-y-6">
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">用户名</label>
+            <label class="block text-sm font-medium text-gray-700 mb-2">用户名/邮箱</label>
             <input
               v-model="form.username"
               type="text"
               required
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-              placeholder="请输入用户名"
+              placeholder="请输入用户名或邮箱"
             />
           </div>
 

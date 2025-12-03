@@ -49,15 +49,21 @@ class RegisterView(APIView):
 
 
 class LoginView(APIView):
-    """用户登录 - 检查激活状态"""
+    """用户登录 - 支持用户名或邮箱登录"""
     def post(self, request):
         serializer = UserLoginSerializer(data=request.data)
         if serializer.is_valid():
-            username = serializer.validated_data['username']
+            username_or_email = serializer.validated_data['username']
             password = serializer.validated_data['password']
             
             try:
-                user = User.objects.get(username=username)
+                # 智能识别：判断输入的是用户名还是邮箱
+                if '@' in username_or_email:
+                    # 输入的是邮箱
+                    user = User.objects.get(email=username_or_email)
+                else:
+                    # 输入的是用户名
+                    user = User.objects.get(username=username_or_email)
                 
                 # 检查密码
                 if not user.check_password(password):
@@ -80,7 +86,10 @@ class LoginView(APIView):
                 })
                 
             except User.DoesNotExist:
-                return Response({'error': '用户不存在'}, status=status.HTTP_404_NOT_FOUND)
+                return Response({
+                    'error': '用户不存在',
+                    'detail': '请检查用户名/邮箱是否正确'
+                }, status=status.HTTP_404_NOT_FOUND)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
