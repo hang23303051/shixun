@@ -4,3 +4,4 @@ django-cors-headers==4.3.1
 PyMySQL==1.1.0
 cryptography==41.0.7
 Pillow==10.1.0
+python-decouple==3.8

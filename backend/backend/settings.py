@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,13 @@ SECRET_KEY = 'django-insecure-v_9*0_tb5)0ngm1vp+_xq-kz%vqc&ya18-=^lr@6zsbp^)m@@0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '192.168.*.*',  # 允许所有192.168网段访问
+    '10.0.*.*',     # 允许所有10.0网段访问
+    '*',            # 开发环境允许所有（生产环境请改为具体IP）
+]
 
 
 # Application definition
@@ -137,17 +145,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# CORS settings
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8080',
-    'http://127.0.0.1:8080',
-]
+# CORS settings (局域网访问)
+CORS_ALLOW_ALL_ORIGINS = True  # 允许所有来源（开发环境）
 CORS_ALLOW_CREDENTIALS = True
 
-# CSRF settings
+# CSRF settings (局域网访问)
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
     'http://127.0.0.1:8080',
+    'http://192.168.*:8080',  # 允许局域网访问
+    'http://10.0.*:8080',     # 允许局域网访问
 ]
 
 # REST Framework settings
@@ -166,7 +173,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = '2377355798@qq.com'
-EMAIL_HOST_PASSWORD = 'ygcqbeitbnnvechf'
-DEFAULT_FROM_EMAIL = 'Ref4D <2377355798@qq.com>'
+# 从.env文件或环境变量读取邮箱配置
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='2377355798@qq.com')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
+DEFAULT_FROM_EMAIL = f'Ref4D <{EMAIL_HOST_USER}>'
 

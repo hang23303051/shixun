@@ -60,6 +60,10 @@ pnpm-debug.log*
 .env.local
 .env.*.local
 
+# frp configuration (contains server info)
+frpc.ini
+frps.ini
+
 # OS
 Thumbs.db
 ehthumbs.db
