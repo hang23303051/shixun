@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_014_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "female-skater",
+        "attributes": {
+          "color": [
+            "light-blue",
+            "white"
+          ],
+          "action": [
+            "gliding",
+            "jumping",
+            "skating",
+            "spinning"
+          ],
+          "pose": [
+            "bent-knees",
+            "extended-arms",
+            "landing",
+            "leaping",
+            "upright"
+          ],
+          "signature": [
+            "light-blue-dress-white-skates-back-bun"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "male-skater",
+        "attributes": {
+          "action": [
+            "partnering",
+            "skating"
+          ],
+          "pose": [
+            "moving",
+            "standing"
+          ],
+          "signature": [
+            "black-outfit"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            6.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            6.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.9,
+            6.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "behind",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            6.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "female-skater",
+          "attributes": {
+            "color": [
+              "light-blue",
+              "white"
+            ],
+            "action": [
+              "gliding",
+              "jumping",
+              "skating",
+              "spinning"
+            ],
+            "pose": [
+              "bent-knees",
+              "extended-arms",
+              "landing",
+              "leaping",
+              "upright"
+            ],
+            "signature": [
+              "light-blue-dress-white-skates-back-bun"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              6.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "male-skater",
+          "attributes": {
+            "action": [
+              "partnering",
+              "skating"
+            ],
+            "pose": [
+              "moving",
+              "standing"
+            ],
+            "signature": [
+              "black-outfit"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              6.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              6.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "above",
+          "object": "o2",
+          "spans": [
+            [
+              0.6,
+              6.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "in-front-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.9,
+              6.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "behind",
+          "object": "o1",
+          "spans": [
+            [
+              0.3,
+              6.7
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "female-skater": 1,
+      "male-skater": 1
+    },
+    "objects_count_display": {
+      "female-skater": 1,
+      "male-skater": 1
+    },
+    "attributes": {
+      "female-skater": {
+        "color": [
+          "light-blue",
+          "white"
+        ],
+        "action": [
+          "gliding",
+          "jumping",
+          "skating",
+          "spinning"
+        ],
+        "pose": [
+          "bent-knees",
+          "extended-arms",
+          "landing",
+          "leaping",
+          "upright"
+        ],
+        "signature": [
+          "light-blue-dress-white-skates-back-bun"
+        ]
+      },
+      "male-skater": {
+        "action": [
+          "partnering",
+          "skating"
+        ],
+        "pose": [
+          "moving",
+          "standing"
+        ],
+        "signature": [
+          "black-outfit"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o2",
+        "predicate": "behind",
+        "object": "o1"
+      }
+    ]
+  }
+}

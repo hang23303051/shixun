@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/sports_competition_006_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "young"
+          ],
+          "action": [
+            "adjusting-hair",
+            "kicking-ball",
+            "talking",
+            "walking"
+          ],
+          "pose": [
+            "gesturing",
+            "standing",
+            "turning"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "foreground",
+            "midground"
+          ],
+          "signature": [
+            "white-shirt-blue-shorts-black-sunglasses-curly-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "orange"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "young"
+          ],
+          "action": [
+            "catching-ball",
+            "holding-cap",
+            "standing"
+          ],
+          "pose": [
+            "raising-arm",
+            "standing"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "orange-shirt-black-shorts-black-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            9.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "facing",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            9.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            9.0
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 13.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue",
+              "white"
+            ],
+            "pattern": [
+              "solid"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "young"
+            ],
+            "action": [
+              "adjusting-hair",
+              "kicking-ball",
+              "talking",
+              "walking"
+            ],
+            "pose": [
+              "gesturing",
+              "standing",
+              "turning"
+            ],
+            "facing-direction": [
+              "forward",
+              "left",
+              "right"
+            ],
+            "position": [
+              "foreground",
+              "midground"
+            ],
+            "signature": [
+              "white-shirt-blue-shorts-black-sunglasses-curly-hair"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              9.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "orange"
+            ],
+            "pattern": [
+              "solid"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "young"
+            ],
+            "action": [
+              "catching-ball",
+              "holding-cap",
+              "standing"
+            ],
+            "pose": [
+              "raising-arm",
+              "standing"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "position": [
+              "background"
+            ],
+            "signature": [
+              "orange-shirt-black-shorts-black-cap"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              9.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "facing",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              9.0
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              9.0
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 2
+    },
+    "objects_count_display": {
+      "person": 2
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "blue",
+          "orange",
+          "white"
+        ],
+        "pattern": [
+          "solid"
+        ],
+        "sex": [
+          "male"
+        ],
+        "age": [
+          "young"
+        ],
+        "action": [
+          "adjusting-hair",
+          "catching-ball",
+          "holding-cap",
+          "kicking-ball",
+          "standing",
+          "talking",
+          "walking"
+        ],
+        "pose": [
+          "gesturing",
+          "raising-arm",
+          "standing",
+          "turning"
+        ],
+        "facing-direction": [
+          "forward",
+          "left",
+          "right"
+        ],
+        "position": [
+          "background",
+          "foreground",
+          "midground"
+        ],
+        "signature": [
+          "orange-shirt-black-shorts-black-cap",
+          "white-shirt-blue-shorts-black-sunglasses-curly-hair"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "facing",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      }
+    ]
+  }
+}

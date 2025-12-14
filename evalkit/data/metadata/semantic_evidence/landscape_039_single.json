@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_039_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "signature": [
+            "brown-and-white-feathers,-large-wingspan"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fish",
+        "attributes": {
+          "signature": [
+            "small,-silver-body"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "bird",
+          "attributes": {
+            "signature": [
+              "brown-and-white-feathers,-large-wingspan"
+            ]
+          },
+          "spans": [
+            [
+              1.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "fish",
+          "attributes": {
+            "signature": [
+              "small,-silver-body"
+            ]
+          },
+          "spans": [
+            [
+              1.0,
+              8.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "bird": 1,
+      "fish": 1
+    },
+    "objects_count_display": {
+      "bird": 1,
+      "fish": 1
+    },
+    "attributes": {
+      "bird": {
+        "signature": [
+          "brown-and-white-feathers,-large-wingspan"
+        ]
+      },
+      "fish": {
+        "signature": [
+          "small,-silver-body"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

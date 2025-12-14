@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_063_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 12.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "water",
+          "attributes": {
+            "signature": [
+              "water-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              12.4
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "water": 1
+    },
+    "objects_count_display": {
+      "water": 1
+    },
+    "attributes": {
+      "water": {
+        "signature": [
+          "water-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

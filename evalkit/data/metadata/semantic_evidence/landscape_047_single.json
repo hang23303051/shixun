@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_047_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "waterfall",
+        "attributes": {
+          "signature": [
+            "waterfall-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "waterfall",
+          "attributes": {
+            "signature": [
+              "waterfall-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "waterfall": 1
+    },
+    "objects_count_display": {
+      "waterfall": 1
+    },
+    "attributes": {
+      "waterfall": {
+        "signature": [
+          "waterfall-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

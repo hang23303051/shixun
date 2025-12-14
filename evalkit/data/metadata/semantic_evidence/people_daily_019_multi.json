@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_019_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "book",
+        "attributes": {
+          "signature": [
+            "book-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "pen",
+        "attributes": {
+          "signature": [
+            "pen-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "bowl",
+        "attributes": {
+          "signature": [
+            "bowl-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "laptop",
+        "attributes": {
+          "signature": [
+            "laptop-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "straw",
+        "attributes": {
+          "signature": [
+            "straw-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "plastic-bag",
+        "attributes": {
+          "signature": [
+            "plastic-bag-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o14",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o15",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 14.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "book",
+          "attributes": {
+            "signature": [
+              "book-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "pen",
+          "attributes": {
+            "signature": [
+              "pen-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "apple",
+          "attributes": {
+            "signature": [
+              "apple-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "apple",
+          "attributes": {
+            "signature": [
+              "apple-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "apple",
+          "attributes": {
+            "signature": [
+              "apple-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "apple",
+          "attributes": {
+            "signature": [
+              "apple-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o8",
+          "name": "apple",
+          "attributes": {
+            "signature": [
+              "apple-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o9",
+          "name": "bowl",
+          "attributes": {
+            "signature": [
+              "bowl-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o10",
+          "name": "laptop",
+          "attributes": {
+            "signature": [
+              "laptop-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o11",
+          "name": "cup",
+          "attributes": {
+            "signature": [
+              "cup-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o12",
+          "name": "straw",
+          "attributes": {
+            "signature": [
+              "straw-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o13",
+          "name": "plastic-bag",
+          "attributes": {
+            "signature": [
+              "plastic-bag-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o14",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        },
+        {
+          "id": "o15",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              14.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 3,
+      "book": 1,
+      "pen": 1,
+      "apple": 5,
+      "bowl": 1,
+      "laptop": 1,
+      "cup": 1,
+      "straw": 1,
+      "plastic-bag": 1
+    },
+    "objects_count_display": {
+      "person": 3,
+      "book": 1,
+      "pen": 1,
+      "apple": 5,
+      "bowl": 1,
+      "laptop": 1,
+      "cup": 1,
+      "straw": 1,
+      "plastic-bag": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "book": {
+        "signature": [
+          "book-coarse"
+        ]
+      },
+      "pen": {
+        "signature": [
+          "pen-coarse"
+        ]
+      },
+      "apple": {
+        "signature": [
+          "apple-coarse"
+        ]
+      },
+      "bowl": {
+        "signature": [
+          "bowl-coarse"
+        ]
+      },
+      "laptop": {
+        "signature": [
+          "laptop-coarse"
+        ]
+      },
+      "cup": {
+        "signature": [
+          "cup-coarse"
+        ]
+      },
+      "straw": {
+        "signature": [
+          "straw-coarse"
+        ]
+      },
+      "plastic-bag": {
+        "signature": [
+          "plastic-bag-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

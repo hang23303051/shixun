@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_057_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "puma",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "mid-sized"
+          ],
+          "state": [
+            "moving",
+            "resting"
+          ],
+          "pose": [
+            "lying",
+            "walking"
+          ],
+          "action": [
+            "moving",
+            "resting"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "on-iceberg"
+          ],
+          "signature": [
+            "brown-fur,-mid-sized,-facing-left,-on-iceberg"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.8
+          ],
+          [
+            7.9,
+            10.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 12.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "puma",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "size": [
+              "mid-sized"
+            ],
+            "state": [
+              "moving",
+              "resting"
+            ],
+            "pose": [
+              "lying",
+              "walking"
+            ],
+            "action": [
+              "moving",
+              "resting"
+            ],
+            "orientation": [
+              "facing-left"
+            ],
+            "position": [
+              "on-iceberg"
+            ],
+            "signature": [
+              "brown-fur,-mid-sized,-facing-left,-on-iceberg"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              6.8
+            ],
+            [
+              7.9,
+              10.1
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "puma": 1
+    },
+    "objects_count_display": {
+      "puma": 1
+    },
+    "attributes": {
+      "puma": {
+        "color": [
+          "brown"
+        ],
+        "size": [
+          "mid-sized"
+        ],
+        "state": [
+          "moving",
+          "resting"
+        ],
+        "pose": [
+          "lying",
+          "walking"
+        ],
+        "action": [
+          "moving",
+          "resting"
+        ],
+        "orientation": [
+          "facing-left"
+        ],
+        "position": [
+          "on-iceberg"
+        ],
+        "signature": [
+          "brown-fur,-mid-sized,-facing-left,-on-iceberg"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

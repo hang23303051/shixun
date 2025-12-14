@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_052_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "material": [
+            "cotton",
+            "plastic"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "lying"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "facing-up"
+          ],
+          "facing-direction": [
+            "up"
+          ],
+          "position": [
+            "attached-to-rock"
+          ],
+          "equipment": [
+            "carabiner",
+            "helmet",
+            "rope"
+          ],
+          "signature": [
+            "blue-shirt-white-helmet-red-strap"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "material": [
+            "fabric",
+            "plastic"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "facing-camera"
+          ],
+          "action": [
+            "talking"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "in-snow"
+          ],
+          "equipment": [
+            "helmet"
+          ],
+          "signature": [
+            "red-jacket-blue-collared-shirt-white-helmet"
+          ]
+        },
+        "spans": [
+          [
+            3.4,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "blue",
+              "white"
+            ],
+            "pattern": [
+              "solid"
+            ],
+            "material": [
+              "cotton",
+              "plastic"
+            ],
+            "size": [
+              "large"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "resting"
+            ],
+            "pose": [
+              "lying"
+            ],
+            "action": [
+              "resting"
+            ],
+            "orientation": [
+              "facing-up"
+            ],
+            "facing-direction": [
+              "up"
+            ],
+            "position": [
+              "attached-to-rock"
+            ],
+            "equipment": [
+              "carabiner",
+              "helmet",
+              "rope"
+            ],
+            "signature": [
+              "blue-shirt-white-helmet-red-strap"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              2.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "blue",
+              "red",
+              "white"
+            ],
+            "pattern": [
+              "solid"
+            ],
+            "material": [
+              "fabric",
+              "plastic"
+            ],
+            "size": [
+              "large"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "standing"
+            ],
+            "pose": [
+              "facing-camera"
+            ],
+            "action": [
+              "talking"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "position": [
+              "in-snow"
+            ],
+            "equipment": [
+              "helmet"
+            ],
+            "signature": [
+              "red-jacket-blue-collared-shirt-white-helmet"
+            ]
+          },
+          "spans": [
+            [
+              3.4,
+              6.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 2
+    },
+    "objects_count_display": {
+      "person": 2
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "blue",
+          "red",
+          "white"
+        ],
+        "pattern": [
+          "solid"
+        ],
+        "material": [
+          "cotton",
+          "fabric",
+          "plastic"
+        ],
+        "size": [
+          "large"
+        ],
+        "sex": [
+          "male"
+        ],
+        "state": [
+          "resting",
+          "standing"
+        ],
+        "pose": [
+          "facing-camera",
+          "lying"
+        ],
+        "action": [
+          "resting",
+          "talking"
+        ],
+        "orientation": [
+          "facing-forward",
+          "facing-up"
+        ],
+        "facing-direction": [
+          "forward",
+          "up"
+        ],
+        "position": [
+          "attached-to-rock",
+          "in-snow"
+        ],
+        "equipment": [
+          "carabiner",
+          "helmet",
+          "rope"
+        ],
+        "signature": [
+          "blue-shirt-white-helmet-red-strap",
+          "red-jacket-blue-collared-shirt-white-helmet"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

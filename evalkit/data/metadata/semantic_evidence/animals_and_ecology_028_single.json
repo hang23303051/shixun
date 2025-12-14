@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_028_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gorilla",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "fuzzy"
+          ],
+          "texture": [
+            "thick"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "holding"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "arms",
+            "chest",
+            "face",
+            "forehead"
+          ],
+          "species-or-breed": [
+            "gorilla"
+          ],
+          "signature": [
+            "large-black-fuzzy-face-forehead-holding-baby"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "baby_gorilla",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "fuzzy"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "infant"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "nestled"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "in-gorilla's-arm"
+          ],
+          "object-part": [
+            "arm",
+            "face"
+          ],
+          "species-or-breed": [
+            "gorilla"
+          ],
+          "signature": [
+            "small-gray-fuzzy-face-nestled-in-gorilla's-arm"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "plant",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "pattern": [
+            "leaves"
+          ],
+          "texture": [
+            "foliage"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "alive"
+          ],
+          "scene": [
+            "natural"
+          ],
+          "signature": [
+            "green-leaves-background"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "gorilla",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "pattern": [
+              "fuzzy"
+            ],
+            "texture": [
+              "thick"
+            ],
+            "size": [
+              "large"
+            ],
+            "age": [
+              "adult"
+            ],
+            "sex": [
+              "female"
+            ],
+            "state": [
+              "resting"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "action": [
+              "holding"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "position": [
+              "center"
+            ],
+            "object-part": [
+              "arms",
+              "chest",
+              "face",
+              "forehead"
+            ],
+            "species-or-breed": [
+              "gorilla"
+            ],
+            "signature": [
+              "large-black-fuzzy-face-forehead-holding-baby"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "baby_gorilla",
+          "attributes": {
+            "color": [
+              "gray"
+            ],
+            "pattern": [
+              "fuzzy"
+            ],
+            "texture": [
+              "soft"
+            ],
+            "size": [
+              "small"
+            ],
+            "age": [
+              "infant"
+            ],
+            "state": [
+              "resting"
+            ],
+            "pose": [
+              "nestled"
+            ],
+            "action": [
+              "resting"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "position": [
+              "in-gorilla's-arm"
+            ],
+            "object-part": [
+              "arm",
+              "face"
+            ],
+            "species-or-breed": [
+              "gorilla"
+            ],
+            "signature": [
+              "small-gray-fuzzy-face-nestled-in-gorilla's-arm"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "plant",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "pattern": [
+              "leaves"
+            ],
+            "texture": [
+              "foliage"
+            ],
+            "size": [
+              "medium"
+            ],
+            "state": [
+              "alive"
+            ],
+            "scene": [
+              "natural"
+            ],
+            "signature": [
+              "green-leaves-background"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.3
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              5.3
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              5.3
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "gorilla": 1,
+      "baby_gorilla": 1,
+      "plant": 1
+    },
+    "objects_count_display": {
+      "gorilla": 1,
+      "baby_gorilla": 1,
+      "plant": 1
+    },
+    "attributes": {
+      "gorilla": {
+        "color": [
+          "black"
+        ],
+        "pattern": [
+          "fuzzy"
+        ],
+        "texture": [
+          "thick"
+        ],
+        "size": [
+          "large"
+        ],
+        "age": [
+          "adult"
+        ],
+        "sex": [
+          "female"
+        ],
+        "state": [
+          "resting"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "action": [
+          "holding"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "facing-direction": [
+          "forward"
+        ],
+        "position": [
+          "center"
+        ],
+        "object-part": [
+          "arms",
+          "chest",
+          "face",
+          "forehead"
+        ],
+        "species-or-breed": [
+          "gorilla"
+        ],
+        "signature": [
+          "large-black-fuzzy-face-forehead-holding-baby"
+        ]
+      },
+      "baby_gorilla": {
+        "color": [
+          "gray"
+        ],
+        "pattern": [
+          "fuzzy"
+        ],
+        "texture": [
+          "soft"
+        ],
+        "size": [
+          "small"
+        ],
+        "age": [
+          "infant"
+        ],
+        "state": [
+          "resting"
+        ],
+        "pose": [
+          "nestled"
+        ],
+        "action": [
+          "resting"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "facing-direction": [
+          "forward"
+        ],
+        "position": [
+          "in-gorilla's-arm"
+        ],
+        "object-part": [
+          "arm",
+          "face"
+        ],
+        "species-or-breed": [
+          "gorilla"
+        ],
+        "signature": [
+          "small-gray-fuzzy-face-nestled-in-gorilla's-arm"
+        ]
+      },
+      "plant": {
+        "color": [
+          "green"
+        ],
+        "pattern": [
+          "leaves"
+        ],
+        "texture": [
+          "foliage"
+        ],
+        "size": [
+          "medium"
+        ],
+        "state": [
+          "alive"
+        ],
+        "scene": [
+          "natural"
+        ],
+        "signature": [
+          "green-leaves-background"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      }
+    ]
+  }
+}

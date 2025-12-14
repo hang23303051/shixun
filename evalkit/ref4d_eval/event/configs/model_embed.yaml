@@ -1,0 +1,24 @@
+paths:
+  data_root: outputs/event/cache
+
+embed:
+  model: checkpoints/e5-large-v2   # 本地已下载
+  device: auto                                  # auto|cuda|cpu
+  dtype: fp16                                   # GPU 建议 fp16
+  batch_size: 64
+  max_length: 128
+  text_prefix: "query: "                        # E5：对称任务可统一用 query:
+  normalize: true                               # L2 归一（强烈建议 true）
+
+  microevent:
+    # 新增：多分隔符优先生效；不写则默认 ["|","。","；",";","."]
+    delims: ["|", "。", ":", ";", "."]
+    strip_punct: true
+    max_parts: 8
+    split_export: true
+
+  export:
+    out_dir: ${paths.data_root}/embeds
+    fname_ref: "ref/{sample_id}.emb.json"
+    fname_gen: "gen/{sample_id}.emb.json"
+    parts_dir: "{side}/{sample_id}.parts"

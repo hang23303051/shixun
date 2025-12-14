@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_037_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "dark-blue",
+            "white"
+          ],
+          "pattern": [
+            "smooth",
+            "snow-capped"
+          ],
+          "texture": [
+            "rocky",
+            "snowy"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "resting"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "snowy-conical-summit"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "dark-blue",
+            "orange",
+            "pink",
+            "purple",
+            "yellow"
+          ],
+          "pattern": [
+            "gradient"
+          ],
+          "weather": [
+            "clear"
+          ],
+          "signature": [
+            "gradient-from-dark-to-light"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "clouds",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "fluffy"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "low-lying-white-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "below",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "mountain",
+          "attributes": {
+            "color": [
+              "dark-blue",
+              "white"
+            ],
+            "pattern": [
+              "smooth",
+              "snow-capped"
+            ],
+            "texture": [
+              "rocky",
+              "snowy"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "resting"
+            ],
+            "position": [
+              "center"
+            ],
+            "signature": [
+              "snowy-conical-summit"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "sky",
+          "attributes": {
+            "color": [
+              "dark-blue",
+              "orange",
+              "pink",
+              "purple",
+              "yellow"
+            ],
+            "pattern": [
+              "gradient"
+            ],
+            "weather": [
+              "clear"
+            ],
+            "signature": [
+              "gradient-from-dark-to-light"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "clouds",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "pattern": [
+              "fluffy"
+            ],
+            "position": [
+              "left"
+            ],
+            "signature": [
+              "low-lying-white-clouds"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "below",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o2",
+          "predicate": "above",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "mountain": 1,
+      "sky": 1,
+      "clouds": 1
+    },
+    "objects_count_display": {
+      "mountain": 1,
+      "sky": 1,
+      "clouds": 1
+    },
+    "attributes": {
+      "mountain": {
+        "color": [
+          "dark-blue",
+          "white"
+        ],
+        "pattern": [
+          "smooth",
+          "snow-capped"
+        ],
+        "texture": [
+          "rocky",
+          "snowy"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "resting"
+        ],
+        "position": [
+          "center"
+        ],
+        "signature": [
+          "snowy-conical-summit"
+        ]
+      },
+      "sky": {
+        "color": [
+          "dark-blue",
+          "orange",
+          "pink",
+          "purple",
+          "yellow"
+        ],
+        "pattern": [
+          "gradient"
+        ],
+        "weather": [
+          "clear"
+        ],
+        "signature": [
+          "gradient-from-dark-to-light"
+        ]
+      },
+      "clouds": {
+        "color": [
+          "white"
+        ],
+        "pattern": [
+          "fluffy"
+        ],
+        "position": [
+          "left"
+        ],
+        "signature": [
+          "low-lying-white-clouds"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "below",
+        "object": "o2"
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o1"
+      }
+    ]
+  }
+}

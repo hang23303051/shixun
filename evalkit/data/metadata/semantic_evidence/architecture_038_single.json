@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_038_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark-gray",
+            "light-green"
+          ],
+          "sex": [
+            "female"
+          ],
+          "age": [
+            "young"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "closing",
+            "opening",
+            "pointing",
+            "walking"
+          ],
+          "facing-direction": [
+            "left",
+            "right"
+          ],
+          "position": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "light-green-shirt-dark-gray-pants-long-hair-tied-back"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cabinet",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "material": [
+            "wood"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "closed",
+            "open"
+          ],
+          "object-part": [
+            "door",
+            "drawer",
+            "mechanism",
+            "shelf"
+          ],
+          "equipment": [
+            "folding-table",
+            "storage-unit"
+          ],
+          "signature": [
+            "brown-wooden-cabinet-with-shelves-and-drawers"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "pointing-to",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-next-to",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "dark-gray",
+              "light-green"
+            ],
+            "sex": [
+              "female"
+            ],
+            "age": [
+              "young"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "action": [
+              "closing",
+              "opening",
+              "pointing",
+              "walking"
+            ],
+            "facing-direction": [
+              "left",
+              "right"
+            ],
+            "position": [
+              "left",
+              "right"
+            ],
+            "signature": [
+              "light-green-shirt-dark-gray-pants-long-hair-tied-back"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cabinet",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "material": [
+              "wood"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "closed",
+              "open"
+            ],
+            "object-part": [
+              "door",
+              "drawer",
+              "mechanism",
+              "shelf"
+            ],
+            "equipment": [
+              "folding-table",
+              "storage-unit"
+            ],
+            "signature": [
+              "brown-wooden-cabinet-with-shelves-and-drawers"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "pointing-to",
+          "object": "o2",
+          "spans": [
+            [
+              0.7,
+              0.8
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "standing-next-to",
+          "object": "o2",
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "cabinet": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "cabinet": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "dark-gray",
+          "light-green"
+        ],
+        "sex": [
+          "female"
+        ],
+        "age": [
+          "young"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "action": [
+          "closing",
+          "opening",
+          "pointing",
+          "walking"
+        ],
+        "facing-direction": [
+          "left",
+          "right"
+        ],
+        "position": [
+          "left",
+          "right"
+        ],
+        "signature": [
+          "light-green-shirt-dark-gray-pants-long-hair-tied-back"
+        ]
+      },
+      "cabinet": {
+        "color": [
+          "brown"
+        ],
+        "material": [
+          "wood"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "closed",
+          "open"
+        ],
+        "object-part": [
+          "door",
+          "drawer",
+          "mechanism",
+          "shelf"
+        ],
+        "equipment": [
+          "folding-table",
+          "storage-unit"
+        ],
+        "signature": [
+          "brown-wooden-cabinet-with-shelves-and-drawers"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "pointing-to",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-next-to",
+        "object": "o2"
+      }
+    ]
+  }
+}

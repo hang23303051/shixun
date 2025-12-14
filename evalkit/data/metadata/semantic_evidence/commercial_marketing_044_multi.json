@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_044_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "box",
+        "attributes": {
+          "color": [
+            "black",
+            "green",
+            "red",
+            "white",
+            "yellow"
+          ],
+          "text": [
+            "almost-hidden-monsters",
+            "pop-mart"
+          ],
+          "signature": [
+            "black-white-green-red-yellow-text-pop-mart-almost-hidden-monsters"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "toy",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "orange",
+            "white"
+          ],
+          "signature": [
+            "small-monster-with-big-eyes-and-spiky-hair"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "plastic-bag",
+        "attributes": {
+          "color": [
+            "orange",
+            "white"
+          ],
+          "signature": [
+            "white-orange-printed-monster-face"
+          ]
+        },
+        "spans": [
+          [
+            4.9,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "figure",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "signature": [
+            "blue-fuzzy-monster-with-large-ears-and-big-eyes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            3.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "figure",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "signature": [
+            "green-fuzzy-monster-with-large-ears-and-big-eyes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            3.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            6.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            3.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 11.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "box",
+          "attributes": {
+            "color": [
+              "black",
+              "green",
+              "red",
+              "white",
+              "yellow"
+            ],
+            "text": [
+              "almost-hidden-monsters",
+              "pop-mart"
+            ],
+            "signature": [
+              "black-white-green-red-yellow-text-pop-mart-almost-hidden-monsters"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              3.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "toy",
+          "attributes": {
+            "color": [
+              "black",
+              "brown",
+              "orange",
+              "white"
+            ],
+            "signature": [
+              "small-monster-with-big-eyes-and-spiky-hair"
+            ]
+          },
+          "spans": [
+            [
+              4.5,
+              6.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "plastic-bag",
+          "attributes": {
+            "color": [
+              "orange",
+              "white"
+            ],
+            "signature": [
+              "white-orange-printed-monster-face"
+            ]
+          },
+          "spans": [
+            [
+              4.9,
+              6.1
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "figure",
+          "attributes": {
+            "color": [
+              "blue",
+              "white"
+            ],
+            "signature": [
+              "blue-fuzzy-monster-with-large-ears-and-big-eyes"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              3.8
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "figure",
+          "attributes": {
+            "color": [
+              "green",
+              "white"
+            ],
+            "signature": [
+              "green-fuzzy-monster-with-large-ears-and-big-eyes"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              3.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              6.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o4",
+          "predicate": "left-of",
+          "object": "o5",
+          "spans": [
+            [
+              0.0,
+              3.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "in-front-of",
+          "object": "o4",
+          "spans": [
+            [
+              0.2,
+              3.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "in-front-of",
+          "object": "o5",
+          "spans": [
+            [
+              0.2,
+              3.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              3.8
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "box": 1,
+      "toy": 1,
+      "plastic-bag": 1,
+      "figure": 2
+    },
+    "objects_count_display": {
+      "box": 1,
+      "toy": 1,
+      "plastic-bag": 1,
+      "figure": 2
+    },
+    "attributes": {
+      "box": {
+        "color": [
+          "black",
+          "green",
+          "red",
+          "white",
+          "yellow"
+        ],
+        "text": [
+          "almost-hidden-monsters",
+          "pop-mart"
+        ],
+        "signature": [
+          "black-white-green-red-yellow-text-pop-mart-almost-hidden-monsters"
+        ]
+      },
+      "toy": {
+        "color": [
+          "black",
+          "brown",
+          "orange",
+          "white"
+        ],
+        "signature": [
+          "small-monster-with-big-eyes-and-spiky-hair"
+        ]
+      },
+      "plastic-bag": {
+        "color": [
+          "orange",
+          "white"
+        ],
+        "signature": [
+          "white-orange-printed-monster-face"
+        ]
+      },
+      "figure": {
+        "color": [
+          "blue",
+          "green",
+          "white"
+        ],
+        "signature": [
+          "blue-fuzzy-monster-with-large-ears-and-big-eyes",
+          "green-fuzzy-monster-with-large-ears-and-big-eyes"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o5"
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o4"
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o5"
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      }
+    ]
+  }
+}

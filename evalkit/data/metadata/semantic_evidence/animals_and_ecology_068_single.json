@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_068_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gorilla",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "fuzzy"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "active"
+          ],
+          "pose": [
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "biting",
+            "grabbing",
+            "pawing",
+            "playing"
+          ],
+          "orientation": [
+            "facing-each-other"
+          ],
+          "position": [
+            "center-left",
+            "center-right"
+          ],
+          "signature": [
+            "black-fuzzy-young"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "gorilla",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "pattern": [
+              "fuzzy"
+            ],
+            "age": [
+              "young"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "active"
+            ],
+            "pose": [
+              "sitting",
+              "standing"
+            ],
+            "action": [
+              "biting",
+              "grabbing",
+              "pawing",
+              "playing"
+            ],
+            "orientation": [
+              "facing-each-other"
+            ],
+            "position": [
+              "center-left",
+              "center-right"
+            ],
+            "signature": [
+              "black-fuzzy-young"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.8
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "gorilla": 1
+    },
+    "objects_count_display": {
+      "gorilla": 1
+    },
+    "attributes": {
+      "gorilla": {
+        "color": [
+          "black"
+        ],
+        "pattern": [
+          "fuzzy"
+        ],
+        "age": [
+          "young"
+        ],
+        "sex": [
+          "male"
+        ],
+        "state": [
+          "active"
+        ],
+        "pose": [
+          "sitting",
+          "standing"
+        ],
+        "action": [
+          "biting",
+          "grabbing",
+          "pawing",
+          "playing"
+        ],
+        "orientation": [
+          "facing-each-other"
+        ],
+        "position": [
+          "center-left",
+          "center-right"
+        ],
+        "signature": [
+          "black-fuzzy-young"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

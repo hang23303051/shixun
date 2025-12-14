@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_011_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "individual-in-the-group"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "star",
+        "attributes": {
+          "signature": [
+            "purple-star-shapes-on-wall"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            2.3
+          ],
+          [
+            2.6,
+            4.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "screen",
+        "attributes": {
+          "signature": [
+            "large-display-showing-multiple-video-thumbnails"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "individual-in-the-group"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "star",
+          "attributes": {
+            "signature": [
+              "purple-star-shapes-on-wall"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              2.3
+            ],
+            [
+              2.6,
+              4.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "screen",
+          "attributes": {
+            "signature": [
+              "large-display-showing-multiple-video-thumbnails"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "star": 1,
+      "screen": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "star": 1,
+      "screen": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "individual-in-the-group"
+        ]
+      },
+      "star": {
+        "signature": [
+          "purple-star-shapes-on-wall"
+        ]
+      },
+      "screen": {
+        "signature": [
+          "large-display-showing-multiple-video-thumbnails"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

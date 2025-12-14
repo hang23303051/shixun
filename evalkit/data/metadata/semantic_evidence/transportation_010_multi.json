@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_010_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "signature": [
+            "red-black-front-4003"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "signature": [
+            "red-tile-platform"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "signature": [
+            "large-green-tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "action": [
+            "waiting"
+          ],
+          "signature": [
+            "passengers-on-platform"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            12.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            12.5
+          ]
+        ],
+        "confidence": 1.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            12.5
+          ]
+        ],
+        "confidence": 1.0
+      },
+      {
+        "subject": "o4",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            12.5
+          ]
+        ],
+        "confidence": 1.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 13.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {
+            "color": [
+              "black",
+              "red"
+            ],
+            "signature": [
+              "red-black-front-4003"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              12.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "platform",
+          "attributes": {
+            "color": [
+              "red"
+            ],
+            "signature": [
+              "red-tile-platform"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              12.5
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "signature": [
+              "large-green-tree"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              12.5
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "person",
+          "attributes": {
+            "action": [
+              "waiting"
+            ],
+            "signature": [
+              "passengers-on-platform"
+            ]
+          },
+          "spans": [
+            [
+              0.6,
+              12.5
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "on",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              12.5
+            ]
+          ],
+          "confidence": 1.0
+        },
+        {
+          "subject": "o1",
+          "predicate": "in-front-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              12.5
+            ]
+          ],
+          "confidence": 1.0
+        },
+        {
+          "subject": "o4",
+          "predicate": "on",
+          "object": "o2",
+          "spans": [
+            [
+              0.6,
+              12.5
+            ]
+          ],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 1,
+      "platform": 1,
+      "tree": 1,
+      "person": 1
+    },
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1,
+      "tree": 1,
+      "person": 1
+    },
+    "attributes": {
+      "train": {
+        "color": [
+          "black",
+          "red"
+        ],
+        "signature": [
+          "red-black-front-4003"
+        ]
+      },
+      "platform": {
+        "color": [
+          "red"
+        ],
+        "signature": [
+          "red-tile-platform"
+        ]
+      },
+      "tree": {
+        "color": [
+          "green"
+        ],
+        "signature": [
+          "large-green-tree"
+        ]
+      },
+      "person": {
+        "action": [
+          "waiting"
+        ],
+        "signature": [
+          "passengers-on-platform"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o4",
+        "predicate": "on",
+        "object": "o2"
+      }
+    ]
+  }
+}

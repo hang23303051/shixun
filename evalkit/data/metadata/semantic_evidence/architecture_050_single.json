@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_050_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "futuristic-structure-with-blue-lights"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "road",
+        "attributes": {
+          "signature": [
+            "lit-road-with-moving-cars"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "futuristic-structure-with-blue-lights"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.1
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "road",
+          "attributes": {
+            "signature": [
+              "lit-road-with-moving-cars"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.1
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              8.1
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "building": 1,
+      "road": 1
+    },
+    "objects_count_display": {
+      "building": 1,
+      "road": 1
+    },
+    "attributes": {
+      "building": {
+        "signature": [
+          "futuristic-structure-with-blue-lights"
+        ]
+      },
+      "road": {
+        "signature": [
+          "lit-road-with-moving-cars"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      }
+    ]
+  }
+}

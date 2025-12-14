@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_015_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "skater",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "extending-arms",
+            "gliding",
+            "jumping",
+            "skating",
+            "spinning"
+          ],
+          "pose": [
+            "bent-knees",
+            "crouched",
+            "leveled-back",
+            "outstretched-arms",
+            "upright"
+          ],
+          "equipment": [
+            "skates"
+          ],
+          "signature": [
+            "white-shirt-black-pants-skates"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "skater",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "action": [
+              "extending-arms",
+              "gliding",
+              "jumping",
+              "skating",
+              "spinning"
+            ],
+            "pose": [
+              "bent-knees",
+              "crouched",
+              "leveled-back",
+              "outstretched-arms",
+              "upright"
+            ],
+            "equipment": [
+              "skates"
+            ],
+            "signature": [
+              "white-shirt-black-pants-skates"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "skater": 1
+    },
+    "objects_count_display": {
+      "skater": 1
+    },
+    "attributes": {
+      "skater": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "action": [
+          "extending-arms",
+          "gliding",
+          "jumping",
+          "skating",
+          "spinning"
+        ],
+        "pose": [
+          "bent-knees",
+          "crouched",
+          "leveled-back",
+          "outstretched-arms",
+          "upright"
+        ],
+        "equipment": [
+          "skates"
+        ],
+        "signature": [
+          "white-shirt-black-pants-skates"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

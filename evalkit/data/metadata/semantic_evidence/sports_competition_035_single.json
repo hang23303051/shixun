@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_035_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gymnast",
+        "attributes": {
+          "color": [
+            "black",
+            "green"
+          ],
+          "pattern": [
+            "sparkly"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "jumping",
+            "landing",
+            "raising-arms",
+            "running"
+          ],
+          "pose": [
+            "crouched",
+            "mid-air",
+            "standing"
+          ],
+          "facing-direction": [
+            "forward",
+            "towards-camera"
+          ],
+          "signature": [
+            "black-green-onesie-bun"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "gymnast",
+          "attributes": {
+            "color": [
+              "black",
+              "green"
+            ],
+            "pattern": [
+              "sparkly"
+            ],
+            "sex": [
+              "female"
+            ],
+            "action": [
+              "jumping",
+              "landing",
+              "raising-arms",
+              "running"
+            ],
+            "pose": [
+              "crouched",
+              "mid-air",
+              "standing"
+            ],
+            "facing-direction": [
+              "forward",
+              "towards-camera"
+            ],
+            "signature": [
+              "black-green-onesie-bun"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "gymnast": 1
+    },
+    "objects_count_display": {
+      "gymnast": 1
+    },
+    "attributes": {
+      "gymnast": {
+        "color": [
+          "black",
+          "green"
+        ],
+        "pattern": [
+          "sparkly"
+        ],
+        "sex": [
+          "female"
+        ],
+        "action": [
+          "jumping",
+          "landing",
+          "raising-arms",
+          "running"
+        ],
+        "pose": [
+          "crouched",
+          "mid-air",
+          "standing"
+        ],
+        "facing-direction": [
+          "forward",
+          "towards-camera"
+        ],
+        "signature": [
+          "black-green-onesie-bun"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_011_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "black-sleeve-white-shirt-dragon-print"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "airsoft-gun",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "red"
+          ],
+          "signature": [
+            "brown-red-black-scope"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "black-sleeve-white-shirt-dragon-print"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "airsoft-gun",
+          "attributes": {
+            "color": [
+              "black",
+              "brown",
+              "red"
+            ],
+            "signature": [
+              "brown-red-black-scope"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "airsoft-gun": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "airsoft-gun": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "black-sleeve-white-shirt-dragon-print"
+        ]
+      },
+      "airsoft-gun": {
+        "color": [
+          "black",
+          "brown",
+          "red"
+        ],
+        "signature": [
+          "brown-red-black-scope"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

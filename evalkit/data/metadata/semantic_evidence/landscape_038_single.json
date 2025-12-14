@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_038_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "naked"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "old"
+          ],
+          "state": [
+            "sitting-in-water"
+          ],
+          "pose": [
+            "arms-held-forward",
+            "legs-bent"
+          ],
+          "action": [
+            "holding-black-object",
+            "possibly-taking-selfie"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "position": [
+            "left-side-of-frame"
+          ],
+          "clothing": [
+            "no-clothing"
+          ],
+          "accessory": [
+            "black-watch-on-left-wrist"
+          ],
+          "signature": [
+            "naked-bald-man-with-mustache-and-watch-on-left-wrist"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "black-object",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "size": [
+            "small"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "object-part": [
+            "hand-held"
+          ],
+          "tool-or-instrument": [
+            "camera-or-recorder"
+          ],
+          "shape": [
+            "rectangular"
+          ],
+          "signature": [
+            "small-black-device-held-by-person"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "naked"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "old"
+            ],
+            "state": [
+              "sitting-in-water"
+            ],
+            "pose": [
+              "arms-held-forward",
+              "legs-bent"
+            ],
+            "action": [
+              "holding-black-object",
+              "possibly-taking-selfie"
+            ],
+            "facing-direction": [
+              "left-facing"
+            ],
+            "position": [
+              "left-side-of-frame"
+            ],
+            "clothing": [
+              "no-clothing"
+            ],
+            "accessory": [
+              "black-watch-on-left-wrist"
+            ],
+            "signature": [
+              "naked-bald-man-with-mustache-and-watch-on-left-wrist"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "black-object",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "size": [
+              "small"
+            ],
+            "material": [
+              "plastic"
+            ],
+            "object-part": [
+              "hand-held"
+            ],
+            "tool-or-instrument": [
+              "camera-or-recorder"
+            ],
+            "shape": [
+              "rectangular"
+            ],
+            "signature": [
+              "small-black-device-held-by-person"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              8.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              8.9
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "black-object": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "black-object": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "naked"
+        ],
+        "sex": [
+          "male"
+        ],
+        "age": [
+          "old"
+        ],
+        "state": [
+          "sitting-in-water"
+        ],
+        "pose": [
+          "arms-held-forward",
+          "legs-bent"
+        ],
+        "action": [
+          "holding-black-object",
+          "possibly-taking-selfie"
+        ],
+        "facing-direction": [
+          "left-facing"
+        ],
+        "position": [
+          "left-side-of-frame"
+        ],
+        "clothing": [
+          "no-clothing"
+        ],
+        "accessory": [
+          "black-watch-on-left-wrist"
+        ],
+        "signature": [
+          "naked-bald-man-with-mustache-and-watch-on-left-wrist"
+        ]
+      },
+      "black-object": {
+        "color": [
+          "black"
+        ],
+        "size": [
+          "small"
+        ],
+        "material": [
+          "plastic"
+        ],
+        "object-part": [
+          "hand-held"
+        ],
+        "tool-or-instrument": [
+          "camera-or-recorder"
+        ],
+        "shape": [
+          "rectangular"
+        ],
+        "signature": [
+          "small-black-device-held-by-person"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      }
+    ]
+  }
+}

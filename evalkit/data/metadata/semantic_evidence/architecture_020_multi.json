@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_020_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 11.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "building-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              11.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "building": 1
+    },
+    "objects_count_display": {
+      "building": 1
+    },
+    "attributes": {
+      "building": {
+        "signature": [
+          "building-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

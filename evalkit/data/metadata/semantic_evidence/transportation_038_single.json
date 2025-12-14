@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_038_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "printed-text": [
+            "70-disneyland"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "on轨道"
+          ],
+          "signature": [
+            "70-disneyland"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "palm-tree",
+        "attributes": {
+          "signature": [
+            "palm-tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {
+            "color": [
+              "blue",
+              "red",
+              "white"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "printed-text": [
+              "70-disneyland"
+            ],
+            "facing-direction": [
+              "right"
+            ],
+            "position": [
+              "on轨道"
+            ],
+            "signature": [
+              "70-disneyland"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              4.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "palm-tree",
+          "attributes": {
+            "signature": [
+              "palm-tree"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "tree"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 1,
+      "palm-tree": 1,
+      "tree": 1
+    },
+    "objects_count_display": {
+      "train": 1,
+      "palm-tree": 1,
+      "tree": 1
+    },
+    "attributes": {
+      "train": {
+        "color": [
+          "blue",
+          "red",
+          "white"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "printed-text": [
+          "70-disneyland"
+        ],
+        "facing-direction": [
+          "right"
+        ],
+        "position": [
+          "on轨道"
+        ],
+        "signature": [
+          "70-disneyland"
+        ]
+      },
+      "palm-tree": {
+        "signature": [
+          "palm-tree"
+        ]
+      },
+      "tree": {
+        "signature": [
+          "tree"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_003_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train_car",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "gray",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "logo",
+            "solid",
+            "text"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "signature": [
+            "northline-logo,-primary-connect-logo,-linfox-logo,-blue-container-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "brown",
+            "yellow"
+          ],
+          "material": [
+            "brick"
+          ],
+          "state": [
+            "empty"
+          ],
+          "signature": [
+            "yellow-line,-brick-pavement"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "state": [
+            "leafy"
+          ],
+          "signature": [
+            "green-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "power_line",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "state": [
+            "active"
+          ],
+          "signature": [
+            "overhead-wires,-electric-pole"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train_car",
+          "attributes": {
+            "color": [
+              "black",
+              "blue",
+              "gray",
+              "white",
+              "yellow"
+            ],
+            "pattern": [
+              "logo",
+              "solid",
+              "text"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "large"
+            ],
+            "facing-direction": [
+              "left-facing"
+            ],
+            "position": [
+              "on-track"
+            ],
+            "signature": [
+              "northline-logo,-primary-connect-logo,-linfox-logo,-blue-container-logo"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              2.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "platform",
+          "attributes": {
+            "color": [
+              "brown",
+              "yellow"
+            ],
+            "material": [
+              "brick"
+            ],
+            "state": [
+              "empty"
+            ],
+            "signature": [
+              "yellow-line,-brick-pavement"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "state": [
+              "leafy"
+            ],
+            "signature": [
+              "green-leaves"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "power_line",
+          "attributes": {
+            "color": [
+              "gray"
+            ],
+            "state": [
+              "active"
+            ],
+            "signature": [
+              "overhead-wires,-electric-pole"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o4",
+          "spans": [
+            [
+              0.7,
+              0.8
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train_car": 1,
+      "platform": 1,
+      "tree": 1,
+      "power_line": 1
+    },
+    "objects_count_display": {
+      "train_car": 1,
+      "platform": 1,
+      "tree": 1,
+      "power_line": 1
+    },
+    "attributes": {
+      "train_car": {
+        "color": [
+          "black",
+          "blue",
+          "gray",
+          "white",
+          "yellow"
+        ],
+        "pattern": [
+          "logo",
+          "solid",
+          "text"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "large"
+        ],
+        "facing-direction": [
+          "left-facing"
+        ],
+        "position": [
+          "on-track"
+        ],
+        "signature": [
+          "northline-logo,-primary-connect-logo,-linfox-logo,-blue-container-logo"
+        ]
+      },
+      "platform": {
+        "color": [
+          "brown",
+          "yellow"
+        ],
+        "material": [
+          "brick"
+        ],
+        "state": [
+          "empty"
+        ],
+        "signature": [
+          "yellow-line,-brick-pavement"
+        ]
+      },
+      "tree": {
+        "color": [
+          "green"
+        ],
+        "state": [
+          "leafy"
+        ],
+        "signature": [
+          "green-leaves"
+        ]
+      },
+      "power_line": {
+        "color": [
+          "gray"
+        ],
+        "state": [
+          "active"
+        ],
+        "signature": [
+          "overhead-wires,-electric-pole"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4"
+      }
+    ]
+  }
+}

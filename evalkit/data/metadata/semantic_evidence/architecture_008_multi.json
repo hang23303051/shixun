@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_008_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bicycle",
+        "attributes": {
+          "signature": [
+            "bicycle"
+          ]
+        },
+        "spans": [
+          [
+            7.5,
+            8.0
+          ],
+          [
+            8.4,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "wheel",
+        "attributes": {
+          "signature": [
+            "wheel"
+          ]
+        },
+        "spans": [
+          [
+            0.9,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "balloon",
+        "attributes": {
+          "signature": [
+            "balloon"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 17.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "bicycle",
+          "attributes": {
+            "signature": [
+              "bicycle"
+            ]
+          },
+          "spans": [
+            [
+              7.5,
+              8.0
+            ],
+            [
+              8.4,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "wheel",
+          "attributes": {
+            "signature": [
+              "wheel"
+            ]
+          },
+          "spans": [
+            [
+              0.9,
+              1.4
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "balloon",
+          "attributes": {
+            "signature": [
+              "balloon"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.1
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "bicycle": 1,
+      "wheel": 1,
+      "balloon": 1
+    },
+    "objects_count_display": {
+      "bicycle": 1,
+      "wheel": 1,
+      "balloon": 1
+    },
+    "attributes": {
+      "bicycle": {
+        "signature": [
+          "bicycle"
+        ]
+      },
+      "wheel": {
+        "signature": [
+          "wheel"
+        ]
+      },
+      "balloon": {
+        "signature": [
+          "balloon"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/commercial_marketing_023_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "box",
+        "attributes": {
+          "signature": [
+            "box-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "box",
+        "attributes": {
+          "signature": [
+            "box-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "box",
+        "attributes": {
+          "signature": [
+            "box-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "arrow",
+        "attributes": {
+          "signature": [
+            "arrow-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "arrow",
+        "attributes": {
+          "signature": [
+            "arrow-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "arrow",
+        "attributes": {
+          "signature": [
+            "arrow-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "emoji",
+        "attributes": {
+          "signature": [
+            "emoji-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "box",
+        "attributes": {
+          "signature": [
+            "box-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "arrow",
+        "attributes": {
+          "signature": [
+            "arrow-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "text-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "text-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "text-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "box",
+          "attributes": {
+            "signature": [
+              "box-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "box",
+          "attributes": {
+            "signature": [
+              "box-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "box",
+          "attributes": {
+            "signature": [
+              "box-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "arrow",
+          "attributes": {
+            "signature": [
+              "arrow-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o8",
+          "name": "arrow",
+          "attributes": {
+            "signature": [
+              "arrow-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o9",
+          "name": "arrow",
+          "attributes": {
+            "signature": [
+              "arrow-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o10",
+          "name": "emoji",
+          "attributes": {
+            "signature": [
+              "emoji-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o11",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "text-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o12",
+          "name": "box",
+          "attributes": {
+            "signature": [
+              "box-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o13",
+          "name": "arrow",
+          "attributes": {
+            "signature": [
+              "arrow-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "text": 4,
+      "box": 4,
+      "arrow": 4,
+      "emoji": 1
+    },
+    "objects_count_display": {
+      "text": 4,
+      "box": 4,
+      "arrow": 4,
+      "emoji": 1
+    },
+    "attributes": {
+      "text": {
+        "signature": [
+          "text-coarse"
+        ]
+      },
+      "box": {
+        "signature": [
+          "box-coarse"
+        ]
+      },
+      "arrow": {
+        "signature": [
+          "arrow-coarse"
+        ]
+      },
+      "emoji": {
+        "signature": [
+          "emoji-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

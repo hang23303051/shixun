@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_027_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "from-concept-to-creation"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cylinder",
+        "attributes": {
+          "signature": [
+            "white-cylindrical-object-with-black-cap-and-drain"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "from-concept-to-creation"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              2.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cylinder",
+          "attributes": {
+            "signature": [
+              "white-cylindrical-object-with-black-cap-and-drain"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              2.5
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "text": 1,
+      "cylinder": 1
+    },
+    "objects_count_display": {
+      "text": 1,
+      "cylinder": 1
+    },
+    "attributes": {
+      "text": {
+        "signature": [
+          "from-concept-to-creation"
+        ]
+      },
+      "cylinder": {
+        "signature": [
+          "white-cylindrical-object-with-black-cap-and-drain"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

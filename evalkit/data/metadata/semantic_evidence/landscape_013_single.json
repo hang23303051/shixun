@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_013_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cow",
+        "attributes": {
+          "signature": [
+            "cow-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cow",
+          "attributes": {
+            "signature": [
+              "cow-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "cow": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "cow": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "cow": {
+        "signature": [
+          "cow-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

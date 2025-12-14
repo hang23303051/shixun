@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/architecture_008_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "column",
+        "attributes": {
+          "signature": [
+            "column-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "column",
+        "attributes": {
+          "signature": [
+            "column-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "column",
+        "attributes": {
+          "signature": [
+            "column-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "column",
+        "attributes": {
+          "signature": [
+            "column-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "fountain",
+        "attributes": {
+          "signature": [
+            "fountain-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "balcony",
+        "attributes": {
+          "signature": [
+            "balcony-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "column",
+          "attributes": {
+            "signature": [
+              "column-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "column",
+          "attributes": {
+            "signature": [
+              "column-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "column",
+          "attributes": {
+            "signature": [
+              "column-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "column",
+          "attributes": {
+            "signature": [
+              "column-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "window",
+          "attributes": {
+            "signature": [
+              "window-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "window",
+          "attributes": {
+            "signature": [
+              "window-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "window",
+          "attributes": {
+            "signature": [
+              "window-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o8",
+          "name": "fountain",
+          "attributes": {
+            "signature": [
+              "fountain-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        },
+        {
+          "id": "o9",
+          "name": "balcony",
+          "attributes": {
+            "signature": [
+              "balcony-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.4
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "column": 4,
+      "window": 3,
+      "fountain": 1,
+      "balcony": 1
+    },
+    "objects_count_display": {
+      "column": 4,
+      "window": 3,
+      "fountain": 1,
+      "balcony": 1
+    },
+    "attributes": {
+      "column": {
+        "signature": [
+          "column-coarse"
+        ]
+      },
+      "window": {
+        "signature": [
+          "window-coarse"
+        ]
+      },
+      "fountain": {
+        "signature": [
+          "fountain-coarse"
+        ]
+      },
+      "balcony": {
+        "signature": [
+          "balcony-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

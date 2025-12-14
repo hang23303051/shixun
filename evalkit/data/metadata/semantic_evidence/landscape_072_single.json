@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_072_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "gray",
+            "green"
+          ],
+          "texture": [
+            "forested",
+            "rocky"
+          ],
+          "state": [
+            "partially-covered-by-mist"
+          ],
+          "signature": [
+            "large-tall-peak-with-green-forests-and-gray-rock-faces"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "lake",
+        "attributes": {
+          "color": [
+            "blue",
+            "reflective"
+          ],
+          "state": [
+            "reflective",
+            "still"
+          ],
+          "signature": [
+            "calm-water-reflecting-mountains-and-sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "light-blue",
+            "white"
+          ],
+          "shape": [
+            "fluffy",
+            "spread-out"
+          ],
+          "signature": [
+            "light-blue-to-white-gradient-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "mountain",
+          "attributes": {
+            "color": [
+              "gray",
+              "green"
+            ],
+            "texture": [
+              "forested",
+              "rocky"
+            ],
+            "state": [
+              "partially-covered-by-mist"
+            ],
+            "signature": [
+              "large-tall-peak-with-green-forests-and-gray-rock-faces"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "lake",
+          "attributes": {
+            "color": [
+              "blue",
+              "reflective"
+            ],
+            "state": [
+              "reflective",
+              "still"
+            ],
+            "signature": [
+              "calm-water-reflecting-mountains-and-sky"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "cloud",
+          "attributes": {
+            "color": [
+              "light-blue",
+              "white"
+            ],
+            "shape": [
+              "fluffy",
+              "spread-out"
+            ],
+            "signature": [
+              "light-blue-to-white-gradient-clouds"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "above",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "mountain": 1,
+      "lake": 1,
+      "cloud": 1
+    },
+    "objects_count_display": {
+      "mountain": 1,
+      "lake": 1,
+      "cloud": 1
+    },
+    "attributes": {
+      "mountain": {
+        "color": [
+          "gray",
+          "green"
+        ],
+        "texture": [
+          "forested",
+          "rocky"
+        ],
+        "state": [
+          "partially-covered-by-mist"
+        ],
+        "signature": [
+          "large-tall-peak-with-green-forests-and-gray-rock-faces"
+        ]
+      },
+      "lake": {
+        "color": [
+          "blue",
+          "reflective"
+        ],
+        "state": [
+          "reflective",
+          "still"
+        ],
+        "signature": [
+          "calm-water-reflecting-mountains-and-sky"
+        ]
+      },
+      "cloud": {
+        "color": [
+          "light-blue",
+          "white"
+        ],
+        "shape": [
+          "fluffy",
+          "spread-out"
+        ],
+        "signature": [
+          "light-blue-to-white-gradient-clouds"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o1"
+      }
+    ]
+  }
+}

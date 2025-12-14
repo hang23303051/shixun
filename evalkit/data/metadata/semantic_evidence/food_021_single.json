@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_021_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "chick-fil-a",
+        "attributes": {
+          "signature": [
+            "chick-fil-a"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 4.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "chick-fil-a",
+          "attributes": {
+            "signature": [
+              "chick-fil-a"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "chick-fil-a": 1
+    },
+    "objects_count_display": {
+      "chick-fil-a": 1
+    },
+    "attributes": {
+      "chick-fil-a": {
+        "signature": [
+          "chick-fil-a"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

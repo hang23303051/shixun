@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_054_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "large,-distant,-with-snow-capped-peak"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "road",
+        "attributes": {
+          "signature": [
+            "narrow,-winding,-asphalt"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bush",
+        "attributes": {
+          "signature": [
+            "small,-green,-scattered"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "large,-brown,-stacked"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 18.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "mountain",
+          "attributes": {
+            "signature": [
+              "large,-distant,-with-snow-capped-peak"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.2
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "road",
+          "attributes": {
+            "signature": [
+              "narrow,-winding,-asphalt"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.2
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "bush",
+          "attributes": {
+            "signature": [
+              "small,-green,-scattered"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.2
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "rock",
+          "attributes": {
+            "signature": [
+              "large,-brown,-stacked"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.2
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "mountain": 1,
+      "road": 1,
+      "bush": 1,
+      "rock": 1
+    },
+    "objects_count_display": {
+      "mountain": 1,
+      "road": 1,
+      "bush": 1,
+      "rock": 1
+    },
+    "attributes": {
+      "mountain": {
+        "signature": [
+          "large,-distant,-with-snow-capped-peak"
+        ]
+      },
+      "road": {
+        "signature": [
+          "narrow,-winding,-asphalt"
+        ]
+      },
+      "bush": {
+        "signature": [
+          "small,-green,-scattered"
+        ]
+      },
+      "rock": {
+        "signature": [
+          "large,-brown,-stacked"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

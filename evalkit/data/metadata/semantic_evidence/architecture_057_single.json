@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_057_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cow",
+        "attributes": {
+          "signature": [
+            "cow-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "temple",
+        "attributes": {
+          "signature": [
+            "temple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "mountain-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "sky-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.1
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cow",
+          "attributes": {
+            "signature": [
+              "cow-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.1
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "temple",
+          "attributes": {
+            "signature": [
+              "temple-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.1
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "mountain",
+          "attributes": {
+            "signature": [
+              "mountain-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.1
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "sky",
+          "attributes": {
+            "signature": [
+              "sky-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.1
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "cow": 1,
+      "temple": 1,
+      "mountain": 1,
+      "sky": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "cow": 1,
+      "temple": 1,
+      "mountain": 1,
+      "sky": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "cow": {
+        "signature": [
+          "cow-coarse"
+        ]
+      },
+      "temple": {
+        "signature": [
+          "temple-coarse"
+        ]
+      },
+      "mountain": {
+        "signature": [
+          "mountain-coarse"
+        ]
+      },
+      "sky": {
+        "signature": [
+          "sky-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_026_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "state": [
+            "relaxed"
+          ],
+          "clothing_type": [
+            "hoodie"
+          ],
+          "signature": [
+            "dark-gray-jacket-straight-back"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "couch",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "position": [
+            "behind-person"
+          ],
+          "signature": [
+            "black-couch-back"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wall",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "lighting": [
+            "dim"
+          ],
+          "signature": [
+            "plain-gray-wall"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "sitting-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "against",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "dark-gray"
+            ],
+            "material": [
+              "fabric"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "state": [
+              "relaxed"
+            ],
+            "clothing_type": [
+              "hoodie"
+            ],
+            "signature": [
+              "dark-gray-jacket-straight-back"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "couch",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "material": [
+              "fabric"
+            ],
+            "position": [
+              "behind-person"
+            ],
+            "signature": [
+              "black-couch-back"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "wall",
+          "attributes": {
+            "color": [
+              "gray"
+            ],
+            "texture": [
+              "smooth"
+            ],
+            "lighting": [
+              "dim"
+            ],
+            "signature": [
+              "plain-gray-wall"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "sitting-on",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "in-front-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "against",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "couch": 1,
+      "wall": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "couch": 1,
+      "wall": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "dark-gray"
+        ],
+        "material": [
+          "fabric"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "state": [
+          "relaxed"
+        ],
+        "clothing_type": [
+          "hoodie"
+        ],
+        "signature": [
+          "dark-gray-jacket-straight-back"
+        ]
+      },
+      "couch": {
+        "color": [
+          "black"
+        ],
+        "material": [
+          "fabric"
+        ],
+        "position": [
+          "behind-person"
+        ],
+        "signature": [
+          "black-couch-back"
+        ]
+      },
+      "wall": {
+        "color": [
+          "gray"
+        ],
+        "texture": [
+          "smooth"
+        ],
+        "lighting": [
+          "dim"
+        ],
+        "signature": [
+          "plain-gray-wall"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "sitting-on",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o2",
+        "predicate": "against",
+        "object": "o3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_009_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "brown",
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "cleaning",
+            "shaping",
+            "working"
+          ],
+          "pose": [
+            "bending",
+            "standing"
+          ],
+          "state": [
+            "wearing-gloves"
+          ],
+          "signature": [
+            "brown-shirt-white-cap-blue-jeans"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "metallic",
+            "rusty"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "operating"
+          ],
+          "signature": [
+            "rotating-wheel-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "metal-plate",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "large-round-metal-sheet"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tool",
+        "attributes": {
+          "color": [
+            "metallic"
+          ],
+          "material": [
+            "metal"
+          ],
+          "type": [
+            "shaping-tool"
+          ],
+          "signature": [
+            "long-handled-tool"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "working-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o4",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "shaping",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "cleaning",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 14.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "blue",
+              "brown",
+              "white"
+            ],
+            "sex": [
+              "male"
+            ],
+            "action": [
+              "cleaning",
+              "shaping",
+              "working"
+            ],
+            "pose": [
+              "bending",
+              "standing"
+            ],
+            "state": [
+              "wearing-gloves"
+            ],
+            "signature": [
+              "brown-shirt-white-cap-blue-jeans"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "machine",
+          "attributes": {
+            "color": [
+              "metallic",
+              "rusty"
+            ],
+            "material": [
+              "metal"
+            ],
+            "state": [
+              "operating"
+            ],
+            "signature": [
+              "rotating-wheel-machine"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "metal-plate",
+          "attributes": {
+            "color": [
+              "silver"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "large"
+            ],
+            "signature": [
+              "large-round-metal-sheet"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "tool",
+          "attributes": {
+            "color": [
+              "metallic"
+            ],
+            "material": [
+              "metal"
+            ],
+            "type": [
+              "shaping-tool"
+            ],
+            "signature": [
+              "long-handled-tool"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "working-on",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o4",
+          "spans": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "shaping",
+          "object": "o3",
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "cleaning",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "machine": 1,
+      "metal-plate": 1,
+      "tool": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "machine": 1,
+      "metal-plate": 1,
+      "tool": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "blue",
+          "brown",
+          "white"
+        ],
+        "sex": [
+          "male"
+        ],
+        "action": [
+          "cleaning",
+          "shaping",
+          "working"
+        ],
+        "pose": [
+          "bending",
+          "standing"
+        ],
+        "state": [
+          "wearing-gloves"
+        ],
+        "signature": [
+          "brown-shirt-white-cap-blue-jeans"
+        ]
+      },
+      "machine": {
+        "color": [
+          "metallic",
+          "rusty"
+        ],
+        "material": [
+          "metal"
+        ],
+        "state": [
+          "operating"
+        ],
+        "signature": [
+          "rotating-wheel-machine"
+        ]
+      },
+      "metal-plate": {
+        "color": [
+          "silver"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "large"
+        ],
+        "signature": [
+          "large-round-metal-sheet"
+        ]
+      },
+      "tool": {
+        "color": [
+          "metallic"
+        ],
+        "material": [
+          "metal"
+        ],
+        "type": [
+          "shaping-tool"
+        ],
+        "signature": [
+          "long-handled-tool"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "working-on",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o4"
+      },
+      {
+        "subject": "o1",
+        "predicate": "shaping",
+        "object": "o3"
+      },
+      {
+        "subject": "o1",
+        "predicate": "cleaning",
+        "object": "o2"
+      }
+    ]
+  }
+}

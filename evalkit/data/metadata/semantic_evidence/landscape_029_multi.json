@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_029_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "blue-gray",
+            "gray",
+            "white"
+          ],
+          "pattern": [
+            "cumulus-like",
+            "layered",
+            "puffy"
+          ],
+          "texture": [
+            "dense",
+            "fluffy",
+            "soft"
+          ],
+          "size": [
+            "large",
+            "massive"
+          ],
+          "state": [
+            "developing",
+            "forming",
+            "moving"
+          ],
+          "orientation": [
+            "horizontal",
+            "vertical"
+          ],
+          "position": [
+            "sky",
+            "upper-atmosphere"
+          ],
+          "lighting": [
+            "partially-shadowed",
+            "sunlit"
+          ],
+          "motion": [
+            "gentle-movement",
+            "slow-drift"
+          ],
+          "density": [
+            "cumulonimbus-like",
+            "thick"
+          ],
+          "signature": [
+            "large,-puffy,-cumulus-like-cloud-formation"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 10.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "cloud",
+          "attributes": {
+            "color": [
+              "blue-gray",
+              "gray",
+              "white"
+            ],
+            "pattern": [
+              "cumulus-like",
+              "layered",
+              "puffy"
+            ],
+            "texture": [
+              "dense",
+              "fluffy",
+              "soft"
+            ],
+            "size": [
+              "large",
+              "massive"
+            ],
+            "state": [
+              "developing",
+              "forming",
+              "moving"
+            ],
+            "orientation": [
+              "horizontal",
+              "vertical"
+            ],
+            "position": [
+              "sky",
+              "upper-atmosphere"
+            ],
+            "lighting": [
+              "partially-shadowed",
+              "sunlit"
+            ],
+            "motion": [
+              "gentle-movement",
+              "slow-drift"
+            ],
+            "density": [
+              "cumulonimbus-like",
+              "thick"
+            ],
+            "signature": [
+              "large,-puffy,-cumulus-like-cloud-formation"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              10.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "cloud": 1
+    },
+    "objects_count_display": {
+      "cloud": 1
+    },
+    "attributes": {
+      "cloud": {
+        "color": [
+          "blue-gray",
+          "gray",
+          "white"
+        ],
+        "pattern": [
+          "cumulus-like",
+          "layered",
+          "puffy"
+        ],
+        "texture": [
+          "dense",
+          "fluffy",
+          "soft"
+        ],
+        "size": [
+          "large",
+          "massive"
+        ],
+        "state": [
+          "developing",
+          "forming",
+          "moving"
+        ],
+        "orientation": [
+          "horizontal",
+          "vertical"
+        ],
+        "position": [
+          "sky",
+          "upper-atmosphere"
+        ],
+        "lighting": [
+          "partially-shadowed",
+          "sunlit"
+        ],
+        "motion": [
+          "gentle-movement",
+          "slow-drift"
+        ],
+        "density": [
+          "cumulonimbus-like",
+          "thick"
+        ],
+        "signature": [
+          "large,-puffy,-cumulus-like-cloud-formation"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

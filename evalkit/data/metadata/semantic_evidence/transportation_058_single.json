@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_058_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "signature": [
+            "450016"
+          ]
+        },
+        "spans": [
+          [
+            2.8,
+            3.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "signature": [
+            "platform"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "railway",
+        "attributes": {
+          "signature": [
+            "railway"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {},
+          "spans": [
+            [
+              2.8,
+              3.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "platform",
+          "attributes": {
+            "signature": [
+              "platform"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "railway",
+          "attributes": {
+            "signature": [
+              "railway"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "tree"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.0
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "sky",
+          "attributes": {
+            "signature": [
+              "sky"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 1,
+      "platform": 1,
+      "railway": 1,
+      "tree": 1,
+      "sky": 1
+    },
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1,
+      "railway": 1,
+      "tree": 1,
+      "sky": 1
+    },
+    "attributes": {
+      "train": {
+        "signature": [
+          "450016"
+        ]
+      },
+      "platform": {
+        "signature": [
+          "platform"
+        ]
+      },
+      "railway": {
+        "signature": [
+          "railway"
+        ]
+      },
+      "tree": {
+        "signature": [
+          "tree"
+        ]
+      },
+      "sky": {
+        "signature": [
+          "sky"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

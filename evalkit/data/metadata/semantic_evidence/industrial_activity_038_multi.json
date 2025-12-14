@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_038_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "robot-arm",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "brand-or-logo": [
+            "schunk"
+          ],
+          "tool-or-instrument": [
+            "gripper"
+          ],
+          "equipment": [
+            "industrial-robot"
+          ],
+          "signature": [
+            "yellow-black-schunk-logo-green-cable"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gripper",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "brand-or-logo": [
+            "schunk"
+          ],
+          "object-part": [
+            "fingers"
+          ],
+          "tool-or-instrument": [
+            "gripper"
+          ],
+          "signature": [
+            "white-schunck-logo-metallic-fingers"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "screw",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "small"
+          ],
+          "object-part": [
+            "head"
+          ],
+          "signature": [
+            "silver-cylindrical-with-head"
+          ]
+        },
+        "spans": [
+          [
+            0.9,
+            1.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 11.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "robot-arm",
+          "attributes": {
+            "color": [
+              "black",
+              "yellow"
+            ],
+            "brand-or-logo": [
+              "schunk"
+            ],
+            "tool-or-instrument": [
+              "gripper"
+            ],
+            "equipment": [
+              "industrial-robot"
+            ],
+            "signature": [
+              "yellow-black-schunk-logo-green-cable"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "gripper",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "brand-or-logo": [
+              "schunk"
+            ],
+            "object-part": [
+              "fingers"
+            ],
+            "tool-or-instrument": [
+              "gripper"
+            ],
+            "signature": [
+              "white-schunck-logo-metallic-fingers"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "screw",
+          "attributes": {
+            "color": [
+              "silver"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "small"
+            ],
+            "object-part": [
+              "head"
+            ],
+            "signature": [
+              "silver-cylindrical-with-head"
+            ]
+          },
+          "spans": [
+            [
+              0.9,
+              1.4
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "holding",
+          "object": "o3",
+          "spans": [
+            [
+              0.4,
+              0.7
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              0.6
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "above",
+          "object": "o3",
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "robot-arm": 1,
+      "gripper": 1,
+      "screw": 1
+    },
+    "objects_count_display": {
+      "robot-arm": 1,
+      "gripper": 1,
+      "screw": 1
+    },
+    "attributes": {
+      "robot-arm": {
+        "color": [
+          "black",
+          "yellow"
+        ],
+        "brand-or-logo": [
+          "schunk"
+        ],
+        "tool-or-instrument": [
+          "gripper"
+        ],
+        "equipment": [
+          "industrial-robot"
+        ],
+        "signature": [
+          "yellow-black-schunk-logo-green-cable"
+        ]
+      },
+      "gripper": {
+        "color": [
+          "white"
+        ],
+        "brand-or-logo": [
+          "schunk"
+        ],
+        "object-part": [
+          "fingers"
+        ],
+        "tool-or-instrument": [
+          "gripper"
+        ],
+        "signature": [
+          "white-schunck-logo-metallic-fingers"
+        ]
+      },
+      "screw": {
+        "color": [
+          "silver"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "small"
+        ],
+        "object-part": [
+          "head"
+        ],
+        "signature": [
+          "silver-cylindrical-with-head"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o3"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o3"
+      }
+    ]
+  }
+}

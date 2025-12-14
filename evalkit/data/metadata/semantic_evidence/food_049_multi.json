@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_049_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cow",
+        "attributes": {
+          "signature": [
+            "beef-steak"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "grill",
+        "attributes": {
+          "signature": [
+            "nexgrill"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 17.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "cow",
+          "attributes": {
+            "signature": [
+              "beef-steak"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "grill",
+          "attributes": {
+            "signature": [
+              "nexgrill"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "cow": 1,
+      "grill": 1
+    },
+    "objects_count_display": {
+      "cow": 1,
+      "grill": 1
+    },
+    "attributes": {
+      "cow": {
+        "signature": [
+          "beef-steak"
+        ]
+      },
+      "grill": {
+        "signature": [
+          "nexgrill"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/architecture_021_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "snowflakes",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "falling"
+          ],
+          "state": [
+            "flying"
+          ],
+          "signature": [
+            "white-falling-particles"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cathedral",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "pattern": [
+            "arched"
+          ],
+          "texture": [
+            "ornate"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "scene": [
+            "night"
+          ],
+          "weather": [
+            "snowy"
+          ],
+          "signature": [
+            "tall-dark-gothic-architecture"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "falling-from",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "snowflakes",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "action": [
+              "falling"
+            ],
+            "state": [
+              "flying"
+            ],
+            "signature": [
+              "white-falling-particles"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cathedral",
+          "attributes": {
+            "color": [
+              "dark"
+            ],
+            "pattern": [
+              "arched"
+            ],
+            "texture": [
+              "ornate"
+            ],
+            "material": [
+              "stone"
+            ],
+            "size": [
+              "large"
+            ],
+            "scene": [
+              "night"
+            ],
+            "weather": [
+              "snowy"
+            ],
+            "signature": [
+              "tall-dark-gothic-architecture"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "in-front-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "confidence": 0.0
+        },
+        {
+          "subject": "o1",
+          "predicate": "falling-from",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "snowflakes": 1,
+      "cathedral": 1
+    },
+    "objects_count_display": {
+      "snowflakes": 1,
+      "cathedral": 1
+    },
+    "attributes": {
+      "snowflakes": {
+        "color": [
+          "white"
+        ],
+        "action": [
+          "falling"
+        ],
+        "state": [
+          "flying"
+        ],
+        "signature": [
+          "white-falling-particles"
+        ]
+      },
+      "cathedral": {
+        "color": [
+          "dark"
+        ],
+        "pattern": [
+          "arched"
+        ],
+        "texture": [
+          "ornate"
+        ],
+        "material": [
+          "stone"
+        ],
+        "size": [
+          "large"
+        ],
+        "scene": [
+          "night"
+        ],
+        "weather": [
+          "snowy"
+        ],
+        "signature": [
+          "tall-dark-gothic-architecture"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "falling-from",
+        "object": "o2"
+      }
+    ]
+  }
+}

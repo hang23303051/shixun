@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_032_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lead-screw",
+        "attributes": {
+          "color": [
+            "black",
+            "gold",
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "object-part": [
+            "nut",
+            "threaded-rod"
+          ],
+          "signature": [
+            "threaded-rod-with-nut"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "printed-text": [
+            "ahead-and-thread-it",
+            "and-thread-it",
+            "lead-screw",
+            "of-fun-with-the-😂",
+            "onto-this-piece",
+            "you-need-to-go"
+          ],
+          "signature": [
+            "printed-text-on-screen"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "background",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "texture": [
+            "wooden"
+          ],
+          "pattern": [
+            "holes"
+          ],
+          "signature": [
+            "wooden-surface-with-metal-strip"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "lead-screw",
+          "attributes": {
+            "color": [
+              "black",
+              "gold",
+              "silver"
+            ],
+            "material": [
+              "metal"
+            ],
+            "object-part": [
+              "nut",
+              "threaded-rod"
+            ],
+            "signature": [
+              "threaded-rod-with-nut"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "text",
+          "attributes": {
+            "color": [
+              "green",
+              "white"
+            ],
+            "printed-text": [
+              "ahead-and-thread-it",
+              "and-thread-it",
+              "lead-screw",
+              "of-fun-with-the-😂",
+              "onto-this-piece",
+              "you-need-to-go"
+            ],
+            "signature": [
+              "printed-text-on-screen"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              2.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "background",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "texture": [
+              "wooden"
+            ],
+            "pattern": [
+              "holes"
+            ],
+            "signature": [
+              "wooden-surface-with-metal-strip"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "lead-screw": 1,
+      "text": 1,
+      "background": 1
+    },
+    "objects_count_display": {
+      "lead-screw": 1,
+      "text": 1,
+      "background": 1
+    },
+    "attributes": {
+      "lead-screw": {
+        "color": [
+          "black",
+          "gold",
+          "silver"
+        ],
+        "material": [
+          "metal"
+        ],
+        "object-part": [
+          "nut",
+          "threaded-rod"
+        ],
+        "signature": [
+          "threaded-rod-with-nut"
+        ]
+      },
+      "text": {
+        "color": [
+          "green",
+          "white"
+        ],
+        "printed-text": [
+          "ahead-and-thread-it",
+          "and-thread-it",
+          "lead-screw",
+          "of-fun-with-the-😂",
+          "onto-this-piece",
+          "you-need-to-go"
+        ],
+        "signature": [
+          "printed-text-on-screen"
+        ]
+      },
+      "background": {
+        "color": [
+          "brown"
+        ],
+        "texture": [
+          "wooden"
+        ],
+        "pattern": [
+          "holes"
+        ],
+        "signature": [
+          "wooden-surface-with-metal-strip"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/food_058_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "glove",
+        "attributes": {
+          "signature": [
+            "glove-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "glove",
+        "attributes": {
+          "signature": [
+            "glove-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tongs",
+        "attributes": {
+          "signature": [
+            "tongs-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bottle",
+        "attributes": {
+          "signature": [
+            "bottle-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "menu",
+        "attributes": {
+          "signature": [
+            "menu-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "paper",
+        "attributes": {
+          "signature": [
+            "paper-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "glove",
+          "attributes": {
+            "signature": [
+              "glove-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "glove",
+          "attributes": {
+            "signature": [
+              "glove-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "tongs",
+          "attributes": {
+            "signature": [
+              "tongs-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "bottle",
+          "attributes": {
+            "signature": [
+              "bottle-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "menu",
+          "attributes": {
+            "signature": [
+              "menu-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "paper",
+          "attributes": {
+            "signature": [
+              "paper-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "glove": 2,
+      "tongs": 1,
+      "bottle": 1,
+      "menu": 1,
+      "paper": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "glove": 2,
+      "tongs": 1,
+      "bottle": 1,
+      "menu": 1,
+      "paper": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "glove": {
+        "signature": [
+          "glove-coarse"
+        ]
+      },
+      "tongs": {
+        "signature": [
+          "tongs-coarse"
+        ]
+      },
+      "bottle": {
+        "signature": [
+          "bottle-coarse"
+        ]
+      },
+      "menu": {
+        "signature": [
+          "menu-coarse"
+        ]
+      },
+      "paper": {
+        "signature": [
+          "paper-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

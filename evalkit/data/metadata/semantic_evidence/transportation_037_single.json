@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_037_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "green",
+            "red"
+          ],
+          "action": [
+            "approaching",
+            "passing"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "printed-text": [
+            "hybrid-technology"
+          ],
+          "signature": [
+            "red-front-green-side-hybrid-technology"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fence",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "printed-text": [
+            "danger-no-trespassing-penalties-apply"
+          ],
+          "signature": [
+            "metal-barrier-with-sign"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "yellow-number-3"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "tall-green-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "clear-blue"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {
+            "color": [
+              "green",
+              "red"
+            ],
+            "action": [
+              "approaching",
+              "passing"
+            ],
+            "position": [
+              "on-track"
+            ],
+            "printed-text": [
+              "hybrid-technology"
+            ],
+            "signature": [
+              "red-front-green-side-hybrid-technology"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              1.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "fence",
+          "attributes": {
+            "color": [
+              "silver"
+            ],
+            "action": [
+              "stationary"
+            ],
+            "position": [
+              "foreground"
+            ],
+            "printed-text": [
+              "danger-no-trespassing-penalties-apply"
+            ],
+            "signature": [
+              "metal-barrier-with-sign"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              1.4
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "platform",
+          "attributes": {
+            "color": [
+              "yellow"
+            ],
+            "action": [
+              "stationary"
+            ],
+            "position": [
+              "left"
+            ],
+            "signature": [
+              "yellow-number-3"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              1.4
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "tree",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "action": [
+              "stationary"
+            ],
+            "position": [
+              "right"
+            ],
+            "signature": [
+              "tall-green-leaves"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              1.4
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "sky",
+          "attributes": {
+            "color": [
+              "blue"
+            ],
+            "action": [
+              "stationary"
+            ],
+            "position": [
+              "background"
+            ],
+            "signature": [
+              "clear-blue"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              1.4
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 1,
+      "fence": 1,
+      "platform": 1,
+      "tree": 1,
+      "sky": 1
+    },
+    "objects_count_display": {
+      "train": 1,
+      "fence": 1,
+      "platform": 1,
+      "tree": 1,
+      "sky": 1
+    },
+    "attributes": {
+      "train": {
+        "color": [
+          "green",
+          "red"
+        ],
+        "action": [
+          "approaching",
+          "passing"
+        ],
+        "position": [
+          "on-track"
+        ],
+        "printed-text": [
+          "hybrid-technology"
+        ],
+        "signature": [
+          "red-front-green-side-hybrid-technology"
+        ]
+      },
+      "fence": {
+        "color": [
+          "silver"
+        ],
+        "action": [
+          "stationary"
+        ],
+        "position": [
+          "foreground"
+        ],
+        "printed-text": [
+          "danger-no-trespassing-penalties-apply"
+        ],
+        "signature": [
+          "metal-barrier-with-sign"
+        ]
+      },
+      "platform": {
+        "color": [
+          "yellow"
+        ],
+        "action": [
+          "stationary"
+        ],
+        "position": [
+          "left"
+        ],
+        "signature": [
+          "yellow-number-3"
+        ]
+      },
+      "tree": {
+        "color": [
+          "green"
+        ],
+        "action": [
+          "stationary"
+        ],
+        "position": [
+          "right"
+        ],
+        "signature": [
+          "tall-green-leaves"
+        ]
+      },
+      "sky": {
+        "color": [
+          "blue"
+        ],
+        "action": [
+          "stationary"
+        ],
+        "position": [
+          "background"
+        ],
+        "signature": [
+          "clear-blue"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

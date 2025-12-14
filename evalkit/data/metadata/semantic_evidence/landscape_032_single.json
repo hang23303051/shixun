@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_032_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "boat",
+        "attributes": {
+          "signature": [
+            "small-red-boat"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bird",
+        "attributes": {
+          "signature": [
+            "flying-bird"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "boat",
+          "attributes": {
+            "signature": [
+              "small-red-boat"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "bird",
+          "attributes": {
+            "signature": [
+              "flying-bird"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.4
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o1",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "boat": 1,
+      "bird": 1
+    },
+    "objects_count_display": {
+      "boat": 1,
+      "bird": 1
+    },
+    "attributes": {
+      "boat": {
+        "signature": [
+          "small-red-boat"
+        ]
+      },
+      "bird": {
+        "signature": [
+          "flying-bird"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1"
+      }
+    ]
+  }
+}

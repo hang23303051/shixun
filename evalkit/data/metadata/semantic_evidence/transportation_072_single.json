@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_072_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "helicopter",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "hovering",
+            "stationary"
+          ],
+          "action": [
+            "hovering",
+            "preparing-to-take-off"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "on-platform"
+          ],
+          "object-part": [
+            "cockpit",
+            "landing-skids",
+            "rotor-blades",
+            "tail-rotor"
+          ],
+          "vehicle-type": [
+            "helicopter"
+          ],
+          "signature": [
+            "black-red-n46040-rotor-spinning"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "pilot",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "adult"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "controlling-helicopter"
+          ],
+          "position": [
+            "driver's-seat"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "equipment": [
+            "helicopter-controls"
+          ],
+          "signature": [
+            "blue-shirt-driver-seat"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "passenger",
+        "attributes": {
+          "color": [
+            "light-colored"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "adult"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "looking-forward"
+          ],
+          "position": [
+            "backseat"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "light-colored-shirt-backseat"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "printed-text": [
+            "branson"
+          ],
+          "signature": [
+            "red-branson"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "hovering",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "controlling",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "helicopter",
+          "attributes": {
+            "color": [
+              "black",
+              "red"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "hovering",
+              "stationary"
+            ],
+            "action": [
+              "hovering",
+              "preparing-to-take-off"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "position": [
+              "on-platform"
+            ],
+            "object-part": [
+              "cockpit",
+              "landing-skids",
+              "rotor-blades",
+              "tail-rotor"
+            ],
+            "vehicle-type": [
+              "helicopter"
+            ],
+            "signature": [
+              "black-red-n46040-rotor-spinning"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "pilot",
+          "attributes": {
+            "color": [
+              "blue"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "adult"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "action": [
+              "controlling-helicopter"
+            ],
+            "position": [
+              "driver's-seat"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "equipment": [
+              "helicopter-controls"
+            ],
+            "signature": [
+              "blue-shirt-driver-seat"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "passenger",
+          "attributes": {
+            "color": [
+              "light-colored"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "adult"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "action": [
+              "looking-forward"
+            ],
+            "position": [
+              "backseat"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "signature": [
+              "light-colored-shirt-backseat"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "platform",
+          "attributes": {
+            "color": [
+              "red"
+            ],
+            "printed-text": [
+              "branson"
+            ],
+            "signature": [
+              "red-branson"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "hovering",
+          "object": "o4",
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o2",
+          "predicate": "controlling",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "looking-at",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ],
+          "confidence": 0.7
+        },
+        {
+          "subject": "o1",
+          "predicate": "on",
+          "object": "o4",
+          "spans": [
+            [
+              0.0,
+              6.9
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "helicopter": 1,
+      "pilot": 1,
+      "passenger": 1,
+      "platform": 1
+    },
+    "objects_count_display": {
+      "helicopter": 1,
+      "pilot": 1,
+      "passenger": 1,
+      "platform": 1
+    },
+    "attributes": {
+      "helicopter": {
+        "color": [
+          "black",
+          "red"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "hovering",
+          "stationary"
+        ],
+        "action": [
+          "hovering",
+          "preparing-to-take-off"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "position": [
+          "on-platform"
+        ],
+        "object-part": [
+          "cockpit",
+          "landing-skids",
+          "rotor-blades",
+          "tail-rotor"
+        ],
+        "vehicle-type": [
+          "helicopter"
+        ],
+        "signature": [
+          "black-red-n46040-rotor-spinning"
+        ]
+      },
+      "pilot": {
+        "color": [
+          "blue"
+        ],
+        "sex": [
+          "male"
+        ],
+        "age": [
+          "adult"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "action": [
+          "controlling-helicopter"
+        ],
+        "position": [
+          "driver's-seat"
+        ],
+        "facing-direction": [
+          "forward"
+        ],
+        "equipment": [
+          "helicopter-controls"
+        ],
+        "signature": [
+          "blue-shirt-driver-seat"
+        ]
+      },
+      "passenger": {
+        "color": [
+          "light-colored"
+        ],
+        "sex": [
+          "male"
+        ],
+        "age": [
+          "adult"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "action": [
+          "looking-forward"
+        ],
+        "position": [
+          "backseat"
+        ],
+        "facing-direction": [
+          "forward"
+        ],
+        "signature": [
+          "light-colored-shirt-backseat"
+        ]
+      },
+      "platform": {
+        "color": [
+          "red"
+        ],
+        "printed-text": [
+          "branson"
+        ],
+        "signature": [
+          "red-branson"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "hovering",
+        "object": "o4"
+      },
+      {
+        "subject": "o2",
+        "predicate": "controlling",
+        "object": "o1"
+      },
+      {
+        "subject": "o3",
+        "predicate": "looking-at",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o4"
+      }
+    ]
+  }
+}

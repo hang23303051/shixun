@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_110_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "tinted-windows"
+          ],
+          "signature": [
+            "white-black-tinted-windows-1253-number"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "tinted-windows"
+          ],
+          "signature": [
+            "white-black-tinted-windows-yellow-door-1253-number"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "strip",
+            "tinted-windows"
+          ],
+          "signature": [
+            "white-black-tinted-windows-yellow-door-red-strip-1253-number"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "bus",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "pattern": [
+              "tinted-windows"
+            ],
+            "signature": [
+              "white-black-tinted-windows-1253-number"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "bus",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "pattern": [
+              "tinted-windows"
+            ],
+            "signature": [
+              "white-black-tinted-windows-yellow-door-1253-number"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              0.6
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "bus",
+          "attributes": {
+            "color": [
+              "black",
+              "red",
+              "white",
+              "yellow"
+            ],
+            "pattern": [
+              "strip",
+              "tinted-windows"
+            ],
+            "signature": [
+              "white-black-tinted-windows-yellow-door-red-strip-1253-number"
+            ]
+          },
+          "spans": [
+            [
+              0.7,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "bus": 3
+    },
+    "objects_count_display": {
+      "bus": 3
+    },
+    "attributes": {
+      "bus": {
+        "color": [
+          "black",
+          "red",
+          "white",
+          "yellow"
+        ],
+        "pattern": [
+          "strip",
+          "tinted-windows"
+        ],
+        "signature": [
+          "white-black-tinted-windows-1253-number",
+          "white-black-tinted-windows-yellow-door-1253-number",
+          "white-black-tinted-windows-yellow-door-red-strip-1253-number"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

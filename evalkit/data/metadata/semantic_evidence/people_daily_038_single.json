@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/people_daily_038_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "pilot",
+        "attributes": {
+          "clothing": [
+            "blue-strap",
+            "white-shirt"
+          ],
+          "accessory": [
+            "sunglasses"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "white-shirt-blue-strap-sunglasses"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "flight-attendant",
+        "attributes": {
+          "clothing": [
+            "black-belt",
+            "white-shirt"
+          ],
+          "action": [
+            "adjusting-epaulet",
+            "holding-object"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "white-shirt-black-belt"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "airplane-interior",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "scene": [
+            "airplane-cabin"
+          ],
+          "signature": [
+            "blue-seats-white-ceiling"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "adjusting",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "pilot",
+          "attributes": {
+            "clothing": [
+              "blue-strap",
+              "white-shirt"
+            ],
+            "accessory": [
+              "sunglasses"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "facing-direction": [
+              "front"
+            ],
+            "signature": [
+              "white-shirt-blue-strap-sunglasses"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "flight-attendant",
+          "attributes": {
+            "clothing": [
+              "black-belt",
+              "white-shirt"
+            ],
+            "action": [
+              "adjusting-epaulet",
+              "holding-object"
+            ],
+            "facing-direction": [
+              "right"
+            ],
+            "signature": [
+              "white-shirt-black-belt"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "airplane-interior",
+          "attributes": {
+            "color": [
+              "blue",
+              "white"
+            ],
+            "scene": [
+              "airplane-cabin"
+            ],
+            "signature": [
+              "blue-seats-white-ceiling"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "adjusting",
+          "object": "o1",
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "pilot": 1,
+      "flight-attendant": 1,
+      "airplane-interior": 1
+    },
+    "objects_count_display": {
+      "pilot": 1,
+      "flight-attendant": 1,
+      "airplane-interior": 1
+    },
+    "attributes": {
+      "pilot": {
+        "clothing": [
+          "blue-strap",
+          "white-shirt"
+        ],
+        "accessory": [
+          "sunglasses"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "facing-direction": [
+          "front"
+        ],
+        "signature": [
+          "white-shirt-blue-strap-sunglasses"
+        ]
+      },
+      "flight-attendant": {
+        "clothing": [
+          "black-belt",
+          "white-shirt"
+        ],
+        "action": [
+          "adjusting-epaulet",
+          "holding-object"
+        ],
+        "facing-direction": [
+          "right"
+        ],
+        "signature": [
+          "white-shirt-black-belt"
+        ]
+      },
+      "airplane-interior": {
+        "color": [
+          "blue",
+          "white"
+        ],
+        "scene": [
+          "airplane-cabin"
+        ],
+        "signature": [
+          "blue-seats-white-ceiling"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "adjusting",
+        "object": "o1"
+      }
+    ]
+  }
+}

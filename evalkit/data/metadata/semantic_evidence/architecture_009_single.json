@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_009_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "wood"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "well-maintained"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "signature": [
+            "white-wooden-hipped-roof-round-window"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chair",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "material": [
+            "wood"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "empty"
+          ],
+          "position": [
+            "on-porch"
+          ],
+          "signature": [
+            "wooden-with-white-cushion"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "flower-bed",
+        "attributes": {
+          "color": [
+            "purple",
+            "yellow"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "blooming"
+          ],
+          "position": [
+            "around-house"
+          ],
+          "signature": [
+            "purple-yellow-flowers-around-house"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.4
+          ],
+          [
+            0.7,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "leafy"
+          ],
+          "position": [
+            "behind-house"
+          ],
+          "signature": [
+            "large-green-tree-behind-house"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "has",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "has",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ],
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "has",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "house",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "material": [
+              "wood"
+            ],
+            "size": [
+              "small"
+            ],
+            "state": [
+              "well-maintained"
+            ],
+            "facing-direction": [
+              "front-facing"
+            ],
+            "signature": [
+              "white-wooden-hipped-roof-round-window"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "chair",
+          "attributes": {
+            "color": [
+              "brown",
+              "white"
+            ],
+            "material": [
+              "wood"
+            ],
+            "size": [
+              "medium"
+            ],
+            "state": [
+              "empty"
+            ],
+            "position": [
+              "on-porch"
+            ],
+            "signature": [
+              "wooden-with-white-cushion"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "flower-bed",
+          "attributes": {
+            "color": [
+              "purple",
+              "yellow"
+            ],
+            "size": [
+              "small"
+            ],
+            "state": [
+              "blooming"
+            ],
+            "position": [
+              "around-house"
+            ],
+            "signature": [
+              "purple-yellow-flowers-around-house"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.4
+            ],
+            [
+              0.7,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "tree",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "leafy"
+            ],
+            "position": [
+              "behind-house"
+            ],
+            "signature": [
+              "large-green-tree-behind-house"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "has",
+          "object": "o2",
+          "spans": [
+            [
+              0.4,
+              0.7
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "has",
+          "object": "o3",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ],
+            [
+              0.7,
+              0.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "has",
+          "object": "o4",
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "house": 1,
+      "chair": 1,
+      "flower-bed": 1,
+      "tree": 1
+    },
+    "objects_count_display": {
+      "house": 1,
+      "chair": 1,
+      "flower-bed": 1,
+      "tree": 1
+    },
+    "attributes": {
+      "house": {
+        "color": [
+          "white"
+        ],
+        "material": [
+          "wood"
+        ],
+        "size": [
+          "small"
+        ],
+        "state": [
+          "well-maintained"
+        ],
+        "facing-direction": [
+          "front-facing"
+        ],
+        "signature": [
+          "white-wooden-hipped-roof-round-window"
+        ]
+      },
+      "chair": {
+        "color": [
+          "brown",
+          "white"
+        ],
+        "material": [
+          "wood"
+        ],
+        "size": [
+          "medium"
+        ],
+        "state": [
+          "empty"
+        ],
+        "position": [
+          "on-porch"
+        ],
+        "signature": [
+          "wooden-with-white-cushion"
+        ]
+      },
+      "flower-bed": {
+        "color": [
+          "purple",
+          "yellow"
+        ],
+        "size": [
+          "small"
+        ],
+        "state": [
+          "blooming"
+        ],
+        "position": [
+          "around-house"
+        ],
+        "signature": [
+          "purple-yellow-flowers-around-house"
+        ]
+      },
+      "tree": {
+        "color": [
+          "green"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "leafy"
+        ],
+        "position": [
+          "behind-house"
+        ],
+        "signature": [
+          "large-green-tree-behind-house"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "has",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "has",
+        "object": "o3"
+      },
+      {
+        "subject": "o1",
+        "predicate": "has",
+        "object": "o4"
+      }
+    ]
+  }
+}

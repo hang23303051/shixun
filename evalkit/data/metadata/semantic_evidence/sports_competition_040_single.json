@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_040_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "basketball",
+        "attributes": {
+          "signature": [
+            "basketball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "basketball-hoop",
+        "attributes": {
+          "signature": [
+            "basketball-hoop-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "basketball",
+          "attributes": {
+            "signature": [
+              "basketball-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "basketball-hoop",
+          "attributes": {
+            "signature": [
+              "basketball-hoop-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "basketball": 1,
+      "basketball-hoop": 1
+    },
+    "objects_count_display": {
+      "basketball": 1,
+      "basketball-hoop": 1
+    },
+    "attributes": {
+      "basketball": {
+        "signature": [
+          "basketball-coarse"
+        ]
+      },
+      "basketball-hoop": {
+        "signature": [
+          "basketball-hoop-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

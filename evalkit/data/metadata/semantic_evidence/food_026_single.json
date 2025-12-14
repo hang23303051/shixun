@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_026_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "steak",
+        "attributes": {
+          "color": [
+            "red",
+            "yellow"
+          ],
+          "pattern": [
+            "striped-grill-marks"
+          ],
+          "state": [
+            "grilling",
+            "raw-to-cooked"
+          ],
+          "action": [
+            "being-flipped"
+          ],
+          "signature": [
+            "yellow-fat-grill-marked"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "content": [
+            "grass-fed-beef-fat-is-not-white"
+          ],
+          "signature": [
+            "white-printed-text"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "steak",
+          "attributes": {
+            "color": [
+              "red",
+              "yellow"
+            ],
+            "pattern": [
+              "striped-grill-marks"
+            ],
+            "state": [
+              "grilling",
+              "raw-to-cooked"
+            ],
+            "action": [
+              "being-flipped"
+            ],
+            "signature": [
+              "yellow-fat-grill-marked"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "text",
+          "attributes": {
+            "content": [
+              "grass-fed-beef-fat-is-not-white"
+            ],
+            "signature": [
+              "white-printed-text"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "steak": 1,
+      "text": 1
+    },
+    "objects_count_display": {
+      "steak": 1,
+      "text": 1
+    },
+    "attributes": {
+      "steak": {
+        "color": [
+          "red",
+          "yellow"
+        ],
+        "pattern": [
+          "striped-grill-marks"
+        ],
+        "state": [
+          "grilling",
+          "raw-to-cooked"
+        ],
+        "action": [
+          "being-flipped"
+        ],
+        "signature": [
+          "yellow-fat-grill-marked"
+        ]
+      },
+      "text": {
+        "content": [
+          "grass-fed-beef-fat-is-not-white"
+        ],
+        "signature": [
+          "white-printed-text"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

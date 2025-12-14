@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/animals_and_ecology_036_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "orca",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "nudging",
+            "swimming"
+          ],
+          "position": [
+            "near-surface",
+            "underwater"
+          ],
+          "signature": [
+            "black-white-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "surfboard",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "position": [
+            "surface"
+          ],
+          "signature": [
+            "white-black-patterned"
+          ]
+        },
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "swimming-around",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "nudges",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "near",
+        "object": "o2",
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "nudging",
+        "object": "o2",
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 12.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "orca",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "action": [
+              "nudging",
+              "swimming"
+            ],
+            "position": [
+              "near-surface",
+              "underwater"
+            ],
+            "signature": [
+              "black-white-surface"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              10.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "surfboard",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "position": [
+              "surface"
+            ],
+            "signature": [
+              "white-black-patterned"
+            ]
+          },
+          "spans": [
+            [
+              3.5,
+              7.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "swimming-around",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              10.5
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "nudges",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              10.5
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "near",
+          "object": "o2",
+          "spans": [
+            [
+              3.5,
+              7.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "nudging",
+          "object": "o2",
+          "spans": [
+            [
+              3.5,
+              7.8
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "orca": 1,
+      "surfboard": 1
+    },
+    "objects_count_display": {
+      "orca": 1,
+      "surfboard": 1
+    },
+    "attributes": {
+      "orca": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "action": [
+          "nudging",
+          "swimming"
+        ],
+        "position": [
+          "near-surface",
+          "underwater"
+        ],
+        "signature": [
+          "black-white-surface"
+        ]
+      },
+      "surfboard": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "position": [
+          "surface"
+        ],
+        "signature": [
+          "white-black-patterned"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "swimming-around",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "nudges",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "near",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "nudging",
+        "object": "o2"
+      }
+    ]
+  }
+}

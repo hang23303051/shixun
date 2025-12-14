@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_041_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "gray",
+            "orange"
+          ],
+          "action": [
+            "looking-around",
+            "perched"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "orange-breast-gray-belly"
+          ]
+        },
+        "spans": [
+          [
+            7.0,
+            10.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "entities": [],
+      "relations": []
+    },
+    {
+      "start": 7.0,
+      "end": 13.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "bird",
+          "attributes": {
+            "color": [
+              "gray",
+              "orange"
+            ],
+            "action": [
+              "looking-around",
+              "perched"
+            ],
+            "position": [
+              "center"
+            ],
+            "signature": [
+              "orange-breast-gray-belly"
+            ]
+          },
+          "spans": [
+            [
+              7.0,
+              10.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "bird": 1
+    },
+    "objects_count_display": {
+      "bird": 1
+    },
+    "attributes": {
+      "bird": {
+        "color": [
+          "gray",
+          "orange"
+        ],
+        "action": [
+          "looking-around",
+          "perched"
+        ],
+        "position": [
+          "center"
+        ],
+        "signature": [
+          "orange-breast-gray-belly"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

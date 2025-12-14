@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_022_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "large-glass-panels-with-beige-frames"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "empire-state-building"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "partly-cloudy"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "window",
+          "attributes": {
+            "signature": [
+              "large-glass-panels-with-beige-frames"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "empire-state-building"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "sky",
+          "attributes": {
+            "signature": [
+              "partly-cloudy"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "window": 1,
+      "building": 1,
+      "sky": 1
+    },
+    "objects_count_display": {
+      "window": 1,
+      "building": 1,
+      "sky": 1
+    },
+    "attributes": {
+      "window": {
+        "signature": [
+          "large-glass-panels-with-beige-frames"
+        ]
+      },
+      "building": {
+        "signature": [
+          "empire-state-building"
+        ]
+      },
+      "sky": {
+        "signature": [
+          "partly-cloudy"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

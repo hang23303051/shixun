@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_085_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "danger-hot",
+        "attributes": {
+          "signature": [
+            "danger-hot"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "三角形警告符号",
+        "attributes": {
+          "signature": [
+            "三角形警告符号"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "danger-hot",
+          "attributes": {
+            "signature": [
+              "danger-hot"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "三角形警告符号",
+          "attributes": {},
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "danger-hot": 1,
+      "三角形警告符号": 1
+    },
+    "objects_count_display": {
+      "danger-hot": 1,
+      "三角形警告符号": 1
+    },
+    "attributes": {
+      "danger-hot": {
+        "signature": [
+          "danger-hot"
+        ]
+      },
+      "三角形警告符号": {
+        "signature": [
+          "三角形警告符号"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

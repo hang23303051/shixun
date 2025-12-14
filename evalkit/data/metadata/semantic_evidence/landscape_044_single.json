@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_044_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sun",
+        "attributes": {
+          "color": [
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "radiant"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "center-left"
+          ],
+          "signature": [
+            "bright-light-source"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "dark-gray",
+            "golden-yellow",
+            "white"
+          ],
+          "pattern": [
+            "fluffy",
+            "irregular"
+          ],
+          "texture": [
+            "puffy",
+            "soft"
+          ],
+          "material": [
+            "water-vapor"
+          ],
+          "size": [
+            "large",
+            "varied"
+          ],
+          "position": [
+            "lower-middle",
+            "scattered",
+            "upper-right"
+          ],
+          "signature": [
+            "fluffy-mass-of-water-vapor"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "sun",
+          "attributes": {
+            "color": [
+              "white",
+              "yellow"
+            ],
+            "pattern": [
+              "radiant"
+            ],
+            "size": [
+              "large"
+            ],
+            "position": [
+              "center-left"
+            ],
+            "signature": [
+              "bright-light-source"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cloud",
+          "attributes": {
+            "color": [
+              "dark-gray",
+              "golden-yellow",
+              "white"
+            ],
+            "pattern": [
+              "fluffy",
+              "irregular"
+            ],
+            "texture": [
+              "puffy",
+              "soft"
+            ],
+            "material": [
+              "water-vapor"
+            ],
+            "size": [
+              "large",
+              "varied"
+            ],
+            "position": [
+              "lower-middle",
+              "scattered",
+              "upper-right"
+            ],
+            "signature": [
+              "fluffy-mass-of-water-vapor"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "overlapping",
+          "object": "o2",
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "sun": 1,
+      "cloud": 1
+    },
+    "objects_count_display": {
+      "sun": 1,
+      "cloud": 1
+    },
+    "attributes": {
+      "sun": {
+        "color": [
+          "white",
+          "yellow"
+        ],
+        "pattern": [
+          "radiant"
+        ],
+        "size": [
+          "large"
+        ],
+        "position": [
+          "center-left"
+        ],
+        "signature": [
+          "bright-light-source"
+        ]
+      },
+      "cloud": {
+        "color": [
+          "dark-gray",
+          "golden-yellow",
+          "white"
+        ],
+        "pattern": [
+          "fluffy",
+          "irregular"
+        ],
+        "texture": [
+          "puffy",
+          "soft"
+        ],
+        "material": [
+          "water-vapor"
+        ],
+        "size": [
+          "large",
+          "varied"
+        ],
+        "position": [
+          "lower-middle",
+          "scattered",
+          "upper-right"
+        ],
+        "signature": [
+          "fluffy-mass-of-water-vapor"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2"
+      }
+    ]
+  }
+}

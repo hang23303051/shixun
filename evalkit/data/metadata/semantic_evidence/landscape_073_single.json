@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_073_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sand",
+        "attributes": {
+          "signature": [
+            "light-brown,-loose-material"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "dry,-tufted-vegetation"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "dark-green-foliage"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "blue-with-scattered-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "contains",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            8.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "adjoins",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            8.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "under",
+        "object": "o4",
+        "spans": [
+          [
+            0.3,
+            8.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "extends",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "sand",
+          "attributes": {
+            "signature": [
+              "light-brown,-loose-material"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "grass",
+          "attributes": {
+            "signature": [
+              "dry,-tufted-vegetation"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              8.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "dark-green-foliage"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              8.9
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "sky",
+          "attributes": {
+            "signature": [
+              "blue-with-scattered-clouds"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "contains",
+          "object": "o2",
+          "spans": [
+            [
+              0.5,
+              8.9
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "adjoins",
+          "object": "o3",
+          "spans": [
+            [
+              0.3,
+              8.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "under",
+          "object": "o4",
+          "spans": [
+            [
+              0.3,
+              8.9
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "extends",
+          "object": "o4",
+          "spans": [
+            [
+              0.1,
+              8.9
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "sand": 1,
+      "grass": 1,
+      "tree": 1,
+      "sky": 1
+    },
+    "objects_count_display": {
+      "sand": 1,
+      "grass": 1,
+      "tree": 1,
+      "sky": 1
+    },
+    "attributes": {
+      "sand": {
+        "signature": [
+          "light-brown,-loose-material"
+        ]
+      },
+      "grass": {
+        "signature": [
+          "dry,-tufted-vegetation"
+        ]
+      },
+      "tree": {
+        "signature": [
+          "dark-green-foliage"
+        ]
+      },
+      "sky": {
+        "signature": [
+          "blue-with-scattered-clouds"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "contains",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "adjoins",
+        "object": "o3"
+      },
+      {
+        "subject": "o3",
+        "predicate": "under",
+        "object": "o4"
+      },
+      {
+        "subject": "o1",
+        "predicate": "extends",
+        "object": "o4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+device: cpu
+weights: /root/autodl-tmp/models/transnetv2/transnetv2-pytorch-weights.pth
+threshold: 0.2
+min_scene_len: 2
+win: 100
+stride: 50

@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_025_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bear",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "action": [
+            "standing",
+            "swimming"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "brown-fur-large-center"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bear",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "action": [
+            "standing",
+            "swimming"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "brown-fur-small-left"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bear",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "action": [
+            "lying",
+            "swimming"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "brown-fur-small-right"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "bear",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "action": [
+              "standing",
+              "swimming"
+            ],
+            "position": [
+              "center"
+            ],
+            "signature": [
+              "brown-fur-large-center"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "bear",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "action": [
+              "standing",
+              "swimming"
+            ],
+            "position": [
+              "left"
+            ],
+            "signature": [
+              "brown-fur-small-left"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "bear",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "action": [
+              "lying",
+              "swimming"
+            ],
+            "position": [
+              "right"
+            ],
+            "signature": [
+              "brown-fur-small-right"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "bear": 3
+    },
+    "objects_count_display": {
+      "bear": 3
+    },
+    "attributes": {
+      "bear": {
+        "color": [
+          "brown"
+        ],
+        "action": [
+          "lying",
+          "standing",
+          "swimming"
+        ],
+        "position": [
+          "center",
+          "left",
+          "right"
+        ],
+        "signature": [
+          "brown-fur-large-center",
+          "brown-fur-small-left",
+          "brown-fur-small-right"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

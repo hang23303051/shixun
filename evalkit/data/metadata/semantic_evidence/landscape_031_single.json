@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_031_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "小船",
+        "attributes": {
+          "signature": [
+            "小船"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "桥梁",
+        "attributes": {
+          "signature": [
+            "桥梁"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "小船",
+          "attributes": {},
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "桥梁",
+          "attributes": {},
+          "spans": [
+            [
+              0.3,
+              0.5
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.1,
+              0.5
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "小船": 1,
+      "桥梁": 1
+    },
+    "objects_count_display": {
+      "小船": 1,
+      "桥梁": 1
+    },
+    "attributes": {
+      "小船": {
+        "signature": [
+          "小船"
+        ]
+      },
+      "桥梁": {
+        "signature": [
+          "桥梁"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      }
+    ]
+  }
+}
