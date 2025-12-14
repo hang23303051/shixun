@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_055_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "clothing": [
+            "red-long-sleeve-jersey-with-'fly-emirates'-text",
+            "red-shoes",
+            "white-pants"
+          ],
+          "action": [
+            "juggling-soccer-ball",
+            "posing"
+          ],
+          "pose": [
+            "moving-legs",
+            "standing"
+          ],
+          "signature": [
+            "red-jersey-white-pants-red-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "soccer-ball",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "signature": [
+            "blue-white-pattern"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "interacting_with",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 4.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "clothing": [
+              "red-long-sleeve-jersey-with-'fly-emirates'-text",
+              "red-shoes",
+              "white-pants"
+            ],
+            "action": [
+              "juggling-soccer-ball",
+              "posing"
+            ],
+            "pose": [
+              "moving-legs",
+              "standing"
+            ],
+            "signature": [
+              "red-jersey-white-pants-red-shoes"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "soccer-ball",
+          "attributes": {
+            "color": [
+              "blue",
+              "white"
+            ],
+            "signature": [
+              "blue-white-pattern"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              4.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "interacting_with",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              4.7
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "soccer-ball": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "soccer-ball": 1
+    },
+    "attributes": {
+      "person": {
+        "clothing": [
+          "red-long-sleeve-jersey-with-'fly-emirates'-text",
+          "red-shoes",
+          "white-pants"
+        ],
+        "action": [
+          "juggling-soccer-ball",
+          "posing"
+        ],
+        "pose": [
+          "moving-legs",
+          "standing"
+        ],
+        "signature": [
+          "red-jersey-white-pants-red-shoes"
+        ]
+      },
+      "soccer-ball": {
+        "color": [
+          "blue",
+          "white"
+        ],
+        "signature": [
+          "blue-white-pattern"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "interacting_with",
+        "object": "o2"
+      }
+    ]
+  }
+}

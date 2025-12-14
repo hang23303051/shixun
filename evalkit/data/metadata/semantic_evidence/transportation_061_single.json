@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_061_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cow",
+        "attributes": {
+          "signature": [
+            "large,-red,-cartoon-like-animal-with-horns"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "metallic,-perforated"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "cow",
+          "attributes": {
+            "signature": [
+              "large,-red,-cartoon-like-animal-with-horns"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              5.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "bench",
+          "attributes": {
+            "signature": [
+              "metallic,-perforated"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              5.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "cow": 1,
+      "bench": 1
+    },
+    "objects_count_display": {
+      "cow": 1,
+      "bench": 1
+    },
+    "attributes": {
+      "cow": {
+        "signature": [
+          "large,-red,-cartoon-like-animal-with-horns"
+        ]
+      },
+      "bench": {
+        "signature": [
+          "metallic,-perforated"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      }
+    ]
+  }
+}

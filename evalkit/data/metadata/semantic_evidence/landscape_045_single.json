@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_045_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "rough-texture,-dark-color"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "dynamic-waves,-sunlight-reflection"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "rock",
+          "attributes": {
+            "signature": [
+              "rough-texture,-dark-color"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              7.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "water",
+          "attributes": {
+            "signature": [
+              "dynamic-waves,-sunlight-reflection"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              7.5
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "rock": 1,
+      "water": 1
+    },
+    "objects_count_display": {
+      "rock": 1,
+      "water": 1
+    },
+    "attributes": {
+      "rock": {
+        "signature": [
+          "rough-texture,-dark-color"
+        ]
+      },
+      "water": {
+        "signature": [
+          "dynamic-waves,-sunlight-reflection"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

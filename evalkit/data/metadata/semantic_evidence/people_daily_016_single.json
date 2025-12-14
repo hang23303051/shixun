@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_016_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "sex": [
+            "female"
+          ],
+          "age": [
+            "adult"
+          ],
+          "pose": [
+            "dancing",
+            "standing"
+          ],
+          "action": [
+            "jumping",
+            "swaying"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "blonde-hair-white-crop-top-black-and-white-striped-skirt"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "sex": [
+            "female"
+          ],
+          "age": [
+            "child"
+          ],
+          "pose": [
+            "dancing",
+            "standing"
+          ],
+          "action": [
+            "jumping",
+            "swaying"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "blonde-hair-pink-crop-top-pink-skirt"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "adult"
+          ],
+          "pose": [
+            "dancing",
+            "standing"
+          ],
+          "action": [
+            "jumping",
+            "swaying"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "white-tank-top-white-shorts-hat-sunglasses"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "sex": [
+              "female"
+            ],
+            "age": [
+              "adult"
+            ],
+            "pose": [
+              "dancing",
+              "standing"
+            ],
+            "action": [
+              "jumping",
+              "swaying"
+            ],
+            "facing-direction": [
+              "front"
+            ],
+            "signature": [
+              "blonde-hair-white-crop-top-black-and-white-striped-skirt"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "pink"
+            ],
+            "sex": [
+              "female"
+            ],
+            "age": [
+              "child"
+            ],
+            "pose": [
+              "dancing",
+              "standing"
+            ],
+            "action": [
+              "jumping",
+              "swaying"
+            ],
+            "facing-direction": [
+              "front"
+            ],
+            "signature": [
+              "blonde-hair-pink-crop-top-pink-skirt"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "adult"
+            ],
+            "pose": [
+              "dancing",
+              "standing"
+            ],
+            "action": [
+              "jumping",
+              "swaying"
+            ],
+            "facing-direction": [
+              "front"
+            ],
+            "signature": [
+              "white-tank-top-white-shorts-hat-sunglasses"
+            ]
+          },
+          "spans": [
+            [
+              0.6,
+              0.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.7,
+              0.8
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 3
+    },
+    "objects_count_display": {
+      "person": 3
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "pink",
+          "white"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "sex": [
+          "female",
+          "male"
+        ],
+        "age": [
+          "adult",
+          "child"
+        ],
+        "pose": [
+          "dancing",
+          "standing"
+        ],
+        "action": [
+          "jumping",
+          "swaying"
+        ],
+        "facing-direction": [
+          "front"
+        ],
+        "signature": [
+          "blonde-hair-pink-crop-top-pink-skirt",
+          "blonde-hair-white-crop-top-black-and-white-striped-skirt",
+          "white-tank-top-white-shorts-hat-sunglasses"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3"
+      }
+    ]
+  }
+}

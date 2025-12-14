@@ -1,0 +1,78 @@
+encoder:
+  # 建议指向本地目录以避免网络波动
+  model_name_or_path: /root/autodl-tmp/aiv/models/e5-large-v2
+  device: cuda          # 或 cpu
+  dtype: bf16           # bf16/fp16/fp32
+  batch_size: 128
+  max_length_query: 64
+  max_length_passage: 128
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  normalize: true
+  cache_dir:
+  local_files_only: false
+  revision:
+  trust_remote_code: false
+
+preprocess:
+  lowercase: true
+  strip: true
+  collapse_spaces: true
+  unify_hyphen_underscore: true
+  remove_quotes: true
+  remove_decorations: true
+  drop_if_no_alpha: true
+  max_value_len: 64
+
+repr:
+  use_name_channel: true
+  use_set_channel: true
+  pooling: weighted_mean        # mean / weighted_mean
+  name_weight: 1.0
+  key_weight:
+    # —— 提升权重的结构键 ——
+    signature: 2.0
+    pattern: 1.5
+    pose: 1.5
+    state: 1.5
+
+    # —— 全量 facets：默认 1.0（如未显式配置会在装载时回填）——
+    color: 1.0
+    texture: 1.0
+    material: 1.0
+    size: 1.0
+    age: 1.0
+    sex: 1.0
+    action: 1.0
+    orientation: 1.0
+    facing-direction: 1.0
+    position: 1.0
+    object-part: 1.0
+    tool-or-instrument: 1.0
+    equipment: 1.0
+    species-or-breed: 1.0
+    vehicle-type: 1.0
+    food-type: 1.0
+    art-medium: 1.0
+    style: 1.0
+    weather: 1.0
+    lighting: 1.0
+    scene: 1.0
+    camera-view: 1.0
+    printed-text: 1.0
+    brand-or-logo: 1.0
+    number-or-id: 1.0
+
+similarity:
+  tau0: 0.30          # 负对分位线；会被映射到 [0,1] 的核使用
+  combine: mean        # name/set 通道融合：max 或 mean
+  gate_min: 0.5       # 低于该阈值的相似将不参与匹配
+
+matching:
+  algo: hungarian
+  min_gate: 0.5      # 与 similarity.gate_min 取最大值生效
+
+fusion:
+  alpha: 0.40
+  beta: 0.40
+  gamma: 0.20

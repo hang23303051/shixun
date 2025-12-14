@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_011_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dirty"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "working"
+          ],
+          "signature": [
+            "male-dirty-hands"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "metal-rod",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "thin"
+          ],
+          "signature": [
+            "thin-black"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "brand-or-logo": [
+            "imc"
+          ],
+          "equipment": [
+            "industrial-machinery"
+          ],
+          "signature": [
+            "green-imc-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            7.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            7.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            7.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            7.2
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "dirty"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "working"
+            ],
+            "signature": [
+              "male-dirty-hands"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "metal-rod",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "thin"
+            ],
+            "signature": [
+              "thin-black"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              7.2
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "machine",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "brand-or-logo": [
+              "imc"
+            ],
+            "equipment": [
+              "industrial-machinery"
+            ],
+            "signature": [
+              "green-imc-machine"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.5,
+              7.2
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.4,
+              7.2
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "touching",
+          "object": "o2",
+          "spans": [
+            [
+              0.4,
+              7.2
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.5,
+              7.2
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "metal-rod": 1,
+      "machine": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "metal-rod": 1,
+      "machine": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "dirty"
+        ],
+        "sex": [
+          "male"
+        ],
+        "state": [
+          "working"
+        ],
+        "signature": [
+          "male-dirty-hands"
+        ]
+      },
+      "metal-rod": {
+        "color": [
+          "black"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "thin"
+        ],
+        "signature": [
+          "thin-black"
+        ]
+      },
+      "machine": {
+        "color": [
+          "green"
+        ],
+        "brand-or-logo": [
+          "imc"
+        ],
+        "equipment": [
+          "industrial-machinery"
+        ],
+        "signature": [
+          "green-imc-machine"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_003_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "e3",
+        "attributes": {
+          "signature": [
+            "e3"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            1.0,
+            4.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 12.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "e3",
+          "attributes": {},
+          "spans": [
+            [
+              0.6,
+              0.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o1",
+          "spans": [
+            [
+              1.0,
+              4.8
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "e3": 1
+    },
+    "objects_count_display": {
+      "e3": 1
+    },
+    "attributes": {
+      "e3": {
+        "signature": [
+          "e3"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1"
+      }
+    ]
+  }
+}

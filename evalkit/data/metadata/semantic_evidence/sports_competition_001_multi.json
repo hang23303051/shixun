@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/sports_competition_001_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            10.0,
+            15.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "entities": [],
+      "relations": []
+    },
+    {
+      "start": 10.0,
+      "end": 15.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              10.0,
+              15.8
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1
+    },
+    "objects_count_display": {
+      "person": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

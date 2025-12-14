@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_016_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "robot-arm",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "text": [
+            "staubu"
+          ],
+          "light": [
+            "green"
+          ],
+          "signature": [
+            "white,-staubu-text,-green-light-on-wrist"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bottles",
+        "attributes": {
+          "color": [
+            "red",
+            "white",
+            "yellow"
+          ],
+          "text": [
+            "leuz"
+          ],
+          "liquid": [
+            "yellow"
+          ],
+          "signature": [
+            "red-cap,-yellow-liquid,-leuz-text,-white-cap,-red-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "flexibowl",
+        "attributes": {
+          "shape": [
+            "round"
+          ],
+          "color": [
+            "beige"
+          ],
+          "text": [
+            "flexibowl"
+          ],
+          "signature": [
+            "round,-beige,-flexibowl-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "grasps",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "is-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "robot-arm",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "text": [
+              "staubu"
+            ],
+            "light": [
+              "green"
+            ],
+            "signature": [
+              "white,-staubu-text,-green-light-on-wrist"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "bottles",
+          "attributes": {
+            "color": [
+              "red",
+              "white",
+              "yellow"
+            ],
+            "text": [
+              "leuz"
+            ],
+            "liquid": [
+              "yellow"
+            ],
+            "signature": [
+              "red-cap,-yellow-liquid,-leuz-text,-white-cap,-red-cap"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "flexibowl",
+          "attributes": {
+            "shape": [
+              "round"
+            ],
+            "color": [
+              "beige"
+            ],
+            "text": [
+              "flexibowl"
+            ],
+            "signature": [
+              "round,-beige,-flexibowl-text"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "grasps",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              1.0
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "is-on",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "robot-arm": 1,
+      "bottles": 1,
+      "flexibowl": 1
+    },
+    "objects_count_display": {
+      "robot-arm": 1,
+      "bottles": 1,
+      "flexibowl": 1
+    },
+    "attributes": {
+      "robot-arm": {
+        "color": [
+          "white"
+        ],
+        "text": [
+          "staubu"
+        ],
+        "light": [
+          "green"
+        ],
+        "signature": [
+          "white,-staubu-text,-green-light-on-wrist"
+        ]
+      },
+      "bottles": {
+        "color": [
+          "red",
+          "white",
+          "yellow"
+        ],
+        "text": [
+          "leuz"
+        ],
+        "liquid": [
+          "yellow"
+        ],
+        "signature": [
+          "red-cap,-yellow-liquid,-leuz-text,-white-cap,-red-cap"
+        ]
+      },
+      "flexibowl": {
+        "shape": [
+          "round"
+        ],
+        "color": [
+          "beige"
+        ],
+        "text": [
+          "flexibowl"
+        ],
+        "signature": [
+          "round,-beige,-flexibowl-text"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "grasps",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "is-on",
+        "object": "o3"
+      }
+    ]
+  }
+}

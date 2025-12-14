@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_078_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "action": [
+            "approaching",
+            "moving"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "signature": [
+            "red-blue-front,-multiple-cars"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "red",
+            "yellow"
+          ],
+          "text": [
+            "stand-behind-the-line"
+          ],
+          "signature": [
+            "yellow-line,-red-tactile-paving,-'stand-behind-the-line'-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "beige",
+            "black",
+            "purple",
+            "white"
+          ],
+          "action": [
+            "standing"
+          ],
+          "position": [
+            "right-side"
+          ],
+          "signature": [
+            "purple-shirt,-beige-shorts,-white-socks,-black-shoes"
+          ]
+        },
+        "spans": [
+          [
+            6.5,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "approaching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ],
+        "confidence": 1.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            6.5,
+            8.0
+          ]
+        ],
+        "confidence": 1.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {
+            "color": [
+              "blue",
+              "red"
+            ],
+            "action": [
+              "approaching",
+              "moving"
+            ],
+            "position": [
+              "on-track"
+            ],
+            "signature": [
+              "red-blue-front,-multiple-cars"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "platform",
+          "attributes": {
+            "color": [
+              "red",
+              "yellow"
+            ],
+            "text": [
+              "stand-behind-the-line"
+            ],
+            "signature": [
+              "yellow-line,-red-tactile-paving,-'stand-behind-the-line'-text"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "beige",
+              "black",
+              "purple",
+              "white"
+            ],
+            "action": [
+              "standing"
+            ],
+            "position": [
+              "right-side"
+            ],
+            "signature": [
+              "purple-shirt,-beige-shorts,-white-socks,-black-shoes"
+            ]
+          },
+          "spans": [
+            [
+              6.5,
+              8.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "approaching",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ],
+          "confidence": 1.0
+        },
+        {
+          "subject": "o3",
+          "predicate": "standing-on",
+          "object": "o2",
+          "spans": [
+            [
+              6.5,
+              8.0
+            ]
+          ],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 1,
+      "platform": 1,
+      "person": 1
+    },
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1,
+      "person": 1
+    },
+    "attributes": {
+      "train": {
+        "color": [
+          "blue",
+          "red"
+        ],
+        "action": [
+          "approaching",
+          "moving"
+        ],
+        "position": [
+          "on-track"
+        ],
+        "signature": [
+          "red-blue-front,-multiple-cars"
+        ]
+      },
+      "platform": {
+        "color": [
+          "red",
+          "yellow"
+        ],
+        "text": [
+          "stand-behind-the-line"
+        ],
+        "signature": [
+          "yellow-line,-red-tactile-paving,-'stand-behind-the-line'-text"
+        ]
+      },
+      "person": {
+        "color": [
+          "beige",
+          "black",
+          "purple",
+          "white"
+        ],
+        "action": [
+          "standing"
+        ],
+        "position": [
+          "right-side"
+        ],
+        "signature": [
+          "purple-shirt,-beige-shorts,-white-socks,-black-shoes"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "approaching",
+        "object": "o2"
+      },
+      {
+        "subject": "o3",
+        "predicate": "standing-on",
+        "object": "o2"
+      }
+    ]
+  }
+}

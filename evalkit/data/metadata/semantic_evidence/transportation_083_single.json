@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_083_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "stop",
+        "attributes": {
+          "signature": [
+            "stop"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "stop",
+          "attributes": {
+            "signature": [
+              "stop"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.5
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "stop": 1
+    },
+    "objects_count_display": {
+      "stop": 1
+    },
+    "attributes": {
+      "stop": {
+        "signature": [
+          "stop"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_034_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "spaghetti",
+        "attributes": {
+          "color": [
+            "green",
+            "red",
+            "white"
+          ],
+          "texture": [
+            "glossy",
+            "smooth"
+          ],
+          "action": [
+            "lifted",
+            "mixed"
+          ],
+          "signature": [
+            "long-thin-white-pasta-mixed-with-red-sauce-and-green-beans"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fork",
+        "attributes": {
+          "action": [
+            "lifting",
+            "mixing"
+          ],
+          "signature": [
+            "metal-fork-with-silver-tines"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "mixed-by",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 1.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "spaghetti",
+          "attributes": {
+            "color": [
+              "green",
+              "red",
+              "white"
+            ],
+            "texture": [
+              "glossy",
+              "smooth"
+            ],
+            "action": [
+              "lifted",
+              "mixed"
+            ],
+            "signature": [
+              "long-thin-white-pasta-mixed-with-red-sauce-and-green-beans"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "fork",
+          "attributes": {
+            "action": [
+              "lifting",
+              "mixing"
+            ],
+            "signature": [
+              "metal-fork-with-silver-tines"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "mixed-by",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "spaghetti": 1,
+      "fork": 1
+    },
+    "objects_count_display": {
+      "spaghetti": 1,
+      "fork": 1
+    },
+    "attributes": {
+      "spaghetti": {
+        "color": [
+          "green",
+          "red",
+          "white"
+        ],
+        "texture": [
+          "glossy",
+          "smooth"
+        ],
+        "action": [
+          "lifted",
+          "mixed"
+        ],
+        "signature": [
+          "long-thin-white-pasta-mixed-with-red-sauce-and-green-beans"
+        ]
+      },
+      "fork": {
+        "action": [
+          "lifting",
+          "mixing"
+        ],
+        "signature": [
+          "metal-fork-with-silver-tines"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "mixed-by",
+        "object": "o2"
+      }
+    ]
+  }
+}

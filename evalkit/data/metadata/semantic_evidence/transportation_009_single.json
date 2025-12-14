@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_009_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tram",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "red",
+            "yellow"
+          ],
+          "pattern": [
+            "triangle"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "text-on-window": [
+            "acap-university-college",
+            "europa",
+            "glenelg",
+            "mogley-square",
+            "the-job"
+          ],
+          "logo": [
+            "translink"
+          ],
+          "signature": [
+            "yellow-black-red-blue-triangle-pattern-number-111-facing-right"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "tram",
+          "attributes": {
+            "color": [
+              "black",
+              "blue",
+              "red",
+              "yellow"
+            ],
+            "pattern": [
+              "triangle"
+            ],
+            "facing-direction": [
+              "right"
+            ],
+            "text-on-window": [
+              "acap-university-college",
+              "europa",
+              "glenelg",
+              "mogley-square",
+              "the-job"
+            ],
+            "logo": [
+              "translink"
+            ],
+            "signature": [
+              "yellow-black-red-blue-triangle-pattern-number-111-facing-right"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              5.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "tram": 1
+    },
+    "objects_count_display": {
+      "tram": 1
+    },
+    "attributes": {
+      "tram": {
+        "color": [
+          "black",
+          "blue",
+          "red",
+          "yellow"
+        ],
+        "pattern": [
+          "triangle"
+        ],
+        "facing-direction": [
+          "right"
+        ],
+        "text-on-window": [
+          "acap-university-college",
+          "europa",
+          "glenelg",
+          "mogley-square",
+          "the-job"
+        ],
+        "logo": [
+          "translink"
+        ],
+        "signature": [
+          "yellow-black-red-blue-triangle-pattern-number-111-facing-right"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

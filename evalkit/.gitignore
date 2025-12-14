@@ -1,0 +1,47 @@
+# ===============================
+# Ref4D-VideoBench: NEVER COMMIT
+# ===============================
+
+# weights / checkpoints
+checkpoints/
+!checkpoints/README_checkpoints.md
+
+# third-party code: 推荐不要直接提交（用脚本拉取或 submodule）
+third_party/*
+!third_party/README_third_party.md
+
+# generated outputs / caches
+outputs/
+**/cache/
+**/.cache/
+**/__pycache__/
+**/*.pyc
+**/*.log
+
+# videos / large media
+data/genvideo/
+data/example_models/
+**/*.mp4
+**/*.mov
+**/*.avi
+**/*.mkv
+**/*.gif
+
+# model weight formats / large binaries
+**/*.pth
+**/*.pt
+**/*.ckpt
+**/*.safetensors
+**/*.bin
+**/*.onnx
+**/*.npz
+**/*.npy
+**/*.tar
+**/*.tar.gz
+**/*.zip
+
+# env / secrets
+**/.env
+**/*.pem
+**/*token*.json
+**/*credentials*.json

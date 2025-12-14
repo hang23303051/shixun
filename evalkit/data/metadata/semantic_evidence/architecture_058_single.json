@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_058_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "green-wall-on-the-left-side-of-the-corridor"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "green-wall-on-the-right-side-of-the-corridor"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "ceiling",
+        "attributes": {
+          "signature": [
+            "arched-transparent-ceiling-with-black-supports"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "floor",
+        "attributes": {
+          "signature": [
+            "gray-tiled-floor"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "white-text-overlay-at-the-bottom-of-the-screen"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "wall",
+          "attributes": {
+            "signature": [
+              "green-wall-on-the-left-side-of-the-corridor"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              9.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "wall",
+          "attributes": {
+            "signature": [
+              "green-wall-on-the-right-side-of-the-corridor"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              9.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "ceiling",
+          "attributes": {
+            "signature": [
+              "arched-transparent-ceiling-with-black-supports"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              9.7
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "floor",
+          "attributes": {
+            "signature": [
+              "gray-tiled-floor"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              9.7
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "white-text-overlay-at-the-bottom-of-the-screen"
+            ]
+          },
+          "spans": [
+            [
+              4.5,
+              8.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "wall": 2,
+      "ceiling": 1,
+      "floor": 1,
+      "text": 1
+    },
+    "objects_count_display": {
+      "wall": 2,
+      "ceiling": 1,
+      "floor": 1,
+      "text": 1
+    },
+    "attributes": {
+      "wall": {
+        "signature": [
+          "green-wall-on-the-left-side-of-the-corridor",
+          "green-wall-on-the-right-side-of-the-corridor"
+        ]
+      },
+      "ceiling": {
+        "signature": [
+          "arched-transparent-ceiling-with-black-supports"
+        ]
+      },
+      "floor": {
+        "signature": [
+          "gray-tiled-floor"
+        ]
+      },
+      "text": {
+        "signature": [
+          "white-text-overlay-at-the-bottom-of-the-screen"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

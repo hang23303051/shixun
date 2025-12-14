@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_042_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "owl",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "mottled",
+            "striped"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "resting"
+          ],
+          "pose": [
+            "facing-forward",
+            "perched"
+          ],
+          "action": [
+            "blinking",
+            "looking-around"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "beak",
+            "body",
+            "eyes",
+            "feathers",
+            "head"
+          ],
+          "species-or-breed": [
+            "owl"
+          ],
+          "signature": [
+            "black-white-brown-feathers-yellow-eyes"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "owl",
+          "attributes": {
+            "color": [
+              "black",
+              "brown",
+              "white"
+            ],
+            "pattern": [
+              "mottled",
+              "striped"
+            ],
+            "texture": [
+              "feathery"
+            ],
+            "size": [
+              "medium"
+            ],
+            "age": [
+              "adult"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "alert",
+              "resting"
+            ],
+            "pose": [
+              "facing-forward",
+              "perched"
+            ],
+            "action": [
+              "blinking",
+              "looking-around"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "position": [
+              "center"
+            ],
+            "object-part": [
+              "beak",
+              "body",
+              "eyes",
+              "feathers",
+              "head"
+            ],
+            "species-or-breed": [
+              "owl"
+            ],
+            "signature": [
+              "black-white-brown-feathers-yellow-eyes"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.6
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "owl": 1
+    },
+    "objects_count_display": {
+      "owl": 1
+    },
+    "attributes": {
+      "owl": {
+        "color": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "pattern": [
+          "mottled",
+          "striped"
+        ],
+        "texture": [
+          "feathery"
+        ],
+        "size": [
+          "medium"
+        ],
+        "age": [
+          "adult"
+        ],
+        "sex": [
+          "male"
+        ],
+        "state": [
+          "alert",
+          "resting"
+        ],
+        "pose": [
+          "facing-forward",
+          "perched"
+        ],
+        "action": [
+          "blinking",
+          "looking-around"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "facing-direction": [
+          "forward"
+        ],
+        "position": [
+          "center"
+        ],
+        "object-part": [
+          "beak",
+          "body",
+          "eyes",
+          "feathers",
+          "head"
+        ],
+        "species-or-breed": [
+          "owl"
+        ],
+        "signature": [
+          "black-white-brown-feathers-yellow-eyes"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

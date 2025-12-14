@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_050_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "flower",
+            "red"
+          ],
+          "action": [
+            "shopping"
+          ],
+          "pose": [
+            "walking"
+          ],
+          "signature": [
+            "red-flower-shirt-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 10.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "flower",
+              "red"
+            ],
+            "action": [
+              "shopping"
+            ],
+            "pose": [
+              "walking"
+            ],
+            "signature": [
+              "red-flower-shirt-left-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o1",
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ],
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1
+    },
+    "objects_count_display": {
+      "person": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "flower",
+          "red"
+        ],
+        "action": [
+          "shopping"
+        ],
+        "pose": [
+          "walking"
+        ],
+        "signature": [
+          "red-flower-shirt-left-facing"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1"
+      }
+    ]
+  }
+}

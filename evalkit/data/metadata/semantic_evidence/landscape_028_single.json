@@ -1,0 +1,644 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_028_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "dirt_path",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "texture": [
+            "gravel",
+            "rocky"
+          ],
+          "material": [
+            "dirt",
+            "stone"
+          ],
+          "size": [
+            "narrow",
+            "winding"
+          ],
+          "signature": [
+            "gravel-texture-rocky-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "dark-green"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "large-dark-green-canopy"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.7
+          ],
+          [
+            6.1,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bush",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "dense",
+            "leafy"
+          ],
+          "position": [
+            "along_path",
+            "edge"
+          ],
+          "signature": [
+            "dense-green-leafy"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.7
+          ],
+          [
+            6.1,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "gray",
+            "green"
+          ],
+          "texture": [
+            "rocky",
+            "sloped"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "rocky-peak-green-slope"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "size": [
+            "medium",
+            "small"
+          ],
+          "position": [
+            "on_path"
+          ],
+          "signature": [
+            "scattered-on-path"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            5.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            7.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.1,
+            7.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            6.1,
+            7.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "along",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.7
+          ],
+          [
+            6.1,
+            7.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "behind",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            7.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "dirt_path",
+          "attributes": {
+            "color": [
+              "brown",
+              "gray"
+            ],
+            "texture": [
+              "gravel",
+              "rocky"
+            ],
+            "material": [
+              "dirt",
+              "stone"
+            ],
+            "size": [
+              "narrow",
+              "winding"
+            ],
+            "signature": [
+              "gravel-texture-rocky-surface"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "tree",
+          "attributes": {
+            "color": [
+              "dark-green"
+            ],
+            "size": [
+              "large"
+            ],
+            "position": [
+              "left",
+              "right"
+            ],
+            "signature": [
+              "large-dark-green-canopy"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              5.7
+            ],
+            [
+              6.1,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "bush",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "texture": [
+              "dense",
+              "leafy"
+            ],
+            "position": [
+              "along_path",
+              "edge"
+            ],
+            "signature": [
+              "dense-green-leafy"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              2.9
+            ],
+            [
+              3.4,
+              5.7
+            ],
+            [
+              6.1,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "mountain",
+          "attributes": {
+            "color": [
+              "gray",
+              "green"
+            ],
+            "texture": [
+              "rocky",
+              "sloped"
+            ],
+            "position": [
+              "background"
+            ],
+            "signature": [
+              "rocky-peak-green-slope"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "rock",
+          "attributes": {
+            "color": [
+              "brown",
+              "gray"
+            ],
+            "size": [
+              "medium",
+              "small"
+            ],
+            "position": [
+              "on_path"
+            ],
+            "signature": [
+              "scattered-on-path"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              7.3
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              5.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.1,
+              2.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o4",
+          "spans": [
+            [
+              0.1,
+              7.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o5",
+          "spans": [
+            [
+              0.1,
+              7.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "right-of",
+          "object": "o1",
+          "spans": [
+            [
+              6.1,
+              7.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "along",
+          "object": "o1",
+          "spans": [
+            [
+              0.1,
+              2.9
+            ],
+            [
+              3.4,
+              5.7
+            ],
+            [
+              6.1,
+              7.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o4",
+          "predicate": "behind",
+          "object": "o1",
+          "spans": [
+            [
+              0.1,
+              7.3
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "dirt_path": 1,
+      "tree": 1,
+      "bush": 1,
+      "mountain": 1,
+      "rock": 1
+    },
+    "objects_count_display": {
+      "dirt_path": 1,
+      "tree": 1,
+      "bush": 1,
+      "mountain": 1,
+      "rock": 1
+    },
+    "attributes": {
+      "dirt_path": {
+        "color": [
+          "brown",
+          "gray"
+        ],
+        "texture": [
+          "gravel",
+          "rocky"
+        ],
+        "material": [
+          "dirt",
+          "stone"
+        ],
+        "size": [
+          "narrow",
+          "winding"
+        ],
+        "signature": [
+          "gravel-texture-rocky-surface"
+        ]
+      },
+      "tree": {
+        "color": [
+          "dark-green"
+        ],
+        "size": [
+          "large"
+        ],
+        "position": [
+          "left",
+          "right"
+        ],
+        "signature": [
+          "large-dark-green-canopy"
+        ]
+      },
+      "bush": {
+        "color": [
+          "green"
+        ],
+        "texture": [
+          "dense",
+          "leafy"
+        ],
+        "position": [
+          "along_path",
+          "edge"
+        ],
+        "signature": [
+          "dense-green-leafy"
+        ]
+      },
+      "mountain": {
+        "color": [
+          "gray",
+          "green"
+        ],
+        "texture": [
+          "rocky",
+          "sloped"
+        ],
+        "position": [
+          "background"
+        ],
+        "signature": [
+          "rocky-peak-green-slope"
+        ]
+      },
+      "rock": {
+        "color": [
+          "brown",
+          "gray"
+        ],
+        "size": [
+          "medium",
+          "small"
+        ],
+        "position": [
+          "on_path"
+        ],
+        "signature": [
+          "scattered-on-path"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o5"
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1"
+      },
+      {
+        "subject": "o3",
+        "predicate": "along",
+        "object": "o1"
+      },
+      {
+        "subject": "o4",
+        "predicate": "behind",
+        "object": "o1"
+      }
+    ]
+  }
+}

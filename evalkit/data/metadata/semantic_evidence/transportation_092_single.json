@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_092_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tram",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "signature": [
+            "green-yellow-306"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "signature": [
+            "white"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "tram",
+          "attributes": {
+            "color": [
+              "green",
+              "yellow"
+            ],
+            "signature": [
+              "green-yellow-306"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "car",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "signature": [
+              "white"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "tram": 1,
+      "car": 1
+    },
+    "objects_count_display": {
+      "tram": 1,
+      "car": 1
+    },
+    "attributes": {
+      "tram": {
+        "color": [
+          "green",
+          "yellow"
+        ],
+        "signature": [
+          "green-yellow-306"
+        ]
+      },
+      "car": {
+        "color": [
+          "white"
+        ],
+        "signature": [
+          "white"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      }
+    ]
+  }
+}

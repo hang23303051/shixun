@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_002_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "excavator",
+        "attributes": {
+          "color": [
+            "orange",
+            "red"
+          ],
+          "brand-or-logo": [
+            "hitachi"
+          ],
+          "equipment": [
+            "excavator",
+            "rock-bucket"
+          ],
+          "tool-or-instrument": [
+            "bucket"
+          ],
+          "action": [
+            "digging",
+            "dumping",
+            "lifting"
+          ],
+          "pose": [
+            "operating",
+            "stationary"
+          ],
+          "state": [
+            "working"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "model": [
+            "zx350"
+          ],
+          "signature": [
+            "red-hitachi-logo-heavy-duty-rock-bucket-orange-teeth"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dumper",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "equipment": [
+            "dumper-truck"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "pose": [
+            "stationary"
+          ],
+          "state": [
+            "empty"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "green-dumper-truck"
+          ]
+        },
+        "spans": [
+          [
+            3.0,
+            9.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            3.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "loading-into",
+        "object": "o2",
+        "spans": [
+          [
+            3.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.6
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "excavator",
+          "attributes": {
+            "color": [
+              "orange",
+              "red"
+            ],
+            "brand-or-logo": [
+              "hitachi"
+            ],
+            "equipment": [
+              "excavator",
+              "rock-bucket"
+            ],
+            "tool-or-instrument": [
+              "bucket"
+            ],
+            "action": [
+              "digging",
+              "dumping",
+              "lifting"
+            ],
+            "pose": [
+              "operating",
+              "stationary"
+            ],
+            "state": [
+              "working"
+            ],
+            "facing-direction": [
+              "right-facing"
+            ],
+            "model": [
+              "zx350"
+            ],
+            "signature": [
+              "red-hitachi-logo-heavy-duty-rock-bucket-orange-teeth"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "dumper",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "equipment": [
+              "dumper-truck"
+            ],
+            "action": [
+              "stationary"
+            ],
+            "pose": [
+              "stationary"
+            ],
+            "state": [
+              "empty"
+            ],
+            "position": [
+              "left"
+            ],
+            "signature": [
+              "green-dumper-truck"
+            ]
+          },
+          "spans": [
+            [
+              3.0,
+              9.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "feeding",
+          "object": "o2",
+          "spans": [
+            [
+              3.0,
+              9.7
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "loading-into",
+          "object": "o2",
+          "spans": [
+            [
+              3.0,
+              9.7
+            ]
+          ],
+          "confidence": 0.6
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "excavator": 1,
+      "dumper": 1
+    },
+    "objects_count_display": {
+      "excavator": 1,
+      "dumper": 1
+    },
+    "attributes": {
+      "excavator": {
+        "color": [
+          "orange",
+          "red"
+        ],
+        "brand-or-logo": [
+          "hitachi"
+        ],
+        "equipment": [
+          "excavator",
+          "rock-bucket"
+        ],
+        "tool-or-instrument": [
+          "bucket"
+        ],
+        "action": [
+          "digging",
+          "dumping",
+          "lifting"
+        ],
+        "pose": [
+          "operating",
+          "stationary"
+        ],
+        "state": [
+          "working"
+        ],
+        "facing-direction": [
+          "right-facing"
+        ],
+        "model": [
+          "zx350"
+        ],
+        "signature": [
+          "red-hitachi-logo-heavy-duty-rock-bucket-orange-teeth"
+        ]
+      },
+      "dumper": {
+        "color": [
+          "green"
+        ],
+        "equipment": [
+          "dumper-truck"
+        ],
+        "action": [
+          "stationary"
+        ],
+        "pose": [
+          "stationary"
+        ],
+        "state": [
+          "empty"
+        ],
+        "position": [
+          "left"
+        ],
+        "signature": [
+          "green-dumper-truck"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "loading-into",
+        "object": "o2"
+      }
+    ]
+  }
+}

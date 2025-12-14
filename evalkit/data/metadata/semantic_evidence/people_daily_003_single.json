@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_003_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "baby",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "calm"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "object-part": [
+            "chest",
+            "face",
+            "neck"
+          ],
+          "clothing": [
+            "white-shirt"
+          ],
+          "signature": [
+            "white-shirt-ring-on-finger"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "skin-tone"
+          ],
+          "action": [
+            "touching"
+          ],
+          "object-part": [
+            "fingers",
+            "palm"
+          ],
+          "accessory": [
+            "ring"
+          ],
+          "signature": [
+            "ring-on-index-finger"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            5.0
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "baby",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "calm"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "object-part": [
+              "chest",
+              "face",
+              "neck"
+            ],
+            "clothing": [
+              "white-shirt"
+            ],
+            "signature": [
+              "white-shirt-ring-on-finger"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "hand",
+          "attributes": {
+            "color": [
+              "skin-tone"
+            ],
+            "action": [
+              "touching"
+            ],
+            "object-part": [
+              "fingers",
+              "palm"
+            ],
+            "accessory": [
+              "ring"
+            ],
+            "signature": [
+              "ring-on-index-finger"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              5.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "touching",
+          "object": "o1",
+          "spans": [
+            [
+              0.3,
+              5.0
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "baby": 1,
+      "hand": 1
+    },
+    "objects_count_display": {
+      "baby": 1,
+      "hand": 1
+    },
+    "attributes": {
+      "baby": {
+        "color": [
+          "white"
+        ],
+        "sex": [
+          "male"
+        ],
+        "state": [
+          "calm"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "object-part": [
+          "chest",
+          "face",
+          "neck"
+        ],
+        "clothing": [
+          "white-shirt"
+        ],
+        "signature": [
+          "white-shirt-ring-on-finger"
+        ]
+      },
+      "hand": {
+        "color": [
+          "skin-tone"
+        ],
+        "action": [
+          "touching"
+        ],
+        "object-part": [
+          "fingers",
+          "palm"
+        ],
+        "accessory": [
+          "ring"
+        ],
+        "signature": [
+          "ring-on-index-finger"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_067_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "spider",
+        "attributes": {
+          "color": [
+            "dark-brown"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "active",
+            "alive"
+          ],
+          "pose": [
+            "spread-out"
+          ],
+          "action": [
+            "moving-legs",
+            "resting"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "center-of-hand"
+          ],
+          "object-part": [
+            "body",
+            "legs"
+          ],
+          "signature": [
+            "large-dark-brown-slim-legs"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "pale"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "skin"
+          ],
+          "state": [
+            "clean"
+          ],
+          "object-part": [
+            "fingers",
+            "palm"
+          ],
+          "signature": [
+            "pale-skinned-open-palm"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "resting-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "spider",
+          "attributes": {
+            "color": [
+              "dark-brown"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "texture": [
+              "smooth"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "active",
+              "alive"
+            ],
+            "pose": [
+              "spread-out"
+            ],
+            "action": [
+              "moving-legs",
+              "resting"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "position": [
+              "center-of-hand"
+            ],
+            "object-part": [
+              "body",
+              "legs"
+            ],
+            "signature": [
+              "large-dark-brown-slim-legs"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "hand",
+          "attributes": {
+            "color": [
+              "pale"
+            ],
+            "texture": [
+              "smooth"
+            ],
+            "material": [
+              "skin"
+            ],
+            "state": [
+              "clean"
+            ],
+            "object-part": [
+              "fingers",
+              "palm"
+            ],
+            "signature": [
+              "pale-skinned-open-palm"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "resting-on",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              7.2
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "spider": 1,
+      "hand": 1
+    },
+    "objects_count_display": {
+      "spider": 1,
+      "hand": 1
+    },
+    "attributes": {
+      "spider": {
+        "color": [
+          "dark-brown"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "texture": [
+          "smooth"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "active",
+          "alive"
+        ],
+        "pose": [
+          "spread-out"
+        ],
+        "action": [
+          "moving-legs",
+          "resting"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "position": [
+          "center-of-hand"
+        ],
+        "object-part": [
+          "body",
+          "legs"
+        ],
+        "signature": [
+          "large-dark-brown-slim-legs"
+        ]
+      },
+      "hand": {
+        "color": [
+          "pale"
+        ],
+        "texture": [
+          "smooth"
+        ],
+        "material": [
+          "skin"
+        ],
+        "state": [
+          "clean"
+        ],
+        "object-part": [
+          "fingers",
+          "palm"
+        ],
+        "signature": [
+          "pale-skinned-open-palm"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "resting-on",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      }
+    ]
+  }
+}

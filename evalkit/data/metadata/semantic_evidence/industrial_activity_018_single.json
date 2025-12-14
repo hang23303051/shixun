@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_018_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "signature": [
+            "metallic-structure-with-moving-parts-and-a-circular-component"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "white-text-on-the-upper-part-of-the-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "is_on",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "is_part_of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "machine",
+          "attributes": {
+            "signature": [
+              "metallic-structure-with-moving-parts-and-a-circular-component"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              5.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "text",
+          "attributes": {
+            "signature": [
+              "white-text-on-the-upper-part-of-the-machine"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "is_on",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              5.6
+            ]
+          ],
+          "confidence": 0.0
+        },
+        {
+          "subject": "o2",
+          "predicate": "is_part_of",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              5.6
+            ]
+          ],
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "machine": 1,
+      "text": 1
+    },
+    "objects_count_display": {
+      "machine": 1,
+      "text": 1
+    },
+    "attributes": {
+      "machine": {
+        "signature": [
+          "metallic-structure-with-moving-parts-and-a-circular-component"
+        ]
+      },
+      "text": {
+        "signature": [
+          "white-text-on-the-upper-part-of-the-machine"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "is_on",
+        "object": "o1"
+      },
+      {
+        "subject": "o2",
+        "predicate": "is_part_of",
+        "object": "o1"
+      }
+    ]
+  }
+}

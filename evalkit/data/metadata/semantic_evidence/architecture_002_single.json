@@ -1,0 +1,463 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_002_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "pink",
+            "white"
+          ],
+          "action": [
+            "holding-on",
+            "looking-down",
+            "sitting"
+          ],
+          "pose": [
+            "leaning-back",
+            "upright"
+          ],
+          "state": [
+            "excited",
+            "scared"
+          ],
+          "signature": [
+            "individual-on-the-ride"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "spike",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "object-part": [
+            "back"
+          ],
+          "signature": [
+            "green-spike-on-dragon's-back"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tower",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "tall"
+          ],
+          "equipment": [
+            "cage",
+            "platform"
+          ],
+          "facing-direction": [
+            "down"
+          ],
+          "signature": [
+            "brown-metal-tower"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "dragon",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "pattern": [
+            "spikes",
+            "text"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "stone"
+          ],
+          "object-part": [
+            "body",
+            "head"
+          ],
+          "signature": [
+            "green-and-yellow-stone-dragon"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "decorating",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "supporting",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "pink",
+              "white"
+            ],
+            "action": [
+              "holding-on",
+              "looking-down",
+              "sitting"
+            ],
+            "pose": [
+              "leaning-back",
+              "upright"
+            ],
+            "state": [
+              "excited",
+              "scared"
+            ],
+            "signature": [
+              "individual-on-the-ride"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.1
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "spike",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "texture": [
+              "rough"
+            ],
+            "material": [
+              "plastic"
+            ],
+            "object-part": [
+              "back"
+            ],
+            "signature": [
+              "green-spike-on-dragon's-back"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.1
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tower",
+          "attributes": {
+            "color": [
+              "brown"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "tall"
+            ],
+            "equipment": [
+              "cage",
+              "platform"
+            ],
+            "facing-direction": [
+              "down"
+            ],
+            "signature": [
+              "brown-metal-tower"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.1
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "dragon",
+          "attributes": {
+            "color": [
+              "green",
+              "yellow"
+            ],
+            "pattern": [
+              "spikes",
+              "text"
+            ],
+            "texture": [
+              "rough"
+            ],
+            "material": [
+              "stone"
+            ],
+            "object-part": [
+              "body",
+              "head"
+            ],
+            "signature": [
+              "green-and-yellow-stone-dragon"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.1
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "riding",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o4",
+          "predicate": "decorating",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "supporting",
+          "object": "o4",
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "spike": 1,
+      "tower": 1,
+      "dragon": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "spike": 1,
+      "tower": 1,
+      "dragon": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "pink",
+          "white"
+        ],
+        "action": [
+          "holding-on",
+          "looking-down",
+          "sitting"
+        ],
+        "pose": [
+          "leaning-back",
+          "upright"
+        ],
+        "state": [
+          "excited",
+          "scared"
+        ],
+        "signature": [
+          "individual-on-the-ride"
+        ]
+      },
+      "spike": {
+        "color": [
+          "green"
+        ],
+        "texture": [
+          "rough"
+        ],
+        "material": [
+          "plastic"
+        ],
+        "object-part": [
+          "back"
+        ],
+        "signature": [
+          "green-spike-on-dragon's-back"
+        ]
+      },
+      "tower": {
+        "color": [
+          "brown"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "tall"
+        ],
+        "equipment": [
+          "cage",
+          "platform"
+        ],
+        "facing-direction": [
+          "down"
+        ],
+        "signature": [
+          "brown-metal-tower"
+        ]
+      },
+      "dragon": {
+        "color": [
+          "green",
+          "yellow"
+        ],
+        "pattern": [
+          "spikes",
+          "text"
+        ],
+        "texture": [
+          "rough"
+        ],
+        "material": [
+          "stone"
+        ],
+        "object-part": [
+          "body",
+          "head"
+        ],
+        "signature": [
+          "green-and-yellow-stone-dragon"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o3"
+      },
+      {
+        "subject": "o4",
+        "predicate": "decorating",
+        "object": "o3"
+      },
+      {
+        "subject": "o3",
+        "predicate": "supporting",
+        "object": "o4"
+      }
+    ]
+  }
+}

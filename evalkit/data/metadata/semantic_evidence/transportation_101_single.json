@@ -1,0 +1,600 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_101_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "green",
+            "orange"
+          ],
+          "action": [
+            "looking",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "orange-vest-black-pants-green-boots"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "blue",
+            "yellow"
+          ],
+          "state": [
+            "emitting-smoke",
+            "moving"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "signature": [
+            "blue-front-yellow-carriages"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "stop-sign",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "shape": [
+            "octagonal"
+          ],
+          "position": [
+            "left-side"
+          ],
+          "signature": [
+            "red-octagonal"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "signboard",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "printed-text": [
+            "stop-look-listen-think"
+          ],
+          "signature": [
+            "red-background-white-text"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "fence",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "position": [
+            "between-person-and-train"
+          ],
+          "signature": [
+            "metallic-with-crossbars"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "gray",
+            "green"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "green-roof-gray-walls"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "walking-on",
+        "object": "o5",
+        "spans": [
+          [
+            0.2,
+            4.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "moving-on",
+        "object": "o5",
+        "spans": [
+          [
+            0.3,
+            5.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            6.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o5",
+        "spans": [
+          [
+            2.0,
+            4.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "in-front-of",
+        "object": "o6",
+        "spans": [
+          [
+            0.3,
+            5.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "green",
+              "orange"
+            ],
+            "action": [
+              "looking",
+              "walking"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "facing-direction": [
+              "right-facing"
+            ],
+            "signature": [
+              "orange-vest-black-pants-green-boots"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              4.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "train",
+          "attributes": {
+            "color": [
+              "blue",
+              "yellow"
+            ],
+            "state": [
+              "emitting-smoke",
+              "moving"
+            ],
+            "position": [
+              "on-track"
+            ],
+            "signature": [
+              "blue-front-yellow-carriages"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              5.1
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "stop-sign",
+          "attributes": {
+            "color": [
+              "red"
+            ],
+            "shape": [
+              "octagonal"
+            ],
+            "position": [
+              "left-side"
+            ],
+            "signature": [
+              "red-octagonal"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              6.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "signboard",
+          "attributes": {
+            "color": [
+              "red",
+              "white"
+            ],
+            "printed-text": [
+              "stop-look-listen-think"
+            ],
+            "signature": [
+              "red-background-white-text"
+            ]
+          },
+          "spans": [
+            [
+              2.0,
+              4.8
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "fence",
+          "attributes": {
+            "material": [
+              "metal"
+            ],
+            "position": [
+              "between-person-and-train"
+            ],
+            "signature": [
+              "metallic-with-crossbars"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              5.1
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "building",
+          "attributes": {
+            "color": [
+              "gray",
+              "green"
+            ],
+            "position": [
+              "background"
+            ],
+            "signature": [
+              "green-roof-gray-walls"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              5.1
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              4.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "walking-on",
+          "object": "o5",
+          "spans": [
+            [
+              0.2,
+              4.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o2",
+          "predicate": "moving-on",
+          "object": "o5",
+          "spans": [
+            [
+              0.3,
+              5.1
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o3",
+          "predicate": "left-of",
+          "object": "o4",
+          "spans": [
+            [
+              0.1,
+              6.0
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o4",
+          "predicate": "left-of",
+          "object": "o5",
+          "spans": [
+            [
+              2.0,
+              4.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o5",
+          "predicate": "in-front-of",
+          "object": "o6",
+          "spans": [
+            [
+              0.3,
+              5.1
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "train": 1,
+      "stop-sign": 1,
+      "signboard": 1,
+      "fence": 1,
+      "building": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "train": 1,
+      "stop-sign": 1,
+      "signboard": 1,
+      "fence": 1,
+      "building": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "green",
+          "orange"
+        ],
+        "action": [
+          "looking",
+          "walking"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "facing-direction": [
+          "right-facing"
+        ],
+        "signature": [
+          "orange-vest-black-pants-green-boots"
+        ]
+      },
+      "train": {
+        "color": [
+          "blue",
+          "yellow"
+        ],
+        "state": [
+          "emitting-smoke",
+          "moving"
+        ],
+        "position": [
+          "on-track"
+        ],
+        "signature": [
+          "blue-front-yellow-carriages"
+        ]
+      },
+      "stop-sign": {
+        "color": [
+          "red"
+        ],
+        "shape": [
+          "octagonal"
+        ],
+        "position": [
+          "left-side"
+        ],
+        "signature": [
+          "red-octagonal"
+        ]
+      },
+      "signboard": {
+        "color": [
+          "red",
+          "white"
+        ],
+        "printed-text": [
+          "stop-look-listen-think"
+        ],
+        "signature": [
+          "red-background-white-text"
+        ]
+      },
+      "fence": {
+        "material": [
+          "metal"
+        ],
+        "position": [
+          "between-person-and-train"
+        ],
+        "signature": [
+          "metallic-with-crossbars"
+        ]
+      },
+      "building": {
+        "color": [
+          "gray",
+          "green"
+        ],
+        "position": [
+          "background"
+        ],
+        "signature": [
+          "green-roof-gray-walls"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "walking-on",
+        "object": "o5"
+      },
+      {
+        "subject": "o2",
+        "predicate": "moving-on",
+        "object": "o5"
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4"
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o5"
+      },
+      {
+        "subject": "o5",
+        "predicate": "in-front-of",
+        "object": "o6"
+      }
+    ]
+  }
+}

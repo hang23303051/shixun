@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_010_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "woman-in-black",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "adjusting-hair",
+            "looking-at-train",
+            "standing"
+          ],
+          "pose": [
+            "facing-right"
+          ],
+          "object-part": [
+            "backpack"
+          ],
+          "signature": [
+            "black-shirt-black-shorts-white-shoes-backpack-long-hair"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "man-in-dark-clothes",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "looking-at-train",
+            "standing"
+          ],
+          "pose": [
+            "facing-left"
+          ],
+          "signature": [
+            "dark-clothes-long-hair-facing-left"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "woman-in-black",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "action": [
+              "adjusting-hair",
+              "looking-at-train",
+              "standing"
+            ],
+            "pose": [
+              "facing-right"
+            ],
+            "object-part": [
+              "backpack"
+            ],
+            "signature": [
+              "black-shirt-black-shorts-white-shoes-backpack-long-hair"
+            ]
+          },
+          "spans": [
+            [
+              1.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "man-in-dark-clothes",
+          "attributes": {
+            "color": [
+              "dark"
+            ],
+            "action": [
+              "looking-at-train",
+              "standing"
+            ],
+            "pose": [
+              "facing-left"
+            ],
+            "signature": [
+              "dark-clothes-long-hair-facing-left"
+            ]
+          },
+          "spans": [
+            [
+              1.0,
+              8.6
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "woman-in-black": 1,
+      "man-in-dark-clothes": 1
+    },
+    "objects_count_display": {
+      "woman-in-black": 1,
+      "man-in-dark-clothes": 1
+    },
+    "attributes": {
+      "woman-in-black": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "action": [
+          "adjusting-hair",
+          "looking-at-train",
+          "standing"
+        ],
+        "pose": [
+          "facing-right"
+        ],
+        "object-part": [
+          "backpack"
+        ],
+        "signature": [
+          "black-shirt-black-shorts-white-shoes-backpack-long-hair"
+        ]
+      },
+      "man-in-dark-clothes": {
+        "color": [
+          "dark"
+        ],
+        "action": [
+          "looking-at-train",
+          "standing"
+        ],
+        "pose": [
+          "facing-left"
+        ],
+        "signature": [
+          "dark-clothes-long-hair-facing-left"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

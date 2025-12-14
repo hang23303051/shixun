@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/architecture_041_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cushion",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "pattern": [
+            "geometric"
+          ],
+          "signature": [
+            "red-patterned"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 10.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "cushion",
+          "attributes": {
+            "color": [
+              "red"
+            ],
+            "pattern": [
+              "geometric"
+            ],
+            "signature": [
+              "red-patterned"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              2.1
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "cushion": 1
+    },
+    "objects_count_display": {
+      "cushion": 1
+    },
+    "attributes": {
+      "cushion": {
+        "color": [
+          "red"
+        ],
+        "pattern": [
+          "geometric"
+        ],
+        "signature": [
+          "red-patterned"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

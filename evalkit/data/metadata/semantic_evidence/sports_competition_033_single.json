@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_033_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "table",
+          "attributes": {
+            "signature": [
+              "table-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 2,
+      "table": 1
+    },
+    "objects_count_display": {
+      "person": 2,
+      "table": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "table": {
+        "signature": [
+          "table-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

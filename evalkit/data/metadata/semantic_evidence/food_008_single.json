@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_008_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "oil",
+        "attributes": {
+          "signature": [
+            "oil-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "garlic",
+        "attributes": {
+          "signature": [
+            "garlic-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "green-onion",
+        "attributes": {
+          "signature": [
+            "green-onion-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "carrot",
+        "attributes": {
+          "signature": [
+            "carrot-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "green-pepper",
+        "attributes": {
+          "signature": [
+            "green-pepper-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "wood-ear-mushroom",
+        "attributes": {
+          "signature": [
+            "wood-ear-mushroom-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "egg",
+        "attributes": {
+          "signature": [
+            "egg-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "salt",
+        "attributes": {
+          "signature": [
+            "salt-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "chicken-essence",
+        "attributes": {
+          "signature": [
+            "chicken-essence-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "soy-sauce",
+        "attributes": {
+          "signature": [
+            "soy-sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "vinegar",
+        "attributes": {
+          "signature": [
+            "vinegar-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "oil",
+          "attributes": {
+            "signature": [
+              "oil-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "garlic",
+          "attributes": {
+            "signature": [
+              "garlic-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "green-onion",
+          "attributes": {
+            "signature": [
+              "green-onion-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "carrot",
+          "attributes": {
+            "signature": [
+              "carrot-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "green-pepper",
+          "attributes": {
+            "signature": [
+              "green-pepper-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "wood-ear-mushroom",
+          "attributes": {
+            "signature": [
+              "wood-ear-mushroom-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "egg",
+          "attributes": {
+            "signature": [
+              "egg-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o8",
+          "name": "salt",
+          "attributes": {
+            "signature": [
+              "salt-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o9",
+          "name": "chicken-essence",
+          "attributes": {
+            "signature": [
+              "chicken-essence-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o10",
+          "name": "soy-sauce",
+          "attributes": {
+            "signature": [
+              "soy-sauce-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        },
+        {
+          "id": "o11",
+          "name": "vinegar",
+          "attributes": {
+            "signature": [
+              "vinegar-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "oil": 1,
+      "garlic": 1,
+      "green-onion": 1,
+      "carrot": 1,
+      "green-pepper": 1,
+      "wood-ear-mushroom": 1,
+      "egg": 1,
+      "salt": 1,
+      "chicken-essence": 1,
+      "soy-sauce": 1,
+      "vinegar": 1
+    },
+    "objects_count_display": {
+      "oil": 1,
+      "garlic": 1,
+      "green-onion": 1,
+      "carrot": 1,
+      "green-pepper": 1,
+      "wood-ear-mushroom": 1,
+      "egg": 1,
+      "salt": 1,
+      "chicken-essence": 1,
+      "soy-sauce": 1,
+      "vinegar": 1
+    },
+    "attributes": {
+      "oil": {
+        "signature": [
+          "oil-coarse"
+        ]
+      },
+      "garlic": {
+        "signature": [
+          "garlic-coarse"
+        ]
+      },
+      "green-onion": {
+        "signature": [
+          "green-onion-coarse"
+        ]
+      },
+      "carrot": {
+        "signature": [
+          "carrot-coarse"
+        ]
+      },
+      "green-pepper": {
+        "signature": [
+          "green-pepper-coarse"
+        ]
+      },
+      "wood-ear-mushroom": {
+        "signature": [
+          "wood-ear-mushroom-coarse"
+        ]
+      },
+      "egg": {
+        "signature": [
+          "egg-coarse"
+        ]
+      },
+      "salt": {
+        "signature": [
+          "salt-coarse"
+        ]
+      },
+      "chicken-essence": {
+        "signature": [
+          "chicken-essence-coarse"
+        ]
+      },
+      "soy-sauce": {
+        "signature": [
+          "soy-sauce-coarse"
+        ]
+      },
+      "vinegar": {
+        "signature": [
+          "vinegar-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

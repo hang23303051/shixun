@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_043_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "panther",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fur"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "standing",
+            "walking"
+          ],
+          "action": [
+            "observing",
+            "sniffing",
+            "yawning"
+          ],
+          "orientation": [
+            "facing-forward",
+            "facing-left",
+            "facing-right"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "center",
+            "foreground"
+          ],
+          "signature": [
+            "black-feline-tree-background"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "panther",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "pattern": [
+              "solid"
+            ],
+            "texture": [
+              "smooth"
+            ],
+            "material": [
+              "fur"
+            ],
+            "size": [
+              "large"
+            ],
+            "age": [
+              "adult"
+            ],
+            "sex": [
+              "male"
+            ],
+            "state": [
+              "alert",
+              "calm"
+            ],
+            "pose": [
+              "standing",
+              "walking"
+            ],
+            "action": [
+              "observing",
+              "sniffing",
+              "yawning"
+            ],
+            "orientation": [
+              "facing-forward",
+              "facing-left",
+              "facing-right"
+            ],
+            "facing-direction": [
+              "forward",
+              "left",
+              "right"
+            ],
+            "position": [
+              "center",
+              "foreground"
+            ],
+            "signature": [
+              "black-feline-tree-background"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.9
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "panther": 1
+    },
+    "objects_count_display": {
+      "panther": 1
+    },
+    "attributes": {
+      "panther": {
+        "color": [
+          "black"
+        ],
+        "pattern": [
+          "solid"
+        ],
+        "texture": [
+          "smooth"
+        ],
+        "material": [
+          "fur"
+        ],
+        "size": [
+          "large"
+        ],
+        "age": [
+          "adult"
+        ],
+        "sex": [
+          "male"
+        ],
+        "state": [
+          "alert",
+          "calm"
+        ],
+        "pose": [
+          "standing",
+          "walking"
+        ],
+        "action": [
+          "observing",
+          "sniffing",
+          "yawning"
+        ],
+        "orientation": [
+          "facing-forward",
+          "facing-left",
+          "facing-right"
+        ],
+        "facing-direction": [
+          "forward",
+          "left",
+          "right"
+        ],
+        "position": [
+          "center",
+          "foreground"
+        ],
+        "signature": [
+          "black-feline-tree-background"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

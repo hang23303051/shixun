@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_057_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "woman-in-beige-sari",
+        "attributes": {
+          "color": [
+            "beige",
+            "dot"
+          ],
+          "pattern": [
+            "dot"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "holding-drum-stick"
+          ],
+          "facing-direction": [
+            "towards-center"
+          ],
+          "signature": [
+            "beige-sari-with-dot-pattern,-seated-in-circle,-holding-drum-stick"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "man-in-black-suit-with-glasses",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "accessory": [
+            "glasses"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "left-of-man-in-blue-suit"
+          ],
+          "signature": [
+            "black-suit-white-shirt,-glasses,-standing-to-left-of-man-in-blue-suit"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "facing",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "woman-in-beige-sari",
+          "attributes": {
+            "color": [
+              "beige",
+              "dot"
+            ],
+            "pattern": [
+              "dot"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "action": [
+              "holding-drum-stick"
+            ],
+            "facing-direction": [
+              "towards-center"
+            ],
+            "signature": [
+              "beige-sari-with-dot-pattern,-seated-in-circle,-holding-drum-stick"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "man-in-black-suit-with-glasses",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "accessory": [
+              "glasses"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "position": [
+              "left-of-man-in-blue-suit"
+            ],
+            "signature": [
+              "black-suit-white-shirt,-glasses,-standing-to-left-of-man-in-blue-suit"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "facing",
+          "object": "o1",
+          "spans": [
+            [
+              0.1,
+              0.3
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "woman-in-beige-sari": 1,
+      "man-in-black-suit-with-glasses": 1
+    },
+    "objects_count_display": {
+      "woman-in-beige-sari": 1,
+      "man-in-black-suit-with-glasses": 1
+    },
+    "attributes": {
+      "woman-in-beige-sari": {
+        "color": [
+          "beige",
+          "dot"
+        ],
+        "pattern": [
+          "dot"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "action": [
+          "holding-drum-stick"
+        ],
+        "facing-direction": [
+          "towards-center"
+        ],
+        "signature": [
+          "beige-sari-with-dot-pattern,-seated-in-circle,-holding-drum-stick"
+        ]
+      },
+      "man-in-black-suit-with-glasses": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "accessory": [
+          "glasses"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "position": [
+          "left-of-man-in-blue-suit"
+        ],
+        "signature": [
+          "black-suit-white-shirt,-glasses,-standing-to-left-of-man-in-blue-suit"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o2",
+        "predicate": "facing",
+        "object": "o1"
+      }
+    ]
+  }
+}

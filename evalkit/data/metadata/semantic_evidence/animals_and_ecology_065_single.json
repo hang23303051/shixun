@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_065_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lizard",
+        "attributes": {
+          "color": [
+            "gray",
+            "green"
+          ],
+          "pattern": [
+            "scaled",
+            "speckled"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "clinging",
+            "perched"
+          ],
+          "action": [
+            "tongue-in",
+            "tongue-out"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "on-branch"
+          ],
+          "object-part": [
+            "body",
+            "head",
+            "limbs"
+          ],
+          "environment": [
+            "enclosure",
+            "naturalistic"
+          ],
+          "lighting": [
+            "indirect",
+            "soft"
+          ],
+          "camera-angle": [
+            "close-up",
+            "frontal"
+          ],
+          "signature": [
+            "gray-green-speckled-scaled-head-facing-forward"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "lizard",
+          "attributes": {
+            "color": [
+              "gray",
+              "green"
+            ],
+            "pattern": [
+              "scaled",
+              "speckled"
+            ],
+            "texture": [
+              "rough"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "alert",
+              "calm"
+            ],
+            "pose": [
+              "clinging",
+              "perched"
+            ],
+            "action": [
+              "tongue-in",
+              "tongue-out"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "position": [
+              "on-branch"
+            ],
+            "object-part": [
+              "body",
+              "head",
+              "limbs"
+            ],
+            "environment": [
+              "enclosure",
+              "naturalistic"
+            ],
+            "lighting": [
+              "indirect",
+              "soft"
+            ],
+            "camera-angle": [
+              "close-up",
+              "frontal"
+            ],
+            "signature": [
+              "gray-green-speckled-scaled-head-facing-forward"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.1
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "lizard": 1
+    },
+    "objects_count_display": {
+      "lizard": 1
+    },
+    "attributes": {
+      "lizard": {
+        "color": [
+          "gray",
+          "green"
+        ],
+        "pattern": [
+          "scaled",
+          "speckled"
+        ],
+        "texture": [
+          "rough"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "alert",
+          "calm"
+        ],
+        "pose": [
+          "clinging",
+          "perched"
+        ],
+        "action": [
+          "tongue-in",
+          "tongue-out"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "position": [
+          "on-branch"
+        ],
+        "object-part": [
+          "body",
+          "head",
+          "limbs"
+        ],
+        "environment": [
+          "enclosure",
+          "naturalistic"
+        ],
+        "lighting": [
+          "indirect",
+          "soft"
+        ],
+        "camera-angle": [
+          "close-up",
+          "frontal"
+        ],
+        "signature": [
+          "gray-green-speckled-scaled-head-facing-forward"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

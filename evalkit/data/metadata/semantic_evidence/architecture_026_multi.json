@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_026_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "e1",
+        "attributes": {
+          "signature": [
+            "e1"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "e2",
+        "attributes": {
+          "signature": [
+            "e2"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 17.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "e1",
+          "attributes": {},
+          "spans": [
+            [
+              0.0,
+              0.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "e2",
+          "attributes": {},
+          "spans": [
+            [
+              0.4,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              0.7
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "right-of",
+          "object": "o1",
+          "spans": [
+            [
+              0.3,
+              1.0
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "e1": 1,
+      "e2": 1
+    },
+    "objects_count_display": {
+      "e1": 1,
+      "e2": 1
+    },
+    "attributes": {
+      "e1": {
+        "signature": [
+          "e1"
+        ]
+      },
+      "e2": {
+        "signature": [
+          "e2"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1"
+      }
+    ]
+  }
+}

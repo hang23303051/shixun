@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_030_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "text_korean",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "white-box-with-black-korean-letters"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "text_korean",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "position": [
+              "center"
+            ],
+            "signature": [
+              "white-box-with-black-korean-letters"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              0.6
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "text_korean": 1
+    },
+    "objects_count_display": {
+      "text_korean": 1
+    },
+    "attributes": {
+      "text_korean": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "position": [
+          "center"
+        ],
+        "signature": [
+          "white-box-with-black-korean-letters"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

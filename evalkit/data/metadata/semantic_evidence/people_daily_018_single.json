@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_018_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "camera",
+        "attributes": {
+          "signature": [
+            "osmo-black-handheld"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "signature": [
+            "white-blue-front-left"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "signature": [
+            "large-beige-windowed"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "action": [
+            "walking"
+          ],
+          "signature": [
+            "multiple-distant-walking"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "camera",
+          "attributes": {
+            "signature": [
+              "osmo-black-handheld"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "car",
+          "attributes": {
+            "color": [
+              "blue",
+              "white"
+            ],
+            "signature": [
+              "white-blue-front-left"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "building",
+          "attributes": {
+            "color": [
+              "beige"
+            ],
+            "signature": [
+              "large-beige-windowed"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "person",
+          "attributes": {
+            "action": [
+              "walking"
+            ],
+            "signature": [
+              "multiple-distant-walking"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "camera": 1,
+      "car": 1,
+      "building": 1,
+      "person": 1
+    },
+    "objects_count_display": {
+      "camera": 1,
+      "car": 1,
+      "building": 1,
+      "person": 1
+    },
+    "attributes": {
+      "camera": {
+        "signature": [
+          "osmo-black-handheld"
+        ]
+      },
+      "car": {
+        "color": [
+          "blue",
+          "white"
+        ],
+        "signature": [
+          "white-blue-front-left"
+        ]
+      },
+      "building": {
+        "color": [
+          "beige"
+        ],
+        "signature": [
+          "large-beige-windowed"
+        ]
+      },
+      "person": {
+        "action": [
+          "walking"
+        ],
+        "signature": [
+          "multiple-distant-walking"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

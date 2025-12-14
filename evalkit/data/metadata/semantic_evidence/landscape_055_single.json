@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_055_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "walking"
+          ],
+          "pose": [
+            "side-view"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "red-shirt-man-walking"
+          ]
+        },
+        "spans": [
+          [
+            6.4,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "walking-by",
+        "object": "o1",
+        "spans": [
+          [
+            6.4,
+            7.8
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "red"
+            ],
+            "sex": [
+              "male"
+            ],
+            "action": [
+              "walking"
+            ],
+            "pose": [
+              "side-view"
+            ],
+            "facing-direction": [
+              "left"
+            ],
+            "signature": [
+              "red-shirt-man-walking"
+            ]
+          },
+          "spans": [
+            [
+              6.4,
+              7.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "walking-by",
+          "object": "o1",
+          "spans": [
+            [
+              6.4,
+              7.8
+            ]
+          ],
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1
+    },
+    "objects_count_display": {
+      "person": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "red"
+        ],
+        "sex": [
+          "male"
+        ],
+        "action": [
+          "walking"
+        ],
+        "pose": [
+          "side-view"
+        ],
+        "facing-direction": [
+          "left"
+        ],
+        "signature": [
+          "red-shirt-man-walking"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "walking-by",
+        "object": "o1"
+      }
+    ]
+  }
+}

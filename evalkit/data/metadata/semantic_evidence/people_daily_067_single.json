@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_067_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "beige",
+            "blonde",
+            "multiple-necklaces"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "holding-canister"
+          ],
+          "action": [
+            "gesturing",
+            "talking"
+          ],
+          "clothing": [
+            "jeans",
+            "t-shirt"
+          ],
+          "accessories": [
+            "ring"
+          ],
+          "signature": [
+            "blonde-hair-beige-shirt-multiple-necklaces"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "insecticide-spray-canister",
+        "attributes": {
+          "color": [
+            "black",
+            "green",
+            "red",
+            "white"
+          ],
+          "material": [
+            "metal",
+            "plastic"
+          ],
+          "size": [
+            "medium"
+          ],
+          "brand-or-logo": [
+            "miller"
+          ],
+          "printed-text": [
+            "8-hrs",
+            "repellent"
+          ],
+          "function": [
+            "insect-repellent"
+          ],
+          "signature": [
+            "green-red-label-black-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "garden-bug-&-disease-shelf",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange"
+          ],
+          "material": [
+            "metal",
+            "wood"
+          ],
+          "size": [
+            "large"
+          ],
+          "content": [
+            "fungicides",
+            "insecticides"
+          ],
+          "label": [
+            "garden-bug-&-disease"
+          ],
+          "signature": [
+            "orange-shelf-with-blue-bottles"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "is-being-held-by",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "contains",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "beige",
+              "blonde",
+              "multiple-necklaces"
+            ],
+            "sex": [
+              "female"
+            ],
+            "state": [
+              "standing"
+            ],
+            "pose": [
+              "holding-canister"
+            ],
+            "action": [
+              "gesturing",
+              "talking"
+            ],
+            "clothing": [
+              "jeans",
+              "t-shirt"
+            ],
+            "accessories": [
+              "ring"
+            ],
+            "signature": [
+              "blonde-hair-beige-shirt-multiple-necklaces"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "insecticide-spray-canister",
+          "attributes": {
+            "color": [
+              "black",
+              "green",
+              "red",
+              "white"
+            ],
+            "material": [
+              "metal",
+              "plastic"
+            ],
+            "size": [
+              "medium"
+            ],
+            "brand-or-logo": [
+              "miller"
+            ],
+            "printed-text": [
+              "8-hrs",
+              "repellent"
+            ],
+            "function": [
+              "insect-repellent"
+            ],
+            "signature": [
+              "green-red-label-black-cap"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "garden-bug-&-disease-shelf",
+          "attributes": {
+            "color": [
+              "blue",
+              "orange"
+            ],
+            "material": [
+              "metal",
+              "wood"
+            ],
+            "size": [
+              "large"
+            ],
+            "content": [
+              "fungicides",
+              "insecticides"
+            ],
+            "label": [
+              "garden-bug-&-disease"
+            ],
+            "signature": [
+              "orange-shelf-with-blue-bottles"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "standing-in-front-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "is-being-held-by",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o3",
+          "predicate": "contains",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              9.5
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "insecticide-spray-canister": 1,
+      "garden-bug-&-disease-shelf": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "insecticide-spray-canister": 1,
+      "garden-bug-&-disease-shelf": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "beige",
+          "blonde",
+          "multiple-necklaces"
+        ],
+        "sex": [
+          "female"
+        ],
+        "state": [
+          "standing"
+        ],
+        "pose": [
+          "holding-canister"
+        ],
+        "action": [
+          "gesturing",
+          "talking"
+        ],
+        "clothing": [
+          "jeans",
+          "t-shirt"
+        ],
+        "accessories": [
+          "ring"
+        ],
+        "signature": [
+          "blonde-hair-beige-shirt-multiple-necklaces"
+        ]
+      },
+      "insecticide-spray-canister": {
+        "color": [
+          "black",
+          "green",
+          "red",
+          "white"
+        ],
+        "material": [
+          "metal",
+          "plastic"
+        ],
+        "size": [
+          "medium"
+        ],
+        "brand-or-logo": [
+          "miller"
+        ],
+        "printed-text": [
+          "8-hrs",
+          "repellent"
+        ],
+        "function": [
+          "insect-repellent"
+        ],
+        "signature": [
+          "green-red-label-black-cap"
+        ]
+      },
+      "garden-bug-&-disease-shelf": {
+        "color": [
+          "blue",
+          "orange"
+        ],
+        "material": [
+          "metal",
+          "wood"
+        ],
+        "size": [
+          "large"
+        ],
+        "content": [
+          "fungicides",
+          "insecticides"
+        ],
+        "label": [
+          "garden-bug-&-disease"
+        ],
+        "signature": [
+          "orange-shelf-with-blue-bottles"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o2",
+        "predicate": "is-being-held-by",
+        "object": "o1"
+      },
+      {
+        "subject": "o3",
+        "predicate": "contains",
+        "object": "o2"
+      }
+    ]
+  }
+}

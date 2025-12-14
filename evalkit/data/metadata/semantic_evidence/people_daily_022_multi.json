@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_022_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "standing"
+          ],
+          "pose": [
+            "facing-away"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "object-part": [
+            "hair-tied-back"
+          ],
+          "tool-or-instrument": [
+            "black-bag"
+          ],
+          "signature": [
+            "black-jacket-blue-pants-long-black-bag-tied-back"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "standing",
+            "walking"
+          ],
+          "pose": [
+            "facing-away",
+            "walking-away"
+          ],
+          "orientation": [
+            "facing-forward",
+            "facing-right"
+          ],
+          "facing-direction": [
+            "forward",
+            "right"
+          ],
+          "object-part": [
+            "hair-tied-back"
+          ],
+          "tool-or-instrument": [
+            "black-bag"
+          ],
+          "signature": [
+            "blue-shirt-blue-pants-short-black-bag-tied-across-body"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 16.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue"
+            ],
+            "sex": [
+              "female"
+            ],
+            "action": [
+              "standing"
+            ],
+            "pose": [
+              "facing-away"
+            ],
+            "orientation": [
+              "facing-right"
+            ],
+            "facing-direction": [
+              "right"
+            ],
+            "object-part": [
+              "hair-tied-back"
+            ],
+            "tool-or-instrument": [
+              "black-bag"
+            ],
+            "signature": [
+              "black-jacket-blue-pants-long-black-bag-tied-back"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue"
+            ],
+            "sex": [
+              "female"
+            ],
+            "action": [
+              "standing",
+              "walking"
+            ],
+            "pose": [
+              "facing-away",
+              "walking-away"
+            ],
+            "orientation": [
+              "facing-forward",
+              "facing-right"
+            ],
+            "facing-direction": [
+              "forward",
+              "right"
+            ],
+            "object-part": [
+              "hair-tied-back"
+            ],
+            "tool-or-instrument": [
+              "black-bag"
+            ],
+            "signature": [
+              "blue-shirt-blue-pants-short-black-bag-tied-across-body"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 2
+    },
+    "objects_count_display": {
+      "person": 2
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "blue"
+        ],
+        "sex": [
+          "female"
+        ],
+        "action": [
+          "standing",
+          "walking"
+        ],
+        "pose": [
+          "facing-away",
+          "walking-away"
+        ],
+        "orientation": [
+          "facing-forward",
+          "facing-right"
+        ],
+        "facing-direction": [
+          "forward",
+          "right"
+        ],
+        "object-part": [
+          "hair-tied-back"
+        ],
+        "tool-or-instrument": [
+          "black-bag"
+        ],
+        "signature": [
+          "black-jacket-blue-pants-long-black-bag-tied-back",
+          "blue-shirt-blue-pants-short-black-bag-tied-across-body"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      }
+    ]
+  }
+}

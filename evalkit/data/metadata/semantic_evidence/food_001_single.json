@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_001_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "e1",
+        "attributes": {
+          "signature": [
+            "e1"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "e2",
+        "attributes": {
+          "signature": [
+            "e2"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "e1",
+          "attributes": {},
+          "spans": [
+            [
+              0.0,
+              0.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "e2",
+          "attributes": {},
+          "spans": [
+            [
+              0.7,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              0.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "right-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.7,
+              1.0
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "e1": 1,
+      "e2": 1
+    },
+    "objects_count_display": {
+      "e1": 1,
+      "e2": 1
+    },
+    "attributes": {
+      "e1": {
+        "signature": [
+          "e1"
+        ]
+      },
+      "e2": {
+        "signature": [
+          "e2"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2"
+      }
+    ]
+  }
+}

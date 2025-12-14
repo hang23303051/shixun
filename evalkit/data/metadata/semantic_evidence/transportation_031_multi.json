@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_031_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "signature": [
+            "train-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "train",
+        "attributes": {
+          "signature": [
+            "train-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "fence",
+        "attributes": {
+          "signature": [
+            "fence-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 18.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {
+            "signature": [
+              "train-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "train",
+          "attributes": {
+            "signature": [
+              "train-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.5
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "car",
+          "attributes": {
+            "signature": [
+              "car-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.5
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "fence",
+          "attributes": {
+            "signature": [
+              "fence-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.5
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "building-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              18.5
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 2,
+      "car": 1,
+      "fence": 1,
+      "building": 1
+    },
+    "objects_count_display": {
+      "train": 2,
+      "car": 1,
+      "fence": 1,
+      "building": 1
+    },
+    "attributes": {
+      "train": {
+        "signature": [
+          "train-coarse"
+        ]
+      },
+      "car": {
+        "signature": [
+          "car-coarse"
+        ]
+      },
+      "fence": {
+        "signature": [
+          "fence-coarse"
+        ]
+      },
+      "building": {
+        "signature": [
+          "building-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

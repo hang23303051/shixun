@@ -1,0 +1,78 @@
+# ==== 全局 ====
+seed: 42
+deterministic: true
+
+paths:
+  data_root: outputs/event/cache
+  models_root: checkpoints
+  # 统一供各模块引用
+  e5_dir: checkpoints/e5-large-v2
+  vlm_dir: checkpoints/videollama3-7b
+  ddm_ckpt: checkpoints/ddmnet/checkpoint.pth.tar
+  transnetv2_weights: checkpoints/transnetv2/transnetv2-pytorch-weights.pth
+
+device:
+  compute: auto              # auto / cuda:0 / cpu
+  dtype: bf16                # 默认用于 VLM；E5 在各自模型里单独配置
+  attn_impl: flash_attention_2
+
+# ==== 时间线 ====
+time_norm:
+  mode: linear_01            # 归一化到 [0,1]
+  eps: 1.0e-9
+
+# ==== MERGE（新增/按方案启用）====
+merge:
+  enable: true
+  tau_sem: 0.93              # 相邻事件合并的语义阈值
+  gap_abs_sec: 0.10          # 允许的绝对间隙（秒）
+  embed_after_merge: "avg_weighted"  # 成员嵌入按时长加权均值后单位化
+
+# ==== MATCH（门控 & r-tIoU）====
+match:
+  s0: 0.8                    # 语义相似门控
+  u0: 0.5                    # r-tIoU 门控
+  delta_abs: 0.01            # r-tIoU 软容差（绝对）
+  delta_rel: 0.02            # r-tIoU 软容差（相对）
+
+gating:
+  s0: 0.8        # Sim_sem 门槛
+  u0: 0.5        # r_tIoU 门槛
+  rtiou:
+    delta: 1.0e-6 # 平滑项
+
+# ==== EGA（只用于已匹配对）====
+ega:
+  w1: 0.80                   # 语义相似权重
+  w2: 0.20                   # 时间重叠权重
+  rho: 0.50                  # 时长加权幂指数
+
+# ==== ERel（Allen 13类关系；启用近邻软一致性 + 置缺省语义保持）====
+ERel:
+  allen_eps:
+    eq: 1.0e-3               # eq/lt/gt/meet 的统一容差（归一化时间域）
+  on_unknown: "mismatch"     # 兜底行为：遇到未覆盖边界时算不一致
+  affinity: default_v1       # ← S2.a：近邻关系得分矩阵；去掉此行或设 false 则回到严格二值
+
+# ==== ECR（覆盖/冗余）====
+ecr:
+  min_events: 0
+
+# ==== 聚合权重 ====
+aggregate:
+  theta1: 0.20               # EGA
+  theta2: 0.20               # ERel
+  theta3: 0.60               # ECR
+  renorm: false
+  ERel_missing: equal        # ← S1：当 |M|<2 时置缺省（theta2=0），由 equal/proportional/keep 控制重分配
+  ERel_missing_fallback: [0.2, 0.8]  # equal 策略下自定义回退比例（theta1, theta3）
+
+# ==== 其它 ====
+hungarian:
+  maximize: true             # 最小化代价
+  pad_unmatched: false       # 不补足未匹配对
+
+io:
+  local_files_only: true     # transformers 离线
+  text_encoding: utf-8
+  float_precision: 6

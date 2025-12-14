@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_061_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "clouds",
+        "attributes": {
+          "color": [
+            "dark-gray",
+            "light-orange"
+          ],
+          "pattern": [
+            "irregular",
+            "scattered"
+          ],
+          "signature": [
+            "dark-gray-to-light-orange-gradient-with-various-shapes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.3
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sea",
+        "attributes": {
+          "color": [
+            "deep-blue"
+          ],
+          "texture": [
+            "smooth-with-ripples"
+          ],
+          "signature": [
+            "deep-blue-waves-with-gentle-ripples"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "clouds",
+          "attributes": {
+            "color": [
+              "dark-gray",
+              "light-orange"
+            ],
+            "pattern": [
+              "irregular",
+              "scattered"
+            ],
+            "signature": [
+              "dark-gray-to-light-orange-gradient-with-various-shapes"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.3
+            ],
+            [
+              0.6,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "sea",
+          "attributes": {
+            "color": [
+              "deep-blue"
+            ],
+            "texture": [
+              "smooth-with-ripples"
+            ],
+            "signature": [
+              "deep-blue-waves-with-gentle-ripples"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "below",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              0.7
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "above",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              0.8
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "clouds": 1,
+      "sea": 1
+    },
+    "objects_count_display": {
+      "clouds": 1,
+      "sea": 1
+    },
+    "attributes": {
+      "clouds": {
+        "color": [
+          "dark-gray",
+          "light-orange"
+        ],
+        "pattern": [
+          "irregular",
+          "scattered"
+        ],
+        "signature": [
+          "dark-gray-to-light-orange-gradient-with-various-shapes"
+        ]
+      },
+      "sea": {
+        "color": [
+          "deep-blue"
+        ],
+        "texture": [
+          "smooth-with-ripples"
+        ],
+        "signature": [
+          "deep-blue-waves-with-gentle-ripples"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "below",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2"
+      }
+    ]
+  }
+}

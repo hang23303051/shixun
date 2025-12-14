@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_040_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "action": [
+            "holding-steel-bar",
+            "manipulating-machine"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "orange-glove-worn"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "steel-bar",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "shape": [
+            "straight"
+          ],
+          "action": [
+            "being-bent"
+          ],
+          "signature": [
+            "metallic-straight-bar"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "metal"
+          ],
+          "action": [
+            "bending-steel-bar"
+          ],
+          "signature": [
+            "black-metal-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "manipulating",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "interacting-with",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            7.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.8,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "hand",
+          "attributes": {
+            "color": [
+              "orange"
+            ],
+            "action": [
+              "holding-steel-bar",
+              "manipulating-machine"
+            ],
+            "position": [
+              "foreground"
+            ],
+            "signature": [
+              "orange-glove-worn"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "steel-bar",
+          "attributes": {
+            "material": [
+              "metal"
+            ],
+            "shape": [
+              "straight"
+            ],
+            "action": [
+              "being-bent"
+            ],
+            "signature": [
+              "metallic-straight-bar"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              7.8
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "machine",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "material": [
+              "metal"
+            ],
+            "action": [
+              "bending-steel-bar"
+            ],
+            "signature": [
+              "black-metal-machine"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "manipulating",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "interacting-with",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              7.8
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "on",
+          "object": "o3",
+          "spans": [
+            [
+              0.3,
+              7.8
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "hand": 1,
+      "steel-bar": 1,
+      "machine": 1
+    },
+    "objects_count_display": {
+      "hand": 1,
+      "steel-bar": 1,
+      "machine": 1
+    },
+    "attributes": {
+      "hand": {
+        "color": [
+          "orange"
+        ],
+        "action": [
+          "holding-steel-bar",
+          "manipulating-machine"
+        ],
+        "position": [
+          "foreground"
+        ],
+        "signature": [
+          "orange-glove-worn"
+        ]
+      },
+      "steel-bar": {
+        "material": [
+          "metal"
+        ],
+        "shape": [
+          "straight"
+        ],
+        "action": [
+          "being-bent"
+        ],
+        "signature": [
+          "metallic-straight-bar"
+        ]
+      },
+      "machine": {
+        "color": [
+          "black"
+        ],
+        "material": [
+          "metal"
+        ],
+        "action": [
+          "bending-steel-bar"
+        ],
+        "signature": [
+          "black-metal-machine"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "manipulating",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "interacting-with",
+        "object": "o3"
+      },
+      {
+        "subject": "o2",
+        "predicate": "on",
+        "object": "o3"
+      }
+    ]
+  }
+}

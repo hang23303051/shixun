@@ -1,0 +1,23 @@
+# GEBD: DDM 推理配置
+ddm:
+  repo_dir: third_party/ddmnet
+  ckpt: checkpoints/ddmnet/checkpoint.pth.tar
+  device: auto
+
+  model: "multiframes_resnet"
+  kind: "multiframes"
+  window: 11
+  stride: 1
+  stack_format: "BNC"     # [B, N, 3, H, W]
+  input_size: 224
+
+batch_size: 32
+threshold: 0.5
+min_peak_distance: 3
+min_event_dur: 0.10
+
+# 推理稳定性
+seed: 1337
+min_peak_prominence: 0.12   # 0.05~0.12 之间寻找稳点；越大切分越“粗”
+threshold: 0.5              # 原有阈值，和 prominence 配合调
+min_peak_distance: 3        # 原有峰距（帧），适度增大也能稳边界

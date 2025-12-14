@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_023_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "silver",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "metallic"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "moving",
+            "passing"
+          ],
+          "action": [
+            "traveling"
+          ],
+          "orientation": [
+            "side-facing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "position": [
+            "adjacent-to-platform",
+            "on-track"
+          ],
+          "signature": [
+            "red-top-silver-body-blue-doors-yellow-seat-interior-electric-overhead-wires"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "pattern": [
+            "brick"
+          ],
+          "texture": [
+            "paved"
+          ],
+          "material": [
+            "brick"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "empty"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "orientation": [
+            "side-facing"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "position": [
+            "adjacent-to-track"
+          ],
+          "signature": [
+            "brick-paved-with-white-line-and-signpost"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female",
+            "male"
+          ],
+          "state": [
+            "sitting"
+          ],
+          "action": [
+            "traveling"
+          ],
+          "pose": [
+            "seated"
+          ],
+          "facing-direction": [
+            "varied"
+          ],
+          "position": [
+            "inside-train"
+          ],
+          "signature": [
+            "yellow-seat-interior-passenger-reflection"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "passing",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "train",
+          "attributes": {
+            "color": [
+              "blue",
+              "red",
+              "silver",
+              "yellow"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "texture": [
+              "metallic"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "moving",
+              "passing"
+            ],
+            "action": [
+              "traveling"
+            ],
+            "orientation": [
+              "side-facing"
+            ],
+            "facing-direction": [
+              "right-facing"
+            ],
+            "position": [
+              "adjacent-to-platform",
+              "on-track"
+            ],
+            "signature": [
+              "red-top-silver-body-blue-doors-yellow-seat-interior-electric-overhead-wires"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "platform",
+          "attributes": {
+            "color": [
+              "gray",
+              "white"
+            ],
+            "pattern": [
+              "brick"
+            ],
+            "texture": [
+              "paved"
+            ],
+            "material": [
+              "brick"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "empty"
+            ],
+            "action": [
+              "stationary"
+            ],
+            "orientation": [
+              "side-facing"
+            ],
+            "facing-direction": [
+              "left-facing"
+            ],
+            "position": [
+              "adjacent-to-track"
+            ],
+            "signature": [
+              "brick-paved-with-white-line-and-signpost"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.6
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "yellow"
+            ],
+            "pattern": [
+              "solid"
+            ],
+            "texture": [
+              "smooth"
+            ],
+            "material": [
+              "plastic"
+            ],
+            "size": [
+              "small"
+            ],
+            "age": [
+              "adult"
+            ],
+            "sex": [
+              "female",
+              "male"
+            ],
+            "state": [
+              "sitting"
+            ],
+            "action": [
+              "traveling"
+            ],
+            "pose": [
+              "seated"
+            ],
+            "facing-direction": [
+              "varied"
+            ],
+            "position": [
+              "inside-train"
+            ],
+            "signature": [
+              "yellow-seat-interior-passenger-reflection"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.6
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "passing",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              6.6
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "inside",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              6.6
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "train": 1,
+      "platform": 1,
+      "person": 1
+    },
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1,
+      "person": 1
+    },
+    "attributes": {
+      "train": {
+        "color": [
+          "blue",
+          "red",
+          "silver",
+          "yellow"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "texture": [
+          "metallic"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "moving",
+          "passing"
+        ],
+        "action": [
+          "traveling"
+        ],
+        "orientation": [
+          "side-facing"
+        ],
+        "facing-direction": [
+          "right-facing"
+        ],
+        "position": [
+          "adjacent-to-platform",
+          "on-track"
+        ],
+        "signature": [
+          "red-top-silver-body-blue-doors-yellow-seat-interior-electric-overhead-wires"
+        ]
+      },
+      "platform": {
+        "color": [
+          "gray",
+          "white"
+        ],
+        "pattern": [
+          "brick"
+        ],
+        "texture": [
+          "paved"
+        ],
+        "material": [
+          "brick"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "empty"
+        ],
+        "action": [
+          "stationary"
+        ],
+        "orientation": [
+          "side-facing"
+        ],
+        "facing-direction": [
+          "left-facing"
+        ],
+        "position": [
+          "adjacent-to-track"
+        ],
+        "signature": [
+          "brick-paved-with-white-line-and-signpost"
+        ]
+      },
+      "person": {
+        "color": [
+          "yellow"
+        ],
+        "pattern": [
+          "solid"
+        ],
+        "texture": [
+          "smooth"
+        ],
+        "material": [
+          "plastic"
+        ],
+        "size": [
+          "small"
+        ],
+        "age": [
+          "adult"
+        ],
+        "sex": [
+          "female",
+          "male"
+        ],
+        "state": [
+          "sitting"
+        ],
+        "action": [
+          "traveling"
+        ],
+        "pose": [
+          "seated"
+        ],
+        "facing-direction": [
+          "varied"
+        ],
+        "position": [
+          "inside-train"
+        ],
+        "signature": [
+          "yellow-seat-interior-passenger-reflection"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "passing",
+        "object": "o2"
+      },
+      {
+        "subject": "o3",
+        "predicate": "inside",
+        "object": "o1"
+      }
+    ]
+  }
+}

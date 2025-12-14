@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_054_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "flower",
+        "attributes": {
+          "signature": [
+            "small-purple-flowers"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "leaf",
+        "attributes": {
+          "signature": [
+            "large-green-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "flower",
+          "attributes": {
+            "signature": [
+              "small-purple-flowers"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "leaf",
+          "attributes": {
+            "signature": [
+              "large-green-leaves"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              7.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "flower": 1,
+      "leaf": 1
+    },
+    "objects_count_display": {
+      "flower": 1,
+      "leaf": 1
+    },
+    "attributes": {
+      "flower": {
+        "signature": [
+          "small-purple-flowers"
+        ]
+      },
+      "leaf": {
+        "signature": [
+          "large-green-leaves"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

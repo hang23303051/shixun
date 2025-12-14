@@ -1,0 +1,42 @@
+vllama3:
+  model: checkpoints/videollama3-7b
+  device: auto
+  dtype: bf16
+  attn_impl: flash_attention_2
+  local_files_only: true
+
+  video_decode:
+    backend: decord
+    fps: 6
+    max_frames: 240
+    short_edge: 384
+
+  prompt:
+    # 目标：每个微事件=1个动词短语；并发用 " | " 分句；避免主观推断
+    template: >
+      Describe only the visually verifiable actions, using generic nouns.
+      Output one short clause per micro-event, each clause MUST contain exactly one main verb phrase
+      and no subordinate clauses. If multiple micro-events happen in the same span, write up to 8
+      clauses separated by " | ".
+      HARD RULES: no commas; no conjunctions (and/while/when); no adjectives/adverbs;
+      no inference about intent, identity, emotions, time or place; ignore camera-only changes;
+      Keep each clause ≤ 8 words.
+    lang: en
+
+  gen:
+    # 收紧解码以降低幻觉；不开采样（最小改动：去除造成 warning 的无效项）
+    do_sample: false
+    max_new_tokens: 128
+    repetition_penalty: 1.05
+    no_repeat_ngram_size: 3
+    num_beams: 1
+    # 说明：temperature/top_p/length_penalty 在非采样/非beam时无效，已移除以消除 warning
+    force_generate: true
+
+  export:
+    out_dir: ${paths.data_root}/vlm
+    fname_ref: "ref/{sample_id}.vlm.json"
+    fname_gen: "gen/{sample_id}.vlm.json"
+
+paths:
+  data_root: outputs/event/cache

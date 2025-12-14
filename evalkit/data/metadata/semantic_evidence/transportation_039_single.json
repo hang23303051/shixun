@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_039_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "truck",
+        "attributes": {
+          "signature": [
+            "white-truck"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "suv",
+        "attributes": {
+          "signature": [
+            "gray-suv"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "truck",
+          "attributes": {
+            "signature": [
+              "white-truck"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              0.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "suv",
+          "attributes": {
+            "signature": [
+              "gray-suv"
+            ]
+          },
+          "spans": [
+            [
+              0.7,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              0.6
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.4,
+              0.8
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "truck": 1,
+      "suv": 1
+    },
+    "objects_count_display": {
+      "truck": 1,
+      "suv": 1
+    },
+    "attributes": {
+      "truck": {
+        "signature": [
+          "white-truck"
+        ]
+      },
+      "suv": {
+        "signature": [
+          "gray-suv"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      }
+    ]
+  }
+}

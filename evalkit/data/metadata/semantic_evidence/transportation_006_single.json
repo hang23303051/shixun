@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/transportation/transportation_006_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "blue",
+            "green",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "size": [
+            "large"
+          ],
+          "vehicle-type": [
+            "city-bus"
+          ],
+          "brand-or-logo": [
+            "mrt",
+            "rapidkl"
+          ],
+          "printed-text": [
+            "connecting-us-all",
+            "menghubungkan-kita-semua",
+            "mrt",
+            "rapidkl"
+          ],
+          "feature": [
+            "door",
+            "handrails",
+            "light",
+            "seats",
+            "symbol",
+            "wheel",
+            "window"
+          ],
+          "signature": [
+            "rapidkl-white-blue-red,-mrt-blue-green-red"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "bus",
+          "attributes": {
+            "color": [
+              "blue",
+              "green",
+              "red",
+              "white"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "size": [
+              "large"
+            ],
+            "vehicle-type": [
+              "city-bus"
+            ],
+            "brand-or-logo": [
+              "mrt",
+              "rapidkl"
+            ],
+            "printed-text": [
+              "connecting-us-all",
+              "menghubungkan-kita-semua",
+              "mrt",
+              "rapidkl"
+            ],
+            "feature": [
+              "door",
+              "handrails",
+              "light",
+              "seats",
+              "symbol",
+              "wheel",
+              "window"
+            ],
+            "signature": [
+              "rapidkl-white-blue-red,-mrt-blue-green-red"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              7.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "bus": 1
+    },
+    "objects_count_display": {
+      "bus": 1
+    },
+    "attributes": {
+      "bus": {
+        "color": [
+          "blue",
+          "green",
+          "red",
+          "white"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "size": [
+          "large"
+        ],
+        "vehicle-type": [
+          "city-bus"
+        ],
+        "brand-or-logo": [
+          "mrt",
+          "rapidkl"
+        ],
+        "printed-text": [
+          "connecting-us-all",
+          "menghubungkan-kita-semua",
+          "mrt",
+          "rapidkl"
+        ],
+        "feature": [
+          "door",
+          "handrails",
+          "light",
+          "seats",
+          "symbol",
+          "wheel",
+          "window"
+        ],
+        "signature": [
+          "rapidkl-white-blue-red,-mrt-blue-green-red"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

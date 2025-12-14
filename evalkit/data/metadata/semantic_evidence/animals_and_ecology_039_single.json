@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_039_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "penguin",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "signature": [
+            "white-belly-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "penguin",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "signature": [
+            "white-belly-right-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            2.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "penguin",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "signature": [
+              "white-belly-left-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              2.1
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "penguin",
+          "attributes": {
+            "color": [
+              "black",
+              "white"
+            ],
+            "signature": [
+              "white-belly-right-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              2.2
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "penguin": 2
+    },
+    "objects_count_display": {
+      "penguin": 2
+    },
+    "attributes": {
+      "penguin": {
+        "color": [
+          "black",
+          "white"
+        ],
+        "signature": [
+          "white-belly-left-facing",
+          "white-belly-right-facing"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

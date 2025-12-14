@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_011_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "red",
+            "yellow"
+          ],
+          "action": [
+            "leaning",
+            "skating"
+          ],
+          "pose": [
+            "bending",
+            "crouching"
+          ],
+          "equipment": [
+            "skates"
+          ],
+          "signature": [
+            "red-helmet-black-and-yellow-shirt-blue-shorts-red-skates"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cone",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "size": [
+            "small"
+          ],
+          "signature": [
+            "yellow"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.9,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue",
+              "red",
+              "yellow"
+            ],
+            "action": [
+              "leaning",
+              "skating"
+            ],
+            "pose": [
+              "bending",
+              "crouching"
+            ],
+            "equipment": [
+              "skates"
+            ],
+            "signature": [
+              "red-helmet-black-and-yellow-shirt-blue-shorts-red-skates"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "cone",
+          "attributes": {
+            "color": [
+              "yellow"
+            ],
+            "size": [
+              "small"
+            ],
+            "signature": [
+              "yellow"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "riding",
+          "object": "o2",
+          "spans": [
+            [
+              0.5,
+              0.7
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "cone": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "cone": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "blue",
+          "red",
+          "yellow"
+        ],
+        "action": [
+          "leaning",
+          "skating"
+        ],
+        "pose": [
+          "bending",
+          "crouching"
+        ],
+        "equipment": [
+          "skates"
+        ],
+        "signature": [
+          "red-helmet-black-and-yellow-shirt-blue-shorts-red-skates"
+        ]
+      },
+      "cone": {
+        "color": [
+          "yellow"
+        ],
+        "size": [
+          "small"
+        ],
+        "signature": [
+          "yellow"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o2"
+      }
+    ]
+  }
+}

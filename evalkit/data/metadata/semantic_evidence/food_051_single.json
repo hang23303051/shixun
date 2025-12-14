@@ -1,0 +1,325 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/food_051_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tongs",
+        "attributes": {
+          "signature": [
+            "tongs-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "arugula",
+        "attributes": {
+          "signature": [
+            "arugula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "microgreens",
+        "attributes": {
+          "signature": [
+            "microgreens-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "cheese-cubes",
+        "attributes": {
+          "signature": [
+            "cheese-cubes-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "pumpkin-seeds",
+        "attributes": {
+          "signature": [
+            "pumpkin-seeds-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "lemon-wedges",
+        "attributes": {
+          "signature": [
+            "lemon-wedges-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "lemon-wedges",
+        "attributes": {
+          "signature": [
+            "lemon-wedges-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "berry-puree",
+        "attributes": {
+          "signature": [
+            "berry-puree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "tongs",
+          "attributes": {
+            "signature": [
+              "tongs-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "arugula",
+          "attributes": {
+            "signature": [
+              "arugula-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "microgreens",
+          "attributes": {
+            "signature": [
+              "microgreens-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "cheese-cubes",
+          "attributes": {
+            "signature": [
+              "cheese-cubes-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "pumpkin-seeds",
+          "attributes": {
+            "signature": [
+              "pumpkin-seeds-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "lemon-wedges",
+          "attributes": {
+            "signature": [
+              "lemon-wedges-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "lemon-wedges",
+          "attributes": {
+            "signature": [
+              "lemon-wedges-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        },
+        {
+          "id": "o8",
+          "name": "berry-puree",
+          "attributes": {
+            "signature": [
+              "berry-puree-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.6
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "tongs": 1,
+      "arugula": 1,
+      "microgreens": 1,
+      "cheese-cubes": 1,
+      "pumpkin-seeds": 1,
+      "lemon-wedges": 2,
+      "berry-puree": 1
+    },
+    "objects_count_display": {
+      "tongs": 1,
+      "arugula": 1,
+      "microgreens": 1,
+      "cheese-cubes": 1,
+      "pumpkin-seeds": 1,
+      "lemon-wedges": 2,
+      "berry-puree": 1
+    },
+    "attributes": {
+      "tongs": {
+        "signature": [
+          "tongs-coarse"
+        ]
+      },
+      "arugula": {
+        "signature": [
+          "arugula-coarse"
+        ]
+      },
+      "microgreens": {
+        "signature": [
+          "microgreens-coarse"
+        ]
+      },
+      "cheese-cubes": {
+        "signature": [
+          "cheese-cubes-coarse"
+        ]
+      },
+      "pumpkin-seeds": {
+        "signature": [
+          "pumpkin-seeds-coarse"
+        ]
+      },
+      "lemon-wedges": {
+        "signature": [
+          "lemon-wedges-coarse"
+        ]
+      },
+      "berry-puree": {
+        "signature": [
+          "berry-puree-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

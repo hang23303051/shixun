@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/industrial_activity_034_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "watermelon_popsicle",
+        "attributes": {
+          "color": [
+            "green",
+            "red"
+          ],
+          "signature": [
+            "red-green-top-bottom"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "machine_part",
+        "attributes": {
+          "signature": [
+            "blue_cable"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            11.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 11.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "watermelon_popsicle",
+          "attributes": {
+            "color": [
+              "green",
+              "red"
+            ],
+            "signature": [
+              "red-green-top-bottom"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              11.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "machine_part",
+          "attributes": {
+            "signature": [
+              "blue_cable"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              11.5
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "on",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              11.5
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "watermelon_popsicle": 1,
+      "machine_part": 1
+    },
+    "objects_count_display": {
+      "watermelon_popsicle": 1,
+      "machine_part": 1
+    },
+    "attributes": {
+      "watermelon_popsicle": {
+        "color": [
+          "green",
+          "red"
+        ],
+        "signature": [
+          "red-green-top-bottom"
+        ]
+      },
+      "machine_part": {
+        "signature": [
+          "blue_cable"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2"
+      }
+    ]
+  }
+}

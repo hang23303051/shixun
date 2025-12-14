@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_018_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person_1",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "cloth"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "gesturing",
+            "speaking"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "object-part": [
+            "arm",
+            "hand",
+            "head"
+          ],
+          "tool-or-instrument": [
+            "bracelet",
+            "microphone",
+            "sunglasses",
+            "watch"
+          ],
+          "printed-text": [
+            "and-ai-i-think",
+            "and-we-had",
+            "but-i-think",
+            "doing-things-at-a-scale",
+            "just-wasn't-possible.",
+            "round-of-bad-behavior.",
+            "that-even-though",
+            "the-teams-before,",
+            "we-had-the-data",
+            "with-intelligence",
+            "you-can-start"
+          ],
+          "state": [
+            "engaged"
+          ],
+          "signature": [
+            "white-shirt-mic-watch-bracelet-sunglasses"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person_2",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "cloth"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "gesturing",
+            "speaking"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "object-part": [
+            "arm",
+            "hand",
+            "head"
+          ],
+          "tool-or-instrument": [
+            "bracelet",
+            "microphone",
+            "watch"
+          ],
+          "printed-text": [
+            "before-that",
+            "now-is-actually-possible?",
+            "possible-before-or",
+            "that-was-not-possible",
+            "that-you're-referring-to",
+            "things-are-changing-slowly.",
+            "what-what-is-this",
+            "you-keep-on-saying-this",
+            "you-know-this-wasn't",
+            "you-say"
+          ],
+          "signature": [
+            "white-shirt-mic-watch-bracelet"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 18.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person_1",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "material": [
+              "cloth"
+            ],
+            "sex": [
+              "male"
+            ],
+            "action": [
+              "gesturing",
+              "speaking"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "object-part": [
+              "arm",
+              "hand",
+              "head"
+            ],
+            "tool-or-instrument": [
+              "bracelet",
+              "microphone",
+              "sunglasses",
+              "watch"
+            ],
+            "printed-text": [
+              "and-ai-i-think",
+              "and-we-had",
+              "but-i-think",
+              "doing-things-at-a-scale",
+              "just-wasn't-possible.",
+              "round-of-bad-behavior.",
+              "that-even-though",
+              "the-teams-before,",
+              "we-had-the-data",
+              "with-intelligence",
+              "you-can-start"
+            ],
+            "state": [
+              "engaged"
+            ],
+            "signature": [
+              "white-shirt-mic-watch-bracelet-sunglasses"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              13.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person_2",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "material": [
+              "cloth"
+            ],
+            "sex": [
+              "male"
+            ],
+            "action": [
+              "gesturing",
+              "speaking"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "orientation": [
+              "facing-forward"
+            ],
+            "object-part": [
+              "arm",
+              "hand",
+              "head"
+            ],
+            "tool-or-instrument": [
+              "bracelet",
+              "microphone",
+              "watch"
+            ],
+            "printed-text": [
+              "before-that",
+              "now-is-actually-possible?",
+              "possible-before-or",
+              "that-was-not-possible",
+              "that-you're-referring-to",
+              "things-are-changing-slowly.",
+              "what-what-is-this",
+              "you-keep-on-saying-this",
+              "you-know-this-wasn't",
+              "you-say"
+            ],
+            "signature": [
+              "white-shirt-mic-watch-bracelet"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              13.8
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person_1": 1,
+      "person_2": 1
+    },
+    "objects_count_display": {
+      "person_1": 1,
+      "person_2": 1
+    },
+    "attributes": {
+      "person_1": {
+        "color": [
+          "white"
+        ],
+        "material": [
+          "cloth"
+        ],
+        "sex": [
+          "male"
+        ],
+        "action": [
+          "gesturing",
+          "speaking"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "object-part": [
+          "arm",
+          "hand",
+          "head"
+        ],
+        "tool-or-instrument": [
+          "bracelet",
+          "microphone",
+          "sunglasses",
+          "watch"
+        ],
+        "printed-text": [
+          "and-ai-i-think",
+          "and-we-had",
+          "but-i-think",
+          "doing-things-at-a-scale",
+          "just-wasn't-possible.",
+          "round-of-bad-behavior.",
+          "that-even-though",
+          "the-teams-before,",
+          "we-had-the-data",
+          "with-intelligence",
+          "you-can-start"
+        ],
+        "state": [
+          "engaged"
+        ],
+        "signature": [
+          "white-shirt-mic-watch-bracelet-sunglasses"
+        ]
+      },
+      "person_2": {
+        "color": [
+          "white"
+        ],
+        "material": [
+          "cloth"
+        ],
+        "sex": [
+          "male"
+        ],
+        "action": [
+          "gesturing",
+          "speaking"
+        ],
+        "pose": [
+          "sitting"
+        ],
+        "orientation": [
+          "facing-forward"
+        ],
+        "object-part": [
+          "arm",
+          "hand",
+          "head"
+        ],
+        "tool-or-instrument": [
+          "bracelet",
+          "microphone",
+          "watch"
+        ],
+        "printed-text": [
+          "before-that",
+          "now-is-actually-possible?",
+          "possible-before-or",
+          "that-was-not-possible",
+          "that-you're-referring-to",
+          "things-are-changing-slowly.",
+          "what-what-is-this",
+          "you-keep-on-saying-this",
+          "you-know-this-wasn't",
+          "you-say"
+        ],
+        "signature": [
+          "white-shirt-mic-watch-bracelet"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

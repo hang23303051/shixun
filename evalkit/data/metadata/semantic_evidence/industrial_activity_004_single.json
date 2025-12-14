@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_004_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "adult"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "handling-objects",
+            "operating-machine"
+          ],
+          "facing-direction": [
+            "towards-machine"
+          ],
+          "signature": [
+            "blue-shirt-black-overalls-short-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            11.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "purple",
+            "white"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "lit",
+            "operational"
+          ],
+          "equipment": [
+            "industrial",
+            "processing"
+          ],
+          "signature": [
+            "white-purple-machine-with-lit-chamber-and-control-panel"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            11.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            11.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "operating",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            11.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            11.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 11.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue"
+            ],
+            "sex": [
+              "male"
+            ],
+            "age": [
+              "adult"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "action": [
+              "handling-objects",
+              "operating-machine"
+            ],
+            "facing-direction": [
+              "towards-machine"
+            ],
+            "signature": [
+              "blue-shirt-black-overalls-short-hair"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              11.1
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "machine",
+          "attributes": {
+            "color": [
+              "purple",
+              "white"
+            ],
+            "material": [
+              "metal"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "lit",
+              "operational"
+            ],
+            "equipment": [
+              "industrial",
+              "processing"
+            ],
+            "signature": [
+              "white-purple-machine-with-lit-chamber-and-control-panel"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              11.1
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              11.1
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "operating",
+          "object": "o2",
+          "spans": [
+            [
+              0.5,
+              11.1
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "standing-in-front-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              11.1
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "machine": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "machine": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "blue"
+        ],
+        "sex": [
+          "male"
+        ],
+        "age": [
+          "adult"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "action": [
+          "handling-objects",
+          "operating-machine"
+        ],
+        "facing-direction": [
+          "towards-machine"
+        ],
+        "signature": [
+          "blue-shirt-black-overalls-short-hair"
+        ]
+      },
+      "machine": {
+        "color": [
+          "purple",
+          "white"
+        ],
+        "material": [
+          "metal"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "lit",
+          "operational"
+        ],
+        "equipment": [
+          "industrial",
+          "processing"
+        ],
+        "signature": [
+          "white-purple-machine-with-lit-chamber-and-control-panel"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "operating",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_037_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "main_gymnast",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "leotard"
+          ],
+          "size": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "performing",
+            "standing"
+          ],
+          "pose": [
+            "arms-outstretched",
+            "bent-forward",
+            "handstand",
+            "jumping",
+            "running"
+          ],
+          "action": [
+            "balancing",
+            "jumping",
+            "landing",
+            "preparing",
+            "raising-arms",
+            "running"
+          ],
+          "orientation": [
+            "facing-back",
+            "facing-front",
+            "facing-left"
+          ],
+          "facing-direction": [
+            "backward",
+            "forward",
+            "leftward"
+          ],
+          "signature": [
+            "blue-black-vest-black-pants-purple-headband-bun"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person_in_background",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "action": [
+            "recording"
+          ],
+          "position": [
+            "behind"
+          ],
+          "object-part": [
+            "phone"
+          ],
+          "signature": [
+            "gray-jacket-black-pants-holding-phone"
+          ]
+        },
+        "spans": [
+          [
+            1.8,
+            2.4
+          ],
+          [
+            3.5,
+            4.6
+          ],
+          [
+            7.9,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person_in_background",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "action": [
+            "watching"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "black-shirt-blue-shirt-holding-drink"
+          ]
+        },
+        "spans": [
+          [
+            1.8,
+            2.4
+          ],
+          [
+            3.5,
+            4.6
+          ],
+          [
+            7.9,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "preparing",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            1.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "running",
+        "object": "o1",
+        "spans": [
+          [
+            3.5,
+            4.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "jumping",
+        "object": "o1",
+        "spans": [
+          [
+            7.9,
+            8.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "landing",
+        "object": "o1",
+        "spans": [
+          [
+            7.9,
+            8.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "balancing",
+        "object": "o1",
+        "spans": [
+          [
+            7.9,
+            8.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "raising-arms",
+        "object": "o1",
+        "spans": [
+          [
+            7.9,
+            8.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "recording",
+        "object": "o1",
+        "spans": [
+          [
+            1.8,
+            2.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "watching",
+        "object": "o1",
+        "spans": [
+          [
+            1.8,
+            2.4
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "main_gymnast",
+          "attributes": {
+            "color": [
+              "black",
+              "blue"
+            ],
+            "pattern": [
+              "striped"
+            ],
+            "texture": [
+              "smooth"
+            ],
+            "material": [
+              "leotard"
+            ],
+            "size": [
+              "adult"
+            ],
+            "sex": [
+              "female"
+            ],
+            "state": [
+              "performing",
+              "standing"
+            ],
+            "pose": [
+              "arms-outstretched",
+              "bent-forward",
+              "handstand",
+              "jumping",
+              "running"
+            ],
+            "action": [
+              "balancing",
+              "jumping",
+              "landing",
+              "preparing",
+              "raising-arms",
+              "running"
+            ],
+            "orientation": [
+              "facing-back",
+              "facing-front",
+              "facing-left"
+            ],
+            "facing-direction": [
+              "backward",
+              "forward",
+              "leftward"
+            ],
+            "signature": [
+              "blue-black-vest-black-pants-purple-headband-bun"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              9.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person_in_background",
+          "attributes": {
+            "color": [
+              "black",
+              "gray"
+            ],
+            "action": [
+              "recording"
+            ],
+            "position": [
+              "behind"
+            ],
+            "object-part": [
+              "phone"
+            ],
+            "signature": [
+              "gray-jacket-black-pants-holding-phone"
+            ]
+          },
+          "spans": [
+            [
+              1.8,
+              2.4
+            ],
+            [
+              3.5,
+              4.6
+            ],
+            [
+              7.9,
+              8.1
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person_in_background",
+          "attributes": {
+            "color": [
+              "black",
+              "blue"
+            ],
+            "action": [
+              "watching"
+            ],
+            "position": [
+              "background"
+            ],
+            "signature": [
+              "black-shirt-blue-shirt-holding-drink"
+            ]
+          },
+          "spans": [
+            [
+              1.8,
+              2.4
+            ],
+            [
+              3.5,
+              4.6
+            ],
+            [
+              7.9,
+              8.1
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "wearing",
+          "object": "o1",
+          "spans": [
+            [
+              0.2,
+              9.7
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "preparing",
+          "object": "o1",
+          "spans": [
+            [
+              0.2,
+              1.8
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "running",
+          "object": "o1",
+          "spans": [
+            [
+              3.5,
+              4.6
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "jumping",
+          "object": "o1",
+          "spans": [
+            [
+              7.9,
+              8.1
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "landing",
+          "object": "o1",
+          "spans": [
+            [
+              7.9,
+              8.1
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "balancing",
+          "object": "o1",
+          "spans": [
+            [
+              7.9,
+              8.1
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "raising-arms",
+          "object": "o1",
+          "spans": [
+            [
+              7.9,
+              8.1
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o2",
+          "predicate": "recording",
+          "object": "o1",
+          "spans": [
+            [
+              1.8,
+              2.4
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "watching",
+          "object": "o1",
+          "spans": [
+            [
+              1.8,
+              2.4
+            ]
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "main_gymnast": 1,
+      "person_in_background": 2
+    },
+    "objects_count_display": {
+      "main_gymnast": 1,
+      "person_in_background": 2
+    },
+    "attributes": {
+      "main_gymnast": {
+        "color": [
+          "black",
+          "blue"
+        ],
+        "pattern": [
+          "striped"
+        ],
+        "texture": [
+          "smooth"
+        ],
+        "material": [
+          "leotard"
+        ],
+        "size": [
+          "adult"
+        ],
+        "sex": [
+          "female"
+        ],
+        "state": [
+          "performing",
+          "standing"
+        ],
+        "pose": [
+          "arms-outstretched",
+          "bent-forward",
+          "handstand",
+          "jumping",
+          "running"
+        ],
+        "action": [
+          "balancing",
+          "jumping",
+          "landing",
+          "preparing",
+          "raising-arms",
+          "running"
+        ],
+        "orientation": [
+          "facing-back",
+          "facing-front",
+          "facing-left"
+        ],
+        "facing-direction": [
+          "backward",
+          "forward",
+          "leftward"
+        ],
+        "signature": [
+          "blue-black-vest-black-pants-purple-headband-bun"
+        ]
+      },
+      "person_in_background": {
+        "color": [
+          "black",
+          "blue",
+          "gray"
+        ],
+        "action": [
+          "recording",
+          "watching"
+        ],
+        "position": [
+          "background",
+          "behind"
+        ],
+        "object-part": [
+          "phone"
+        ],
+        "signature": [
+          "black-shirt-blue-shirt-holding-drink",
+          "gray-jacket-black-pants-holding-phone"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "preparing",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "running",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "jumping",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "landing",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "balancing",
+        "object": "o1"
+      },
+      {
+        "subject": "o1",
+        "predicate": "raising-arms",
+        "object": "o1"
+      },
+      {
+        "subject": "o2",
+        "predicate": "recording",
+        "object": "o1"
+      },
+      {
+        "subject": "o3",
+        "predicate": "watching",
+        "object": "o1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/food/food_018_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "pan",
+        "attributes": {
+          "signature": [
+            "red-pan-with-black-interior"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "light-blue-spatula"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "garlic",
+        "attributes": {
+          "signature": [
+            "minced-garlic"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "red-chili-pepper",
+        "attributes": {
+          "signature": [
+            "diced-red-chili-peppers"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "green-onion",
+        "attributes": {
+          "signature": [
+            "diced-green-onions"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "brown-powder",
+        "attributes": {
+          "signature": [
+            "brown-seasoning-powder"
+          ]
+        },
+        "spans": [
+          [
+            7.5,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "pan",
+          "attributes": {
+            "signature": [
+              "red-pan-with-black-interior"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "spatula",
+          "attributes": {
+            "signature": [
+              "light-blue-spatula"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "garlic",
+          "attributes": {
+            "signature": [
+              "minced-garlic"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "red-chili-pepper",
+          "attributes": {
+            "signature": [
+              "diced-red-chili-peppers"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "green-onion",
+          "attributes": {
+            "signature": [
+              "diced-green-onions"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "brown-powder",
+          "attributes": {
+            "signature": [
+              "brown-seasoning-powder"
+            ]
+          },
+          "spans": [
+            [
+              7.5,
+              9.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "pan": 1,
+      "spatula": 1,
+      "garlic": 1,
+      "red-chili-pepper": 1,
+      "green-onion": 1,
+      "brown-powder": 1
+    },
+    "objects_count_display": {
+      "pan": 1,
+      "spatula": 1,
+      "garlic": 1,
+      "red-chili-pepper": 1,
+      "green-onion": 1,
+      "brown-powder": 1
+    },
+    "attributes": {
+      "pan": {
+        "signature": [
+          "red-pan-with-black-interior"
+        ]
+      },
+      "spatula": {
+        "signature": [
+          "light-blue-spatula"
+        ]
+      },
+      "garlic": {
+        "signature": [
+          "minced-garlic"
+        ]
+      },
+      "red-chili-pepper": {
+        "signature": [
+          "diced-red-chili-peppers"
+        ]
+      },
+      "green-onion": {
+        "signature": [
+          "diced-green-onions"
+        ]
+      },
+      "brown-powder": {
+        "signature": [
+          "brown-seasoning-powder"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

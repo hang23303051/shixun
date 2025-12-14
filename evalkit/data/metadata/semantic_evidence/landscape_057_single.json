@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_057_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "gray"
+          ],
+          "pose": [
+            "hands-on-hips"
+          ],
+          "action": [
+            "standing"
+          ],
+          "signature": [
+            "blue-jacket-gray-shorts-black-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "signature": [
+            "snow-capped-mountains"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "lake",
+        "attributes": {
+          "signature": [
+            "blue-lake-with-white-surroundings"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue",
+              "gray"
+            ],
+            "pose": [
+              "hands-on-hips"
+            ],
+            "action": [
+              "standing"
+            ],
+            "signature": [
+              "blue-jacket-gray-shorts-black-shoes"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.1
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "mountain",
+          "attributes": {
+            "color": [
+              "brown",
+              "white"
+            ],
+            "signature": [
+              "snow-capped-mountains"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.1
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "lake",
+          "attributes": {
+            "signature": [
+              "blue-lake-with-white-surroundings"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              9.1
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              9.1
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "mountain": 1,
+      "lake": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "mountain": 1,
+      "lake": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "blue",
+          "gray"
+        ],
+        "pose": [
+          "hands-on-hips"
+        ],
+        "action": [
+          "standing"
+        ],
+        "signature": [
+          "blue-jacket-gray-shorts-black-shoes"
+        ]
+      },
+      "mountain": {
+        "color": [
+          "brown",
+          "white"
+        ],
+        "signature": [
+          "snow-capped-mountains"
+        ]
+      },
+      "lake": {
+        "signature": [
+          "blue-lake-with-white-surroundings"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2"
+      }
+    ]
+  }
+}

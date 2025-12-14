@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_028_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "bicycle",
+        "attributes": {
+          "signature": [
+            "bicycle-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "tree-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "tree-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "building-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "building-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o7",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "building-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        },
+        {
+          "id": "o8",
+          "name": "bicycle",
+          "attributes": {
+            "signature": [
+              "bicycle-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 2,
+      "tree": 2,
+      "building": 3,
+      "bicycle": 1
+    },
+    "objects_count_display": {
+      "person": 2,
+      "tree": 2,
+      "building": 3,
+      "bicycle": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "tree": {
+        "signature": [
+          "tree-coarse"
+        ]
+      },
+      "building": {
+        "signature": [
+          "building-coarse"
+        ]
+      },
+      "bicycle": {
+        "signature": [
+          "bicycle-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

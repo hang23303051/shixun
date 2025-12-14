@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/people_daily_029_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "clothing": [
+            "black-cap",
+            "camouflage-jacket"
+          ],
+          "action": [
+            "holding-products"
+          ],
+          "signature": [
+            "black-cap,-camouflage-jacket"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "product",
+        "attributes": {
+          "color": [
+            "clear",
+            "red",
+            "white"
+          ],
+          "brand": [
+            "smackdown",
+            "tarnish-trapper"
+          ],
+          "text": [
+            "15-count",
+            "black-dot",
+            "pre-saturated-cleaner"
+          ],
+          "signature": [
+            "white-container-with-red-label,-clear-plastic-package-with-red-items"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "decorative-tree",
+        "attributes": {
+          "color": [
+            "blue",
+            "multicolored"
+          ],
+          "position": [
+            "on-shelf"
+          ],
+          "signature": [
+            "small-blue-pot,-colorful-ornaments"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "candle",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "position": [
+            "on-shelf"
+          ],
+          "signature": [
+            "white-candle"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "garland",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "position": [
+            "on-shelf"
+          ],
+          "signature": [
+            "white-and-green"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "stone-wall",
+        "attributes": {
+          "material": [
+            "stone"
+          ],
+          "color": [
+            "brown"
+          ],
+          "signature": [
+            "brown-stone-texture"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "clothing": [
+              "black-cap",
+              "camouflage-jacket"
+            ],
+            "action": [
+              "holding-products"
+            ],
+            "signature": [
+              "black-cap,-camouflage-jacket"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "product",
+          "attributes": {
+            "color": [
+              "clear",
+              "red",
+              "white"
+            ],
+            "brand": [
+              "smackdown",
+              "tarnish-trapper"
+            ],
+            "text": [
+              "15-count",
+              "black-dot",
+              "pre-saturated-cleaner"
+            ],
+            "signature": [
+              "white-container-with-red-label,-clear-plastic-package-with-red-items"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "decorative-tree",
+          "attributes": {
+            "color": [
+              "blue",
+              "multicolored"
+            ],
+            "position": [
+              "on-shelf"
+            ],
+            "signature": [
+              "small-blue-pot,-colorful-ornaments"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "candle",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "position": [
+              "on-shelf"
+            ],
+            "signature": [
+              "white-candle"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "garland",
+          "attributes": {
+            "color": [
+              "green",
+              "white"
+            ],
+            "position": [
+              "on-shelf"
+            ],
+            "signature": [
+              "white-and-green"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "stone-wall",
+          "attributes": {
+            "material": [
+              "stone"
+            ],
+            "color": [
+              "brown"
+            ],
+            "signature": [
+              "brown-stone-texture"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              0.5
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              0.5
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "product": 1,
+      "decorative-tree": 1,
+      "candle": 1,
+      "garland": 1,
+      "stone-wall": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "product": 1,
+      "decorative-tree": 1,
+      "candle": 1,
+      "garland": 1,
+      "stone-wall": 1
+    },
+    "attributes": {
+      "person": {
+        "clothing": [
+          "black-cap",
+          "camouflage-jacket"
+        ],
+        "action": [
+          "holding-products"
+        ],
+        "signature": [
+          "black-cap,-camouflage-jacket"
+        ]
+      },
+      "product": {
+        "color": [
+          "clear",
+          "red",
+          "white"
+        ],
+        "brand": [
+          "smackdown",
+          "tarnish-trapper"
+        ],
+        "text": [
+          "15-count",
+          "black-dot",
+          "pre-saturated-cleaner"
+        ],
+        "signature": [
+          "white-container-with-red-label,-clear-plastic-package-with-red-items"
+        ]
+      },
+      "decorative-tree": {
+        "color": [
+          "blue",
+          "multicolored"
+        ],
+        "position": [
+          "on-shelf"
+        ],
+        "signature": [
+          "small-blue-pot,-colorful-ornaments"
+        ]
+      },
+      "candle": {
+        "color": [
+          "white"
+        ],
+        "position": [
+          "on-shelf"
+        ],
+        "signature": [
+          "white-candle"
+        ]
+      },
+      "garland": {
+        "color": [
+          "green",
+          "white"
+        ],
+        "position": [
+          "on-shelf"
+        ],
+        "signature": [
+          "white-and-green"
+        ]
+      },
+      "stone-wall": {
+        "material": [
+          "stone"
+        ],
+        "color": [
+          "brown"
+        ],
+        "signature": [
+          "brown-stone-texture"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3"
+      }
+    ]
+  }
+}

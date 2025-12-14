@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_049_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "player",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "numbered"
+          ],
+          "action": [
+            "dribbling",
+            "running",
+            "shooting"
+          ],
+          "position": [
+            "center",
+            "left",
+            "right"
+          ],
+          "signature": [
+            "white-jersey-number-4"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "player",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "numbered"
+          ],
+          "action": [
+            "defending",
+            "running"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "black-jersey-number-32"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "player",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "numbered"
+          ],
+          "action": [
+            "passing",
+            "shooting"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "white-jersey-number-9"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "player",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "pattern": [
+            "numbered"
+          ],
+          "action": [
+            "defending",
+            "running"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "yellow-jersey-number-11"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "player",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "pattern": [
+              "numbered"
+            ],
+            "action": [
+              "dribbling",
+              "running",
+              "shooting"
+            ],
+            "position": [
+              "center",
+              "left",
+              "right"
+            ],
+            "signature": [
+              "white-jersey-number-4"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "player",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "pattern": [
+              "numbered"
+            ],
+            "action": [
+              "defending",
+              "running"
+            ],
+            "position": [
+              "right"
+            ],
+            "signature": [
+              "black-jersey-number-32"
+            ]
+          },
+          "spans": [
+            [
+              0.7,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "player",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "pattern": [
+              "numbered"
+            ],
+            "action": [
+              "passing",
+              "shooting"
+            ],
+            "position": [
+              "center"
+            ],
+            "signature": [
+              "white-jersey-number-9"
+            ]
+          },
+          "spans": [
+            [
+              0.6,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "player",
+          "attributes": {
+            "color": [
+              "yellow"
+            ],
+            "pattern": [
+              "numbered"
+            ],
+            "action": [
+              "defending",
+              "running"
+            ],
+            "position": [
+              "left"
+            ],
+            "signature": [
+              "yellow-jersey-number-11"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.6
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o4",
+          "spans": [
+            [
+              0.7,
+              0.8
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "player": 4
+    },
+    "objects_count_display": {
+      "player": 4
+    },
+    "attributes": {
+      "player": {
+        "color": [
+          "black",
+          "white",
+          "yellow"
+        ],
+        "pattern": [
+          "numbered"
+        ],
+        "action": [
+          "defending",
+          "dribbling",
+          "passing",
+          "running",
+          "shooting"
+        ],
+        "position": [
+          "center",
+          "left",
+          "right"
+        ],
+        "signature": [
+          "black-jersey-number-32",
+          "white-jersey-number-4",
+          "white-jersey-number-9",
+          "yellow-jersey-number-11"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4"
+      }
+    ]
+  }
+}

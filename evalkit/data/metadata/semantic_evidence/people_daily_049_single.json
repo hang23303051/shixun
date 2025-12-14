@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_049_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bush",
+        "attributes": {
+          "signature": [
+            "bush-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "escalator",
+        "attributes": {
+          "signature": [
+            "escalator-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sign",
+        "attributes": {
+          "signature": [
+            "sign-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "person-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "bush",
+          "attributes": {
+            "signature": [
+              "bush-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "tree-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "escalator",
+          "attributes": {
+            "signature": [
+              "escalator-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "sign",
+          "attributes": {
+            "signature": [
+              "sign-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.3
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "building",
+          "attributes": {
+            "signature": [
+              "building-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.3
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "bush": 1,
+      "tree": 1,
+      "escalator": 1,
+      "sign": 1,
+      "building": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "bush": 1,
+      "tree": 1,
+      "escalator": 1,
+      "sign": 1,
+      "building": 1
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "person-coarse"
+        ]
+      },
+      "bush": {
+        "signature": [
+          "bush-coarse"
+        ]
+      },
+      "tree": {
+        "signature": [
+          "tree-coarse"
+        ]
+      },
+      "escalator": {
+        "signature": [
+          "escalator-coarse"
+        ]
+      },
+      "sign": {
+        "signature": [
+          "sign-coarse"
+        ]
+      },
+      "building": {
+        "signature": [
+          "building-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_005_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "dashrath-sangle",
+        "attributes": {
+          "signature": [
+            "dashrath-sangle"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "subscribe!",
+        "attributes": {
+          "signature": [
+            "subscribe!"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "is",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "is",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.1,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "dashrath-sangle",
+          "attributes": {
+            "signature": [
+              "dashrath-sangle"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "subscribe!",
+          "attributes": {
+            "signature": [
+              "subscribe!"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "is",
+          "object": "o1",
+          "spans": [
+            [
+              0.3,
+              0.7
+            ]
+          ],
+          "confidence": 0.0
+        },
+        {
+          "subject": "o2",
+          "predicate": "is",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.7
+            ]
+          ],
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "dashrath-sangle": 1,
+      "subscribe!": 1
+    },
+    "objects_count_display": {
+      "dashrath-sangle": 1,
+      "subscribe!": 1
+    },
+    "attributes": {
+      "dashrath-sangle": {
+        "signature": [
+          "dashrath-sangle"
+        ]
+      },
+      "subscribe!": {
+        "signature": [
+          "subscribe!"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "is",
+        "object": "o1"
+      },
+      {
+        "subject": "o2",
+        "predicate": "is",
+        "object": "o2"
+      }
+    ]
+  }
+}

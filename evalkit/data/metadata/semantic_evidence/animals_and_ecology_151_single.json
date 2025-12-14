@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/animals_and_ecology/animals_and_ecology_151_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "owl",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "speckled"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "perched",
+            "wing-flapping"
+          ],
+          "action": [
+            "displaying-wings",
+            "looking-around"
+          ],
+          "orientation": [
+            "front-facing"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "body",
+            "feet",
+            "head",
+            "wings"
+          ],
+          "signature": [
+            "brown-white-speckled-feathers-yellow-eyes-front-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "perched-on",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "owl",
+          "attributes": {
+            "color": [
+              "brown",
+              "white"
+            ],
+            "pattern": [
+              "speckled"
+            ],
+            "texture": [
+              "feathery"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "alert",
+              "calm"
+            ],
+            "pose": [
+              "perched",
+              "wing-flapping"
+            ],
+            "action": [
+              "displaying-wings",
+              "looking-around"
+            ],
+            "orientation": [
+              "front-facing"
+            ],
+            "facing-direction": [
+              "forward"
+            ],
+            "position": [
+              "center"
+            ],
+            "object-part": [
+              "body",
+              "feet",
+              "head",
+              "wings"
+            ],
+            "signature": [
+              "brown-white-speckled-feathers-yellow-eyes-front-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              7.4
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "perched-on",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              7.4
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "owl": 1
+    },
+    "objects_count_display": {
+      "owl": 1
+    },
+    "attributes": {
+      "owl": {
+        "color": [
+          "brown",
+          "white"
+        ],
+        "pattern": [
+          "speckled"
+        ],
+        "texture": [
+          "feathery"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "alert",
+          "calm"
+        ],
+        "pose": [
+          "perched",
+          "wing-flapping"
+        ],
+        "action": [
+          "displaying-wings",
+          "looking-around"
+        ],
+        "orientation": [
+          "front-facing"
+        ],
+        "facing-direction": [
+          "forward"
+        ],
+        "position": [
+          "center"
+        ],
+        "object-part": [
+          "body",
+          "feet",
+          "head",
+          "wings"
+        ],
+        "signature": [
+          "brown-white-speckled-feathers-yellow-eyes-front-facing"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "perched-on",
+        "object": "o1"
+      }
+    ]
+  }
+}

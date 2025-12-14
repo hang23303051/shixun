@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/sports_competition/sports_competition_017_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "black",
+            "orange",
+            "purple"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "signature": [
+            "purple-black-outfit-orange-shoes-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "signature": [
+            "red-outfit-black-shoes-right-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange",
+            "yellow"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "signature": [
+            "yellow-and-blue-outfit-orange-shoes-right-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "signature": [
+            "black-outfit-yellow-shoes-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 9.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "runner",
+          "attributes": {
+            "color": [
+              "black",
+              "orange",
+              "purple"
+            ],
+            "action": [
+              "running"
+            ],
+            "pose": [
+              "mid-stride"
+            ],
+            "signature": [
+              "purple-black-outfit-orange-shoes-left-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "runner",
+          "attributes": {
+            "color": [
+              "black",
+              "red"
+            ],
+            "action": [
+              "running"
+            ],
+            "pose": [
+              "mid-stride"
+            ],
+            "signature": [
+              "red-outfit-black-shoes-right-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "runner",
+          "attributes": {
+            "color": [
+              "blue",
+              "orange",
+              "yellow"
+            ],
+            "action": [
+              "running"
+            ],
+            "pose": [
+              "mid-stride"
+            ],
+            "signature": [
+              "yellow-and-blue-outfit-orange-shoes-right-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "runner",
+          "attributes": {
+            "color": [
+              "black",
+              "yellow"
+            ],
+            "action": [
+              "running"
+            ],
+            "pose": [
+              "mid-stride"
+            ],
+            "signature": [
+              "black-outfit-yellow-shoes-left-facing"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o2",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.4,
+              1.0
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "left-of",
+          "object": "o4",
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "runner": 4
+    },
+    "objects_count_display": {
+      "runner": 4
+    },
+    "attributes": {
+      "runner": {
+        "color": [
+          "black",
+          "blue",
+          "orange",
+          "purple",
+          "red",
+          "yellow"
+        ],
+        "action": [
+          "running"
+        ],
+        "pose": [
+          "mid-stride"
+        ],
+        "signature": [
+          "black-outfit-yellow-shoes-left-facing",
+          "purple-black-outfit-orange-shoes-left-facing",
+          "red-outfit-black-shoes-right-facing",
+          "yellow-and-blue-outfit-orange-shoes-right-facing"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4"
+      }
+    ]
+  }
+}

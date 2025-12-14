@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/architecture_043_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "multiple-small-openings-in-the-structure"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "bright-yellow-light"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "emits_from",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.2,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "window",
+          "attributes": {
+            "signature": [
+              "multiple-small-openings-in-the-structure"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              1.6
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "light",
+          "attributes": {
+            "signature": [
+              "bright-yellow-light"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o2",
+          "predicate": "emits_from",
+          "object": "o1",
+          "spans": [
+            [
+              0.1,
+              0.2
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "window": 1,
+      "light": 1
+    },
+    "objects_count_display": {
+      "window": 1,
+      "light": 1
+    },
+    "attributes": {
+      "window": {
+        "signature": [
+          "multiple-small-openings-in-the-structure"
+        ]
+      },
+      "light": {
+        "signature": [
+          "bright-yellow-light"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o2",
+        "predicate": "emits_from",
+        "object": "o1"
+      }
+    ]
+  }
+}

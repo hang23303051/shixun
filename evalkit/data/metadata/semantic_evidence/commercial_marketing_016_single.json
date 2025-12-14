@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_016_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gun",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "brand-or-logo": [
+            "disney",
+            "hammer"
+          ],
+          "signature": [
+            "red-black-color-hammer-disney-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white",
+            "yellow"
+          ],
+          "signature": [
+            "white-yellow-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 7.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "gun",
+          "attributes": {
+            "color": [
+              "black",
+              "red"
+            ],
+            "brand-or-logo": [
+              "disney",
+              "hammer"
+            ],
+            "signature": [
+              "red-black-color-hammer-disney-logo"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "white",
+              "yellow"
+            ],
+            "signature": [
+              "white-yellow-shirt"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "gun": 1,
+      "person": 1
+    },
+    "objects_count_display": {
+      "gun": 1,
+      "person": 1
+    },
+    "attributes": {
+      "gun": {
+        "color": [
+          "black",
+          "red"
+        ],
+        "brand-or-logo": [
+          "disney",
+          "hammer"
+        ],
+        "signature": [
+          "red-black-color-hammer-disney-logo"
+        ]
+      },
+      "person": {
+        "color": [
+          "white",
+          "yellow"
+        ],
+        "signature": [
+          "white-yellow-shirt"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_004_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "traditional-dancer"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            16.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "drummer"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            16.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "spectator"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            16.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "dancing",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            16.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "watching",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            16.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 16.5,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "traditional-dancer"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              16.5
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "drummer"
+            ]
+          },
+          "spans": [
+            [
+              0.6,
+              16.5
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person",
+          "attributes": {
+            "signature": [
+              "spectator"
+            ]
+          },
+          "spans": [
+            [
+              0.8,
+              16.5
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "dancing",
+          "object": "o2",
+          "spans": [
+            [
+              0.0,
+              16.5
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o3",
+          "predicate": "watching",
+          "object": "o1",
+          "spans": [
+            [
+              0.0,
+              16.5
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 3
+    },
+    "objects_count_display": {
+      "person": 3
+    },
+    "attributes": {
+      "person": {
+        "signature": [
+          "drummer",
+          "spectator",
+          "traditional-dancer"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "dancing",
+        "object": "o2"
+      },
+      {
+        "subject": "o3",
+        "predicate": "watching",
+        "object": "o1"
+      }
+    ]
+  }
+}

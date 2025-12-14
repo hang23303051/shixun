@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_017_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "green-can",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "flavor": [
+            "lemon-mint"
+          ],
+          "signature": [
+            "green-blender-logo,-lemon-mint-flavor-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "orange-can",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "flavor": [
+            "strawberry-blueberry"
+          ],
+          "signature": [
+            "orange-blender-logo,-strawberry-blueberry-flavor-text"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "lemon-slice",
+        "attributes": {
+          "color": [
+            "white",
+            "yellow"
+          ],
+          "signature": [
+            "white-rind,-yellow-pulp"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "mint-leaf",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "signature": [
+            "green-leaf"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "strawberry",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "signature": [
+            "red-fruit"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "blueberry",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "signature": [
+            "blue-fruit"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 2.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "green-can",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "flavor": [
+              "lemon-mint"
+            ],
+            "signature": [
+              "green-blender-logo,-lemon-mint-flavor-text"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "orange-can",
+          "attributes": {
+            "color": [
+              "orange"
+            ],
+            "flavor": [
+              "strawberry-blueberry"
+            ],
+            "signature": [
+              "orange-blender-logo,-strawberry-blueberry-flavor-text"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "lemon-slice",
+          "attributes": {
+            "color": [
+              "white",
+              "yellow"
+            ],
+            "signature": [
+              "white-rind,-yellow-pulp"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "mint-leaf",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "signature": [
+              "green-leaf"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "strawberry",
+          "attributes": {
+            "color": [
+              "red"
+            ],
+            "signature": [
+              "red-fruit"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "blueberry",
+          "attributes": {
+            "color": [
+              "blue"
+            ],
+            "signature": [
+              "blue-fruit"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "green-can": 1,
+      "orange-can": 1,
+      "lemon-slice": 1,
+      "mint-leaf": 1,
+      "strawberry": 1,
+      "blueberry": 1
+    },
+    "objects_count_display": {
+      "green-can": 1,
+      "orange-can": 1,
+      "lemon-slice": 1,
+      "mint-leaf": 1,
+      "strawberry": 1,
+      "blueberry": 1
+    },
+    "attributes": {
+      "green-can": {
+        "color": [
+          "green"
+        ],
+        "flavor": [
+          "lemon-mint"
+        ],
+        "signature": [
+          "green-blender-logo,-lemon-mint-flavor-text"
+        ]
+      },
+      "orange-can": {
+        "color": [
+          "orange"
+        ],
+        "flavor": [
+          "strawberry-blueberry"
+        ],
+        "signature": [
+          "orange-blender-logo,-strawberry-blueberry-flavor-text"
+        ]
+      },
+      "lemon-slice": {
+        "color": [
+          "white",
+          "yellow"
+        ],
+        "signature": [
+          "white-rind,-yellow-pulp"
+        ]
+      },
+      "mint-leaf": {
+        "color": [
+          "green"
+        ],
+        "signature": [
+          "green-leaf"
+        ]
+      },
+      "strawberry": {
+        "color": [
+          "red"
+        ],
+        "signature": [
+          "red-fruit"
+        ]
+      },
+      "blueberry": {
+        "color": [
+          "blue"
+        ],
+        "signature": [
+          "blue-fruit"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_025_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "filling-bottle",
+            "handling-bottle"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "state": [
+            "working"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "white-coat-blue-mask-gloves"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "handling-bottle"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "state": [
+            "working"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "white-coat-white-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "handling-bottle"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "state": [
+            "working"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "white-coat-white-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "blue",
+              "white"
+            ],
+            "action": [
+              "filling-bottle",
+              "handling-bottle"
+            ],
+            "pose": [
+              "sitting"
+            ],
+            "state": [
+              "working"
+            ],
+            "facing-direction": [
+              "right-facing"
+            ],
+            "signature": [
+              "white-coat-blue-mask-gloves"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "action": [
+              "handling-bottle"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "state": [
+              "working"
+            ],
+            "facing-direction": [
+              "left-facing"
+            ],
+            "signature": [
+              "white-coat-white-cap"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.5
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "action": [
+              "handling-bottle"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "state": [
+              "working"
+            ],
+            "facing-direction": [
+              "left-facing"
+            ],
+            "signature": [
+              "white-coat-white-cap"
+            ]
+          },
+          "spans": [
+            [
+              0.6,
+              0.8
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o2",
+          "spans": [
+            [
+              0.2,
+              0.5
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "left-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.2,
+              0.8
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 3
+    },
+    "objects_count_display": {
+      "person": 3
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "blue",
+          "white"
+        ],
+        "action": [
+          "filling-bottle",
+          "handling-bottle"
+        ],
+        "pose": [
+          "sitting",
+          "standing"
+        ],
+        "state": [
+          "working"
+        ],
+        "facing-direction": [
+          "left-facing",
+          "right-facing"
+        ],
+        "signature": [
+          "white-coat-blue-mask-gloves",
+          "white-coat-white-cap"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/people_daily/people_daily_017_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "brown",
+            "pink"
+          ],
+          "pattern": [
+            "ripped",
+            "solid"
+          ],
+          "texture": [
+            "furry",
+            "soft"
+          ],
+          "material": [
+            "fabric",
+            "fur",
+            "leather"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "teenager"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "bending_forward",
+            "dancing",
+            "posing",
+            "standing_up"
+          ],
+          "action": [
+            "adjusting_bag",
+            "dancing",
+            "posing",
+            "swaying"
+          ],
+          "orientation": [
+            "facing_forward"
+          ],
+          "facing_direction": [
+            "front"
+          ],
+          "position": [
+            "center"
+          ],
+          "object_part": [
+            "arms",
+            "back",
+            "feet",
+            "head",
+            "legs",
+            "shoulders",
+            "torso"
+          ],
+          "equipment": [
+            "watch"
+          ],
+          "printed_text": [
+            "text_on_pink_shirt"
+          ],
+          "style": [
+            "casual",
+            "winter"
+          ],
+          "lighting": [
+            "warm"
+          ],
+          "scene": [
+            "home",
+            "indoor"
+          ],
+          "camera_view": [
+            "front_view"
+          ],
+          "signature": [
+            "black_hair_pink_shirt_blue_jeans_furry_boots_watch_on_left_wrist"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black",
+              "blue",
+              "brown",
+              "pink"
+            ],
+            "pattern": [
+              "ripped",
+              "solid"
+            ],
+            "texture": [
+              "furry",
+              "soft"
+            ],
+            "material": [
+              "fabric",
+              "fur",
+              "leather"
+            ],
+            "size": [
+              "medium"
+            ],
+            "age": [
+              "teenager"
+            ],
+            "sex": [
+              "female"
+            ],
+            "state": [
+              "standing"
+            ],
+            "pose": [
+              "bending_forward",
+              "dancing",
+              "posing",
+              "standing_up"
+            ],
+            "action": [
+              "adjusting_bag",
+              "dancing",
+              "posing",
+              "swaying"
+            ],
+            "orientation": [
+              "facing_forward"
+            ],
+            "facing_direction": [
+              "front"
+            ],
+            "position": [
+              "center"
+            ],
+            "object_part": [
+              "arms",
+              "back",
+              "feet",
+              "head",
+              "legs",
+              "shoulders",
+              "torso"
+            ],
+            "equipment": [
+              "watch"
+            ],
+            "printed_text": [
+              "text_on_pink_shirt"
+            ],
+            "style": [
+              "casual",
+              "winter"
+            ],
+            "lighting": [
+              "warm"
+            ],
+            "scene": [
+              "home",
+              "indoor"
+            ],
+            "camera_view": [
+              "front_view"
+            ],
+            "signature": [
+              "black_hair_pink_shirt_blue_jeans_furry_boots_watch_on_left_wrist"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              3.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1
+    },
+    "objects_count_display": {
+      "person": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "pink"
+        ],
+        "pattern": [
+          "ripped",
+          "solid"
+        ],
+        "texture": [
+          "furry",
+          "soft"
+        ],
+        "material": [
+          "fabric",
+          "fur",
+          "leather"
+        ],
+        "size": [
+          "medium"
+        ],
+        "age": [
+          "teenager"
+        ],
+        "sex": [
+          "female"
+        ],
+        "state": [
+          "standing"
+        ],
+        "pose": [
+          "bending_forward",
+          "dancing",
+          "posing",
+          "standing_up"
+        ],
+        "action": [
+          "adjusting_bag",
+          "dancing",
+          "posing",
+          "swaying"
+        ],
+        "orientation": [
+          "facing_forward"
+        ],
+        "facing_direction": [
+          "front"
+        ],
+        "position": [
+          "center"
+        ],
+        "object_part": [
+          "arms",
+          "back",
+          "feet",
+          "head",
+          "legs",
+          "shoulders",
+          "torso"
+        ],
+        "equipment": [
+          "watch"
+        ],
+        "printed_text": [
+          "text_on_pink_shirt"
+        ],
+        "style": [
+          "casual",
+          "winter"
+        ],
+        "lighting": [
+          "warm"
+        ],
+        "scene": [
+          "home",
+          "indoor"
+        ],
+        "camera_view": [
+          "front_view"
+        ],
+        "signature": [
+          "black_hair_pink_shirt_blue_jeans_furry_boots_watch_on_left_wrist"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/commercial_marketing/commercial_marketing_053_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "crank-arm",
+        "attributes": {
+          "color": [
+            "black",
+            "silver"
+          ],
+          "printed-text": [
+            "era"
+          ],
+          "signature": [
+            "era-printed-text-black-silver-color"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chain",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "texture": [
+            "metallic"
+          ],
+          "signature": [
+            "metallic-texture"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "object-part": [
+            "hand"
+          ],
+          "signature": [
+            "black-sleeve-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "attached-to",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 5.7,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "crank-arm",
+          "attributes": {
+            "color": [
+              "black",
+              "silver"
+            ],
+            "printed-text": [
+              "era"
+            ],
+            "signature": [
+              "era-printed-text-black-silver-color"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "chain",
+          "attributes": {
+            "material": [
+              "metal"
+            ],
+            "texture": [
+              "metallic"
+            ],
+            "signature": [
+              "metallic-texture"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "black"
+            ],
+            "object-part": [
+              "hand"
+            ],
+            "signature": [
+              "black-sleeve-hand"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "holding",
+          "object": "o2",
+          "spans": [
+            [
+              0.3,
+              0.4
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "attached-to",
+          "object": "o2",
+          "spans": [
+            [
+              0.7,
+              0.8
+            ]
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "crank-arm": 1,
+      "chain": 1,
+      "person": 1
+    },
+    "objects_count_display": {
+      "crank-arm": 1,
+      "chain": 1,
+      "person": 1
+    },
+    "attributes": {
+      "crank-arm": {
+        "color": [
+          "black",
+          "silver"
+        ],
+        "printed-text": [
+          "era"
+        ],
+        "signature": [
+          "era-printed-text-black-silver-color"
+        ]
+      },
+      "chain": {
+        "material": [
+          "metal"
+        ],
+        "texture": [
+          "metallic"
+        ],
+        "signature": [
+          "metallic-texture"
+        ]
+      },
+      "person": {
+        "color": [
+          "black"
+        ],
+        "object-part": [
+          "hand"
+        ],
+        "signature": [
+          "black-sleeve-hand"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2"
+      },
+      {
+        "subject": "o1",
+        "predicate": "attached-to",
+        "object": "o2"
+      }
+    ]
+  }
+}

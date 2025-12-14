@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "video": "/nfs/FM/huhaoxuan/others/jiajia/evaluation/code/aiv/videodata/refvideo/food_019_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hand",
+        "attributes": {
+          "signature": [
+            "hand-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chopsticks",
+        "attributes": {
+          "signature": [
+            "chopsticks-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "vegetables",
+        "attributes": {
+          "signature": [
+            "vegetables-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "soy-sauce",
+        "attributes": {
+          "signature": [
+            "soy-sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "sauce",
+        "attributes": {
+          "signature": [
+            "sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "hand",
+          "attributes": {
+            "signature": [
+              "hand-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "chopsticks",
+          "attributes": {
+            "signature": [
+              "chopsticks-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "vegetables",
+          "attributes": {
+            "signature": [
+              "vegetables-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "soy-sauce",
+          "attributes": {
+            "signature": [
+              "soy-sauce-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "water",
+          "attributes": {
+            "signature": [
+              "water-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        },
+        {
+          "id": "o6",
+          "name": "sauce",
+          "attributes": {
+            "signature": [
+              "sauce-coarse"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              6.4
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "hand": 1,
+      "chopsticks": 1,
+      "vegetables": 1,
+      "soy-sauce": 1,
+      "water": 1,
+      "sauce": 1
+    },
+    "objects_count_display": {
+      "hand": 1,
+      "chopsticks": 1,
+      "vegetables": 1,
+      "soy-sauce": 1,
+      "water": 1,
+      "sauce": 1
+    },
+    "attributes": {
+      "hand": {
+        "signature": [
+          "hand-coarse"
+        ]
+      },
+      "chopsticks": {
+        "signature": [
+          "chopsticks-coarse"
+        ]
+      },
+      "vegetables": {
+        "signature": [
+          "vegetables-coarse"
+        ]
+      },
+      "soy-sauce": {
+        "signature": [
+          "soy-sauce-coarse"
+        ]
+      },
+      "water": {
+        "signature": [
+          "water-coarse"
+        ]
+      },
+      "sauce": {
+        "signature": [
+          "sauce-coarse"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

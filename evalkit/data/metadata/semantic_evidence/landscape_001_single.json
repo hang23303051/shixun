@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_001_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cable",
+        "attributes": {
+          "signature": [
+            "thin,-black,-vertical-lines-extending-from-top-of-frame-towards-the-mountain"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "snow-covered-slope-with-trees"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "green-trees-on-snow-covered-mountainside"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "fog",
+        "attributes": {
+          "signature": [
+            "white,-dense-layer-covering-lower-part-of-valley"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "clear-blue-sky-above-fog-layer"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "cable",
+          "attributes": {
+            "signature": [
+              "thin,-black,-vertical-lines-extending-from-top-of-frame-towards-the-mountain"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.4
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "mountain",
+          "attributes": {
+            "signature": [
+              "snow-covered-slope-with-trees"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.4
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "tree",
+          "attributes": {
+            "signature": [
+              "green-trees-on-snow-covered-mountainside"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.4
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "fog",
+          "attributes": {
+            "signature": [
+              "white,-dense-layer-covering-lower-part-of-valley"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.4
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "sky",
+          "attributes": {
+            "signature": [
+              "clear-blue-sky-above-fog-layer"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              8.4
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "cable": 1,
+      "mountain": 1,
+      "tree": 1,
+      "fog": 1,
+      "sky": 1
+    },
+    "objects_count_display": {
+      "cable": 1,
+      "mountain": 1,
+      "tree": 1,
+      "fog": 1,
+      "sky": 1
+    },
+    "attributes": {
+      "cable": {
+        "signature": [
+          "thin,-black,-vertical-lines-extending-from-top-of-frame-towards-the-mountain"
+        ]
+      },
+      "mountain": {
+        "signature": [
+          "snow-covered-slope-with-trees"
+        ]
+      },
+      "tree": {
+        "signature": [
+          "green-trees-on-snow-covered-mountainside"
+        ]
+      },
+      "fog": {
+        "signature": [
+          "white,-dense-layer-covering-lower-part-of-valley"
+        ]
+      },
+      "sky": {
+        "signature": [
+          "clear-blue-sky-above-fog-layer"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}

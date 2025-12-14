@@ -1,0 +1,582 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/industrial_activity/industrial_activity_041_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "handling-hot-metal",
+            "working"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "back-to-camera"
+          ],
+          "signature": [
+            "blue-shirt-back-facing-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fan",
+        "attributes": {
+          "color": [
+            "blue-green"
+          ],
+          "material": [
+            "metal"
+          ],
+          "object-part": [
+            "base",
+            "blades"
+          ],
+          "position": [
+            "in-front-of-machine"
+          ],
+          "signature": [
+            "blue-green-fan-in-front-of-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "material": [
+            "metal"
+          ],
+          "equipment": [
+            "forge",
+            "press"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "operational"
+          ],
+          "signature": [
+            "green-machine-with-red-chinese-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "hot-metal-piece",
+        "attributes": {
+          "color": [
+            "bright-orange"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "glowing",
+            "hot"
+          ],
+          "action": [
+            "being-shaped",
+            "being-worked-on"
+          ],
+          "signature": [
+            "bright-orange-hot-metal-being-handled"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "control-panel",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "material": [
+            "metal"
+          ],
+          "equipment": [
+            "control-unit"
+          ],
+          "state": [
+            "lit"
+          ],
+          "signature": [
+            "orange-control-panel-with-green-lights"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "attached-to",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 8.3,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "blue"
+            ],
+            "sex": [
+              "male"
+            ],
+            "action": [
+              "handling-hot-metal",
+              "working"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "facing-direction": [
+              "back-to-camera"
+            ],
+            "signature": [
+              "blue-shirt-back-facing-machine"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "fan",
+          "attributes": {
+            "color": [
+              "blue-green"
+            ],
+            "material": [
+              "metal"
+            ],
+            "object-part": [
+              "base",
+              "blades"
+            ],
+            "position": [
+              "in-front-of-machine"
+            ],
+            "signature": [
+              "blue-green-fan-in-front-of-machine"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "machine",
+          "attributes": {
+            "color": [
+              "green"
+            ],
+            "material": [
+              "metal"
+            ],
+            "equipment": [
+              "forge",
+              "press"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "operational"
+            ],
+            "signature": [
+              "green-machine-with-red-chinese-text"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "hot-metal-piece",
+          "attributes": {
+            "color": [
+              "bright-orange"
+            ],
+            "material": [
+              "metal"
+            ],
+            "state": [
+              "glowing",
+              "hot"
+            ],
+            "action": [
+              "being-shaped",
+              "being-worked-on"
+            ],
+            "signature": [
+              "bright-orange-hot-metal-being-handled"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "control-panel",
+          "attributes": {
+            "color": [
+              "orange"
+            ],
+            "material": [
+              "metal"
+            ],
+            "equipment": [
+              "control-unit"
+            ],
+            "state": [
+              "lit"
+            ],
+            "signature": [
+              "orange-control-panel-with-green-lights"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "feeding",
+          "object": "o4",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o1",
+          "predicate": "standing-in-front-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o2",
+          "predicate": "in-front-of",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o5",
+          "predicate": "attached-to",
+          "object": "o3",
+          "spans": [
+            [
+              0.0,
+              8.3
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "fan": 1,
+      "machine": 1,
+      "hot-metal-piece": 1,
+      "control-panel": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "fan": 1,
+      "machine": 1,
+      "hot-metal-piece": 1,
+      "control-panel": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "blue"
+        ],
+        "sex": [
+          "male"
+        ],
+        "action": [
+          "handling-hot-metal",
+          "working"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "facing-direction": [
+          "back-to-camera"
+        ],
+        "signature": [
+          "blue-shirt-back-facing-machine"
+        ]
+      },
+      "fan": {
+        "color": [
+          "blue-green"
+        ],
+        "material": [
+          "metal"
+        ],
+        "object-part": [
+          "base",
+          "blades"
+        ],
+        "position": [
+          "in-front-of-machine"
+        ],
+        "signature": [
+          "blue-green-fan-in-front-of-machine"
+        ]
+      },
+      "machine": {
+        "color": [
+          "green"
+        ],
+        "material": [
+          "metal"
+        ],
+        "equipment": [
+          "forge",
+          "press"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "operational"
+        ],
+        "signature": [
+          "green-machine-with-red-chinese-text"
+        ]
+      },
+      "hot-metal-piece": {
+        "color": [
+          "bright-orange"
+        ],
+        "material": [
+          "metal"
+        ],
+        "state": [
+          "glowing",
+          "hot"
+        ],
+        "action": [
+          "being-shaped",
+          "being-worked-on"
+        ],
+        "signature": [
+          "bright-orange-hot-metal-being-handled"
+        ]
+      },
+      "control-panel": {
+        "color": [
+          "orange"
+        ],
+        "material": [
+          "metal"
+        ],
+        "equipment": [
+          "control-unit"
+        ],
+        "state": [
+          "lit"
+        ],
+        "signature": [
+          "orange-control-panel-with-green-lights"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o4"
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3"
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o2",
+        "predicate": "in-front-of",
+        "object": "o3"
+      },
+      {
+        "subject": "o5",
+        "predicate": "attached-to",
+        "object": "o3"
+      }
+    ]
+  }
+}

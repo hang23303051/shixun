@@ -1,0 +1,472 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/architecture/architecture_024_single.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "pink",
+            "white"
+          ],
+          "sex": [
+            "female"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "signature": [
+            "pink-shirt-white-pants-hat-woman-facing-right"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "temple",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange"
+          ],
+          "pattern": [
+            "ornate"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "by-sea"
+          ],
+          "signature": [
+            "ornate-blue-roofed-structure-by-sea-at-sunset"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bench",
+        "attributes": {
+          "material": [
+            "wood"
+          ],
+          "position": [
+            "under-arch"
+          ],
+          "signature": [
+            "wooden-bench-under-arch"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sea",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "state": [
+            "calm"
+          ],
+          "signature": [
+            "calm-blue-water"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sand",
+        "attributes": {
+          "color": [
+            "tan"
+          ],
+          "texture": [
+            "grainy"
+          ],
+          "signature": [
+            "beach-sand-with-footprints"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o4",
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "by",
+        "object": "o4",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "next-to",
+        "object": "o4",
+        "spans": [
+          [
+            0.5,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "under",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 6.6,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "person",
+          "attributes": {
+            "color": [
+              "pink",
+              "white"
+            ],
+            "sex": [
+              "female"
+            ],
+            "facing-direction": [
+              "right"
+            ],
+            "pose": [
+              "standing"
+            ],
+            "signature": [
+              "pink-shirt-white-pants-hat-woman-facing-right"
+            ]
+          },
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ]
+        },
+        {
+          "id": "o2",
+          "name": "temple",
+          "attributes": {
+            "color": [
+              "blue",
+              "orange"
+            ],
+            "pattern": [
+              "ornate"
+            ],
+            "size": [
+              "large"
+            ],
+            "position": [
+              "by-sea"
+            ],
+            "signature": [
+              "ornate-blue-roofed-structure-by-sea-at-sunset"
+            ]
+          },
+          "spans": [
+            [
+              0.3,
+              0.8
+            ]
+          ]
+        },
+        {
+          "id": "o3",
+          "name": "bench",
+          "attributes": {
+            "material": [
+              "wood"
+            ],
+            "position": [
+              "under-arch"
+            ],
+            "signature": [
+              "wooden-bench-under-arch"
+            ]
+          },
+          "spans": [
+            [
+              0.4,
+              0.6
+            ]
+          ]
+        },
+        {
+          "id": "o4",
+          "name": "sea",
+          "attributes": {
+            "color": [
+              "blue"
+            ],
+            "state": [
+              "calm"
+            ],
+            "signature": [
+              "calm-blue-water"
+            ]
+          },
+          "spans": [
+            [
+              0.1,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "o5",
+          "name": "sand",
+          "attributes": {
+            "color": [
+              "tan"
+            ],
+            "texture": [
+              "grainy"
+            ],
+            "signature": [
+              "beach-sand-with-footprints"
+            ]
+          },
+          "spans": [
+            [
+              0.5,
+              0.9
+            ]
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "subject": "o1",
+          "predicate": "looking-at",
+          "object": "o4",
+          "spans": [
+            [
+              0.2,
+              0.7
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o2",
+          "predicate": "by",
+          "object": "o4",
+          "spans": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "confidence": 0.9
+        },
+        {
+          "subject": "o5",
+          "predicate": "next-to",
+          "object": "o4",
+          "spans": [
+            [
+              0.5,
+              0.9
+            ]
+          ],
+          "confidence": 0.8
+        },
+        {
+          "subject": "o3",
+          "predicate": "under",
+          "object": "o1",
+          "spans": [
+            [
+              0.4,
+              0.6
+            ]
+          ],
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "person": 1,
+      "temple": 1,
+      "bench": 1,
+      "sea": 1,
+      "sand": 1
+    },
+    "objects_count_display": {
+      "person": 1,
+      "temple": 1,
+      "bench": 1,
+      "sea": 1,
+      "sand": 1
+    },
+    "attributes": {
+      "person": {
+        "color": [
+          "pink",
+          "white"
+        ],
+        "sex": [
+          "female"
+        ],
+        "facing-direction": [
+          "right"
+        ],
+        "pose": [
+          "standing"
+        ],
+        "signature": [
+          "pink-shirt-white-pants-hat-woman-facing-right"
+        ]
+      },
+      "temple": {
+        "color": [
+          "blue",
+          "orange"
+        ],
+        "pattern": [
+          "ornate"
+        ],
+        "size": [
+          "large"
+        ],
+        "position": [
+          "by-sea"
+        ],
+        "signature": [
+          "ornate-blue-roofed-structure-by-sea-at-sunset"
+        ]
+      },
+      "bench": {
+        "material": [
+          "wood"
+        ],
+        "position": [
+          "under-arch"
+        ],
+        "signature": [
+          "wooden-bench-under-arch"
+        ]
+      },
+      "sea": {
+        "color": [
+          "blue"
+        ],
+        "state": [
+          "calm"
+        ],
+        "signature": [
+          "calm-blue-water"
+        ]
+      },
+      "sand": {
+        "color": [
+          "tan"
+        ],
+        "texture": [
+          "grainy"
+        ],
+        "signature": [
+          "beach-sand-with-footprints"
+        ]
+      }
+    },
+    "triplets": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o4"
+      },
+      {
+        "subject": "o2",
+        "predicate": "by",
+        "object": "o4"
+      },
+      {
+        "subject": "o5",
+        "predicate": "next-to",
+        "object": "o4"
+      },
+      {
+        "subject": "o3",
+        "predicate": "under",
+        "object": "o1"
+      }
+    ]
+  }
+}

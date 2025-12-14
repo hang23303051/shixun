@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "video": "/root/autodl-tmp/aiv/videodata/refvideo/landscape/landscape_013_multi.mp4",
+    "window_sec": 6.0,
+    "hop_sec": 3.0,
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain-peak",
+        "attributes": {
+          "color": [
+            "dark-blue",
+            "light-blue",
+            "orange",
+            "pink",
+            "yellow"
+          ],
+          "pattern": [
+            "rocky",
+            "snow-covered"
+          ],
+          "texture": [
+            "rough",
+            "smooth"
+          ],
+          "material": [
+            "rock",
+            "snow"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "static"
+          ],
+          "orientation": [
+            "upright"
+          ],
+          "facing-direction": [
+            "north"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "ridges",
+            "slopes",
+            "summit"
+          ],
+          "signature": [
+            "the-central-snow-covered-mountain-peak"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            17.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "fine_windows": [
+    {
+      "start": 0.0,
+      "end": 17.0,
+      "entities": [
+        {
+          "id": "o1",
+          "name": "mountain-peak",
+          "attributes": {
+            "color": [
+              "dark-blue",
+              "light-blue",
+              "orange",
+              "pink",
+              "yellow"
+            ],
+            "pattern": [
+              "rocky",
+              "snow-covered"
+            ],
+            "texture": [
+              "rough",
+              "smooth"
+            ],
+            "material": [
+              "rock",
+              "snow"
+            ],
+            "size": [
+              "large"
+            ],
+            "state": [
+              "static"
+            ],
+            "orientation": [
+              "upright"
+            ],
+            "facing-direction": [
+              "north"
+            ],
+            "position": [
+              "center"
+            ],
+            "object-part": [
+              "ridges",
+              "slopes",
+              "summit"
+            ],
+            "signature": [
+              "the-central-snow-covered-mountain-peak"
+            ]
+          },
+          "spans": [
+            [
+              0.0,
+              17.0
+            ]
+          ]
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "views": {
+    "objects_count": {
+      "mountain-peak": 1
+    },
+    "objects_count_display": {
+      "mountain-peak": 1
+    },
+    "attributes": {
+      "mountain-peak": {
+        "color": [
+          "dark-blue",
+          "light-blue",
+          "orange",
+          "pink",
+          "yellow"
+        ],
+        "pattern": [
+          "rocky",
+          "snow-covered"
+        ],
+        "texture": [
+          "rough",
+          "smooth"
+        ],
+        "material": [
+          "rock",
+          "snow"
+        ],
+        "size": [
+          "large"
+        ],
+        "state": [
+          "static"
+        ],
+        "orientation": [
+          "upright"
+        ],
+        "facing-direction": [
+          "north"
+        ],
+        "position": [
+          "center"
+        ],
+        "object-part": [
+          "ridges",
+          "slopes",
+          "summit"
+        ],
+        "signature": [
+          "the-central-snow-covered-mountain-peak"
+        ]
+      }
+    },
+    "triplets": []
+  }
+}
