@@ -1,4 +1,5 @@
 import axios from 'axios'
+import router from '@/router' // 引入路由，用于401跳转
 
 // 从cookie中获取CSRF token
 function getCookie(name) {
@@ -19,7 +20,10 @@ function getCookie(name) {
 const instance = axios.create({
   baseURL: '/api',
   timeout: 30000,
-  withCredentials: true
+  withCredentials: true,
+   headers: {
+    'Accept': 'application/json' // 明确接受JSON格式
+  }
 })
 
 // 请求拦截器
