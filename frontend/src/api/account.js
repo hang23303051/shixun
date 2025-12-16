@@ -1,5 +1,6 @@
 import request from './axios'
 
+
 export const accountAPI = {
   // 注册
   register(data) {
@@ -18,6 +19,7 @@ export const accountAPI = {
 
   // 检查登录状态
   checkLogin() {
+    // 后端接口：/api/account/check-login/
     return request.get('/account/check-login/')
   },
 
