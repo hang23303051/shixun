@@ -38,10 +38,6 @@ export const accountAPI = {
     return request.get(`/account/activate/${email}/${token}/`)
   },
 
-  // 重新发送激活邮件
-  resendActivationEmail(email) {
-    return request.post('/account/resend-activation/', { email })
-  },
 
   // 请求密码重置（发送验证码）
   requestPasswordReset(email) {
@@ -51,6 +47,10 @@ export const accountAPI = {
   // 验证重置验证码
   verifyResetCode(email, code) {
     return request.post('/account/verify-reset-code/', { email, code })
+  },
+  // 重新发送激活邮件
+  resendActivationEmail(email) {
+    return request.post('/account/resend-activation/', { email })
   },
 
   // 重置密码
