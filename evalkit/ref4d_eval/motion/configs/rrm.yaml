@@ -1,0 +1,84 @@
+# configs/rrm.yaml
+# Alignment-Free RRM — 仅做单端主体/背景掩码与点跟踪，三项指标 + FRZ 两项
+
+sample:
+  short_side: 448         # 统一短边
+  fps: 12                 # 统一 FPS
+
+# ---- 主体/背景掩码（单端） ----
+# subject_mask_rmm.py 会把以下路径写入环境变量供 GroundingDINO / SAM2 使用
+subject:
+  enable: true
+  # GroundingDINO（开集检测），任选其一：本地 cfg+ckpt，或直接留空用你已有默认
+  gdino_cfg: third_party/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py
+  gdino_ckpt: checkpoints/groundingdino/groundingdino_swint_ogc.pth
+  # SAM 2（视频掩码传播），二选一：cfg_name 或 cfg+ckpt
+  sam2_cfg_name: configs/sam2.1/sam2.1_hiera_l                # 例如 "sam2_hiera_l.yaml"（若使用官方注册名）
+  sam2_cfg: third_party/sam2/sam2/configs/sam2.1/sam2.1_hiera_l.yaml
+  sam2_ckpt: checkpoints/sam2/sam2.1_hiera_large.pt
+
+  # 检测与分割阈值
+  box_conf_thr: 0.15                    # GroundingDINO box score
+  text_thr: 0.2                        # GroundingDINO text score
+  topk_instances: 3                     # 每帧最多保留的实例（取并集送 SAM2）
+
+  # 掩码后处理
+  post_erode: 0                         # 腐蚀迭代
+  post_dilate: 3                        # 膨胀迭代
+  post_fill_ratio: 0.02                # 小孔填充（相对面积阈）
+  sam2_pred_iou_thr: 0.80 # 分割置信门槛略放松（原 0.86）
+  
+# ---- TAPIR 点跟踪（任意点跟踪） ----
+tapir:
+  backend: "torch"                        # 固定 "torch"（避免任何回退）
+  weights: "checkpoints/tapnet_checkpoints/bootstapir_checkpoint_v2.pt"  # 模型权重（按你的 tapir_infer.py 期望）
+  chunk: 64                             # 按需：时序分块
+  batch_size: 4096                      # 按需：点批大小
+  vis_thresh: 0.6                       # 可见性阈（供上游筛点或统计用）
+
+# ---- 撒点（严格无回退） ----
+tracking:
+  num_fg: 128
+  num_bg: 128
+  border: 2                             # 边界裁切像素
+  edge_bonus: true                      # 边界增益采样
+  min_tex: 0.02                         # 纹理门控（Sobel 阈）；如不用可置 null
+  t0_stride: 8
+
+fallback:
+  mask:
+    enable: true
+    max_skip: 6       # 仅修补短洞；更大的洞让撒点阶段跳帧
+    dilate_iters: 1   # 修补后轻度膨胀
+    min_area_px: 200  # 面积很小时再膨胀一次（可置 0 关闭）
+  sampling:
+    policy: "skip_or_reduce"  # "skip_only" / "reduce_only"
+    min_fg: 8
+    min_bg: 16
+    density: 0.005
+
+# ---- 特征 ----
+features:
+  dir_bins: 8                          # HoF(16) + 圆周 EMD
+  eps: 1.0e-3                           # log(|r|+eps) 的 eps
+
+# ---- 冻结惩罚（仅 RF + LS） ----
+freeze:
+  tau_motion_abs: 0.1                   # 启用 FRZ 的门控：median(s_ref) > 该阈值
+  # RF：局部 NCC “独特像素率不足”帧比例
+  ncc_patch: 32
+  ncc_stride: 32                        # 可与 patch 相同；如设 null 将由实现取 patch
+  ncc_thr: 0.9                         # 块相似性阈；越高越严格
+  unique_min_ratio: 0.15                # 每帧“独特像素率”低于该比例视为重复
+  # LS：低速占比
+  tau_s_quantile_ref: 0.20              # tau_s = P20( s_ref )
+  w_rf: 0.7                   # RF 权重稍降
+  w_ls: 0.3                   # LS 权重稍降，避免一棒子打死
+  roi_bbox_expand: 8   # ROI 外扩，避免严格贴边导致无法取块
+  roi_on_empty: "use_curr"   # 可改为 use_curr / use_prev / full / skip/ union
+# ---- 评分映射与融合 ----
+scoring:
+  lambdas: {dir: 4.0, mag: 1, smo: 2.0}   # S_k = 100 * exp(-lambda_k * D_k)
+  alphas:  {dir: 0.45, mag: 0.40, smo: 0.15}# Σα=1
+  eta: 0.1                                   # S_motion = (ΣαS_k)*(1-eta*FRZ)
+

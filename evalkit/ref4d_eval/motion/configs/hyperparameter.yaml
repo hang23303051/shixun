@@ -1,0 +1,41 @@
+# ===== Global hyper-parameters =====
+repro:
+  seed: 1234
+  torch_deterministic: true
+  disable_tf32: true
+
+# ---------- sampling / windowing ----------
+sampling:
+  short_edge: 448
+  fps: 12
+
+windowing:
+  window_sec: 6.0
+  hop_sec: 3.0
+  prefer_shot_segments: true
+  min_valid_ratio: 0.15
+
+shots:
+  threshold: 27.0
+  min_scene_len: 12
+
+subject:
+  enable: true
+  engine: grounding_sam2
+  # —— GroundingDINO ——
+  gdino_cfg:  /root/autodl-tmp/aigc_motion_eval/third_party/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py
+  gdino_ckpt: /root/autodl-tmp/aigc_motion_eval/weights/groundingdino/groundingdino_swint_ogc.pth
+  # —— SAM2（任选一种写法：cfg_name 或 cfg+ckpt） ——
+  sam2_cfg_name: configs/sam2.1/sam2.1_hiera_l        # 包内配置名
+  # 或者：
+  sam2_cfg:  /root/autodl-tmp/aigc_motion_eval/third_party/sam2/sam2/configs/sam2.1/sam2.1_hiera_l.yaml
+  sam2_ckpt: /root/autodl-tmp/aigc_motion_eval/weights/sam2/sam2.1_hiera_large.pt
+
+  # 文本提示（留空则自动从 semantics/ 或 目录主题推断）
+  text_prompts: []
+  box_conf_thr: 0.3
+  text_thr: 0.25
+  pred_iou_thr: 0.80
+  topk_instances: 1
+  cov_min: 0.001
+  mask_logic: union         # ref | gen_warp | intersection | union

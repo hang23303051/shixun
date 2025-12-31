@@ -1,0 +1,23 @@
+# ===== TAPIR / point tracking =====
+
+# 撒点（首帧 M_mot 区域内；若为空则全图）
+seeds:
+  N: 1200               # 目标种子点数（代码已严格补齐到 N）
+  border: 4             # 边界避让像素
+  edge_bonus: true      # 主体边界加密采样
+  stratified_grid: true # 先分格再随机，提升均匀性
+  max_iter_fill: 10     # 若不足 N，迭代补齐轮次（配合 seeds.py）
+
+# TAPIR 模型与推理
+model:
+  device: "cuda"
+  ckpt: ""              # TAPIR 权重路径（留空使用默认）
+  chunk: 32             # 逐段窗口长度（避免 OOM）
+  stride: 16            # 段间重叠
+  fp16: true
+
+tracking:
+  vis_thr: 0.25         # 可见性阈值（过滤不可见观测）
+  nms_radius: 2         # 点级去冗余（若实现支持）
+  max_age: 0            # 允许丢失的最大连续帧数
+

@@ -1,0 +1,22 @@
+# ===== GMFlow / PTLFlow inference =====
+device: "cuda"                  # 自动回落 CPU 由代码处理
+ckpt: ""                        # 可留空使用内置权重；如有自定义权重填绝对路径
+
+# GMFlow 推理常用选项（不同版本 PTLFlow 可能忽略，这里统一暴露）
+inference:
+  iters: 16                     # 递归迭代次数（若模型支持）
+  pyramid_levels: 5             # 金字塔层数（若模型支持）
+  padding_mode: "border"        # 边界采样
+  fp16: true                    # 允许半精度
+  resize_to_short_edge: 0       # 0=不重置尺寸（由外部统一为 448）
+
+# 前后向一致性（遮挡检测）阈值
+fb_consistency:
+  threshold: 20.0                # |F_fwd + warp(F_bwd)| 的容忍阈值（像素）
+  alpha: 0.5                   # 边界松弛系数（代码中亦有默认）
+  rel_threshold: 0.05          # 新增：相对阈值 = 0.05 * P90(|F_ref|) 参与取大
+  
+# 运行时缓存 / 数据
+cache:
+  enable_tensor_intermediate: false
+  save_flow_npz: false

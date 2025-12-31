@@ -1,0 +1,36 @@
+# ================= FLI with GMFlow (P95 Warp-Error / MAD) =================
+# 本文件的所有键都会在运行时注入到 argparse；命令行参数优先生效（CLI > YAML > 默认）。
+
+# ---- I/O 与运行控制 ----
+rrm_csv: /root/autodl-tmp/aigc_motion_eval/runs/rrm_batch.csv   # 输入 rrm_batch.csv
+out_csv: null            # 为空则根据 --inplace 决定是否覆盖 rrm_csv
+inplace: true            # true=原地写回 rrm_csv；false=写到 *_with_fli.csv
+video_col: gen           # rrm_batch 中的生成端视频路径列名（如: gen / gen_path / video_path...）
+device: cuda             # cuda 或 cpu
+max_videos: -1           # 仅调试时截断数量；-1 表示全量
+
+# ---- GMFlow 模型与依赖 ----
+gmflow_repo: /root/autodl-tmp/aigc_motion_eval/third_party/gmflow
+weights: /root/autodl-tmp/aigc_motion_eval/weights/gmflow/gmflow_sintel-0c07dcb3.pth
+
+# ---- 重采样与预处理（统一对所有模型生效）----
+short_side: 448          # 解码后按短边等比缩放到该尺寸
+fps: 12                  # 目标 FPS；实际取 min(src_fps_四舍五入, fps) 避免时间上采样
+pad_multiple: 8          # <<< 关键：右下零填充到 8 的倍数（与 GMFlow 对齐），统计只在原图区域
+
+# ---- 遮挡/低置信门控（前后向一致性）----
+alpha1: 0.01             # FB consistency: diff <= alpha1 * mag + alpha2
+alpha2: 1.5
+
+# ---- 有效像素下限（保证统计稳定）----
+min_valid_pix: 1         # 有效像素下限（像素数）
+min_valid_ratio: 0.0005  # 或以原图像素比例给下限（两者取 max）
+
+# ---- 退火策略（在 FB 严格掩码过严时，允许退到 in-bounds 掩码）----
+allow_relax_fb: true
+
+# ---- MAD 统计形式 ----
+use_median_mad: false    # true=用中位数（更抗极端）；false=均值（默认，与当前实现一致）
+
+# ---- 调试输出 ----
+print_per_model_stats: true  # 末尾打印各 modelname 的 pairs>0 个数

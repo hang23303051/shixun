@@ -1,0 +1,56 @@
+# ===== Global hyper-parameters =====
+repro:
+  seed: 1234
+  torch_deterministic: true
+  disable_tf32: true
+
+# ---------- sampling / windowing ----------
+sampling:
+  short_edge: 448           # 短边统一到 448
+  fps: 12                   # 统一采样到 12 FPS
+
+windowing:
+  window_sec: 6.0           # 滑窗长度（秒）
+  hop_sec: 3.0              # 滑窗步长（秒）
+  prefer_shot_segments: true
+  min_valid_ratio: 0.15      # 若有效像素占比过低，可将该窗权重置零（0=不启用）
+
+shots:
+  threshold: 27.0           # PySceneDetect content-aware threshold
+  min_scene_len: 12         # 最小镜头长度（帧），与 fps=12 对齐≈1s
+
+# ---------- DTW (time alignment) ----------
+dtw:
+  bandwidth_ratio: 0.10     # r≈10%T 的 Sakoe–Chiba 带宽
+  curve:
+    smooth_win: 3           # 计算“相邻帧平均流幅度曲线”时的平滑窗口（奇数）
+    metric: "l1"            # DTW 代价曲线的距离度量（l1 / l2）
+
+# ---------- EPE* (flow pixel error) ----------
+epe_star:
+  eps_px: 1.5               # 相对化分母 ε（像素）
+  alpha_grad: 0.05          # 梯度显著性放大系数 α
+  mot_quantile: 0.80        # 显著运动掩码阈值：参考流幅度的 P50
+  min_motion_px: 0.5      # 最小显著运动像素数（像素）
+  motion_mask_min_cc: 64    # 小连通域剔除阈值（像素）
+  soft_kappa: 0.5           # 软化运动掩码的 κ（越大越接近硬掩码）
+  beta_mix_adapt: true      # β 自适应相机能量占比（cam/obj 融合）
+
+# ---------- Freeze (dynamic-miss penalty) ----------
+freeze:
+  tau_strength_ratio: 0.70  # 强度比下限 τ
+  delta_activate_p90: 0.50  # 仅当 P90(|F_ref|) ≥ δ 激活 Freeze
+  lambdas: [0.50, 0.25, 0.25]   # [λ1, λ2, λ3] -> mag / dup / dtw
+  dup_ssim_thr: 0.999       # 相邻帧判重 SSIM 阈值
+  dup_dhash_thr: 1          # dHash 汉明距离上限
+  gate_mag_only: true       # 若实现支持，仅当激活窗才计算其余子项以省时
+
+# ---------- Scoring (window score & aggregation) ----------
+scoring:
+  omega1: 0.3              # 光流项权重
+  omega2: 0.40              # 轨迹项权重
+  lambda_fr: 0.30           # Freeze 惩罚权重系数
+  aggregate:
+    robust: "winsor"        # 全片聚合鲁棒化：none / winsor / moments
+    winsor_q: 0.10          # Winsorize 比例（两侧各 q）
+    mom_groups: 5           # 分组求矩（若使用“moments”）
