@@ -1,0 +1,204 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_059_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      4.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the text 'NATIONAL CHEESE PIZZA DAY' appear at the top of the frame throughout the clip?",
+      "signals": [
+        "frame_discontinuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the pizza being lifted away from an oven without flame proximity or falling hazard visible?",
+      "signals": [
+        "hot_surface_contact",
+        "flame_proximity",
+        "falling_hazard"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667,
+        "flame_proximity": 6.8333,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hand maintain a stable grasp on the crust while lifting the pizza slice?",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, does the size of the remaining pizza stay consistent relative to the initial whole pizza?",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the cheese stretch smoothly when the pizza slice is lifted?",
+      "signals": [
+        "deformation",
+        "material_optics",
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "material_optics": 7.5,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text 'NATIONAL CHEESE PIZZA DAY' is visible at the top of the frame.",
+      "signals": [
+        "frame_discontinuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A hand lifts a pizza slice with smooth motion and proper crust deformation.",
+      "signals": [
+        "deformation",
+        "material_optics",
+        "support",
+        "trajectory_dir",
+        "accel_sign",
+        "frame_discontinuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "frame_discontinuity": 8.0,
+        "trajectory_dir": 7.6667,
+        "material_optics": 7.5,
+        "support": 7.0,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The hand maintains grasp stability on the pizza crust while lifting.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The size of the remaining pizza does not change suddenly during lifting.",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hot pizza surface contacts an oven without flame proximity or falling hazard.",
+      "signals": [
+        "hot_surface_contact",
+        "flame_proximity",
+        "falling_hazard"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667,
+        "flame_proximity": 6.8333,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

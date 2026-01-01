@@ -1,0 +1,213 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_028_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      17.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the snail remain stationary on the substrate without moving or displacing?",
+      "signals": [
+        "continuity(oX)",
+        "deformation(oX)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(oX)": 7.3333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the snail's mouth open and close smoothly, showing natural biological motion throughout the clip?",
+      "signals": [
+        "biological_motion(snail)",
+        "continuity(snail)",
+        "continuity(fish)",
+        "interpenetration(snail,fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(snail)": 38.3333,
+        "continuity(snail)": 7.3333,
+        "continuity(fish)": 7.3333,
+        "interpenetration(snail,fish)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the snail's shell connected to its body continuously, with no sudden separation from the tentacle area?",
+      "signals": [
+        "continuity(snail)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snail)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the fish swim in a manner consistent with its body structure, following natural biological motion in water?",
+      "signals": [
+        "continuity(oX)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any sharp objects or extreme temperatures visible in the underwater environment?",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 36.67,
+      "total_score_100": 36.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The snail remains stationary on the substrate, with its mouth opening and closing smoothly.",
+      "signals": [
+        "continuity(oX)",
+        "biological_motion(snail)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(snail)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The snail's shell maintains structural integrity and is connected to its body without separation.",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)",
+        "continuity(snail)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(snail)": 7.3333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The fish swims in a natural manner, maintaining consistent physical behavior throughout the video.",
+      "signals": [
+        "continuity(snail)",
+        "biological_motion(fish)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "continuity(snail)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The snail and fish do not interpenetrate or merge; they maintain their respective forms and positions.",
+      "signals": [
+        "continuity(snail)",
+        "continuity(fish)",
+        "interpenetration(snail,fish)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snail)": 36.6667,
+        "continuity(fish)": 7.3333,
+        "interpenetration(snail,fish)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The aquatic creatures' movements follow natural biological motion within the underwater environment.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

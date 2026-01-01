@@ -1,0 +1,230 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_002_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the diver maintain a consistent trajectory relative to the water surface without colliding with another diver?",
+      "signals": [
+        "trajectory_dir(diver,axis)",
+        "accel_sign(diver,axis)",
+        "buoyancy_float(diver,in:water)",
+        "collision(diver,diver)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(diver,axis)": 38.3333,
+        "accel_sign(diver,axis)": 7.0,
+        "buoyancy_float(diver,in:water)": 6.8333,
+        "collision(diver,diver)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the diver's body posture change smoothly during movement, avoiding sudden limb twisting or interpenetration?",
+      "signals": [
+        "continuity(diver)",
+        "trajectory_dir(diver,axis)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(diver,axis)": 38.3333,
+        "continuity(diver)": 7.3333
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the diving platform support the divers' weight without deformation as they stand on it?",
+      "signals": [
+        "support(diver,platform)",
+        "material_optics(diver)",
+        "support(platform,divers)",
+        "deformation(platform)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(platform)": 40.0,
+        "material_optics(diver)": 7.5,
+        "support(diver,platform)": 7.0,
+        "support(platform,divers)": 7.0
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the diver exhibit proper alignment and orientation of limbs throughout the dive motion phase?",
+      "signals": [
+        "biological_motion(diver)",
+        "action_phase(diver,phase)",
+        "trajectory_dir(diver,axis)",
+        "continuity(diver)",
+        "interpenetration(diver,diver)"
+      ],
+      "content_score_60": 54,
+      "signal_score_40": 40.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(diver)": 38.3333,
+        "trajectory_dir(diver,axis)": 7.6667,
+        "continuity(diver)": 7.3333,
+        "interpenetration(diver,diver)": 7.1667,
+        "action_phase(diver,phase)": 5.3333
+      },
+      "content_score_raw": "54"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the video show continuous physical continuity in the diver's form across all frames?",
+      "signals": [
+        "continuity(diver)",
+        "frame_discontinuity(t)",
+        "interpenetration(diver,diver)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 40.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(diver)": 7.3333,
+        "interpenetration(diver,diver)": 7.1667
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The diver maintains a consistent trajectory and orientation relative to the water surface.",
+      "signals": [
+        "trajectory_dir(diver,axis)",
+        "accel_sign(diver,axis)",
+        "buoyancy_float(diver,in:water)",
+        "collision(diver,diver)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 40.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(diver,axis)": 38.3333,
+        "accel_sign(diver,axis)": 7.0,
+        "buoyancy_float(diver,in:water)": 6.8333,
+        "collision(diver,diver)": 6.3333
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The diver's body exhibits continuous motion without frame discontinuity or sudden changes in posture.",
+      "signals": [
+        "continuity(diver)",
+        "frame_discontinuity(t)",
+        "interpenetration(diver,diver)",
+        "trajectory_dir(diver,axis)"
+      ],
+      "content_score_60": 53,
+      "signal_score_40": 40.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(diver,axis)": 7.6667,
+        "continuity(diver)": 7.3333,
+        "interpenetration(diver,diver)": 7.1667
+      },
+      "content_score_raw": "53"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The diving platform supports the diver's weight without deformation or collapse.",
+      "signals": [
+        "support(diver,platform)",
+        "material_optics(diver)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(diver)": 37.5,
+        "support(diver,platform)": 7.0
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The diver's body maintains physical continuity without frame discontinuity during movement.",
+      "signals": [
+        "continuity(diver)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 36.67,
+      "total_score_100": 88.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(diver)": 36.6667
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The diver's body maintains a consistent trajectory and orientation without sudden changes or interpenetration.",
+      "signals": [
+        "trajectory_dir(diver,axis)",
+        "continuity(diver)",
+        "interpenetration(diver,diver)"
+      ],
+      "content_score_60": 54,
+      "signal_score_40": 40.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(diver,axis)": 38.3333,
+        "continuity(diver)": 7.3333,
+        "interpenetration(diver,diver)": 7.1667
+      },
+      "content_score_raw": "54"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

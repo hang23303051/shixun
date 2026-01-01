@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_061_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      17.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person move forward in a straight trajectory?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person's center of mass stay over their feet during movement?",
+      "signals": [
+        "balance(oX)",
+        "continuity(oX)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the right foot follow the left foot when stepping backward, and does it avoid intersecting with other objects?",
+      "signals": [
+        "trajectory_dir(person's foot,axis)",
+        "step_order(prev:task,next:task)",
+        "prohibited_intersection(person,other objects)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person's foot,axis)": 38.3333,
+        "prohibited_intersection(person,other objects)": 7.3333,
+        "step_order(prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person's shadow match their position on the floor tiles without sudden changes?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "friction_sliding(oA,on:oB), falling_hazard(oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "friction_sliding(oA,on:oB), falling_hazard(oObj)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the text 'WHAT!' and 'PAM-CO'UVE-' remain static in their positions on the screen?",
+      "signals": [
+        "size_inconsistency(oX), hue_histogram_jump(oX)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX), hue_histogram_jump(oX)": 7.5,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person's body maintains continuity and balance during movement.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "balance(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person's foot trajectory is consistent with their forward step order.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "trajectory_dir(person's foot,axis)",
+        "step_order(prev:task,next:task)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(person's foot,axis)": 7.6667,
+        "step_order(prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'PAM-CO'UVE-' appears consistently in the same position.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text 'WHAT!' remains a static green overlay without size or color changes.",
+      "signals": [
+        "size_inconsistency(oX), hue_histogram_jump(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX), hue_histogram_jump(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person's center of mass stays over their base to avoid falling.",
+      "signals": [
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(person)": 32.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_040_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      11.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person use a spoon to spread rice and their hands to place ingredients on nori?",
+      "signals": [
+        "tool_contact(spoon,nori)",
+        "cuttable_progress(nori)",
+        "action_phase(preparation,spreading)",
+        "tool_usage_correct(sushi mat,for:preparing sushi)",
+        "biological_motion(hands)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hands)": 38.3333,
+        "tool_usage_correct(sushi mat,for:preparing sushi)": 5.8333,
+        "tool_contact(spoon,nori)": 5.6667,
+        "action_phase(preparation,spreading)": 5.3333,
+        "cuttable_progress(nori)": 4.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are all visible ingredients placed within easy reach for assembling sushi?",
+      "signals": [
+        "placeable(ingredients,at:preparation_area)",
+        "supportable(ingredients,by:preparation_surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(ingredients,by:preparation_surface)": 26.6667,
+        "placeable(ingredients,at:preparation_area)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there any contact with hot surfaces during handling of raw fish?",
+      "signals": [
+        "hot_surface_contact(knife,hand)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.17,
+      "total_score_100": 74.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(knife,hand)": 34.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the cutting board support the weight of all placed ingredients without bending?",
+      "signals": [
+        "support(cutting board,ingredients)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting board,ingredients)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are various ingredients used for assembly, including avocado, cucumber, carrots, salmon, and roe?",
+      "signals": [
+        "tool_usage_correct(sushi_rolling_board,rolling_nori)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(sushi_rolling_board,rolling_nori)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person uses their hands to place ingredients on rice and nori.",
+      "signals": [
+        "tool_usage_correct(sushi mat,for:preparing sushi)",
+        "biological_motion(hands)",
+        "interpenetration(nori,avocado)",
+        "interpenetration(nori,carrots)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hands)": 38.3333,
+        "interpenetration(nori,avocado)": 7.1667,
+        "interpenetration(nori,carrots)": 7.1667,
+        "tool_usage_correct(sushi mat,for:preparing sushi)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Avocado, cucumber, carrots, salmon, and roe are within easy reach for assembly.",
+      "signals": [
+        "placeable(ingredients,at:preparation_area)",
+        "supportable(ingredients,by:preparation_surface)",
+        "support(cutting board,ingredients)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting board,ingredients)": 35.0,
+        "supportable(ingredients,by:preparation_surface)": 5.3333,
+        "placeable(ingredients,at:preparation_area)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Rice is placed on nori during the sushi rolling process.",
+      "signals": [
+        "support(nori,rice)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(nori,rice)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Raw fish does not contact hot surfaces.",
+      "signals": [
+        "hot_surface_contact(knife,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(knife,hand)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person uses a spoon to spread rice evenly on nori.",
+      "signals": [
+        "tool_contact(spoon,nori)",
+        "cuttable_progress(nori)",
+        "action_phase(preparation,spreading)",
+        "tool_usage_correct(sushi mat,for:preparing sushi)",
+        "biological_motion(hands)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hands)": 38.3333,
+        "tool_usage_correct(sushi mat,for:preparing sushi)": 5.8333,
+        "tool_contact(spoon,nori)": 5.6667,
+        "action_phase(preparation,spreading)": 5.3333,
+        "cuttable_progress(nori)": 4.6667
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

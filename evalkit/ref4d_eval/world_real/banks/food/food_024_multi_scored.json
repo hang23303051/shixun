@@ -1,0 +1,220 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_024_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the yellow lunchbox stay stable on the white surface without moving?",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "slosh_response(oV,amp)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the beans in the round container remain within its boundaries and not interpenetrate each other?",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)",
+        "support(containers, surface)",
+        "continuity(food)",
+        "friction_sliding(food, on:containers)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(food)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(containers, surface)": 7.0,
+        "friction_sliding(food, on:containers)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person's hand near the bottom left corner wearing a yellow shirt?",
+      "signals": [
+        "placeable(oObj,at:oTarget)",
+        "goal_placement(oObj,at:oTarget)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.83,
+      "total_score_100": 86.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement(oObj,at:oTarget)": 26.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the text \"साब्लू बाले पते, गाजर फलना इमको चाहिल दारो।\" clearly visible on the green circle at the top left?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are various types of beans displayed stably across the clip?",
+      "signals": [
+        "continuity(beans)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(beans)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bowls contain beans, seeds, vegetables, bread, cheese, blueberries, waffles, cherry tomatoes, cucumber slices, radish slices, black beans, red beans, green beans, orange lentils.",
+      "signals": [
+        "placeable(bowls, at:table)",
+        "containment(food, in:bowl)",
+        "openable(bowl)",
+        "pourable(bowl)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(food, in:bowl)": 29.1667,
+        "placeable(bowls, at:table)": 5.1667,
+        "openable(bowl)": 5.1667,
+        "pourable(bowl)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The food items in the containers remain stable and do not show signs of sudden movement or interpenetration.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "slosh_response(oV,amp)",
+        "support(containers, surface)",
+        "continuity(food)",
+        "friction_sliding(food, on:containers)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(food)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(containers, surface)": 7.0,
+        "slosh_response(oV,amp)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "friction_sliding(food, on:containers)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person in the yellow shirt is positioned to interact with one of the lunchboxes.",
+      "signals": [
+        "placeable(oObj,at:oTarget)",
+        "goal_placement(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement(oObj,at:oTarget)": 26.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The beans in the container remain within its boundaries without interpenetration.",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text overlay on the green circle is clearly visible.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

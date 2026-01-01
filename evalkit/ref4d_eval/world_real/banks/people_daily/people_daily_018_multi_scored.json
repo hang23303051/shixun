@@ -1,0 +1,190 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_018_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does water fall from the sky and accumulate on surfaces?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the rice field under the umbrella show continuity in its appearance as it gets wet?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the center of mass of the person carrying an object over their base of support?",
+      "signals": [
+        "balance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the path of objects in motion show continuity without sudden changes?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the stone wall and wooden door provide structural support for the building?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People walk on a path and carry objects while rain falls from the sky.",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "balance(oX)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rice field under the umbrella shows continuity in its appearance as it gets wet.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person carrying an object maintains balance with their center of mass over their base of support.",
+      "signals": [
+        "balance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A stone wall and wooden door provide structural support for the building.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Water accumulates on the path and rice field surfaces during the rain.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a5"
+  ]
+}

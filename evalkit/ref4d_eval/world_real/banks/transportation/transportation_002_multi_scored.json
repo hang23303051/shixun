@@ -1,0 +1,222 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_002_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      13.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do people and buses move naturally without sudden changes in speed or direction?",
+      "signals": [
+        "trajectory_dir(umbrella,axis)",
+        "accel_sign(umbrella,axis)",
+        "continuity(umbrella)",
+        "collision(umbrella,bus)",
+        "collision(person,bus)",
+        "collision(person,other_person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(umbrella,axis)": 38.3333,
+        "continuity(umbrella)": 7.3333,
+        "accel_sign(umbrella,axis)": 7.0,
+        "collision(umbrella,bus)": 6.3333,
+        "collision(person,bus)": 6.3333,
+        "collision(person,other_person)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the umbrella provide shade for a person, and is its shadow consistent with its position?",
+      "signals": [
+        "support(umbrella,person)",
+        "containment(person,umbrella)",
+        "shadow_consistency(umbrella)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(umbrella)": 36.6667,
+        "support(umbrella,person)": 7.0,
+        "containment(person,umbrella)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows of umbrellas and pedestrians remain consistently aligned with their positions throughout the clip?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do individuals carrying bags avoid slipping on surfaces at the bus station?",
+      "signals": [
+        "slip(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 27.5,
+      "total_score_100": 77.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slip(oA,on:oB)": 27.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there supportable objects (buses) and openable containers (bus doors) available for passengers to board?",
+      "signals": [
+        "supportable(oObj,by:oSurface)",
+        "openable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667,
+        "openable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People and buses move naturally without sudden changes in speed or direction.",
+      "signals": [
+        "trajectory_dir(umbrella,axis)",
+        "accel_sign(umbrella,axis)",
+        "continuity(umbrella)",
+        "collision(umbrella,bus)",
+        "collision(person,bus)",
+        "collision(person,other_person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(umbrella,axis)": 38.3333,
+        "continuity(umbrella)": 7.3333,
+        "accel_sign(umbrella,axis)": 7.0,
+        "collision(umbrella,bus)": 6.3333,
+        "collision(person,bus)": 6.3333,
+        "collision(person,other_person)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person walks under a white umbrella, which provides shade.",
+      "signals": [
+        "support(umbrella,person)",
+        "containment(person,umbrella)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(umbrella,person)": 35.0,
+        "containment(person,umbrella)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows of the bus and people align with their positions and light sources.",
+      "signals": [
+        "shadow_consistency(umbrella)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(umbrella)": 36.6667,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Passengers afford boarding actions at the bus station.",
+      "signals": [
+        "supportable(oObj,by:oSurface)",
+        "openable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667,
+        "openable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The size of the buses and people remains consistent throughout the scene.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

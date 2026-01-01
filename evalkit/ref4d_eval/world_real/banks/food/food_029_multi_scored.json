@@ -1,0 +1,209 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_029_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      14.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the air fryer stable on its base?",
+      "signals": [
+        "center_of_mass_over_base(air-fryer)",
+        "center_of_mass_over_base"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(air-fryer)": 32.5,
+        "center_of_mass_over_base": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the yellow spoon stay in contact with the cake while being lifted?",
+      "signals": [
+        "tool_contact(Yellow spoon, Food)",
+        "tool_contact(Finger, Yellow spoon)",
+        "buoyancy_float(spoon,in:cake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(spoon,in:cake)": 34.1667,
+        "tool_contact(Yellow spoon, Food)": 5.6667,
+        "tool_contact(Finger, Yellow spoon)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Can the lid of the air fryer be opened to access the contents?",
+      "signals": [
+        "openable(air-fryer)",
+        "state_change(air-fryer,from:closed,to:open)",
+        "openable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(air-fryer,from:closed,to:open)": 37.5,
+        "openable(air-fryer)": 5.1667,
+        "openable": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the bandaged finger kept away from any hot surfaces of the air fryer?",
+      "signals": [
+        "hot_surface_contact(Finger, Air-fryer)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(Finger, Air-fryer)": 34.1667,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the food remain supported by the spoon during lifting?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The finger maintains a consistent position relative to the air-fryer display.",
+      "signals": [
+        "interpenetration(finger,air-fryer)",
+        "frame_discontinuity(t)",
+        "continuity(finger)",
+        "finger_clearance(air-fryer, finger)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(finger)": 7.3333,
+        "interpenetration(finger,air-fryer)": 7.1667,
+        "finger_clearance(air-fryer, finger)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The yellow spoon is in contact with the cake inside the air-fryer.",
+      "signals": [
+        "tool_contact(Yellow spoon, Food)",
+        "tool_contact(Finger, Yellow spoon)",
+        "buoyancy_float(spoon,in:cake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(spoon,in:cake)": 34.1667,
+        "tool_contact(Yellow spoon, Food)": 5.6667,
+        "tool_contact(Finger, Yellow spoon)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The air-fryer remains stationary on its base.",
+      "signals": [
+        "center_of_mass_over_base(air-fryer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(air-fryer)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The air fryer is placed on a stable surface.",
+      "signals": [
+        "center_of_mass_over_base"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lid of the air-fryer can be opened.",
+      "signals": [
+        "openable(air-fryer)",
+        "state_change(air-fryer,from:closed,to:open)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(air-fryer,from:closed,to:open)": 37.5,
+        "openable(air-fryer)": 5.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

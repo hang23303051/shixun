@@ -1,0 +1,224 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_032_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      10.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the rhinoceroses' horns maintain contact without interpenetration?",
+      "signals": [
+        "continuity(rhinoceros)",
+        "interpenetration(rhinoceros,rhinoceros)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rhinoceros)": 36.6667,
+        "interpenetration(rhinoceros,rhinoceros)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the larger rhinoceros's head move naturally during their interaction?",
+      "signals": [
+        "biological_motion(rhinoceros)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(rhinoceros)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the colliding rhinoceros horns consistent with expected material properties and collision behavior?",
+      "signals": [
+        "material_optics(rhinoceros)",
+        "post_collision_change(rhinoceros)",
+        "size_inconsistency(rhinoceros)",
+        "collision(rhinoceros_head,rhinoceros_head)",
+        "material_optics(rhinoceros_head)",
+        "biological_motion(rhinoceros)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(rhinoceros)": 38.3333,
+        "material_optics(rhinoceros)": 7.5,
+        "size_inconsistency(rhinoceros)": 7.5,
+        "material_optics(rhinoceros_head)": 7.5,
+        "post_collision_change(rhinoceros)": 6.8333,
+        "collision(rhinoceros_head,rhinoceros_head)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the two rhinoceros heads stay in continuous physical contact throughout the clip?",
+      "signals": [
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)",
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the biological motion of the rhinoceroses natural?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The rhinoceros's head and horn maintain continuity and natural biological motion.",
+      "signals": [
+        "continuity(rhinoceros)",
+        "biological_motion(rhinoceros)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(rhinoceros)": 38.3333,
+        "continuity(rhinoceros)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rhinoceroses avoid interpenetration during their interaction.",
+      "signals": [
+        "continuity(rhinoceros)",
+        "interpenetration(rhinoceros,rhinoceros)",
+        "material_optics(rhinoceros)",
+        "post_collision_change(rhinoceros)",
+        "size_inconsistency(rhinoceros)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rhinoceros)": 37.5,
+        "size_inconsistency(rhinoceros)": 7.5,
+        "continuity(rhinoceros)": 7.3333,
+        "interpenetration(rhinoceros,rhinoceros)": 7.1667,
+        "post_collision_change(rhinoceros)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The rhinoceroses' horns exhibit expected material optics without size inconsistency.",
+      "signals": [
+        "collision(rhinoceros_head,rhinoceros_head)",
+        "material_optics(rhinoceros_head)",
+        "biological_motion(rhinoceros)",
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(rhinoceros)": 38.3333,
+        "material_optics(rhinoceros_head)": 7.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(rhinoceros_head,rhinoceros_head)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The rhinoceros's body posture reflects natural biological motion.",
+      "signals": [
+        "biological_motion(rhinoceros)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(rhinoceros)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The movement of the rhinoceroses exhibits continuity without frame discontinuity.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

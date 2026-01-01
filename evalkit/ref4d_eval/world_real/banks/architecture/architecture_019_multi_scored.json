@@ -1,0 +1,216 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_019_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the chairs remain balanced on the table without tipping over?",
+      "signals": [
+        "continuity(oX)",
+        "shadow_consistency(oX)",
+        "support(oA,oB)",
+        "balance(oX)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "shadow_consistency(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the window and door frames in their original positions throughout the clip?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the candle stay upright on the table, casting a consistent shadow?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the potted plant near the large window stable against falling hazards?",
+      "signals": [
+        "support(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the reflections outside the window show natural light conditions consistently?",
+      "signals": [
+        "reflection_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The table, chairs, and candle remain in their positions without sudden disappearance or interpenetration.",
+      "signals": [
+        "continuity(oX)",
+        "shadow_consistency(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "shadow_consistency(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Chairs are consistently supported by the table surface throughout the scene.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Window and door frames maintain structural integrity with no deformation or size change.",
+      "signals": [
+        "rigid_transform(oX)",
+        "deformation(oX)",
+        "fracture(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "rigid_transform(oX)": 7.5,
+        "continuity(oX)": 7.3333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by objects align properly with their positions and light sources.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The candle on the table remains upright and stable.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

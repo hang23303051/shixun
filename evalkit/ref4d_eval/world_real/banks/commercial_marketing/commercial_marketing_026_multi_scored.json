@@ -1,0 +1,218 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_026_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is a person eating cereal from a bowl?",
+      "signals": [
+        "containment(bowl,cereal)",
+        "grasp_stability(person,bowl)",
+        "action_phase(eating,phase)",
+        "buoyancy_float(oA,in:oV)",
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667,
+        "slosh_response(oV,amp)": 6.8333,
+        "containment(bowl,cereal)": 5.8333,
+        "grasp_stability(person,bowl)": 5.6667,
+        "action_phase(eating,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cereal box maintain its size relative to the pink plate on the table?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "material_optics(oA)",
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(oA)": 7.5,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the podcast device stay attached to the person's chest while they hold the cereal box?",
+      "signals": [
+        "rigid_transform(podcast)",
+        "support(person,podcast)",
+        "friction_sliding(person,podcast)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(podcast)": 37.5,
+        "support(person,podcast)": 7.0,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(person,podcast)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the bowl remain stable on the pink stand without tipping or floating away?",
+      "signals": [
+        "support(oA,oB), balance(oX)",
+        "support(cereal-box,pink-plate)",
+        "continuity(cereal-box)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cereal-box)": 36.6667,
+        "support(oA,oB), balance(oX)": 7.0,
+        "support(cereal-box,pink-plate)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hand holding the spoon move in a continuous trajectory when reaching for the cereal?",
+      "signals": [
+        "support",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person eats cereal from a bowl on a table.",
+      "signals": [
+        "containment(bowl,cereal)",
+        "grasp_stability(person,bowl)",
+        "action_phase(eating,phase)",
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "containment(bowl,cereal)": 5.8333,
+        "grasp_stability(person,bowl)": 5.6667,
+        "action_phase(eating,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The pink box labeled 'MAGIC POON' is the same size as other visible boxes.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(oA)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A hand holds the green and yellow cereal box over the pink plate.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cereal box rests on its base, supported by the table surface.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The white bowl with blue contents sits stably on the pink stand.",
+      "signals": [
+        "support(oA,oB), balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB), balance(oX)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

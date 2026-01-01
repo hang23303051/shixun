@@ -1,0 +1,208 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_038_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the soccer ball follow a continuous trajectory without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are there any collisions or interpenetrations between objects that are consistent with real-world physics?",
+      "signals": [
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do people and cones maintain consistent size and proportions without sudden size inconsistency?",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do shadows cast by moving objects show continuity and consistency with their motion?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the shadow of the person kicking the ball consistent with the light source and not showing interpenetration with other objects?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The player wearing number 29 controls the soccer ball with his foot.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "tool_usage_correct(oTool,for:oTask)",
+        "action_phase(oAct,phase)",
+        "step_order(prev:task,next:task)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333,
+        "action_phase(oAct,phase)": 5.3333,
+        "step_order(prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person and a cone maintain consistent size in the scene.",
+      "signals": [
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by moving people show continuity as they walk.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The soccer ball rolls on the ground with realistic motion.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "wheel_rolling(oX)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Players move in biologically plausible ways during the game.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

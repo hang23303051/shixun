@@ -1,0 +1,213 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_013_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the bushes near the bottom of the building stay grounded?",
+      "signals": [
+        "center_of_mass_over_base(building)",
+        "center_of_mass_over_base(sign)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(building)": 32.5,
+        "center_of_mass_over_base(sign)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the banner on the right side of the building remain attached to the wall and scaffolding without floating or rotating away?",
+      "signals": [
+        "continuity(banner)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(banner)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows cast by the trees match the direction of the light source in the scene?",
+      "signals": [
+        "shadow_consistency(building)",
+        "shadow_consistency(scaffolding)",
+        "shadow_consistency(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(building)": 36.6667,
+        "shadow_consistency(scaffolding)": 7.3333,
+        "shadow_consistency(trees)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the scaffolding around the building show signs of structural instability throughout the clip?",
+      "signals": [
+        "rigid_transform(scaffolding)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(scaffolding)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the sign at the bottom right corner maintain its position relative to the ground?",
+      "signals": [
+        "continuity(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bushes in the foreground are firmly planted on the ground.",
+      "signals": [
+        "material_optics(building)",
+        "shadow_consistency(building)",
+        "material_optics(window)",
+        "shadow_consistency(window)",
+        "center_of_mass_over_base(building)",
+        "center_of_mass_over_base(sign)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(building)": 37.5,
+        "material_optics(window)": 7.5,
+        "shadow_consistency(building)": 7.3333,
+        "shadow_consistency(window)": 7.3333,
+        "center_of_mass_over_base(building)": 6.5,
+        "center_of_mass_over_base(sign)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of the building and scaffolding fall to the left, matching the light source direction.",
+      "signals": [
+        "shadow_consistency(building)",
+        "shadow_consistency(scaffolding)",
+        "shadow_consistency(trees)",
+        "continuity(building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(building)": 36.6667,
+        "shadow_consistency(scaffolding)": 7.3333,
+        "shadow_consistency(trees)": 7.3333,
+        "continuity(building)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The white facade of the building shows no signs of material change or deformation.",
+      "signals": [
+        "continuity(building)",
+        "continuity(window)",
+        "continuity(facade)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667,
+        "continuity(window)": 7.3333,
+        "continuity(facade)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The banner is attached to the right side of the building with consistent tension.",
+      "signals": [
+        "continuity(banner)",
+        "rigid_transform(banner)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(banner)": 37.5,
+        "continuity(banner)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The sign remains static at the top center of the building.",
+      "signals": [
+        "continuity(banner)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 36.67,
+      "total_score_100": 36.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(banner)": 36.6667
+      },
+      "content_score_raw": "0"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

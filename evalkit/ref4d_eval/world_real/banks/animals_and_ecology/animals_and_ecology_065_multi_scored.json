@@ -1,0 +1,224 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_065_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      17.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hammerhead shark maintain a stable position in the water without sudden movement?",
+      "signals": [
+        "continuity(oX)",
+        "trajectory_dir(oX,axis)",
+        "balance(oX)",
+        "buoyancy_float(diver,in:water)",
+        "buoyancy_float(stingray,in:water)",
+        "buoyancy_float(hammerhead-shark,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "buoyancy_float(diver,in:water)": 6.8333,
+        "buoyancy_float(stingray,in:water)": 6.8333,
+        "buoyancy_float(hammerhead-shark,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the small fish swim naturally with smooth, continuous motion?",
+      "signals": [
+        "biological_motion(stingray)",
+        "biological_motion(hammerhead-shark)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(stingray)": 38.3333,
+        "biological_motion(hammerhead-shark)": 7.6667,
+        "biological_motion(oA)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there any intersection between the diver and the large marine animals?",
+      "signals": [
+        "prohibited_intersection(diver,hammerhead-shark)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(diver,hammerhead-shark)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the moving objects follow consistent paths without abrupt changes?",
+      "signals": [
+        "continuity(oX)",
+        "trajectory_dir(shark,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(shark,axis)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hammerhead shark exhibit natural swimming behavior on the sandy seabed?",
+      "signals": [
+        "biological_motion(oA)",
+        "buoyancy_float(oA,in:oV)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hammerhead shark swims near the sandy seabed, with a small fish nearby.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "continuity(oX)",
+        "biological_motion(oA)",
+        "biological_motion(stingray)",
+        "biological_motion(hammerhead-shark)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "biological_motion(stingray)": 7.6667,
+        "biological_motion(hammerhead-shark)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hammerhead shark's fins move continuously without abrupt changes in trajectory.",
+      "signals": [
+        "buoyancy_float(diver,in:water)",
+        "buoyancy_float(stingray,in:water)",
+        "buoyancy_float(hammerhead-shark,in:water)",
+        "trajectory_dir(shark,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(shark,axis)": 38.3333,
+        "buoyancy_float(diver,in:water)": 6.8333,
+        "buoyancy_float(stingray,in:water)": 6.8333,
+        "buoyancy_float(hammerhead-shark,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "No diver is visible; only marine animals are present underwater.",
+      "signals": [
+        "prohibited_intersection(diver,hammerhead-shark)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(diver,hammerhead-shark)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Small fish swim naturally around the larger sharks and other sea life.",
+      "signals": [
+        "biological_motion(oA)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hammerhead shark swims naturally, with consistent lighting across the underwater scene.",
+      "signals": [
+        "biological_motion(oA)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "material_optics(oA)": 7.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

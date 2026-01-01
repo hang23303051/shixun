@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_020_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man stand on a stable surface while pointing at the grill?",
+      "signals": [
+        "continuity(grill)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(grill)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the grills remain stationary and not show signs of tipping or falling?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "deformation(oX)",
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "balance(oX)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the open grill lid support an upright position without collapsing, indicating continuous explanation?",
+      "signals": [
+        "balance(oX)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the person's hand in contact with the openable grill door for opening or pointing action?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "openable(oContainer)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 33.5,
+      "total_score_100": 78.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "openable(oContainer)": 5.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any flammable materials near the hot surfaces to prevent fire hazards?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The grills are stationary, and their wheels do not show unexpected rolling or deformation.",
+      "signals": [
+        "continuity(grill)",
+        "wheel_rolling(oX)",
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(grill)": 7.3333,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The man's hand gestures indicate a continuous explanation or demonstration of the grill.",
+      "signals": [
+        "balance(oX)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The man's hand is in contact with the openable grill door.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "openable(oContainer)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 33.5,
+      "total_score_100": 78.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "openable(oContainer)": 5.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hot surface of the grill remains away from any flammable materials or people.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The flame proximity to the man stays within safe limits.",
+      "signals": [
+        "flame_proximity",
+        "prohibited_intersection"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667,
+        "flame_proximity": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

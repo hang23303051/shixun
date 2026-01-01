@@ -1,0 +1,234 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_077_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the garden plants near the house stationary?",
+      "signals": [
+        "continuity(water_droplets)",
+        "interpenetration(garden_objects)",
+        "collision(garden_objects)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water_droplets)": 36.6667,
+        "interpenetration(garden_objects)": 7.1667,
+        "collision(garden_objects)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do water bubbles rise naturally in the pool scene?",
+      "signals": [
+        "buoyancy_float(water_bubbles,in:pool_water)",
+        "slosh_response(pool_water,amp)",
+        "trajectory_dir(water_bubbles,axis=vertical)",
+        "friction_sliding(garden,on:ground)",
+        "rigid_transform(garden)",
+        "deformation(garden)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(garden)": 40.0,
+        "trajectory_dir(water_bubbles,axis=vertical)": 7.6667,
+        "rigid_transform(garden)": 7.5,
+        "buoyancy_float(water_bubbles,in:pool_water)": 6.8333,
+        "slosh_response(pool_water,amp)": 6.8333,
+        "friction_sliding(garden,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person float buoyantly in the pool water?",
+      "signals": [
+        "buoyancy_float(person,in:pool_water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(person,in:pool_water)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person exhibit continuity and buoyancy while swimming underwater?",
+      "signals": [
+        "buoyancy_float(person,in:pool_water)",
+        "continuity(water)",
+        "buoyancy_float(person,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "buoyancy_float(person,in:pool_water)": 6.8333,
+        "buoyancy_float(person,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the blue-tiled pool background static with consistent material appearance?",
+      "signals": [
+        "material_optics(pool_water)",
+        "hue_histogram_jump(pool_water)",
+        "material_optics(person)",
+        "continuity(person)",
+        "reflection_consistency(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(pool_water)": 37.5,
+        "material_optics(person)": 7.5,
+        "continuity(person)": 7.3333,
+        "reflection_consistency(person)": 7.0,
+        "hue_histogram_jump(pool_water)": 6.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water droplets are visible on the person's skin, and their hair is wet.",
+      "signals": [
+        "continuity(water_droplets)",
+        "material_optics(person)",
+        "continuity(person)",
+        "reflection_consistency(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(person)": 37.5,
+        "continuity(water_droplets)": 7.3333,
+        "continuity(person)": 7.3333,
+        "reflection_consistency(person)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Garden plants with red flowers grow near a house in the background.",
+      "signals": [
+        "interpenetration(garden_objects)",
+        "collision(garden_objects)",
+        "friction_sliding(garden,on:ground)",
+        "rigid_transform(garden)",
+        "deformation(garden)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(garden)": 40.0,
+        "rigid_transform(garden)": 7.5,
+        "interpenetration(garden_objects)": 7.1667,
+        "collision(garden_objects)": 6.3333,
+        "friction_sliding(garden,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Bubbles rise from the bottom of the pool towards the surface.",
+      "signals": [
+        "buoyancy_float(water_bubbles,in:pool_water)",
+        "slosh_response(pool_water,amp)",
+        "trajectory_dir(water_bubbles,axis=vertical)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water_bubbles,axis=vertical)": 38.3333,
+        "buoyancy_float(water_bubbles,in:pool_water)": 6.8333,
+        "slosh_response(pool_water,amp)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue-tiled pool water has bubbles, and the person floats underwater.",
+      "signals": [
+        "material_optics(pool_water)",
+        "hue_histogram_jump(pool_water)",
+        "buoyancy_float(person,in:pool_water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(pool_water)": 37.5,
+        "buoyancy_float(person,in:pool_water)": 6.8333,
+        "hue_histogram_jump(pool_water)": 6.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Underwater swimming shows buoyancy as the person remains above the pool floor.",
+      "signals": [
+        "buoyancy_float(person,in:pool_water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(person,in:pool_water)": 34.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

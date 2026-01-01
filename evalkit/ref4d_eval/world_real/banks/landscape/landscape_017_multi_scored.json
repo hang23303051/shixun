@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_017_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      17.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a hand hold a branch and use shears to cut it?",
+      "signals": [
+        "tool_contact(shears,branch)",
+        "cuttable_progress(branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(shears,branch)": 28.3333,
+        "cuttable_progress(branch)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the pruner's fingers have clearance from the blade while holding the tool?",
+      "signals": [
+        "finger_clearance(hand,plier)",
+        "blade_orientation_away(plier,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,plier)": 34.1667,
+        "blade_orientation_away(plier,hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the knife blade in contact with the branch during cutting?",
+      "signals": [
+        "tool_contact(knife,branch)",
+        "cuttable_progress(branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,branch)": 28.3333,
+        "cuttable_progress(branch)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the pruned branches fall downward due to gravity?",
+      "signals": [
+        "trajectory_dir(branch,axis=down)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(branch,axis=down)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the branch being cut supported by another part of the plant?",
+      "signals": [
+        "support(branch,plant)",
+        "balance(branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(branch)": 35.8333,
+        "support(branch,plant)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand holds a branch and uses garden shears to cut it.",
+      "signals": [
+        "tool_contact(GardenShears,Branch)",
+        "cuttable_progress(Branch)",
+        "grasp_stability(Hand,Branch)",
+        "tool_contact(shears,branch)",
+        "cuttable_progress(branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(GardenShears,Branch)": 28.3333,
+        "grasp_stability(Hand,Branch)": 5.6667,
+        "tool_contact(shears,branch)": 5.6667,
+        "cuttable_progress(Branch)": 4.6667,
+        "cuttable_progress(branch)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The pruner holds the tool with proper finger clearance and blade orientation away from their hand.",
+      "signals": [
+        "finger_clearance(hand,plier)",
+        "blade_orientation_away(plier,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,plier)": 34.1667,
+        "blade_orientation_away(plier,hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The pruning tool (scissors) can be used correctly for its intended task of cutting branches.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "cuttable_progress(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "cuttable_progress(oObj)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The knife blade is in contact with the branch, indicating tool_contact(knife,branch) and cuttable_progress(branch).",
+      "signals": [
+        "tool_contact(knife,branch)",
+        "cuttable_progress(branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,branch)": 28.3333,
+        "cuttable_progress(branch)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The branch being cut is supported by another part of the plant, maintaining balance during the cutting action.",
+      "signals": [
+        "support(branch,plant)",
+        "balance(branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(branch)": 35.8333,
+        "support(branch,plant)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

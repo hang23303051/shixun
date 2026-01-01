@@ -1,0 +1,189 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_028_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      10.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are people sitting and standing around a table with various objects?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the cups on the table maintain their size without sudden changes?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows cast by people align with their positions in front of the light source?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the phone held properly by the person holding it, not floating above her hand?",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the liquid in the cup show no unnatural spillage?",
+      "signals": [
+        "spillage(oV)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "spillage(oV)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People sit and stand around a table with various objects, maintaining normal physical interactions.",
+      "signals": [
+        "continuity(person)",
+        "support(table,objects)",
+        "balance(people)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(people)": 7.1667,
+        "support(table,objects)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Objects on the table maintain consistent size and position without sudden changes.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by people and objects align with their positions and light sources.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A person holds a phone properly in her hand.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Liquid in a cup on the table does not show unnatural spillage.",
+      "signals": [
+        "continuity(oX)",
+        "spillage(oV)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "spillage(oV)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

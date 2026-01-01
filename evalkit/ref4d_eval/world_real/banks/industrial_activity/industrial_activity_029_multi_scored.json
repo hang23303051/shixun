@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_029_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the molten metal flow from the container into the muffin tin due to gravity?",
+      "signals": [
+        "pour_direction(molten-metal,axis)",
+        "continuity(molten-metal)",
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(molten-metal)": 36.6667,
+        "pour_direction(molten-metal,axis)": 5.6667,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the tongs and gloves used correctly to handle the hot material without dropping it?",
+      "signals": [
+        "tool_contact(tongs,metal-container)",
+        "grasp_stability(gloves,tongs)",
+        "tool_contact(tongs,molten-metal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(tongs,metal-container)": 28.3333,
+        "grasp_stability(gloves,tongs)": 5.6667,
+        "tool_contact(tongs,molten-metal)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the red light at the bottom of the container present, indicating heated material inside while avoiding direct contact with unprotected surfaces?",
+      "signals": [
+        "material_optics(metal-container)",
+        "hue_histogram_jump(molten-metal)",
+        "hot_surface_contact(molten-metal,muffin-tin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(metal-container)": 37.5,
+        "hot_surface_contact(molten-metal,muffin-tin)": 6.8333,
+        "hue_histogram_jump(molten-metal)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the muffin tin hold multiple circular cavities containing molten metal securely during heating?",
+      "signals": [
+        "support(muffin-tin,molten-metal)",
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(muffin-tin,molten-metal)": 35.0,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the molten metal stay within its designated area in the muffin tin after being poured?",
+      "signals": [
+        "hot_surface_contact(molten-metal,muffin-tin)",
+        "prohibited_intersection(molten-metal,unprotected-surface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(molten-metal,unprotected-surface)": 36.6667,
+        "hot_surface_contact(molten-metal,muffin-tin)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red light at the bottom of the metal container is illuminated.",
+      "signals": [
+        "material_optics(metal-container)",
+        "hue_histogram_jump(molten-metal)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(metal-container)": 37.5,
+        "hue_histogram_jump(molten-metal)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Molten metal flows from the tongs into the muffin tin due to gravity.",
+      "signals": [
+        "pour_direction(molten-metal,axis)",
+        "continuity(molten-metal)",
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(molten-metal)": 36.6667,
+        "pour_direction(molten-metal,axis)": 5.6667,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A person uses gloves and tongs to hold the hot metal container.",
+      "signals": [
+        "tool_contact(tongs,metal-container)",
+        "grasp_stability(gloves,tongs)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(tongs,metal-container)": 28.3333,
+        "grasp_stability(gloves,tongs)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Tongs are used to pour molten metal, ensuring safe transfer without spillage.",
+      "signals": [
+        "tool_contact(tongs,molten-metal)",
+        "grasp_stability(gloves,tongs)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(tongs,molten-metal)": 28.3333,
+        "grasp_stability(gloves,tongs)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The muffin tin has multiple circular cavities filled with molten metal.",
+      "signals": [
+        "support(muffin-tin,molten-metal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(muffin-tin,molten-metal)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

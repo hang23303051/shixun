@@ -1,0 +1,193 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_009_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tram's shadow on the platform consistently follow its position and orientation?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person near the edge of the platform stand in a stable posture without sudden motion?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the tram move along the track with a consistent trajectory direction and acceleration sign?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person maintain a safe distance from the moving tram to avoid collision?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tram operate within safe boundaries of the platform, maintaining clear separation from any potential hazards?",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tram moves along the track with a consistent trajectory direction.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person near the edge of the platform maintains a safe distance from the moving tram.",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The tram's shadow on the platform consistently follows its position and orientation.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The tram operates within the platform boundaries, maintaining clear separation from potential hazards.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the tram is cast consistently on the platform, matching the light source direction.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

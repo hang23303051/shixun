@@ -1,0 +1,188 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_039_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      15.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the stadium's red LED display maintain visual continuity without frame discontinuity?",
+      "signals": [
+        "continuity(stadium)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(stadium)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the large red building's LED display show continuous and coherent animation without frame discontinuity?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text 'Chinese New Year' on the screen clearly visible and consistent in appearance across the clip?",
+      "signals": [
+        "containment(oA,oB)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the boat move along a straight path with no sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any signs of material instability or support issues affecting the elevated structures?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The stadium's red outdoor LED display maintains visual continuity and consistent lighting effects.",
+      "signals": [
+        "continuity(stadium)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(stadium)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The large red building's LED display shows continuous and coherent animation without frame discontinuity.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Light reflections from buildings in the water match their real-world positions and angles.",
+      "signals": [
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(oX)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The stadium structure remains rigid and stable throughout the scene.",
+      "signals": [
+        "rigid_transform(stadium)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(stadium)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No falling hazards are present from elevated structures like the stadium or surrounding buildings.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

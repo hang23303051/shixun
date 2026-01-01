@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_023_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the red bottle on the countertop stay in place without being knocked over?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the small white container remain balanced on the bathroom countertop?",
+      "signals": [
+        "balance(bottles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(bottles)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the shower curtain stationary and not moving throughout the clip?",
+      "signals": [
+        "continuity(shower-curtain)",
+        "continuity(curtain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(shower-curtain)": 36.6667,
+        "continuity(curtain)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the headband securely worn by the person, with no signs of falling off?",
+      "signals": [
+        "prohibited_intersection"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the person's hand stable on the countertop?",
+      "signals": [
+        "support(hand,counter-top)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(hand,counter-top)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person is interacting with objects on a bathroom countertop.",
+      "signals": [
+        "support(oA,oB)",
+        "support(hand,counter-top)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "support(hand,counter-top)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Bottles and containers remain intact, placed securely on the flat surface of the bathroom countertop.",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "balance(bottles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(bottles)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shower curtain remains in its position without being pulled or moved.",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "continuity(shower-curtain)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "continuity(shower-curtain)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person is wearing an indoor-appropriate outfit and headwear that does not pose a falling hazard.",
+      "signals": [
+        "biological_motion(oA)",
+        "prohibited_intersection"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "prohibited_intersection": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bathroom facilities are used safely without causing collisions or hazards.",
+      "signals": [
+        "collision(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

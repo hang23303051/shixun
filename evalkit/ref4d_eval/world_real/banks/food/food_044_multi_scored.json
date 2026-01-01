@@ -1,0 +1,189 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_044_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      19.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person squeeze fried shallots with gloved hands?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do sizzling and splattering occur when dropping shallots into oil?",
+      "signals": [
+        "slosh_response(oil,amp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oil,amp)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do chopped green onions fall onto the cutting board due to gravity?",
+      "signals": [
+        "falling_hazard(chopped_onions)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(chopped_onions)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the hand holding the onion away from the sharp blade of the knife?",
+      "signals": [
+        "blade_orientation_away(knife,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(knife,hand)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Can a mandoline tool be used for slicing vegetables in the kitchen?",
+      "signals": [
+        "tool_usage_correct(mandoline,for:slicing)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 29.17,
+      "total_score_100": 59.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(mandoline,for:slicing)": 29.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person holds and squeezes fried shallots with gloved hands.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The oil remains contained within the pot during cooking.",
+      "signals": [
+        "containment(oil,pot)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oil,pot)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Pieces of chopped green onions fall onto the cutting board due to gravity.",
+      "signals": [
+        "falling_hazard(chopped_onions)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(chopped_onions)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Fried shallots are placed in the pot for frying.",
+      "signals": [
+        "tool_contact(shallots,hand)",
+        "tool_contact(shallots,pot)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.0,
+      "total_score_100": 64.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(shallots,hand)": 28.3333,
+        "tool_contact(shallots,pot)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Dropping shallots into oil causes sizzling and splattering.",
+      "signals": [
+        "slosh_response(oil,amp)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oil,amp)": 34.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

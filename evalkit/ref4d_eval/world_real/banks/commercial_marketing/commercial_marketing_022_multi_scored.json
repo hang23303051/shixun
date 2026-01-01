@@ -1,0 +1,203 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_022_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      15.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is a person operating at a table in an industrial setting?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the large metal sheet on the table remain supported by the table surface and maintain balance?",
+      "signals": [
+        "support",
+        "balance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Across the clip, does the black trash bag not interpenetrate with other objects?",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do all object trajectories and movements maintain continuity without sudden changes or frame discontinuities?",
+      "signals": [
+        "continuity(table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(table)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no visible collisions or interpenetrations between objects?",
+      "signals": [
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Two individuals are working together to handle a large screen on a table.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The metal sheet remains supported by the table surface and maintains balance.",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "There are no visible collisions or interpenetrations between objects, including the black trash bag.",
+      "signals": [
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Object trajectories and movements maintain continuity without sudden changes or frame discontinuities.",
+      "signals": [
+        "continuity(table)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(table)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A person operates at a table in an industrial setting.",
+      "signals": [
+        "support",
+        "balance"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "support": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

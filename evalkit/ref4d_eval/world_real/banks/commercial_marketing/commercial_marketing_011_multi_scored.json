@@ -1,0 +1,196 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_011_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the thermos stay supported by the person's hand without interpenetration with other objects?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the blue container designed to hold liquid and has a cup inside it showing slosh response?",
+      "signals": [
+        "slosh_response(oV,amp)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oV,amp)": 34.1667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the bus and stop sign static in the background throughout the clip?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the gear remain attached to the gloves on the person's hand while holding the thermos?",
+      "signals": [
+        "rigid_transform(thermos)",
+        "rigid_transform(cup)",
+        "grasp_stability(gloves,thermos)",
+        "grasp_stability(gloves,gear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(thermos)": 37.5,
+        "rigid_transform(cup)": 7.5,
+        "grasp_stability(gloves,thermos)": 5.6667,
+        "grasp_stability(gloves,gear)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the words 'bus' and 'camp!' part of an overlay or caption, not physical objects in the scene?",
+      "signals": [
+        "post_collision_change"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "post_collision_change": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The thermos is held by the person's hand without interpenetration with other objects.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cup inside the thermos shows slosh response consistent with being in a container.",
+      "signals": [
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.17,
+      "total_score_100": 74.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oV,amp)": 34.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The garden background remains consistent throughout the clip.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bus and stop sign are static in the background.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text 'bus' and 'camp!' on the screen indicates they are overlays, not physical objects.",
+      "signals": [
+        "post_collision_change"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "post_collision_change": 34.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a5"
+  ]
+}

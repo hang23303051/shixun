@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_025_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bread stay supported by the cutting board without floating or sinking?",
+      "signals": [
+        "hot_surface_contact",
+        "support(cutting_board,table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting_board,table)": 35.0,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the bread keep a consistent size relative to the person's hands?",
+      "signals": [
+        "continuity(bread)",
+        "grasp_stability(hand,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bread)": 36.6667,
+        "grasp_stability(hand,bread)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "During slicing, does the knife cut through the bread while it remains on the cutting board?",
+      "signals": [
+        "support(cutting_board,bread)",
+        "support(Le Creuset cutting board, bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting_board,bread)": 35.0,
+        "support(Le Creuset cutting board, bread)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the hand holding the bread at a safe distance from the blade during the action?",
+      "signals": [
+        "blade_orientation_away(knife,hand)",
+        "blade_orientation_away(Knife, Hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(knife,hand)": 29.1667,
+        "blade_orientation_away(Knife, Hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the person's hands steady and in contact with the bread while using the knife?",
+      "signals": [
+        "tool_contact(knife,bread)",
+        "cuttable_progress(bread)",
+        "grasp_stability(person's_hands,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.67,
+      "total_score_100": 88.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,bread)": 28.3333,
+        "grasp_stability(person's_hands,bread)": 5.6667,
+        "cuttable_progress(bread)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bread is held by its handle, and the cutting board supports it.",
+      "signals": [
+        "hot_surface_contact",
+        "support(Le Creuset cutting board, bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(Le Creuset cutting board, bread)": 35.0,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bread maintains its round shape without deformation or slipping from the hand.",
+      "signals": [
+        "continuity(bread)",
+        "grasp_stability(hand,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bread)": 36.6667,
+        "grasp_stability(hand,bread)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The surface beneath the cutting board is flat, providing support for slicing.",
+      "signals": [
+        "support(cutting_board,table)",
+        "support(cutting_board,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting_board,table)": 35.0,
+        "support(cutting_board,bread)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's left hand stays clear of the knife blade during the action.",
+      "signals": [
+        "blade_orientation_away(knife,hand)",
+        "blade_orientation_away(Knife, Hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(knife,hand)": 29.1667,
+        "blade_orientation_away(Knife, Hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Both hands hold the bread steady while a knife slices through it.",
+      "signals": [
+        "tool_contact(knife,bread)",
+        "cuttable_progress(bread)",
+        "grasp_stability(person's_hands,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.67,
+      "total_score_100": 88.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,bread)": 28.3333,
+        "grasp_stability(person's_hands,bread)": 5.6667,
+        "cuttable_progress(bread)": 4.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_061_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      11.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the salad container stay stable on the countertop while dressing is added?",
+      "signals": [
+        "support(oA,oB)",
+        "openable(oContainer)",
+        "pourable(oContainer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "openable(oContainer)": 5.1667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the strawberries placed inside a small red container that remains stable?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the fork held by the person and used to interact with the food in the salad container?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the tines of the fork face away from the body when eating salad?",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the hot surface of the blender base not touched by any part of the scene?",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The salad container is stable on the countertop.",
+      "signals": [
+        "support(oA,oB)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Strawberries are in a small red container, which is stable on the countertop.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The dressing bottle's cap is off, allowing for its contents to be added to the salad.",
+      "signals": [
+        "openable(oContainer)",
+        "pourable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.0,
+      "total_score_100": 81.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(oContainer)": 25.8333,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The fork interacts with food items in the salad container.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "tool_contact(fork,food)",
+        "grasp_stability(person,fork)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "tool_contact(fork,food)": 5.6667,
+        "grasp_stability(person,fork)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person holds the dressing bottle by their hand.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

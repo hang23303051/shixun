@@ -1,0 +1,216 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_035_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      16.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person use a brush to apply liquid from a glass container onto braided dough?",
+      "signals": [
+        "tool_contact(brush,dough)",
+        "action_phase(pouring,phase)",
+        "pour_direction(oV,axis)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(brush,dough)": 28.3333,
+        "pour_direction(oV,axis)": 5.6667,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "action_phase(pouring,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the parchment paper support the weight of the shaped dough without collapsing on the baking tray?",
+      "signals": [
+        "support(tray,parchment)",
+        "support(parchment,dough)",
+        "support(tray, dough)",
+        "support(parchment, dough)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tray,parchment)": 35.0,
+        "support(parchment,dough)": 7.0,
+        "support(tray, dough)": 7.0,
+        "support(parchment, dough)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the hands positioned correctly for handling raw dough, with fingers clear of sharp edges and no contact with hot surfaces?",
+      "signals": [
+        "grasp_stability(hand,dough)",
+        "blade_orientation_away(tool,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(tool,hand)": 29.1667,
+        "grasp_stability(hand,dough)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the dough being manipulated to form a consistent twisted structure during braiding?",
+      "signals": [
+        "deformation(dough)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(dough)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the dough remain in place on the parchment paper as it is being brushed?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person uses a brush to apply liquid on the braided dough.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "pourable(oContainer)",
+        "action_phase(oAct,phase)",
+        "tool_contact(brush,dough)",
+        "action_phase(pouring,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "tool_contact(brush,dough)": 5.6667,
+        "action_phase(oAct,phase)": 5.3333,
+        "action_phase(pouring,phase)": 5.3333,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The baking tray and parchment paper support the weight of the shaped dough.",
+      "signals": [
+        "support(tray,parchment)",
+        "support(parchment,dough)",
+        "support(tray, dough)",
+        "support(parchment, dough)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tray,parchment)": 35.0,
+        "support(parchment,dough)": 7.0,
+        "support(tray, dough)": 7.0,
+        "support(parchment, dough)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The hands are positioned correctly for handling raw dough, with fingers clear of sharp edges.",
+      "signals": [
+        "grasp_stability(hand,dough)",
+        "blade_orientation_away(tool,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(tool,hand)": 29.1667,
+        "grasp_stability(hand,dough)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The liquid from the glass container is poured onto the dough in a controlled manner.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.0,
+      "total_score_100": 74.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The dough remains in place on the parchment paper as it is being brushed.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3"
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_057_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does Gergely Siklosi's sword maintain a consistent trajectory without sudden changes in orientation?",
+      "signals": [
+        "continuity(fencer1)",
+        "continuity(fencer2)",
+        "trajectory_dir(fencing-sword,axis)",
+        "accel_sign(fencing-sword,axis)",
+        "rigid_transform(fencing-mask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(fencing-sword,axis)": 38.3333,
+        "rigid_transform(fencing-mask)": 7.5,
+        "continuity(fencer1)": 7.3333,
+        "continuity(fencer2)": 7.3333,
+        "accel_sign(fencing-sword,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are both fencers wearing their masks properly to protect their faces and keep safe distances?",
+      "signals": [
+        "support(fencing-mask,fencing-mask)",
+        "collision(fencer,fencer)",
+        "friction_sliding(sword,on:fencer)",
+        "tool_contact(sword,fencer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(fencing-mask,fencing-mask)": 35.0,
+        "collision(fencer,fencer)": 6.3333,
+        "friction_sliding(sword,on:fencer)": 6.0,
+        "tool_contact(sword,fencer)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is Koki Kano attempting to score by attacking with his sword against Gergely Siklosi?",
+      "signals": [
+        "tool_usage_correct(fencing-sword,for:fencing)",
+        "tool_usage_correct(sword,for:fencing)",
+        "action_phase(fencer,phase:offensive)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(fencing-sword,for:fencing)": 29.1667,
+        "tool_usage_correct(sword,for:fencing)": 5.8333,
+        "action_phase(fencer,phase:offensive)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the fencers avoid impossible collisions or interpenetration of bodies and swords during movements?",
+      "signals": [
+        "balance(fencer)",
+        "collision(fencing-sword,fencing-mask)",
+        "interpenetration(fencing-mask,fencing-mask)",
+        "continuity(fencer)",
+        "trajectory_dir(fencing-sword,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(fencing-sword,axis)": 38.3333,
+        "continuity(fencer)": 7.3333,
+        "balance(fencer)": 7.1667,
+        "interpenetration(fencing-mask,fencing-mask)": 7.1667,
+        "collision(fencing-sword,fencing-mask)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the scoreboard display correct scores for HUN and JPN?",
+      "signals": [
+        "balance(fencer)",
+        "interpenetration(sword,fencer)",
+        "continuity(fencer)",
+        "rigid_transform(sword)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(sword)": 37.5,
+        "continuity(fencer)": 7.3333,
+        "balance(fencer)": 7.1667,
+        "interpenetration(sword,fencer)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Gergely Siklosi's sword is extended forward, parallel to the ground.",
+      "signals": [
+        "continuity(fencer1)",
+        "continuity(fencer2)",
+        "trajectory_dir(fencing-sword,axis)",
+        "accel_sign(fencing-sword,axis)",
+        "rigid_transform(fencing-mask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(fencing-sword,axis)": 38.3333,
+        "rigid_transform(fencing-mask)": 7.5,
+        "continuity(fencer1)": 7.3333,
+        "continuity(fencer2)": 7.3333,
+        "accel_sign(fencing-sword,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Koki Kano (JPN) attacks with his sword aimed at Gergely Siklosi (HUN).",
+      "signals": [
+        "support(fencing-mask,fencing-mask)",
+        "tool_usage_correct(fencing-sword,for:fencing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(fencing-mask,fencing-mask)": 35.0,
+        "tool_usage_correct(fencing-sword,for:fencing)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Both fencers maintain balance and avoid interpenetration of their bodies or swords.",
+      "signals": [
+        "balance(fencer)",
+        "interpenetration(fencing-mask,fencing-mask)",
+        "continuity(fencer)",
+        "trajectory_dir(fencing-sword,axis)",
+        "interpenetration(sword,fencer)",
+        "rigid_transform(sword)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(fencing-sword,axis)": 38.3333,
+        "rigid_transform(sword)": 7.5,
+        "continuity(fencer)": 7.3333,
+        "balance(fencer)": 7.1667,
+        "interpenetration(fencing-mask,fencing-mask)": 7.1667,
+        "interpenetration(sword,fencer)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The fencers stand apart on the fencing piste.",
+      "signals": [
+        "collision(fencer,fencer)",
+        "friction_sliding(sword,on:fencer)",
+        "tool_contact(sword,fencer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(fencer,fencer)": 31.6667,
+        "friction_sliding(sword,on:fencer)": 6.0,
+        "tool_contact(sword,fencer)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fencers use their swords to perform offensive and defensive actions.",
+      "signals": [
+        "tool_usage_correct(sword,for:fencing)",
+        "action_phase(fencer,phase:offensive)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.5,
+      "total_score_100": 84.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(sword,for:fencing)": 29.1667,
+        "action_phase(fencer,phase:offensive)": 5.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

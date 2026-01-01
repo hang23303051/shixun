@@ -1,0 +1,202 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_014_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mountain range maintain its structural integrity and elevation relative to the foreground throughout the video?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the position of the mountains in the background stable compared to the green grassy field in the foreground across the entire sequence?",
+      "signals": [
+        "continuity(landscape)",
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5,
+        "continuity(landscape)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the undulations of the green grassy field continuous and realistic without abrupt changes or unnatural patterns?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows cast by the terrain align consistently with the sun's position, maintaining shadow edges that follow the light source direction?",
+      "signals": [
+        "shadow_consistency(mountain)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain)": 36.6667,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no loose rocks or unstable ground visible on the slope of the landscape?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The mountain range in the background remains stable and continuous throughout the sequence.",
+      "signals": [
+        "continuity(landscape)",
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5,
+        "continuity(landscape)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Sunlight consistently casts shadows on the terrain, aligning with its topography and light direction.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(mountain)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The green grassy field shows natural undulations without abrupt changes in height or texture.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The color and texture of the grassy landscape remain continuous and realistic across the scene.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The terrain's slope maintains consistent tilt angles over its base.",
+      "signals": [
+        "tilt_angle_threshold(terrain,deg)",
+        "center_of_mass_over_base(mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(terrain,deg)": 35.8333,
+        "center_of_mass_over_base(mountain)": 6.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

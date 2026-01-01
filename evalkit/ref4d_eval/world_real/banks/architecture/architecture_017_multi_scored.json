@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_017_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      17.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the snow around the fortification remain on the ground without sudden disappearance?",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the white-outline-plan of the fortification align with the actual structure's shape and location, maintaining spatial consistency with the field and river?",
+      "signals": [
+        "rigid_transform(plan)",
+        "continuity(field)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(plan)": 37.5,
+        "continuity(field)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the river maintain a natural flow direction and width through the field throughout the clip?",
+      "signals": [
+        "trajectory_dir(river,axis)",
+        "friction_sliding(river,on:ground)",
+        "collision(river,field)",
+        "material_optics(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(river,axis)": 38.3333,
+        "material_optics(river)": 7.5,
+        "collision(river,field)": 6.3333,
+        "friction_sliding(river,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the fortification show any collision with the surrounding field or river during the video?",
+      "signals": [
+        "collision(fortification, field)",
+        "collision(fortification, river)",
+        "material_optics(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(river)": 37.5,
+        "collision(fortification, field)": 6.3333,
+        "collision(fortification, river)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the circular structure in the plan match the layout of the ruins visible in the real-world scene?",
+      "signals": [
+        "interpenetration(fortification-plan,fortification-structure)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(fortification-plan,fortification-structure)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The white-outline-plan of the fortification aligns with the actual structure's shape and location.",
+      "signals": [
+        "interpenetration(fortification-plan,fortification-structure)",
+        "frame_discontinuity(t)",
+        "rigid_transform(plan)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(plan)": 7.5,
+        "interpenetration(fortification-plan,fortification-structure)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The river runs through the field, maintaining a natural flow direction and width.",
+      "signals": [
+        "trajectory_dir(river,axis)",
+        "friction_sliding(river,on:ground)",
+        "collision(river,field)",
+        "material_optics(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(river,axis)": 38.3333,
+        "material_optics(river)": 7.5,
+        "collision(river,field)": 6.3333,
+        "friction_sliding(river,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Snow remains on the ground around the fortification without sudden disappearance.",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The fortification does not collide with the surrounding field or river.",
+      "signals": [
+        "collision(fortification, field)",
+        "collision(fortification, river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(fortification, field)": 31.6667,
+        "collision(fortification, river)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Snow coverage is consistent in its appearance around the fortification.",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

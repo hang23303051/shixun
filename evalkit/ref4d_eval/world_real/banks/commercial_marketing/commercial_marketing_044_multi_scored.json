@@ -1,0 +1,199 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_044_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      11.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the box stay supported on a stable surface while being opened?",
+      "signals": [
+        "support(oA,oB)",
+        "supportable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand maintain grasp stability when peeling off the plastic wrap?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is unwrapping part of an openable container task in this scene?",
+      "signals": [
+        "openable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the plastic bag reveal the toy inside without tearing during unwrapping?",
+      "signals": [
+        "containment(toy,plastic-bag)",
+        "friction_sliding(plastic-bag,on:hand)",
+        "deformation(plastic-bag)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(plastic-bag)": 40.0,
+        "friction_sliding(plastic-bag,on:hand)": 6.0,
+        "containment(toy,plastic-bag)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the hands and objects free from interpenetration or collision?",
+      "signals": [
+        "interpenetration",
+        "collision"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "collision": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hand holds the box steady while peeling off the plastic bag.",
+      "signals": [
+        "support(oA,oB)",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hands manipulate the plastic bag to reveal the toy inside without tearing.",
+      "signals": [
+        "containment(toy,plastic-bag)",
+        "friction_sliding(plastic-bag,on:hand)",
+        "deformation(plastic-bag)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(plastic-bag)": 40.0,
+        "friction_sliding(plastic-bag,on:hand)": 6.0,
+        "containment(toy,plastic-bag)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The box is supported by a stable surface during unwrapping.",
+      "signals": [
+        "supportable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Peeling off the plastic wrap is part of an openable container task.",
+      "signals": [
+        "openable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable": 25.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hands and objects do not show signs of interpenetration or collision.",
+      "signals": [
+        "interpenetration",
+        "collision"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "collision": 6.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

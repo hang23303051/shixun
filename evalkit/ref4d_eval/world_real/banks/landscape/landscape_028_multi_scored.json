@@ -1,0 +1,235 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_028_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      14.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person stand near the water's edge without sudden disappearance?",
+      "signals": [
+        "continuity(person)",
+        "balance(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(person)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the rocks by the stream remain in their positions relative to each other?",
+      "signals": [
+        "continuity(stream)",
+        "interpenetration(river,rock)",
+        "support(rock,ground)",
+        "buoyancy_float(rock,in:water)=false"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(stream)": 36.6667,
+        "interpenetration(river,rock)": 7.1667,
+        "support(rock,ground)": 7.0,
+        "buoyancy_float(rock,in:water)=false": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the cows stay on land and not fall into the water?",
+      "signals": [
+        "biological_motion(cow)",
+        "falling_hazard(person)",
+        "collision(person,cow)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cow)": 38.3333,
+        "falling_hazard(person)": 6.3333,
+        "collision(person,cow)": 6.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water flow naturally along the riverbed with no falling hazard for objects nearby?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "falling_hazard(person)",
+        "falling_hazard(cow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "falling_hazard(person)": 6.3333,
+        "falling_hazard(cow)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the cows exhibit natural biological motion consistent with being together, showing normal growth patterns of grass around them?",
+      "signals": [
+        "material_optics(cow)",
+        "collision(cow,cow)",
+        "hue_histogram_jump(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(cow)": 37.5,
+        "material_optics(oA)": 7.5,
+        "hue_histogram_jump(oX)": 6.6667,
+        "collision(cow,cow)": 6.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person stands near the water's edge, maintaining balance and continuity in posture.",
+      "signals": [
+        "continuity(person)",
+        "balance(person)",
+        "continuity(stream)",
+        "interpenetration(river,rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "continuity(stream)": 7.3333,
+        "balance(person)": 7.1667,
+        "interpenetration(river,rock)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Rocks by the stream remain stable without interpenetration or unexpected movement.",
+      "signals": [
+        "support(rock,ground)",
+        "buoyancy_float(rock,in:water)=false",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "deformation(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(rock,ground)": 7.0,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(rock,in:water)=false": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Cows stay as a group near the riverbank, exhibiting natural biological motion on land.",
+      "signals": [
+        "biological_motion(cow)",
+        "material_optics(cow)",
+        "collision(cow,cow)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cow)": 38.3333,
+        "material_optics(cow)": 7.5,
+        "collision(cow,cow)": 6.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Grass on the bank shows consistent growth patterns and coloration with no abrupt changes.",
+      "signals": [
+        "falling_hazard(person)",
+        "falling_hazard(cow)",
+        "hue_histogram_jump(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "hue_histogram_jump(oX)": 6.6667,
+        "falling_hazard(person)": 6.3333,
+        "falling_hazard(cow)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Water flows naturally along the riverbed following its trajectory.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

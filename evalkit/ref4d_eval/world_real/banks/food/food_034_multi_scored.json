@@ -1,0 +1,230 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_034_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the finger move smoothly on the touchpad without abrupt changes in trajectory direction?",
+      "signals": [
+        "continuity(touchpad)",
+        "continuity(finger)",
+        "trajectory_dir(finger,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(finger,axis)": 38.3333,
+        "continuity(touchpad)": 7.3333,
+        "continuity(finger)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, do the menu interface elements keep a consistent size relative to each other and display stable positions?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "material_optics(oA)",
+        "size_inconsistency(menu_elements)",
+        "interpenetration(menu_elements)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(oA)": 7.5,
+        "size_inconsistency(menu_elements)": 7.5,
+        "interpenetration(menu_elements)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "During touchscreen interaction, does the finger maintain continuity and consistent trajectory when selecting menu items near food images?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "hot_surface_contact(food_images)",
+        "flame_proximity(food_images)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "hot_surface_contact(food_images)": 6.8333,
+        "flame_proximity(food_images)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the digital display and touchscreen elements maintain size consistency that aligns with real-world expectations during interaction?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "material_optics(oA)",
+        "hot_surface_contact(food_images)",
+        "flame_proximity(food_images)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(oA)": 7.5,
+        "hot_surface_contact(food_images)": 6.8333,
+        "flame_proximity(food_images)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hand's position relative to the touchscreen exhibit continuous trajectory without frame discontinuity or abrupt changes in direction?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The finger moves smoothly on the touchscreen without abrupt changes in trajectory.",
+      "signals": [
+        "continuity(touchpad)",
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(touchpad)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The menu interface elements display stable positions and consistent sizes throughout the video.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "material_optics(oA)",
+        "size_inconsistency(menu_elements)",
+        "interpenetration(menu_elements)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(oA)": 7.5,
+        "size_inconsistency(menu_elements)": 7.5,
+        "interpenetration(menu_elements)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The finger maintains a continuous trajectory when selecting menu items.",
+      "signals": [
+        "continuity(finger)",
+        "trajectory_dir(finger,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(finger,axis)": 38.3333,
+        "continuity(finger)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The digital display and touchscreen elements maintain size consistency without hot surface contact or flame proximity.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "material_optics(oA)",
+        "hot_surface_contact(food_images)",
+        "flame_proximity(food_images)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(oA)": 7.5,
+        "hot_surface_contact(food_images)": 6.8333,
+        "flame_proximity(food_images)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Food images on the menu interface do not interpenetrate during interaction.",
+      "signals": [
+        "size_inconsistency(menu_elements)",
+        "interpenetration(menu_elements)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(menu_elements)": 37.5,
+        "interpenetration(menu_elements)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_053_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      5.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the chain stay in contact with the chainring without interpenetration?",
+      "signals": [
+        "tool_contact(crank-arm,chain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(crank-arm,chain)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the chainring remain attached to the crank arm during operation?",
+      "signals": [
+        "tool_contact(crank_arm,hand)",
+        "interpenetration(chainring,crank_arm)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(chainring,crank_arm)": 35.8333,
+        "tool_contact(crank_arm,hand)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows on the bicycle frame and components consistent with a single light source?",
+      "signals": [
+        "material_optics(bicycle_frame)",
+        "shadow_consistency(bicycle_frame)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(bicycle_frame)": 37.5,
+        "shadow_consistency(bicycle_frame)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the person's hand interacting safely with the bicycle component?",
+      "signals": [
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tool maintain grasp stability while performing maintenance?",
+      "signals": [
+        "grasp_stability(hand,tool)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,tool)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bicycle frame and components show consistent material optics and shadows.",
+      "signals": [
+        "material_optics(bicycle_frame)",
+        "shadow_consistency(bicycle_frame)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(bicycle_frame)": 37.5,
+        "shadow_consistency(bicycle_frame)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The chainring remains attached to the crank arm, with no interpenetration or separation from the chain.",
+      "signals": [
+        "tool_contact(crank_arm,hand)",
+        "interpenetration(chainring,crank_arm)",
+        "tool_contact(crank-arm,chain)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(chainring,crank_arm)": 35.8333,
+        "tool_contact(crank_arm,hand)": 5.6667,
+        "tool_contact(crank-arm,chain)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A hand is interacting safely with the bicycle component.",
+      "signals": [
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hand maintains a stable grasp on the crank arm.",
+      "signals": [
+        "grasp_stability(hand,crank-arm)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,crank-arm)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The tool is held firmly by the hand during maintenance.",
+      "signals": [
+        "grasp_stability(hand,tool)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,tool)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3"
+  ]
+}

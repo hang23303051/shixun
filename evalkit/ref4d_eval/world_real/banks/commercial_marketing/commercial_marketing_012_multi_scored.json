@@ -1,0 +1,195 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_012_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are workers wearing yellow helmets near heavy machinery and materials?",
+      "signals": [
+        "hot_surface_contact(helmet,on:metal_beam)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(helmet,on:metal_beam)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is fire present during metal cutting or welding, kept at a safe distance from workers?",
+      "signals": [
+        "tool_contact",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the stacked metal beams maintain their structural integrity without deformation or fracture?",
+      "signals": [
+        "deformation",
+        "fracture"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "fracture": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do objects on the floor maintain consistent size and shape without sudden deformation or fracture?",
+      "signals": [
+        "deformation(metal_beam)",
+        "fracture(metal_beam)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(metal_beam)": 40.0,
+        "fracture(metal_beam)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the crane afford material handling tasks such as moving heavy steel beams?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Workers wear yellow helmets and protective gear near heavy machinery.",
+      "signals": [
+        "hot_surface_contact(helmet,on:metal_beam)",
+        "tool_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(helmet,on:metal_beam)": 34.1667,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Metal beams on the stack show no signs of deformation or fracture.",
+      "signals": [
+        "deformation",
+        "fracture"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "fracture": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Steel beams remain supported by their base, not floating in mid-air.",
+      "signals": [
+        "buoyancy_float(metal_beam,in:air)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(metal_beam,in:air)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by objects like cranes are continuous and consistent.",
+      "signals": [
+        "shadow_consistency(craneshadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(craneshadow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A crane is used to move heavy steel beams.",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

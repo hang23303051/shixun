@@ -1,0 +1,244 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_029_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      15.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the blue motorcycle stay on the ground with its wheels in contact?",
+      "signals": [
+        "continuity(motorcycle)",
+        "cast_shadow_contact(motorcycle,shadow)",
+        "friction_sliding(motorcycle,on:concrete)",
+        "material_optics(motorcycle)",
+        "shadow_consistency(motorcycle)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(motorcycle,shadow)": 37.5,
+        "material_optics(motorcycle)": 7.5,
+        "continuity(motorcycle)": 7.3333,
+        "shadow_consistency(motorcycle)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "friction_sliding(motorcycle,on:concrete)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the '50% ENUFF' signboard stand upright against the wall without falling?",
+      "signals": [
+        "tilt_angle_threshold(sign,deg)",
+        "support(sign,ground)",
+        "support(sign,wall)",
+        "balance(sign)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(sign,deg)": 35.8333,
+        "balance(sign)": 7.1667,
+        "support(sign,ground)": 7.0,
+        "support(sign,wall)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do pedestrians walk along the sidewalk while maintaining a safe distance from vehicles and obstacles?",
+      "signals": [
+        "collision(oA,oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)",
+        "friction_sliding(person,on:concrete)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "collision(oA,oB)": 6.3333,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(person,on:concrete)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do people's legs move forward during walking motion across the scene?",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do shadows of objects maintain consistency with their positions under light sources?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People walk on the street and interact with their environment in a manner consistent with real-world physics.",
+      "signals": [
+        "continuity(person)",
+        "trajectory_dir(person,xaxis)",
+        "trajectory_dir(person,axis)",
+        "center_of_mass_over_base(person)",
+        "friction_sliding(person,on:concrete)",
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,xaxis)": 38.3333,
+        "trajectory_dir(person,axis)": 7.6667,
+        "continuity(person)": 7.3333,
+        "shadow_consistency(person)": 7.3333,
+        "center_of_mass_over_base(person)": 6.5,
+        "friction_sliding(person,on:concrete)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Pedestrians afford walking along sidewalks, maintaining safe distances from vehicles and obstacles.",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)",
+        "action_phase(oAct,phase)",
+        "friction_sliding(person,on:concrete)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(person,on:concrete)": 6.0,
+        "action_phase(oAct,phase)": 5.3333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The signboard stands upright against the wall without tilting or falling.",
+      "signals": [
+        "tilt_angle_threshold(sign,deg)",
+        "support(sign,ground)",
+        "support(sign,wall)",
+        "balance(sign)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(sign,deg)": 35.8333,
+        "balance(sign)": 7.1667,
+        "support(sign,ground)": 7.0,
+        "support(sign,wall)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue motorcycle remains stationary on the ground with its wheels in contact.",
+      "signals": [
+        "shadow_consistency(motorcycle)",
+        "cast_shadow_contact(motorcycle,shadow)",
+        "interpenetration(oA,oB)",
+        "continuity(motorcycle)",
+        "friction_sliding(motorcycle,on:concrete)",
+        "material_optics(motorcycle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(motorcycle,shadow)": 37.5,
+        "material_optics(motorcycle)": 7.5,
+        "shadow_consistency(motorcycle)": 7.3333,
+        "continuity(motorcycle)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "friction_sliding(motorcycle,on:concrete)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows maintain consistency with object positions and light sources.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

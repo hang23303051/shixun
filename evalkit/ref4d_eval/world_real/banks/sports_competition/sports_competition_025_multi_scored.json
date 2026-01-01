@@ -1,0 +1,186 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_025_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the player in a white jersey with green shoes and number 30 maintain balance while moving?",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 35.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the ball follow a continuous trajectory without sudden changes or disappearing?",
+      "signals": [
+        "continuity(ball)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ball)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does any player exhibit interpenetration with another player during their movement?",
+      "signals": [
+        "interpenetration(player,player)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 35.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(player,player)": 35.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does any player show falling hazard behavior, such as floating above ground level unsupported?",
+      "signals": [
+        "falling_hazard(player)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 31.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(player)": 31.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do players' movements like running and jumping appear biologically plausible?",
+      "signals": [
+        "biological_motion(player)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 38.33,
+      "total_score_100": 96.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A player in a white jersey with green shoes and number 30 maintains balance while moving.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 35.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ball follows a continuous trajectory during the transition from defense to offense.",
+      "signals": [
+        "continuity(ball)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ball)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "No interpenetration occurs between players or objects.",
+      "signals": [
+        "interpenetration(player,player)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 35.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(player,player)": 35.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Players exhibit biologically plausible movements during the transition from defense to offense.",
+      "signals": [
+        "biological_motion(player)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 38.33,
+      "total_score_100": 96.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No player or object shows falling hazard behavior.",
+      "signals": [
+        "falling_hazard(player)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 31.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(player)": 31.6667
+      },
+      "content_score_raw": "58"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

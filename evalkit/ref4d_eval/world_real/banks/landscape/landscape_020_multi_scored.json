@@ -1,0 +1,222 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_020_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person remain stationary on the snowy ground without unexpected movement?",
+      "signals": [
+        "buoyancy_float(person,in:ground)",
+        "friction_sliding(person,on:ground)",
+        "continuity(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "buoyancy_float(person,in:ground)": 6.8333,
+        "friction_sliding(person,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the trees maintain their natural shape and position throughout the clip?",
+      "signals": [
+        "continuity(oX)",
+        "material_optics(oA)",
+        "interpenetration(tree,snow)",
+        "material_optics(snow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "material_optics(snow)": 7.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(tree,snow)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the trees in the background completely still during the entire sequence?",
+      "signals": [
+        "rigid_transform(oX)",
+        "continuity(oX)",
+        "interpenetration(tree,tree)",
+        "collision(person,tree)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(tree,tree)": 7.1667,
+        "collision(person,tree)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the snow on the ground consistent in appearance, with no sudden changes or disappearance?",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "continuity(snow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "continuity(snow)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the man exhibit safe behavior near icy surfaces?",
+      "signals": [
+        "falling_hazard(icy_surface)",
+        "prohibited_intersection(person,ice边缘)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,ice边缘)": 36.6667,
+        "falling_hazard(icy_surface)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person remains stationary on the snowy ground in front of trees and a waterfall.",
+      "signals": [
+        "continuity(person)",
+        "trajectory_dir(person,vertical)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,vertical)": 38.3333,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Snow and trees maintain natural continuity without sudden changes or interpenetration.",
+      "signals": [
+        "continuity(oX)",
+        "material_optics(oA)",
+        "interpenetration(tree,snow)",
+        "material_optics(snow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "material_optics(snow)": 7.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(tree,snow)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Trees remain stationary throughout the sequence.",
+      "signals": [
+        "rigid_transform(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The man wears appropriate winter clothing for standing in a snowy landscape.",
+      "signals": [
+        "support(foot,ground)",
+        "placeable(person,at:snowy_landscape)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(foot,ground)": 35.0,
+        "placeable(person,at:snowy_landscape)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bearded man does not exhibit unsafe behavior near icy surfaces.",
+      "signals": [
+        "falling_hazard(icy_surface)",
+        "prohibited_intersection(person,ice边缘)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,ice边缘)": 36.6667,
+        "falling_hazard(icy_surface)": 6.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_052_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      15.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does water flow from higher to lower elevation, moving downward?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(water,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(water,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do trees with green leaves cast shadows consistent with sunlight direction?",
+      "signals": [
+        "shadow_consistency(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trees)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are people positioned safely on stable rocks near the water without immediate danger of falling?",
+      "signals": [
+        "support(rock,water)",
+        "center_of_mass_over_base(person)",
+        "buoyancy_float(river,water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rock,water)": 35.0,
+        "buoyancy_float(river,water)": 6.8333,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do wet rocks show natural interaction with flowing water in contact?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do people on the rocky path use handrails for support while navigating?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows naturally from higher to lower elevation, consistent with gravity.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(water,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(water,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "People remain on rocks without falling into the water near the body of water.",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "buoyancy_float(person,in:water)",
+        "support(rock,water)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "support(rock,water)": 7.0,
+        "buoyancy_float(person,in:water)": 6.8333,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Clear-blue-green water shows natural interaction with wet rocks and vegetation in contact with flowing water.",
+      "signals": [
+        "material_optics(water)",
+        "friction_sliding(oA,on:oB)",
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Trees with green leaves show shadow consistency with sunlight direction and are firmly rooted.",
+      "signals": [
+        "shadow_consistency(trees)",
+        "support(trees,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trees)": 36.6667,
+        "support(trees,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Rocks support other objects without displacement or deformation.",
+      "signals": [
+        "support(rocks,water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rocks,water)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_030_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      19.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the blue-gloved hand hold a silver electrode?",
+      "signals": [
+        "tool_contact(silver electrode,blue-gloved-hand)",
+        "grasp_stability(blue-gloved-hand,silver electrode)",
+        "goal_placement(silver electrode,on:alignment device)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.33,
+      "total_score_100": 89.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(silver electrode,blue-gloved-hand)": 28.3333,
+        "grasp_stability(blue-gloved-hand,silver electrode)": 5.6667,
+        "goal_placement(silver electrode,on:alignment device)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the patterned roller transfer design onto the solar cell?",
+      "signals": [
+        "tool_contact(roller,solar-cell)",
+        "action_phase(pattern-transfer,phase)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 33.67,
+      "total_score_100": 73.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(roller,solar-cell)": 28.3333,
+        "action_phase(pattern-transfer,phase)": 5.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the blue tool press and rotate the roller on the machine?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the blue tool adjust the white roller?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the purple tool rotate the printing flexo roller?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A blue-gloved hand holds a silver electrode and uses a patterned roller.",
+      "signals": [
+        "tool_contact(silver electrode,blue-gloved-hand)",
+        "grasp_stability(blue-gloved-hand,silver electrode)",
+        "goal_placement(silver electrode,on:alignment device)",
+        "tool_contact(roller,solar-cell)",
+        "action_phase(pattern-transfer,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(silver electrode,blue-gloved-hand)": 28.3333,
+        "grasp_stability(blue-gloved-hand,silver electrode)": 5.6667,
+        "tool_contact(roller,solar-cell)": 5.6667,
+        "goal_placement(silver electrode,on:alignment device)": 5.3333,
+        "action_phase(pattern-transfer,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A blue-gloved hand flexes a white mechanical component with the roller.",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 28.33,
+      "total_score_100": 58.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A purple tool rotates the printing flexo roller on the machine.",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A blue tool presses and rotates the wheel on the device.",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The wheel rolls smoothly along the surface in its contact point.",
+      "signals": [
+        "wheel_rolling"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling": 30.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

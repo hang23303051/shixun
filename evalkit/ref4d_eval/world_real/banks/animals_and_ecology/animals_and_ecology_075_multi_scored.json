@@ -1,0 +1,204 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_075_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the animal's head maintain a consistent size and shape without sudden changes?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the animal standing on stable grassy ground with no signs of interpenetration?",
+      "signals": [
+        "biological_motion(oA)",
+        "support(animal,ground)",
+        "interpenetration(animal,ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "interpenetration(animal,ground)": 7.1667,
+        "support(animal,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the animal move naturally on the grass, avoiding collisions or falling actions?",
+      "signals": [
+        "biological_motion(animal)",
+        "falling_hazard(animal)",
+        "continuity(animal)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(animal)": 38.3333,
+        "continuity(animal)": 7.3333,
+        "falling_hazard(animal)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the animal exhibit natural biological movement throughout the clip?",
+      "signals": [
+        "continuity(animal)",
+        "biological_motion(animal)",
+        "biological_motion"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(animal)": 38.3333,
+        "biological_motion": 7.6667,
+        "continuity(animal)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the animal's shadow match its position and orientation on the ground?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The logo is stationary in the top right corner.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The animal stands on the grass, looking around naturally.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The ground surface supports the animal without any interpenetration.",
+      "signals": [
+        "support(animal,ground)",
+        "interpenetration(animal,ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(animal,ground)": 35.8333,
+        "support(animal,ground)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The animal moves safely on the grassy terrain with no obstacles nearby.",
+      "signals": [
+        "biological_motion(animal)",
+        "falling_hazard(animal)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(animal)": 38.3333,
+        "falling_hazard(animal)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the animal matches its position on the ground.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

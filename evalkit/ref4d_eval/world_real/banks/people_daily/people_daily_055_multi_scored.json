@@ -1,0 +1,207 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_055_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      15.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mango stay supported by a hand without floating or sinking?",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the child in the red-blue suit asleep and not moving suddenly?",
+      "signals": [
+        "biological_motion(oA)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "state_change(oObj,from:state,to:state)": 7.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the driver's hands on the steering wheel while driving?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.0,
+      "total_score_100": 64.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the hand grasp and lift the mango without interpenetration?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "cast_shadow_contact(oX,shadow)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "continuity(oX)": 7.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the falling mangoes follow a trajectory consistent with their initial position?",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand holds a mango near the sleeping child in the red-blue superhero suit.",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "biological_motion(oA)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "state_change(oObj,from:state,to:state)": 7.5,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person in the blue checkered shirt drives with hands on the steering wheel.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.0,
+      "total_score_100": 64.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A hand grasps and lifts a mango without interpenetration or frame discontinuity.",
+      "signals": [
+        "continuity(mango)",
+        "grasp_stability(oHand,oObj)",
+        "cast_shadow_contact(oX,shadow)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "continuity(mango)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "No hand suddenly appears or disappears during the video.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Mangoes move consistently from their initial position.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

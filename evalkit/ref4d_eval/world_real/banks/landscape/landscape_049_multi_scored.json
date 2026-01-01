@@ -1,0 +1,224 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_049_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      17.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the car on the road move in a direction consistent with its path?",
+      "signals": [
+        "trajectory_dir(ship,axis)",
+        "trajectory_dir(car,axis)",
+        "accel_sign(ship,axis)",
+        "accel_sign(car,axis)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ship,axis)": 38.3333,
+        "trajectory_dir(car,axis)": 7.6667,
+        "accel_sign(ship,axis)": 7.0,
+        "accel_sign(car,axis)": 7.0
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of the ship and cars match their positions relative to the light source?",
+      "signals": [
+        "shadow_consistency(ship)",
+        "shadow_consistency(car)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(ship)": 36.6667,
+        "shadow_consistency(car)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the mountains continuous without abrupt size changes across the clip?",
+      "signals": [
+        "continuity(landscape)",
+        "size_inconsistency(landscape)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(landscape)": 37.5,
+        "continuity(landscape)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the moving object follow a smooth trajectory without sudden speed changes?",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "accel_sign(car,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "accel_sign(car,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the ship maintain a plausible position change throughout the scene?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The ship maintains a consistent trajectory relative to the valley and mountains.",
+      "signals": [
+        "continuity(landscape)",
+        "size_inconsistency(landscape)",
+        "trajectory_dir(ship,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ship,axis)": 38.3333,
+        "size_inconsistency(landscape)": 7.5,
+        "continuity(landscape)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of the ships are visible on the water surface, matching their positions.",
+      "signals": [
+        "shadow_consistency(ship)",
+        "shadow_consistency(car)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "shadow_consistency(ship)": 7.3333,
+        "shadow_consistency(car)": 7.3333
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A car drives along the road with a continuous motion direction.",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "accel_sign(car,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "accel_sign(car,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The car follows a natural trajectory along the road without sudden disappearance.",
+      "signals": [
+        "trajectory_dir(ship,axis)",
+        "trajectory_dir(car,axis)",
+        "accel_sign(ship,axis)",
+        "accel_sign(car,axis)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(ship)",
+        "size_inconsistency(car)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(ship,axis)": 7.6667,
+        "trajectory_dir(car,axis)": 7.6667,
+        "size_inconsistency(ship)": 7.5,
+        "size_inconsistency(car)": 7.5,
+        "accel_sign(ship,axis)": 7.0,
+        "accel_sign(car,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Clouds and mountains maintain consistent shapes and appearances throughout the scene.",
+      "signals": [
+        "material_optics(ship)",
+        "material_optics(car)",
+        "continuity(landscape)",
+        "size_inconsistency(landscape)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(ship)": 37.5,
+        "material_optics(car)": 7.5,
+        "size_inconsistency(landscape)": 7.5,
+        "continuity(landscape)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

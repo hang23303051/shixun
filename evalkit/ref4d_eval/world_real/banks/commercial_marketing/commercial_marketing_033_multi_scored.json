@@ -1,0 +1,194 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_033_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the gun stay held steadily by the person's hands without sudden movement?",
+      "signals": [
+        "grasp_stability(person,gun)",
+        "continuity(gun)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gun)": 36.6667,
+        "grasp_stability(person,gun)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the fingers of the hand holding the gun clear of the trigger?",
+      "signals": [
+        "finger_clearance(person,gun)",
+        "blade_orientation_away(weapon,hands)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person,gun)": 34.1667,
+        "blade_orientation_away(weapon,hands)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the handgun a black-textured object with a red dot sight on top?",
+      "signals": [
+        "tool_usage_correct(weapon,for:aiming)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(weapon,for:aiming)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the gun remain a single, unbroken object during handling?",
+      "signals": [
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the grip maintain stability to prevent accidental release?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The gun is held steadily by the person's hands without sudden movement.",
+      "signals": [
+        "grasp_stability(person,gun)",
+        "continuity(gun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gun)": 36.6667,
+        "grasp_stability(person,gun)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The fingers are clear of the trigger, and pointing in a safe direction.",
+      "signals": [
+        "finger_clearance(person,gun)",
+        "blade_orientation_away(weapon,hands)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person,gun)": 34.1667,
+        "blade_orientation_away(weapon,hands)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The black handgun with red dot sight can be operated for aiming tasks.",
+      "signals": [
+        "tool_usage_correct(weapon,for:aiming)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(weapon,for:aiming)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The gun remains a single object without interpenetration with other objects.",
+      "signals": [
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The gun's trajectory and orientation are consistent with human grip and manipulation.",
+      "signals": [
+        "trajectory_dir(gun,axis)",
+        "rigid_transform(gun)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(gun,axis)": 38.3333,
+        "rigid_transform(gun)": 7.5
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

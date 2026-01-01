@@ -1,0 +1,246 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_002_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the orange cones remain in their positions without moving unexpectedly?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "size_inconsistency(oX)",
+        "support(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the children in the background standing at a safe distance from the child playing with hoops and cones?",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "balance(oX)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the green cone placed as an obstacle for the child to navigate around while using the yellow hoops?",
+      "signals": [
+        "goal_placement(oObj,at:oTarget)",
+        "tool_usage_correct(oTool,for:oTask)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "goal_placement(oObj,at:oTarget)": 5.3333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the other children stand behind the active play area, avoiding any risk of collision?",
+      "signals": [
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the child maintain balance on the grassy surface when interacting with the yellow hoops and orange cones?",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The yellow hoops and orange cones are solid objects that do not interpenetrate or suddenly disappear.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "size_inconsistency(oX)",
+        "support(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Gravity acts on the child, who maintains balance while interacting with objects; children in the background stand at a safe distance.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "balance(oX)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The green cone is an obstacle for the child to navigate around. The yellow hoops afford a path for navigating through obstacles.",
+      "signals": [
+        "goal_placement(oObj,at:oTarget)",
+        "tool_usage_correct(oTool,for:oTask)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "goal_placement(oObj,at:oTarget)": 5.3333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The children in the background stand behind the activity area without interfering.",
+      "signals": [
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The child navigates through the yellow hoops, maintaining balance while interacting with objects.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "placeable(oObj,at:oTarget)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

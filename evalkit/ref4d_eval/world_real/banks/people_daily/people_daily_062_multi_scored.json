@@ -1,0 +1,205 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_062_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      10.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the gray Tesla car stay stationary on the ground with its wheels in contact?",
+      "signals": [
+        "wheel_rolling(car)",
+        "buoyancy_float(oA,in:oV)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667,
+        "falling_hazard(oObj)": 6.3333,
+        "wheel_rolling(car)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are people standing at a safe distance from the vehicle, avoiding unsafe proximity to active traffic?",
+      "signals": [
+        "balance(people)",
+        "collision(people)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "balance(people)": 7.1667,
+        "collision(people)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person holding the phone extending their arm towards the group while gesturing and conversing?",
+      "signals": [
+        "grasp_stability(hand,phone)",
+        "tool_contact(oTool,oObj)",
+        "handoff_between_hands(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.33,
+      "total_score_100": 89.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,phone)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "handoff_between_hands(oObj)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the cup held by the individual near the center-right show no spillage or leakage during social interaction?",
+      "signals": [
+        "spillage(cup)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "spillage(cup)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do shadows cast by objects remain consistent with their positions and light sources throughout the clip?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People stand on a solid concrete surface near a stationary gray Tesla car.",
+      "signals": [
+        "balance(people)",
+        "collision(people)",
+        "buoyancy_float(oA,in:oV)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(people)": 35.8333,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "collision(people)": 6.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Individuals gesture and converse, indicating social interaction among the group.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "handoff_between_hands(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "handoff_between_hands(oObj)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A person extends their arm to hold a phone for taking a photo or video.",
+      "signals": [
+        "grasp_stability(hand,phone)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 28.33,
+      "total_score_100": 58.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,phone)": 28.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cup held by the individual does not show any spillage or leakage.",
+      "signals": [
+        "spillage(cup)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 28.33,
+      "total_score_100": 58.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "spillage(cup)": 28.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "An object is handed off between hands of a single person.",
+      "signals": [
+        "handoff_between_hands(oObj)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 26.67,
+      "total_score_100": 26.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "handoff_between_hands(oObj)": 26.6667
+      },
+      "content_score_raw": "0"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2"
+  ]
+}

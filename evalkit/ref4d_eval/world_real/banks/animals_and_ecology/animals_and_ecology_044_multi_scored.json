@@ -1,0 +1,222 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_044_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the koala's fur show continuity without sudden changes?",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the leaves around the koala supported by branches and not floating away?",
+      "signals": [
+        "biological_motion(koala)",
+        "support(leaves,koala)",
+        "balance(koala)",
+        "interpenetration(leaves,koala)",
+        "collision(leaves,koala)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333,
+        "balance(koala)": 7.1667,
+        "interpenetration(leaves,koala)": 7.1667,
+        "support(leaves,koala)": 7.0,
+        "collision(leaves,koala)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the koala's head move in a natural, consistent direction relative to its body?",
+      "signals": [
+        "biological_motion(koala)",
+        "trajectory_dir(koala,vertical)",
+        "accel_sign(koala,vertical)",
+        "support(koala,tree)",
+        "containment(koala,tree)",
+        "interpenetration(koala,leaves)",
+        "collision(koala,branch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333,
+        "trajectory_dir(koala,vertical)": 7.6667,
+        "interpenetration(koala,leaves)": 7.1667,
+        "accel_sign(koala,vertical)": 7.0,
+        "support(koala,tree)": 7.0,
+        "collision(koala,branch)": 6.3333,
+        "containment(koala,tree)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the eucalyptus leaf in the koala's mouth interpenetrate with its fur?",
+      "signals": [
+        "material_optics(leaves)",
+        "interpenetration(leaves,koala_fur)",
+        "biological_motion(koala)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333,
+        "material_optics(leaves)": 7.5,
+        "interpenetration(leaves,koala_fur)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the koala eating eucalyptus leaves as part of normal feeding behavior?",
+      "signals": [
+        "biological_motion(koala)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The koala's fur and body show continuity and consistency without sudden changes.",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The koala interacts with eucalyptus leaves by grasping and eating them naturally.",
+      "signals": [
+        "biological_motion(koala)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The koala's head position relative to its body shows consistent biological motion.",
+      "signals": [
+        "biological_motion(koala)",
+        "trajectory_dir(koala,vertical)",
+        "accel_sign(koala,vertical)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333,
+        "trajectory_dir(koala,vertical)": 7.6667,
+        "accel_sign(koala,vertical)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The koala is supported by tree branches and leaves, showing no interpenetration or collision.",
+      "signals": [
+        "support(koala,tree)",
+        "containment(koala,tree)",
+        "interpenetration(koala,leaves)",
+        "collision(koala,branch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(koala,leaves)": 35.8333,
+        "support(koala,tree)": 7.0,
+        "collision(koala,branch)": 6.3333,
+        "containment(koala,tree)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The leaves in the koala's mouth maintain consistent material optics without interpenetration with its fur.",
+      "signals": [
+        "material_optics(leaves)",
+        "interpenetration(leaves,koala_fur)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(leaves)": 37.5,
+        "interpenetration(leaves,koala_fur)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

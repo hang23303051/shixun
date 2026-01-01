@@ -1,0 +1,218 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_058_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      10.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fawn's head move naturally without sudden frame discontinuity?",
+      "signals": [
+        "continuity(fawn)",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fawn)": 36.6667,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the fawn's head stay in contact with the adult deer's body during their close proximity?",
+      "signals": [
+        "interpenetration(fawn,adult-deer)",
+        "frame_discontinuity(t)",
+        "biological_motion"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion": 7.6667,
+        "interpenetration(fawn,adult-deer)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow on the deer's face match its position and lighting throughout the clip?",
+      "signals": [
+        "biological_motion(adult-deer)",
+        "material_optics(adult-deer)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(adult-deer)": 38.3333,
+        "material_optics(adult-deer)": 7.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the chipmunk maintain a natural posture and avoid collision with the other deer while supporting the fawn's head?",
+      "signals": [
+        "accel_sign(adult-deer,axis)",
+        "collision(adult-deer,fawn)",
+        "size_inconsistency(chipmunk, fawn)",
+        "size_inconsistency(chipmunk, adult-deer)",
+        "prohibited_intersection(chipmunk, fawn)",
+        "prohibited_intersection(chipmunk, adult-deer)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(chipmunk, fawn)": 37.5,
+        "size_inconsistency(chipmunk, adult-deer)": 7.5,
+        "prohibited_intersection(chipmunk, fawn)": 7.3333,
+        "prohibited_intersection(chipmunk, adult-deer)": 7.3333,
+        "accel_sign(adult-deer,axis)": 7.0,
+        "collision(adult-deer,fawn)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the adult deer exhibit smooth eye movement consistent with biological motion?",
+      "signals": [
+        "size_inconsistency(chipmunk)",
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "size_inconsistency(chipmunk)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The adult deer's eyes move smoothly, and its posture is stable.",
+      "signals": [
+        "biological_motion(adult-deer)",
+        "material_optics(adult-deer)",
+        "biological_motion"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(adult-deer)": 38.3333,
+        "biological_motion": 7.6667,
+        "material_optics(adult-deer)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The fawn's head remains in contact with the adult deer without interpenetration or frame discontinuity.",
+      "signals": [
+        "interpenetration(fawn,adult-deer)",
+        "frame_discontinuity(t)",
+        "continuity(fawn)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(fawn)": 7.3333,
+        "interpenetration(fawn,adult-deer)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The animals' movements are consistent with biological motion.",
+      "signals": [
+        "accel_sign(adult-deer,axis)",
+        "collision(adult-deer,fawn)",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "accel_sign(adult-deer,axis)": 7.0,
+        "collision(adult-deer,fawn)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The chipmunk maintains a natural posture and size relative to the adult deer.",
+      "signals": [
+        "size_inconsistency(chipmunk)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(chipmunk)": 37.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow on the deer's face aligns with its position and lighting.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

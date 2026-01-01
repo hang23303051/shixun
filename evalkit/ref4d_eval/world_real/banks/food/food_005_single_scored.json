@@ -1,0 +1,200 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_005_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      7.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a hand place seasoned carrot sticks into a bowl?",
+      "signals": [
+        "tool_contact(hand,carrots)",
+        "pour_direction(oil,V,axis=down)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(hand,carrots)": 28.3333,
+        "pour_direction(oil,V,axis=down)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does oil flow in a continuous stream from the bottle to the carrots?",
+      "signals": [
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hand maintain grasp stability while picking up and placing down carrot pieces?",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does salt evenly distribute on the carrots without sudden size inconsistency?",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bowl support the weight of the seasoned carrots without deformation or interpenetration?",
+      "signals": [
+        "support(oA,oB)",
+        "deformation(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand is seasoning peeled and cut carrots with oil.",
+      "signals": [
+        "tool_contact(hand,carrots)",
+        "pour_direction(oil,V,axis=down)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(hand,carrots)": 28.3333,
+        "pour_direction(oil,V,axis=down)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bowl supports the weight of seasoned carrots without deformation or interpenetration.",
+      "signals": [
+        "tool_usage_correct(knife,for:cut carrots)",
+        "placeable(carrot_sticks,at:bowl)",
+        "grasp_stability(hand,carrot_sticks)",
+        "support(oA,oB)",
+        "deformation(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "tool_usage_correct(knife,for:cut carrots)": 5.8333,
+        "grasp_stability(hand,carrot_sticks)": 5.6667,
+        "placeable(carrot_sticks,at:bowl)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Oil flows in a continuous stream from the bottle to the carrots.",
+      "signals": [
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hand maintains grasp stability while picking up carrot pieces.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Salt appears evenly distributed on the carrots.",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

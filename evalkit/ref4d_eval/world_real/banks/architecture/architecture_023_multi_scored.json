@@ -1,0 +1,225 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_023_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      16.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the yellow crane remain stable without collapsing?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the metal beams on the scaffolding maintain their shape and not interpenetrate each other?",
+      "signals": [
+        "rigid_transform(oX)",
+        "interpenetration(oA,oB)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the workers positioned safely away from falling hazards at elevated platforms?",
+      "signals": [
+        "support(oA,oB)",
+        "falling_hazard(oObj)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "support(oA,oB)": 7.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the lighting fixtures hanging from the ceiling stay suspended in place throughout the clip?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the yellow crane move with a consistent trajectory, showing no unexpected deformations?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "tilt_angle_threshold(oX,deg)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "accel_sign(oX,axis)": 7.0,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Large structural components and scaffolding maintain physical continuity and stability.",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "rigid_transform(oX)": 7.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Cranes and large structural elements remain in a stable state without unexpected movement.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The yellow crane moves with consistent physics, maintaining a stable trajectory.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Workers on elevated platforms are supported by stable surfaces to prevent falling hazards.",
+      "signals": [
+        "support(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There are no falling hazards from heights during the operation of cranes and workers.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

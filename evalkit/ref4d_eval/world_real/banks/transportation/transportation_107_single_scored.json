@@ -1,0 +1,193 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_107_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      9.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the car's wheels roll on the road?",
+      "signals": [
+        "wheel_rolling(vehicles)",
+        "accel_sign(vehicles,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(vehicles,axis)": 35.0,
+        "wheel_rolling(vehicles)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are pedestrians using a crosswalk to cross the street?",
+      "signals": [
+        "containment(pedestrians,crosswalk)",
+        "trajectory_dir(vehicles,axis)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "containment(pedestrians,crosswalk)": 5.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are shadows of buildings consistent with their positions and light source direction?",
+      "signals": [
+        "shadow_consistency(vehicles)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(vehicles)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the yellow van merge safely into traffic from its lane?",
+      "signals": [
+        "trajectory_dir(vehicles,axis)",
+        "accel_sign(vehicles,axis)",
+        "containment(vehicles,road)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "accel_sign(vehicles,axis)": 7.0,
+        "containment(vehicles,road)": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do tall residential buildings provide structural support for public services in the city?",
+      "signals": [
+        "support(buildings,sky)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(buildings,sky)": 35.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The vehicle's wheels roll on the road as it moves forward.",
+      "signals": [
+        "wheel_rolling(vehicles)",
+        "accel_sign(vehicles,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(vehicles,axis)": 35.0,
+        "wheel_rolling(vehicles)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Vehicles maintain safe distances and follow traffic rules in city driving.",
+      "signals": [
+        "trajectory_dir(vehicles,axis)",
+        "accel_sign(vehicles,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "accel_sign(vehicles,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows of buildings are visible on the ground, matching their positions.",
+      "signals": [
+        "shadow_consistency(vehicles)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(vehicles)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Buildings line both sides of the street, providing structural support.",
+      "signals": [
+        "support(buildings,sky)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(buildings,sky)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Pedestrians use designated crosswalks to ensure safety.",
+      "signals": [
+        "containment(pedestrians,crosswalk)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 29.17,
+      "total_score_100": 29.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pedestrians,crosswalk)": 29.1667
+      },
+      "content_score_raw": "0"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

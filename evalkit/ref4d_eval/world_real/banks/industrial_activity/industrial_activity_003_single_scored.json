@@ -1,0 +1,198 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_003_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the wheels of the conveyor belt roll smoothly without interpenetration?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the green light on, indicating safe operation, and is the emergency stop button visible in red?",
+      "signals": [
+        "state_change(operational_light,from:off,to:on)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(operational_light,from:off,to:on)": 37.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the paper move continuously on the conveyor belt without sudden stops?",
+      "signals": [
+        "continuity(paper_roll)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(paper_roll)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the control panel buttons and display positions consistent throughout the clip?",
+      "signals": [
+        "rigid_transform(machine_panel)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine_panel)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the numerical values for cut length, cut places, and paper to be cut remain stable?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The wheels of the conveyor belt roll smoothly along their designated paths.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "interpenetration(oA,oB)",
+        "wheel_rolling(wheel)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "wheel_rolling(oX)": 6.0,
+        "wheel_rolling(wheel)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The control panel buttons and display maintain consistent physical states and positions throughout the clip.",
+      "signals": [
+        "rigid_transform(machine_panel)",
+        "continuity(screen_data)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine_panel)": 37.5,
+        "continuity(screen_data)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A green light indicates that the machine is running safely, with a red emergency stop button clearly visible.",
+      "signals": [
+        "state_change(operational_light,from:off,to:on)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(operational_light,from:off,to:on)": 37.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The screen displays continuous numerical values for cut length, cut places, and paper to be cut.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Paper rolls on the conveyor belt move continuously without sudden stops or reversals.",
+      "signals": [
+        "continuity(paper_roll)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(paper_roll)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

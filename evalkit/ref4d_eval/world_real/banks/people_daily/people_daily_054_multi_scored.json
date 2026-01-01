@@ -1,0 +1,193 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_054_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      10.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person's arm move naturally without violating physical consistency?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the showerhead and faucet fixed to the wall in this bathroom setting?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Across the clip, does the person's arm maintain continuity with no frame discontinuity?",
+      "signals": [
+        "continuity(arm)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(arm)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the water flow from the showerhead controlled by normal means during brushing teeth?",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow cast by the hand on the wall show interpenetration with other objects?",
+      "signals": [
+        "shadow_consistency(hand)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(hand)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bathroom environment is safe with no visible falling hazards or sharp objects.",
+      "signals": [
+        "falling_hazard(bathroom)",
+        "prohibited_intersection(sharp_objects,hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(sharp_objects,hand)": 36.6667,
+        "falling_hazard(bathroom)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The showerhead and faucet remain fixed to the wall without movement or detachment.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person's arm maintains consistent size and position relative to their body.",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's arm moves naturally, following physical consistency.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person's arm shows continuity without frame discontinuity.",
+      "signals": [
+        "continuity(arm)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(arm)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

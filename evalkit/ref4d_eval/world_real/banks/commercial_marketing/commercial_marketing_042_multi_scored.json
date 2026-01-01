@@ -1,0 +1,195 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_042_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      11.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man lie on the mattress without moving off it?",
+      "signals": [
+        "continuity(person)",
+        "support(mattress,by:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "support(mattress,by:ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the mattress stationary and not sinking or shifting under the man?",
+      "signals": [
+        "continuity(mattress)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mattress)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the man's body and bedding continuous across all frames, with no sudden changes in position?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the headboard remain consistent on the wall throughout the clip?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the text overlays maintain a uniform size relative to the bed and other objects?",
+      "signals": [
+        "size_inconsistency",
+        "material_optics"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "material_optics": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The man lies on the mattress, and it remains stationary.",
+      "signals": [
+        "continuity(person)",
+        "support(mattress,by:ground)",
+        "continuity(mattress)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "continuity(mattress)": 7.3333,
+        "support(mattress,by:ground)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The man's body and bedding maintain continuity without frame discontinuity.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the headboard on the wall is consistent with its position and light source.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text overlay does not exhibit size inconsistency or material optics anomalies.",
+      "signals": [
+        "size_inconsistency",
+        "material_optics"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "material_optics": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The mattress does not exhibit unexpected movement or deformation.",
+      "signals": [
+        "continuity(mattress)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mattress)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

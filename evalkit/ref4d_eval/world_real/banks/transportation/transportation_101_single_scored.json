@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_101_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the 'STOP' sign remain stationary and visible throughout the scene?",
+      "signals": [
+        "continuity(oX)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "prohibited_intersection(oA,oB)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the steam locomotive emit smoke that rises vertically from its chimney?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "smoke_direction_consistency(scene)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the emergency assembly area sign clearly legible in front of the building?",
+      "signals": [
+        "containment(signboard,emergency-area-sign)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(signboard,emergency-area-sign)": 29.1667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the blue toy train stay on the tracks without moving off its path?",
+      "signals": [
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget)": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the stop sign maintain its position relative to the track crossing, with no sudden movement?",
+      "signals": [
+        "continuity(train)",
+        "continuity(stop-sign)",
+        "interpenetration(train,fence)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(train)": 7.3333,
+        "continuity(stop-sign)": 7.3333,
+        "interpenetration(train,fence)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red 'STOP' sign is stationary and clearly visible.",
+      "signals": [
+        "continuity(oX)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "prohibited_intersection(oA,oB)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Smoke rises vertically from the steam locomotive behind the tracks.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "smoke_direction_consistency(scene)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A green sign with a yellow symbol reads 'PLEASE NOTE EMERGENCY ASSEMBLY AREA FOR TRAINS'.",
+      "signals": [
+        "containment(signboard,emergency-area-sign)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(signboard,emergency-area-sign)": 29.1667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A blue toy train sits on the track, ready to move forward.",
+      "signals": [
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget)": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "All objects maintain their physical positions without interpenetration.",
+      "signals": [
+        "continuity(train)",
+        "continuity(stop-sign)",
+        "interpenetration(train,fence)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(train)": 7.3333,
+        "continuity(stop-sign)": 7.3333,
+        "interpenetration(train,fence)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

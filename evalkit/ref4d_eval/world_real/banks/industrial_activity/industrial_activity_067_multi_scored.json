@@ -1,0 +1,201 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_067_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      18.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person's hand hold and guide the metal rod against the sanding wheel?",
+      "signals": [
+        "tool_contact(belt-sander,metal_object)",
+        "grasp_stability(person-(hand-with-tool),belt-sander)",
+        "tool_contact(belt-sander,metal-rod)",
+        "grasp_stability(person-(hand-with-tool),metal-rod)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(belt-sander,metal_object)": 28.3333,
+        "grasp_stability(person-(hand-with-tool),belt-sander)": 5.6667,
+        "tool_contact(belt-sander,metal-rod)": 5.6667,
+        "grasp_stability(person-(hand-with-tool),metal-rod)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the blue-gloved hand maintain finger clearance from the grinding wheel?",
+      "signals": [
+        "finger_clearance(person-(hand-with-tool),grinding-wheel)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person-(hand-with-tool),grinding-wheel)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the yellow grinding wheel rotate consistently while in contact with the metal rod?",
+      "signals": [
+        "friction_sliding(grinding-wheel,on:metal_object), friction_sliding(belt-sander,on:metal_object)",
+        "wheel_rolling(grinding-wheel)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.0,
+      "total_score_100": 86.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(grinding-wheel,on:metal_object), friction_sliding(belt-sander,on:metal_object)": 30.0,
+        "wheel_rolling(grinding-wheel)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the belt sander smooth the surface of the metal object by continuous material removal?",
+      "signals": [
+        "tool_contact(belt-sander,metal_object)",
+        "continuity(belt-sander)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(belt-sander)": 36.6667,
+        "tool_contact(belt-sander,metal_object)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the hand holding the blue handle positioned away from the moving blade?",
+      "signals": [
+        "blade_orientation_away(tool,hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(tool,hand)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person's hand holds and guides the metal rod against the sanding wheel.",
+      "signals": [
+        "tool_contact(belt-sander,metal_object)",
+        "grasp_stability(person-(hand-with-tool),belt-sander)",
+        "tool_contact(belt-sander,metal-rod)",
+        "grasp_stability(person-(hand-with-tool),metal-rod)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(belt-sander,metal_object)": 28.3333,
+        "grasp_stability(person-(hand-with-tool),belt-sander)": 5.6667,
+        "tool_contact(belt-sander,metal-rod)": 5.6667,
+        "grasp_stability(person-(hand-with-tool),metal-rod)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The wooden handle remains attached to the grinding wheel.",
+      "signals": [
+        "continuity(wooden-handle)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 36.67,
+      "total_score_100": 36.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wooden-handle)": 36.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The yellow grinding wheel contacts the moving metal rod continuously.",
+      "signals": [
+        "friction_sliding(grinding-wheel,on:metal_object), friction_sliding(belt-sander,on:metal_object)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(grinding-wheel,on:metal_object), friction_sliding(belt-sander,on:metal_object)": 30.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's hand maintains finger clearance from the grinding wheel.",
+      "signals": [
+        "finger_clearance(person-(hand-with-tool),grinding-wheel)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person-(hand-with-tool),grinding-wheel)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The movement of the sanding belt shows continuous tool usage.",
+      "signals": [
+        "continuity(belt-sander)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(belt-sander)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

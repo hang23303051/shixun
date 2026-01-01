@@ -1,0 +1,200 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_012_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train's shadow on the ground follow its trajectory and maintain consistency with the light source direction?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the train wheels roll smoothly along the tracks without sudden changes in speed or direction?",
+      "signals": [
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the train cars properly supported by the railway tracks, ensuring stability during transit?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the containers on the train rest securely on the railcars without interpenetration between them?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the chain-link fence remain unobstructed and separate from the moving train?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Train containers rest on railcars without interpenetration, separated by a chain-link fence.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "interpenetration(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Train's shadow follows its trajectory and aligns with the light source direction.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Train cars sit stably on railway tracks during movement.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Train wheels roll smoothly along the tracks without abrupt changes in motion.",
+      "signals": [
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Container shadows maintain consistency with the train's movement and light source.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

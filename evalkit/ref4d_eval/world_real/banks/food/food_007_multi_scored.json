@@ -1,0 +1,217 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_007_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      17.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do small white cubes continuously fall onto the conveyor belt?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "falling_hazard(oObj)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the material and texture of the cubes consistent throughout the scene?",
+      "signals": [
+        "continuity(cubes)",
+        "material_optics(cubes)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(cubes)": 37.5,
+        "continuity(cubes)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person's hand movement maintain physical consistency with their body position?",
+      "signals": [
+        "continuity(hand-motion)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hand-motion)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do small white particles keep pouring without sudden disappearance or merging?",
+      "signals": [
+        "continuity(cubes)",
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(cubes)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the optics of the metallic surface match real-world scenarios?",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 37.5,
+      "total_score_100": 57.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Small white cubes continuously fall onto the conveyor belt.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "falling_hazard(oObj)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "White particles are poured without sudden disappearance or merging.",
+      "signals": [
+        "continuity(cubes)",
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(cubes)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The material of the cubes and metallic surface appear consistent.",
+      "signals": [
+        "material_optics(cubes)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(cubes)": 37.5,
+        "material_optics(oA)": 7.5
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's hand movements maintain physical consistency with their body position.",
+      "signals": [
+        "continuity(hand-motion)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hand-motion)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Small white cubes are manipulated by a person's hand without sudden disappearance.",
+      "signals": [
+        "continuity(cubes)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cubes)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a2",
+    "a5"
+  ]
+}

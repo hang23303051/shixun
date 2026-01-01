@@ -1,0 +1,211 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_046_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      17.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the airplane maintain a consistent orientation and trajectory in the air?",
+      "signals": [
+        "continuity(oX)",
+        "balance(oX)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the text overlay stay consistently displayed at the top of the frame without sudden size changes?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)",
+        "continuity(text-overlay)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(text-overlay)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the fence support the sign without collision, acting as a barrier to prevent unauthorized access?",
+      "signals": [
+        "support(fence,airplane)",
+        "prohibited_intersection(fence,airplane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(fence,airplane)": 36.6667,
+        "support(fence,airplane)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the text overlay clearly visible on the screen without interpenetration with other objects?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)",
+        "continuity(text-overlay)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(text-overlay)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the content of the article avoid misleading information about real-world events or safety risks?",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The airplane remains in the air with a consistent orientation and trajectory.",
+      "signals": [
+        "continuity(oX)",
+        "balance(oX)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The text-overlay is consistently displayed at the top of the frame without size changes.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)",
+        "continuity(text-overlay)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(text-overlay)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The fence supports signs, acts as a barrier to prevent unauthorized access.",
+      "signals": [
+        "support(fence,airplane)",
+        "prohibited_intersection(fence,airplane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(fence,airplane)": 36.6667,
+        "support(fence,airplane)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text overlay is clearly visible on the screen without interpenetration with other objects.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The article content does not contain misleading information about real-world events or safety risks.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_018_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      18.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hand holding the microphone move continuously without stopping?",
+      "signals": [
+        "continuity(oX)",
+        "continuity(person_1)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(person_1)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cap on the table stay in place relative to its base?",
+      "signals": [
+        "support(object_1,table), balance(object_1), continuity(object_1)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(object_1,table), balance(object_1), continuity(object_1)": 35.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there continuous contact between the person's hand and the microphone?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are both hands of person_1 visible throughout the clip?",
+      "signals": [
+        "continuity(person_1's posture)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person_1's posture)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the subtitles remain at the bottom of the frame consistently?",
+      "signals": [
+        "size_inconsistency(subtitles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(subtitles)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Subtitles appear consistently at the bottom of the frame.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Person_1 maintains a consistent posture and hand position while holding the microphone.",
+      "signals": [
+        "continuity(person_1)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person_1)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Person_1's hand and microphone maintain continuous physical contact.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Object_1 (the cap on the table) remains stationary relative to its base.",
+      "signals": [
+        "support(object_1,table), balance(object_1), continuity(object_1)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 35.0,
+      "total_score_100": 55.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(object_1,table), balance(object_1), continuity(object_1)": 35.0
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Person_1's hand moves naturally without frame discontinuity.",
+      "signals": [
+        "continuity(person_1)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person_1)": 36.6667
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v5",
+    "a1",
+    "a3"
+  ]
+}

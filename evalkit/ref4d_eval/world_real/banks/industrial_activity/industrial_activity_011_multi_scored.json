@@ -1,0 +1,195 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_011_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the worker place metal scraps into a pot?",
+      "signals": [
+        "tool_contact(metal-scraps,worker-hand)",
+        "containment(pot,metal-scraps)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pot,metal-scraps)": 29.1667,
+        "tool_contact(metal-scraps,worker-hand)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the worker handle and process metallic objects while maintaining stable grasp on pots?",
+      "signals": [
+        "material_optics(metal-scraps)",
+        "grasp_stability(worker,pot)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(metal-scraps)": 37.5,
+        "grasp_stability(worker,pot)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do large shiny metallic bowls stay supported by the ground without sudden movement, and do silver shavings remain in place?",
+      "signals": [
+        "support(pot,surface)",
+        "continuity(metal-scraps)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(metal-scraps)": 36.6667,
+        "support(pot,surface)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there continuous deformation of heated metal when it contacts the tool, and is direct hand contact with hot surfaces avoided?",
+      "signals": [
+        "deformation(metal_object)",
+        "hot_surface_contact(metal_object,hands)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(metal_object)": 40.0,
+        "hot_surface_contact(metal_object,hands)": 6.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the worker's hand maintain contact with the tool during handling?",
+      "signals": [
+        "tool_contact(worker,pot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(worker,pot)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The worker manipulates metal scraps and places them into a pot.",
+      "signals": [
+        "tool_contact(metal-scraps,worker-hand)",
+        "containment(pot,metal-scraps)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pot,metal-scraps)": 29.1667,
+        "tool_contact(metal-scraps,worker-hand)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Metal scraps are being handled and processed by the worker.",
+      "signals": [
+        "material_optics(metal-scraps)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(metal-scraps)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Silver shiny spiral shavings remain in place without sudden disappearance.",
+      "signals": [
+        "continuity(metal-scraps)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(metal-scraps)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The large shiny metallic bowl is supported by the surface.",
+      "signals": [
+        "support(pot,surface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(pot,surface)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No direct hand contact with molten or extremely hot surfaces.",
+      "signals": [
+        "hot_surface_contact(metal_object,hands)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(metal_object,hands)": 34.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_001_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      19.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the beach sand maintain its golden-brown grainy texture without sudden size inconsistency?",
+      "signals": [
+        "continuity(sand)",
+        "material_optics(sand)",
+        "continuity(beach-sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(sand)": 37.5,
+        "continuity(sand)": 7.3333,
+        "continuity(beach-sand)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are people on the beach positioned safely away from falling hazards such as cliffs?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do chairs and umbrellas afford seating and shade for visitors at the beach?",
+      "signals": [
+        "placeable(oObj,at:oTarget)",
+        "supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the beach sand remain stable under the weight of objects like chairs or people?",
+      "signals": [
+        "friction_sliding(people,on:sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(people,on:sand)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the text overlay stay in the same position relative to the ground throughout the clip?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The beach sand is golden-brown and grainy throughout the video.",
+      "signals": [
+        "continuity(sand)",
+        "material_optics(sand)",
+        "continuity(beach-sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(sand)": 37.5,
+        "continuity(sand)": 7.3333,
+        "continuity(beach-sand)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "People on the beach are positioned safely away from falling hazards such as cliffs.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Chairs at the beach afford seating for visitors.",
+      "signals": [
+        "placeable(oObj,at:oTarget)",
+        "supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cable car follows a consistent trajectory along the cables.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Beach sand remains stable under the weight of people and objects.",
+      "signals": [
+        "friction_sliding(people,on:sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(people,on:sand)": 30.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

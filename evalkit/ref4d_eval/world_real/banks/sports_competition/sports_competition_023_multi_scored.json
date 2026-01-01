@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_023_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the ribbon follow a continuous trajectory without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(ribbon,axis)",
+        "continuity(ribbon)",
+        "balance(performer)",
+        "biological_motion(performer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ribbon,axis)": 38.3333,
+        "biological_motion(performer)": 7.6667,
+        "continuity(ribbon)": 7.3333,
+        "balance(performer)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the performer maintain balance throughout the routine?",
+      "signals": [
+        "balance(performer)",
+        "center_of_mass_over_base(performer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(performer)": 35.8333,
+        "center_of_mass_over_base(performer)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the performer safely distanced from any potential hazards during the event?",
+      "signals": [
+        "falling_hazard(ribbon)",
+        "falling_hazard(performer)",
+        "friction_sliding(ribbon,on:performer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(ribbon)": 31.6667,
+        "falling_hazard(performer)": 6.3333,
+        "friction_sliding(ribbon,on:performer)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the rainbow-colored ribbon exhibit consistent material optics, such as color and transparency, throughout its motion?",
+      "signals": [
+        "material_optics(ribbon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(ribbon)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the floor designed to ensure no falling hazards for the performer?",
+      "signals": [
+        "falling_hazard(performer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(performer)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The ribbon follows a continuous trajectory as the performer executes movements.",
+      "signals": [
+        "trajectory_dir(ribbon,axis)",
+        "continuity(ribbon)",
+        "balance(performer)",
+        "biological_motion(performer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ribbon,axis)": 38.3333,
+        "biological_motion(performer)": 7.6667,
+        "continuity(ribbon)": 7.3333,
+        "balance(performer)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The performer maintains balance and stability during the routine on the floor.",
+      "signals": [
+        "balance(performer)",
+        "biological_motion(performer)",
+        "center_of_mass_over_base(performer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(performer)": 38.3333,
+        "balance(performer)": 7.1667,
+        "center_of_mass_over_base(performer)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The event setting is free of potential hazards, ensuring safe performance space.",
+      "signals": [
+        "falling_hazard(ribbon)",
+        "falling_hazard(performer)",
+        "balance(performer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(performer)": 35.8333,
+        "falling_hazard(ribbon)": 6.3333,
+        "falling_hazard(performer)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The performer controls the ribbon to avoid injury risk.",
+      "signals": [
+        "friction_sliding(ribbon,on:performer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(ribbon,on:performer)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rainbow-colored ribbon exhibits consistent color and transparency throughout its motion.",
+      "signals": [
+        "material_optics(ribbon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(ribbon)": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

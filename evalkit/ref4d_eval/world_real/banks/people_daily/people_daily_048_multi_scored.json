@@ -1,0 +1,202 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_048_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      12.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the woman in green maintain a natural posture without interpenetration with other objects?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the blue-dressed woman bending forward while maintaining balance during her action?",
+      "signals": [
+        "balance(oX)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hand of the man show continuous motion when interacting with an object, and does it follow physical continuity?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "continuity(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "material_optics(oA)": 7.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, does the item held by the person change size or trajectory direction suddenly?",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows cast by people on the ground remain consistent throughout the scene?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The woman in green maintains a natural posture without interpenetration with other objects.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The woman in the blue dress bends forward while maintaining balance.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The man's hand and arm move continuously during the interaction.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The biological motion of people is consistent with normal human behavior.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A person bends over to pick up an object, which is expected and safe.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

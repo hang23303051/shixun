@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_036_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the surfer maintain balance on the surfboard while riding the wave?",
+      "signals": [
+        "balance(surfer)",
+        "buoyancy_float(surfboard,in:water)",
+        "support(surfer,surfboard)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(surfer)": 35.8333,
+        "support(surfer,surfboard)": 7.0,
+        "buoyancy_float(surfboard,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water's motion show continuity and natural splashes as the surfer moves through the wave?",
+      "signals": [
+        "continuity(wave)",
+        "slosh_response(water,amp)",
+        "continuity(oX)",
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wave)": 36.6667,
+        "continuity(oX)": 7.3333,
+        "slosh_response(water,amp)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the bridge structure distant from the surfer in the background?",
+      "signals": [
+        "prohibited_intersection(bridge,surfer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(bridge,surfer)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person in the wetsuit stay partially submerged or floating due to buoyancy?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any visible immediate hazards around the surfer in the open water?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The surfer maintains balance on the white-red surfboard while riding a large blue wave.",
+      "signals": [
+        "balance(surfer)",
+        "buoyancy_float(surfboard,in:water)",
+        "support(surfer,surfboard)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(surfer)": 35.8333,
+        "support(surfer,surfboard)": 7.0,
+        "buoyancy_float(surfboard,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The water's motion exhibits continuity and natural slosh response as waves crash, creating splashes.",
+      "signals": [
+        "continuity(wave)",
+        "slosh_response(water,amp)",
+        "continuity(oX)",
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wave)": 36.6667,
+        "continuity(oX)": 7.3333,
+        "slosh_response(water,amp)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bridge structure is distant in the background behind the wave.",
+      "signals": [
+        "prohibited_intersection(bridge,surfer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(bridge,surfer)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person in the black wetsuit floats partially submerged in turbulent water due to buoyancy.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The environment around the surfer shows an open body of water with no immediate visible hazards.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

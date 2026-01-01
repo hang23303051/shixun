@@ -1,0 +1,198 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_004_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person keep a safe distance from the lit chamber to avoid burns?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the hot surface inside the machine properly contained within the chamber?",
+      "signals": [
+        "hot_surface_contact(person,machine)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(person,machine)": 34.1667,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Across the clip, does the light in the right compartment stay consistent in color and intensity?",
+      "signals": [
+        "material_optics(oA)",
+        "material_optics(machine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "material_optics(machine)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the lit chamber of the machine remain stable without unexpected movement?",
+      "signals": [
+        "balance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the control panel on the left side designed for user interaction?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person interacts with the control panel on the left side of the machine.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "tool_contact(person,machine)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "tool_contact(person,machine)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The lit chamber indicates a hot surface, maintaining safe distance from direct contact.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "hot_surface_contact(person,machine)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact(person,machine)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The light inside the machine's chamber is consistent in color and intensity.",
+      "signals": [
+        "material_optics(oA)",
+        "material_optics(machine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "material_optics(machine)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The lit chamber remains stable without unexpected movement.",
+      "signals": [
+        "balance"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The flame inside the machine stays within the designated opening.",
+      "signals": [
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

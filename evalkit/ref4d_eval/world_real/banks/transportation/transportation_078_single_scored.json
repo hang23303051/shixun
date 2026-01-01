@@ -1,0 +1,184 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_078_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.07
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train move towards the platform?",
+      "signals": [
+        "containment(person,platform)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(person,platform)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the train maintain a straight trajectory along the tracks without changing direction abruptly?",
+      "signals": [
+        "trajectory_dir(train,rail,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,rail,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the train's shadow on the platform align with its actual position and movement path?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the red tactile paving present near the edge of the platform?",
+      "signals": [
+        "support(tactile_paving,platform)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tactile_paving,platform)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the 'stand behind the line' text visible on the platform?",
+      "signals": [
+        "support(text,platform)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(text,platform)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train moves along the tracks with consistent speed and direction.",
+      "signals": [
+        "trajectory_dir(train,rail,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,rail,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The train's shadow on the platform aligns with its actual position and trajectory.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "'STAND BEHIND THE LINE' text is visible on the platform edge.",
+      "signals": [
+        "support(text,platform)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 35.0,
+      "total_score_100": 71.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "support(text,platform)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Red tactile paving runs parallel to the yellow line for visually impaired navigation.",
+      "signals": [
+        "support(tactile_paving,platform)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tactile_paving,platform)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Passengers stand behind the yellow line while waiting for the train.",
+      "signals": [
+        "containment(person,platform)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(person,platform)": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

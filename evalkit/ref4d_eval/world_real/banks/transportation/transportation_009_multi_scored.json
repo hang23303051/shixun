@@ -1,0 +1,197 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_009_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      19.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tram move along the track in a consistent direction without sudden changes?",
+      "signals": [
+        "trajectory_dir(tram,axis)",
+        "accel_sign(tram,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tram,axis)": 38.3333,
+        "accel_sign(tram,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the tram doors open and properly aligned with the platform edge for safe access?",
+      "signals": [
+        "state_change(tram,from:moving,to:stationary)",
+        "support(tram_platform)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(tram,from:moving,to:stationary)": 37.5,
+        "support(tram_platform)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do passengers maintain a safe distance from the open tram doors?",
+      "signals": [
+        "containment(tram,station)",
+        "openable(doors)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.33,
+      "total_score_100": 64.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(tram,station)": 29.1667,
+        "openable(doors)": 5.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the shadow of the train car cast consistently on the ground, matching its position?",
+      "signals": [
+        "shadow_consistency(tram)",
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(tram)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the leaves in the hedges show natural movement due to wind?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 38.33,
+      "total_score_100": 58.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tram follows the railway track in a consistent direction.",
+      "signals": [
+        "trajectory_dir(tram,axis)",
+        "accel_sign(tram,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tram,axis)": 38.3333,
+        "accel_sign(tram,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tram's doors are open, aligned with the platform edge.",
+      "signals": [
+        "state_change(tram,from:moving,to:stationary)",
+        "support(tram_platform)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(tram,from:moving,to:stationary)": 37.5,
+        "support(tram_platform)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Passengers maintain a safe distance from the open tram doors.",
+      "signals": [
+        "containment(tram,station)",
+        "openable(doors)"
+      ],
+      "content_score_60": 18,
+      "signal_score_40": 34.33,
+      "total_score_100": 52.33,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "containment(tram,station)": 29.1667,
+        "openable(doors)": 5.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The train car casts a shadow on the ground below it.",
+      "signals": [
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The tram's shadow matches its position and orientation.",
+      "signals": [
+        "shadow_consistency(tram)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tram)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

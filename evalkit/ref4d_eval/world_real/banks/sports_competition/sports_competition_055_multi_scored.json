@@ -1,0 +1,200 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_055_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the diver maintain a stable position relative to the water surface while holding equipment?",
+      "signals": [
+        "buoyancy_float(diver,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(diver,in:water)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the coral-reef visible as a habitat for marine life in the background?",
+      "signals": [
+        "biological_motion(turtle)",
+        "support(coral-reef,by:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(turtle)": 38.3333,
+        "support(coral-reef,by:water)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the fish-school move together with smooth, continuous trajectories without sudden changes?",
+      "signals": [
+        "continuity(fish-school)",
+        "trajectory_dir(fish-school,axis:horizontal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(fish-school,axis:horizontal)": 38.3333,
+        "continuity(fish-school)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the metal-structure fixed and not floating or sinking underwater?",
+      "signals": [
+        "falling_hazard(metal-structure)",
+        "buoyancy_float"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667,
+        "falling_hazard(metal-structure)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the diver handle the camera properly without causing any tool-related hazards?",
+      "signals": [
+        "tool_usage_correct(diver's_gear,for:diving)",
+        "tool_usage_correct"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(diver's_gear,for:diving)": 29.1667,
+        "tool_usage_correct": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The diver maintains consistent buoyancy and proper camera handling underwater.",
+      "signals": [
+        "buoyancy_float(diver,in:water)",
+        "tool_usage_correct(diver's_gear,for:diving)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(diver,in:water)": 34.1667,
+        "tool_usage_correct(diver's_gear,for:diving)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The fish school swims naturally, maintaining continuity in their motion.",
+      "signals": [
+        "continuity(fish-school)",
+        "trajectory_dir(fish-school,axis:horizontal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(fish-school,axis:horizontal)": 38.3333,
+        "continuity(fish-school)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The coral-reef provides a habitat for marine organisms.",
+      "signals": [
+        "support(coral-reef,by:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(coral-reef,by:water)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The metal structure is stable, not posing a falling hazard to nearby marine life.",
+      "signals": [
+        "biological_motion(turtle)",
+        "falling_hazard(metal-structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(turtle)": 38.3333,
+        "falling_hazard(metal-structure)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Objects interact with water in a manner consistent with their buoyancy.",
+      "signals": [
+        "buoyancy_float"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

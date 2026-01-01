@@ -1,0 +1,190 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_151_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bucket support the owl without tipping over?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the owl inside an enclosed area with a fence and netting?",
+      "signals": [
+        "prohibited_intersection(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the owl's wing movement match its body position throughout the clip?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the owl on the ground align with its actual location under the light source?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the owl remain in a stable, perched position at all times?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The owl is perched on a bucket, which provides stable support for it.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The owl remains within an enclosed area to ensure its safety.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The cage structure supports the weight of the owl without deformation.",
+      "signals": [
+        "support(oA,oB)",
+        "deformation(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The owl's wing movement maintains physical consistency with its body and environment.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The owl is in an enclosure designed to contain it.",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

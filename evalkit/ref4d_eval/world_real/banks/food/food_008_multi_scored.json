@@ -1,0 +1,198 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_008_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      12.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the action preparing for cooking or frying?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the oil in the pan stay contained without spilling out during mixing?",
+      "signals": [
+        "continuity(egg)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(egg)": 36.6667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the white substance maintain its shape when lifted by the gloved hand?",
+      "signals": [
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the oil flow smoothly from the ladle into the bowl without sudden stops?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the oil in the pan remain contained without spilling out?",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The white substance held by the gloved hand is a solid material.",
+      "signals": [
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A ladle contains oil above a bowl with more oil and flour-like particles below.",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Oil in the pan does not spill out.",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Oil flows smoothly from the ladle into the bowl.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No spillage or leakage occurs during the pouring process.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "viscosity_effect(oV)",
+        "leakage(oV,from:oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "viscosity_effect(oV)": 34.1667,
+        "leakage(oV,from:oContainer)": 5.8333,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

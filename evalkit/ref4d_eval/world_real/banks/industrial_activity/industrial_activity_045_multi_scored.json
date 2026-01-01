@@ -1,0 +1,216 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_045_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the conveyor belt move continuously without sudden stops or reversals?",
+      "signals": [
+        "trajectory_dir(conveyor-belt,axis)",
+        "continuity(belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(conveyor-belt,axis)": 38.3333,
+        "continuity(belt)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the robot arm move along a smooth trajectory with consistent speed and direction on the conveyor belt?",
+      "signals": [
+        "trajectory_dir(robot-arm,on:conveyor-belt)",
+        "accel_sign(robot-arm,axis:x)",
+        "trajectory_dir(arm,axis)",
+        "accel_sign(arm,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(robot-arm,on:conveyor-belt)": 38.3333,
+        "trajectory_dir(arm,axis)": 7.6667,
+        "accel_sign(robot-arm,axis:x)": 7.0,
+        "accel_sign(arm,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the red coil cable remain taut and properly connected to the robot arm, avoiding slack or entanglement?",
+      "signals": [
+        "continuity(red-coil-cable)",
+        "support(red-coil-cable,by:robot-arm)",
+        "interpenetration(robot-arm,coil-cable)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(red-coil-cable)": 36.6667,
+        "interpenetration(robot-arm,coil-cable)": 7.1667,
+        "support(red-coil-cable,by:robot-arm)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the machinery parts avoid unexpected collisions or interpenetration during operation?",
+      "signals": [
+        "collision(robot-arm,conveyor-belt)",
+        "interpenetration(part1,part2)",
+        "collision(part1,part2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(part1,part2)": 35.8333,
+        "collision(robot-arm,conveyor-belt)": 6.3333,
+        "collision(part1,part2)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the blue solar panel stay stationary relative to the window throughout the scene?",
+      "signals": [
+        "continuity(solar-panel)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(solar-panel)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The conveyor belt moves continuously, and the robot arm follows a consistent trajectory.",
+      "signals": [
+        "trajectory_dir(conveyor-belt,axis)",
+        "trajectory_dir(robot-arm,on:conveyor-belt)",
+        "accel_sign(robot-arm,axis:x)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(conveyor-belt,axis)": 38.3333,
+        "trajectory_dir(robot-arm,on:conveyor-belt)": 7.6667,
+        "accel_sign(robot-arm,axis:x)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The red coil cable attached to the robot arm remains taut and properly connected.",
+      "signals": [
+        "continuity(red-coil-cable)",
+        "support(red-coil-cable,by:robot-arm)",
+        "interpenetration(robot-arm,coil-cable)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(red-coil-cable)": 36.6667,
+        "interpenetration(robot-arm,coil-cable)": 7.1667,
+        "support(red-coil-cable,by:robot-arm)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The robotic arm's movement is smooth without abrupt changes in direction or speed.",
+      "signals": [
+        "continuity(belt)",
+        "trajectory_dir(arm,axis)",
+        "accel_sign(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(arm,axis)": 38.3333,
+        "continuity(belt)": 7.3333,
+        "accel_sign(arm,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Machinery parts do not interpenetrate or collide unexpectedly during operation.",
+      "signals": [
+        "collision(robot-arm,conveyor-belt)",
+        "interpenetration(part1,part2)",
+        "collision(part1,part2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(part1,part2)": 35.8333,
+        "collision(robot-arm,conveyor-belt)": 6.3333,
+        "collision(part1,part2)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The blue solar panel near the window stays stationary throughout the scene.",
+      "signals": [
+        "continuity(solar-panel)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(solar-panel)": 36.6667
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_011_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      19.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the performer on the right maintain balance while holding a red ribbon?",
+      "signals": [
+        "trajectory_dir(ribbon,axis)",
+        "continuity(ribbon)",
+        "balance(person), collision(person,ribbon)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ribbon,axis)": 38.3333,
+        "continuity(ribbon)": 7.3333,
+        "balance(person), collision(person,ribbon)": 7.1667,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do any performers fall during the performance in this clip?",
+      "signals": [
+        "balance(oX)",
+        "falling_hazard(performer)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "falling_hazard(performer)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are rhythm ribbons used for artistic expression by all visible performers?",
+      "signals": [
+        "tool_usage_correct(ribbon,for:performance), action_phase(performance,phase:routine)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 37.5,
+      "total_score_100": 72.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "tool_usage_correct(ribbon,for:performance), action_phase(performance,phase:routine)": 5.8333
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the plush toy stationary throughout the entire scene?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does each performer keep their balance when manipulating the ribbon?",
+      "signals": [
+        "balance(person)",
+        "balance(performer)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "balance(performer)": 7.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Performers on the floor avoid collisions with each other and surrounding objects.",
+      "signals": [
+        "balance(person)",
+        "collision(person,ribbon)",
+        "collision(person,plush-toy)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "collision(person,ribbon)": 6.3333,
+        "collision(person,plush-toy)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Performers maintain balance while holding rhythm ribbons during their routine.",
+      "signals": [
+        "balance(person), collision(person,ribbon)",
+        "falling_hazard(person)",
+        "balance(person)",
+        "balance(oX)",
+        "balance(performer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person), collision(person,ribbon)": 35.8333,
+        "balance(person)": 7.1667,
+        "balance(oX)": 7.1667,
+        "balance(performer)": 7.1667,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Rhythm ribbons are used by performers for artistic expression in a dance routine.",
+      "signals": [
+        "tool_usage_correct(ribbon,for:performance), action_phase(performance,phase:routine)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(ribbon,for:performance), action_phase(performance,phase:routine)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The plush toy on the sofa remains stationary without interpenetrating other objects.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Ribbons follow performers' motion without interpenetration.",
+      "signals": [
+        "continuity(ribbon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ribbon)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

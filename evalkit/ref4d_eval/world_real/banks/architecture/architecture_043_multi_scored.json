@@ -1,0 +1,221 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_043_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      16.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the crane maintain a stable trajectory without sudden changes in height or direction?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "rigid_transform(oX)",
+        "trajectory_dir(construction-crane,axis)",
+        "continuity(construction-crane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(construction-crane,axis)": 7.6667,
+        "rigid_transform(oX)": 7.5,
+        "continuity(construction-crane)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the text 'One Medlock Street 51 Storeys Under Construction' legible and correctly positioned at the bottom of the frame throughout the scene?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "deformation(oX)",
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do vehicles on the road follow a continuous trajectory without encroaching into the construction area?",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the heavy load carried by the crane maintain balance and continuity in its trajectory during operation?",
+      "signals": [
+        "balance(construction-crane,load)",
+        "continuity(trajectory(construction-crane))"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(trajectory(construction-crane))": 36.6667,
+        "balance(construction-crane,load)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the crane support building materials while maintaining balance to prevent tipping?",
+      "signals": [
+        "balance(construction-crane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(construction-crane)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tall building under construction shows visible vertical development.",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)",
+        "size_inconsistency(text)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "size_inconsistency(text)": 7.5,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The text overlay 'One Medlock Street 51 Storeys Under Construction' is legible and correctly positioned at the bottom of the frame.",
+      "signals": [
+        "size_inconsistency(text)",
+        "frame_discontinuity(t)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 40.0,
+      "total_score_100": 73.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(text)": 7.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The crane maintains a stable trajectory without sudden changes in height or direction, carrying heavy loads continuously.",
+      "signals": [
+        "trajectory_dir(construction-crane,axis)",
+        "continuity(construction-crane)",
+        "balance(construction-crane,load)",
+        "continuity(trajectory(construction-crane))"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(construction-crane,axis)": 38.3333,
+        "continuity(construction-crane)": 7.3333,
+        "continuity(trajectory(construction-crane))": 7.3333,
+        "balance(construction-crane,load)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Vehicles on the road follow a continuous trajectory away from the construction site area.",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The crane operates with balance to prevent tipping hazards during its movement.",
+      "signals": [
+        "balance(construction-crane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(construction-crane)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}
