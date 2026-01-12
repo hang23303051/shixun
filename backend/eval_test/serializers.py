@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from datetime import date
+from .models import GenData
 
 
 class EvalRequestSerializer(serializers.Serializer):
@@ -30,3 +31,13 @@ class EvalStatusSerializer(serializers.Serializer):
     progress = serializers.IntegerField(min_value=0, max_value=100)
     message = serializers.CharField(required=False)
     result = serializers.DictField(required=False)
+
+
+class GenDataSerializer(serializers.ModelSerializer):
+    """生成数据序列化器"""
+    theme_display = serializers.CharField(source='get_theme_display', read_only=True)
+    shot_type_display = serializers.CharField(source='get_shot_type_display', read_only=True)
+    
+    class Meta:
+        model = GenData
+        fields = '__all__'

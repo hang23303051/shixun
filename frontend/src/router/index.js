@@ -15,6 +15,12 @@ const routes = [
     meta: { requiresAuth: false }
   },
   {
+    path: '/dataset/:theme',
+    name: 'ThemeDetail',
+    component: () => import('@/views/ThemeDetail.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
     path: '/models',
     name: 'Models',
     component: () => import('@/views/Models.vue'),

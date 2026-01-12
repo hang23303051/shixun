@@ -1,8 +1,8 @@
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .models import RefData, GenData
-from .serializers import RefDataSerializer, GenDataSerializer
+from .models import RefData
+from .serializers import RefDataSerializer
 
 
 class RefDataViewSet(viewsets.ReadOnlyModelViewSet):
@@ -37,19 +37,3 @@ class RefDataViewSet(viewsets.ReadOnlyModelViewSet):
             serializer = self.get_serializer(queryset, many=True)
             return Response(serializer.data)
         return Response({'error': '请提供theme参数'}, status=status.HTTP_400_BAD_REQUEST)
-
-
-class GenDataViewSet(viewsets.ModelViewSet):
-    """生成数据视图"""
-    queryset = GenData.objects.all()
-    serializer_class = GenDataSerializer
-    
-    @action(detail=False, methods=['get'])
-    def by_model(self, request):
-        """按模型名筛选"""
-        model_name = request.query_params.get('model_name')
-        if model_name:
-            queryset = self.queryset.filter(model_name=model_name)
-            serializer = self.get_serializer(queryset, many=True)
-            return Response(serializer.data)
-        return Response({'error': '请提供model_name参数'}, status=status.HTTP_400_BAD_REQUEST)

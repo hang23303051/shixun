@@ -26,9 +26,20 @@
       <div class="bg-white rounded-xl shadow-sm p-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">主题分类</h2>
         <div class="grid md:grid-cols-3 gap-4">
-          <div v-for="theme in themes" :key="theme.value" class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+          <div
+            v-for="theme in themes"
+            :key="theme.value"
+            @click="goToTheme(theme.value)"
+            class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-100 hover:shadow-lg hover:border-blue-300 transition-all cursor-pointer transform hover:scale-105"
+          >
             <h3 class="font-semibold text-gray-900 mb-2">{{ theme.label }}</h3>
-            <p class="text-sm text-gray-600">{{ theme.description }}</p>
+            <p class="text-sm text-gray-600 mb-3">{{ theme.description }}</p>
+            <div class="flex items-center text-blue-600 text-sm font-medium">
+              <span>浏览视频</span>
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -46,10 +57,13 @@
 
 <script>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default {
   name: 'Dataset',
   setup() {
+    const router = useRouter()
+    
     const themes = ref([
       { value: 'animals_and_ecology', label: '动物与生态', description: '包含各种动物行为和生态场景' },
       { value: 'architecture', label: '建筑', description: '涵盖各类建筑风格和场景' },
@@ -62,7 +76,11 @@ export default {
       { value: 'transportation', label: '交通', description: '交通工具和运输场景' }
     ])
 
-    return { themes }
+    const goToTheme = (themeValue) => {
+      router.push(`/dataset/${themeValue}`)
+    }
+
+    return { themes, goToTheme }
   }
 }
 </script>

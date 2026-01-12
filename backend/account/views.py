@@ -11,6 +11,7 @@ from .serializers import (
     UserLoginSerializer, UserUpdateSerializer
 )
 from .email_utils import send_activation_email, send_password_reset_email
+from .utils import get_host_address
 
 
 @method_decorator(ensure_csrf_cookie, name='dispatch')
@@ -25,8 +26,13 @@ class RegisterView(APIView):
             activation_token = user.generate_activation_token()
             user.save()
             
-            # 构造激活URL
-            frontend_url = request.headers.get('Origin', 'http://localhost:8080')
+            # 构造激活URL - 使用实际主机地址
+            frontend_url = get_host_address(request)
+            # 如果前端端口不是8000（后端端口），通常是8080
+            if ':8000' in frontend_url:
+                frontend_url = frontend_url.replace(':8000', ':8080')
+            elif not any(port in frontend_url for port in [':8080', ':80', ':443']):
+                frontend_url = frontend_url + ':8080'
             activation_url = f"{frontend_url}/activate/{user.email}/{activation_token}"
             
             try:
@@ -223,8 +229,13 @@ class ResendActivationEmailView(APIView):
             activation_token = user.generate_activation_token()
             user.save()
             
-            # 发送激活邮件
-            frontend_url = request.headers.get('Origin', 'http://localhost:8080')
+            # 发送激活邮件 - 使用实际主机地址
+            frontend_url = get_host_address(request)
+            # 如果前端端口不是8000（后端端口），通常是8080
+            if ':8000' in frontend_url:
+                frontend_url = frontend_url.replace(':8000', ':8080')
+            elif not any(port in frontend_url for port in [':8080', ':80', ':443']):
+                frontend_url = frontend_url + ':8080'
             activation_url = f"{frontend_url}/activate/{user.email}/{activation_token}"
             
             try:

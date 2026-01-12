@@ -24,7 +24,7 @@ class RefData(models.Model):
     theme = models.CharField(max_length=50, choices=THEME_CHOICES, verbose_name='主题类型')
     shot_type = models.CharField(max_length=10, choices=SHOT_TYPE_CHOICES, verbose_name='镜头类型')
     prompt = models.TextField(verbose_name='Prompt描述')
-    video_file = models.FileField(upload_to='refdata/videos/', verbose_name='视频文件')
+    video_file = models.CharField(max_length=500, verbose_name='视频文件路径')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     
     class Meta:
@@ -34,28 +34,3 @@ class RefData(models.Model):
     
     def __str__(self):
         return f"{self.video_id} - {self.get_theme_display()}"
-
-
-class GenData(models.Model):
-    """生成数据 - 用于打分算法过程中的数据存储"""
-    THEME_CHOICES = RefData.THEME_CHOICES
-    SHOT_TYPE_CHOICES = RefData.SHOT_TYPE_CHOICES
-    
-    video_id = models.CharField(max_length=100, verbose_name='视频ID')
-    theme = models.CharField(max_length=50, choices=THEME_CHOICES, verbose_name='主题类型')
-    shot_type = models.CharField(max_length=10, choices=SHOT_TYPE_CHOICES, verbose_name='镜头类型')
-    model_name = models.CharField(max_length=100, verbose_name='模型名称')
-    prompt = models.TextField(verbose_name='Prompt描述')
-    video_file = models.FileField(upload_to='gendata/videos/', verbose_name='视频文件')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
-    
-    class Meta:
-        db_table = 'gendata'
-        verbose_name = '生成数据'
-        verbose_name_plural = '生成数据'
-        indexes = [
-            models.Index(fields=['model_name']),
-        ]
-    
-    def __str__(self):
-        return f"{self.video_id} - {self.model_name}"

@@ -4,7 +4,6 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'refdata', views.RefDataViewSet)
-router.register(r'gendata', views.GenDataViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
