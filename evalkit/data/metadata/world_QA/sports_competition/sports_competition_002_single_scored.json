@@ -1,0 +1,217 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_002_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.8
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the hurdles stay stationary and not interpenetrate each other?",
+      "signals": [
+        "balance(person)",
+        "interpenetration(hurdle, person)",
+        "interpenetration(hurdle,hurdle)",
+        "collision(hurdle,hurdle)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "interpenetration(hurdle, person)": 7.1667,
+        "interpenetration(hurdle,hurdle)": 7.1667,
+        "collision(hurdle,hurdle)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the last hurdle remain stable on the ground after landing?",
+      "signals": [
+        "material_optics(hurdle)",
+        "support(hurdle,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(hurdle)": 37.5,
+        "support(hurdle,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the athlete maintain a continuous trajectory without sudden changes in direction during the jump?",
+      "signals": [
+        "trajectory_dir(athlete,axis)",
+        "accel_sign(athlete,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(athlete,axis)": 38.3333,
+        "accel_sign(athlete,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the athlete's body maintain balance throughout the entire jumping sequence?",
+      "signals": [
+        "continuity(athlete)",
+        "balance(athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(athlete)": 36.6667,
+        "balance(athlete)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the jumping path clear of unexpected falling hazards?",
+      "signals": [
+        "falling_hazard(athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(athlete)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The athlete jumps over the hurdles without interpenetrating them.",
+      "signals": [
+        "balance(person)",
+        "interpenetration(hurdle, person)",
+        "interpenetration(hurdle,hurdle)",
+        "collision(hurdle,hurdle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "interpenetration(hurdle, person)": 7.1667,
+        "interpenetration(hurdle,hurdle)": 7.1667,
+        "collision(hurdle,hurdle)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The athlete's body maintains a continuous trajectory during the jump.",
+      "signals": [
+        "trajectory_dir(athlete,axis)",
+        "accel_sign(athlete,axis)",
+        "continuity(athlete)",
+        "balance(athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(athlete,axis)": 38.3333,
+        "continuity(athlete)": 7.3333,
+        "balance(athlete)": 7.1667,
+        "accel_sign(athlete,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The hurdle remains stable on the ground after landing.",
+      "signals": [
+        "material_optics(hurdle)",
+        "support(hurdle,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(hurdle)": 37.5,
+        "support(hurdle,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The athlete maintains balance and continuity without sudden state changes during the jump.",
+      "signals": [
+        "trajectory_dir(athlete,axis)",
+        "accel_sign(athlete,axis)",
+        "continuity(athlete)",
+        "balance(athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(athlete,axis)": 38.3333,
+        "continuity(athlete)": 7.3333,
+        "balance(athlete)": 7.1667,
+        "accel_sign(athlete,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The jumping path is clear of unexpected falling hazards.",
+      "signals": [
+        "falling_hazard(athlete)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "falling_hazard(athlete)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

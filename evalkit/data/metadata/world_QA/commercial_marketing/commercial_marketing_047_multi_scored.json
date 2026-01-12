@@ -1,0 +1,244 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_047_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      17.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the document page remain stationary and legible without visual artifacts?",
+      "signals": [
+        "rigid_transform(page)",
+        "deformation(page)",
+        "fracture(page)",
+        "frame_discontinuity(t)",
+        "tilt_angle_threshold(page)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(page)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "rigid_transform(page)": 7.5,
+        "tilt_angle_threshold(page)": 7.1667,
+        "fracture(page)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the stethoscope held by a person in its intended manner, not causing harm to objects or people nearby?",
+      "signals": [
+        "tool_contact(stethoscope,hand)",
+        "biological_motion(person)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "falling_hazard(oObj)": 6.3333,
+        "tool_contact(stethoscope,hand)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the position and orientation of the paper on the left side stay consistent throughout the clip?",
+      "signals": [
+        "continuity(page)",
+        "interpenetration(document,page)",
+        "continuity(document)",
+        "balance(page)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(page)": 36.6667,
+        "continuity(document)": 7.3333,
+        "interpenetration(document,page)": 7.1667,
+        "balance(page)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person use the stethoscope correctly while examining another person's back as shown?",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "friction_sliding(oA,on:oB)",
+        "tool_contact(oTool,oObj)",
+        "action_phase(oAct,phase=perform)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "action_phase(oAct,phase=perform)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the person on the left align with their actual position consistently?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The document page remains stationary and its content is legible.",
+      "signals": [
+        "rigid_transform(page)",
+        "deformation(page)",
+        "fracture(page)",
+        "frame_discontinuity(t)",
+        "tilt_angle_threshold(page)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(page)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "rigid_transform(page)": 7.5,
+        "tilt_angle_threshold(page)": 7.1667,
+        "fracture(page)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person holds a stethoscope to examine another person's back.",
+      "signals": [
+        "tool_contact(stethoscope,hand)",
+        "biological_motion(person)",
+        "tool_contact(oTool,oObj)",
+        "action_phase(oAct,phase=perform)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "tool_contact(stethoscope,hand)": 5.6667,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "action_phase(oAct,phase=perform)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The document stays flat on the surface without interpenetration with other objects.",
+      "signals": [
+        "continuity(page)",
+        "interpenetration(document,page)",
+        "continuity(document)",
+        "balance(page)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(page)": 36.6667,
+        "continuity(document)": 7.3333,
+        "interpenetration(document,page)": 7.1667,
+        "balance(page)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The paper on the left side of the frame is stable and does not deform.",
+      "signals": [
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)",
+        "deformation",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "interpenetration": 7.1667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The document and pages remain in their original position on the table.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_038_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      15.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train remain on the platform without interpenetrating it?",
+      "signals": [
+        "interpenetration(train,platform)",
+        "collision(train,car)",
+        "collision(person,train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(train,platform)": 35.8333,
+        "collision(train,car)": 6.3333,
+        "collision(person,train)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person maintain balance while standing near the moving train?",
+      "signals": [
+        "balance(person平台上)",
+        "support(platform,people)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person平台上)": 35.8333,
+        "support(platform,people)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are passengers crossing the red line on the platform?",
+      "signals": [
+        "prohibited_intersection(person,red_line)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,red_line)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the child accompanied by an adult while near the open door?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 38.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the train doors open and close smoothly?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train is stationary on the platform, not moving or interpenetrating with it.",
+      "signals": [
+        "interpenetration(train,platform)",
+        "collision(train,car)",
+        "collision(person,train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(train,platform)": 35.8333,
+        "collision(train,car)": 6.3333,
+        "collision(person,train)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A child stands near the open door of the train while maintaining balance.",
+      "signals": [
+        "openable(door)",
+        "placeable(child,at:door)",
+        "balance(person平台上)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person平台上)": 35.8333,
+        "openable(door)": 5.1667,
+        "placeable(child,at:door)": 5.1667
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Passengers do not cross the red line marked on the platform floor.",
+      "signals": [
+        "prohibited_intersection(person,red_line)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,red_line)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "An adult accompanies the child near the open train door as they stand close to each other.",
+      "signals": [
+        "biological_motion(oA)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 10,
+      "signal_score_40": 40.0,
+      "total_score_100": 50.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(oA)": 7.6667
+      },
+      "content_score_raw": "10"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "People and objects move along continuous trajectories without sudden jumps.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v5",
+    "a1",
+    "a5"
+  ]
+}

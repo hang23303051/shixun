@@ -1,0 +1,217 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_028_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      13.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cup stay supported by the table without floating or sinking?",
+      "signals": [
+        "grasp_stability(person,cup)",
+        "spillage(liquid)",
+        "rigid_transform(cup)",
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(cup)": 37.5,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "grasp_stability(person,cup)": 5.6667,
+        "spillage(liquid)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the heart-shaped foam in the cup remain consistent throughout the clip?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "result_appearance(oObj)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "pour_direction(oV,axis)": 5.6667,
+        "result_appearance(oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the flow of milk from the pitcher follow gravity and maintain continuity while forming the latte art?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "continuity(oX)",
+        "interpenetration(cup,saucer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(cup,saucer)": 7.1667,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person's gloved hand hold the saucer securely on the table, preventing spillage during pouring?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "grasp_stability(person,laptop)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "grasp_stability(person,laptop)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the latte art show no sudden state change across the video?",
+      "signals": [
+        "continuity(latte-art)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(latte-art)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Milk flows smoothly from the pitcher into the cup, forming a heart-shaped foam.",
+      "signals": [
+        "continuity(oX)",
+        "pour_direction(oV,axis)",
+        "result_appearance(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "pour_direction(oV,axis)": 5.6667,
+        "result_appearance(oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cup and saucer rest on the table without interpenetration.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "interpenetration(cup,saucer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "interpenetration(cup,saucer)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The heart-shaped latte art in the cup remains consistent throughout.",
+      "signals": [
+        "continuity(oX)",
+        "result_appearance(oObj)",
+        "continuity(latte-art)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(latte-art)": 7.3333,
+        "result_appearance(oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's gloved hand holds the laptop with stable grasp stability.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 28.33,
+      "total_score_100": 28.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Liquid pours downward following gravity direction during creation.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_041_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      18.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the box lid move upwards and away from the base during opening?",
+      "signals": [
+        "trajectory_dir(ipad_box_lid,axis:vertical)",
+        "continuity(box_lid,box_base)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ipad_box_lid,axis:vertical)": 38.3333,
+        "continuity(box_lid,box_base)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the text on the label inside the box keep a consistent size?",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the iPad stay supported by the box until it is fully removed without falling out suddenly?",
+      "signals": [
+        "support(ipad-box,ipad)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ipad-box,ipad)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the white box remain visible throughout the unboxing process without disappearing?",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hand avoid touching any sharp edges of the iPad?",
+      "signals": [
+        "blade_orientation_away(hand,ipad)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(hand,ipad)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The box lid moves upwards and away from the base during opening.",
+      "signals": [
+        "trajectory_dir(ipad_box_lid,axis:vertical)",
+        "continuity(box_lid,box_base)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ipad_box_lid,axis:vertical)": 38.3333,
+        "continuity(box_lid,box_base)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The text size on the label inside the box remains consistent.",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 37.5,
+      "total_score_100": 37.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The finger maintains a continuous position relative to the bottom edge of the box.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The iPad stays supported by the box until it is fully removed.",
+      "signals": [
+        "support(ipad-box,ipad)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ipad-box,ipad)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The white box does not suddenly disappear or float without support.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a4",
+    "a5"
+  ]
+}

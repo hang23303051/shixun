@@ -1,0 +1,214 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_012_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the banana slice on the chocolate dessert remain supported by the base without interpenetrating it?",
+      "signals": [
+        "support(oA,oB)",
+        "interpenetration(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, do the food items stay in place without unexpected movement or displacement from hands and utensils?",
+      "signals": [
+        "continuity(oX)",
+        "tool_contact(oTool,oObj)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the objects maintain their expected material properties with consistent size for the banana slice relative to the ice cream scoop?",
+      "signals": [
+        "material_optics(oA)",
+        "size_inconsistency(banana_slice)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "size_inconsistency(banana_slice)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there hot_surface_contact between any object and a surface?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "support(ice_cream_scoop,chocolate_base)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ice_cream_scoop,chocolate_base)": 35.0,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "When cutting into the dessert, does the spoon not interpenetrate the food, and does the liquid in the bowl show slosh response when a utensil is used?",
+      "signals": [
+        "interpenetration(spoon,food)",
+        "slosh_response(red_sauce液体)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(spoon,food)": 35.8333,
+        "slosh_response(red_sauce液体)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The banana slice rests on the chocolate dessert without interpenetration.",
+      "signals": [
+        "support(oA,oB)",
+        "interpenetration(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The spoon and knife interact with the ice cream and chocolate dessert smoothly.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)",
+        "tool_contact(oTool,oObj)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(oX)": 7.3333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The food items remain in place, showing no unexpected movement or material optics inconsistencies.",
+      "signals": [
+        "continuity(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ice cream scoop and crumble toppings are supported by the chocolate base.",
+      "signals": [
+        "support(ice_cream_scoop,chocolate_base)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ice_cream_scoop,chocolate_base)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No hot_surface_contact occurs between any object and a surface.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

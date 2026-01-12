@@ -1,0 +1,196 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_039_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      19.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the runner move forward on the road?",
+      "signals": [
+        "continuity(runner)",
+        "trajectory_dir(runner,axis:road,dir:forward)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis:road,dir:forward)": 38.3333,
+        "continuity(runner)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the runner's shadow follow their movement direction?",
+      "signals": [
+        "shadow_consistency(runner,road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(runner,road)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the guardrail along the roadside?",
+      "signals": [
+        "support(road,guardrail)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(road,guardrail)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the road a paved surface?",
+      "signals": [
+        "placeable(runner,on:road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(runner,on:road)": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the runner maintain balance while running?",
+      "signals": [
+        "continuity(runner)",
+        "balance(runner)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(runner)": 36.6667,
+        "balance(runner)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The runner moves forward on the paved road.",
+      "signals": [
+        "continuity(runner)",
+        "trajectory_dir(runner,axis:road,dir:forward)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis:road,dir:forward)": 38.3333,
+        "continuity(runner)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The runner's body maintains balance and continuity of motion, with a consistent shadow.",
+      "signals": [
+        "continuity(runner)",
+        "balance(runner)",
+        "shadow_consistency(runner,road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(runner)": 36.6667,
+        "shadow_consistency(runner,road)": 7.3333,
+        "balance(runner)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A metal guardrail runs parallel to the roadside.",
+      "signals": [
+        "support(road,guardrail)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(road,guardrail)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The paved road provides a stable surface for the runner's continuous forward motion.",
+      "signals": [
+        "placeable(runner,on:road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(runner,on:road)": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Vegetation grows behind the metal guardrail along the roadside.",
+      "signals": [
+        "support(road,guardrail)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(road,guardrail)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

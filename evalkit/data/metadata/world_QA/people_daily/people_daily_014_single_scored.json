@@ -1,0 +1,214 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_014_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man in the blue shirt stand safely without sudden movement?",
+      "signals": [
+        "continuity(oX)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the pepper grinder stay on the table and not move abruptly?",
+      "signals": [
+        "buoyancy_float"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water bottle inside the blue container show a consistent liquid level throughout the clip?",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the books on the bookshelf positioned consistently relative to each other, without moving or interpenetrating?",
+      "signals": [
+        "containment",
+        "support"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "containment": 5.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do all objects maintain their physical consistency, such as the wooden shelf supporting items above it?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The water bottle in the blue container does not suddenly disappear.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The pepper grinder remains on the table without floating.",
+      "signals": [
+        "collision(oA,oB)",
+        "support(oA,oB)",
+        "interpenetration(oA,oB)",
+        "balance(oX)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The liquid level in the water bottle shows a consistent slosh response.",
+      "signals": [
+        "buoyancy_float",
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667,
+        "slosh_response": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The books and items on the bookshelf maintain their positions relative to each other.",
+      "signals": [
+        "containment",
+        "support"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "containment": 5.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The man in the blue shirt stands safely on the floor.",
+      "signals": [
+        "collision(oA,oB)",
+        "support(oA,oB)",
+        "interpenetration(oA,oB)",
+        "balance(oX)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "58"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

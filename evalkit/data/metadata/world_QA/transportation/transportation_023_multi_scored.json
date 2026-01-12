@@ -1,0 +1,223 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_023_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      14.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the workers in white helmets and green shirts positioned away from heavy machinery?",
+      "signals": [
+        "containment(oA,oB)",
+        "prohibited_intersection(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "collision(oA,oB)": 6.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the rebar structure provide vertical support for future concrete pouring, supported by the ground?",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the grader move along its designated path to level the road surface without sudden changes?",
+      "signals": [
+        "trajectory_dir(tractor,axis)",
+        "trajectory_dir(grader,axis)",
+        "material_optics(grader)",
+        "wheel_rolling(grader)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tractor,axis)": 38.3333,
+        "trajectory_dir(grader,axis)": 7.6667,
+        "material_optics(grader)": 7.5,
+        "wheel_rolling(grader)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the worker on the truck visible above the equipment during operation?",
+      "signals": [
+        "containment(worker,grader)",
+        "friction_sliding(grader,road)",
+        "continuity(concrete surface)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(concrete surface)": 36.6667,
+        "friction_sliding(grader,road)": 6.0,
+        "containment(worker,grader)": 5.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the material flow continuously over the grader's blade as it moves?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "size_inconsistency(tractor)",
+        "interpenetration(grader,road)",
+        "trajectory_dir(tractor,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(tractor,axis)": 7.6667,
+        "size_inconsistency(tractor)": 7.5,
+        "interpenetration(grader,road)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Two workers in white helmets and green shirts stand on the road, away from heavy machinery.",
+      "signals": [
+        "containment(oA,oB)",
+        "prohibited_intersection(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "collision(oA,oB)": 6.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A pit with a rebar structure is visible, supported by the ground for future concrete pouring.",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Heavy machinery moves along designated paths to level the surface of the construction site.",
+      "signals": [
+        "trajectory_dir(tractor,axis)",
+        "trajectory_dir(grader,axis)",
+        "material_optics(grader)",
+        "wheel_rolling(grader)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tractor,axis)": 38.3333,
+        "trajectory_dir(grader,axis)": 7.6667,
+        "material_optics(grader)": 7.5,
+        "wheel_rolling(grader)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The grader's blade continuously moves material as it levels the dirt road.",
+      "signals": [
+        "containment(worker,grader)",
+        "friction_sliding(grader,road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(grader,road)": 30.0,
+        "containment(worker,grader)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The newly leveled section of the road shows continuous concrete without interpenetration with surrounding objects.",
+      "signals": [
+        "continuity(concrete surface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(concrete surface)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

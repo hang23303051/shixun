@@ -1,0 +1,214 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_029_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the motorcycle stay on the ground with its wheels in contact?",
+      "signals": [
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)",
+        "friction_sliding(oA,on:oB)",
+        "support(motorcycle,ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "support(motorcycle,ground)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the front wheel's shadow match its position consistently?",
+      "signals": [
+        "wheel_rolling(motorcycle)",
+        "shadow_consistency(motorcycle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(motorcycle)": 36.6667,
+        "wheel_rolling(motorcycle)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person maintain a stable posture beside the motorcycle?",
+      "signals": [
+        "balance(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the man hold the handlebar naturally without interpenetration?",
+      "signals": [
+        "support(oA,oB), balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB), balance(oX)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the Yamaha FZX designed for riding?",
+      "signals": [
+        "placeable(oObj,at:oTarget), supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget), supportable(oObj,by:oSurface)": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The motorcycle is stationary on the ground with its wheels in contact.",
+      "signals": [
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(motorcycle)",
+        "continuity(person)",
+        "interpenetration(motorcycle, person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(motorcycle)": 36.6667,
+        "continuity(person)": 7.3333,
+        "interpenetration(motorcycle, person)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The man's hand rests naturally on the motorcycle handlebar, showing grasp stability.",
+      "signals": [
+        "grasp_stability(person, motorcycle)",
+        "prohibited_intersection(person, motorcycle)",
+        "support(oA,oB), balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person, motorcycle)": 36.6667,
+        "support(oA,oB), balance(oX)": 7.0,
+        "grasp_stability(person, motorcycle)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person maintains a consistent posture beside the motorcycle without unexpected movement.",
+      "signals": [
+        "support(motorcycle,ground)",
+        "balance(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "support(motorcycle,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The Yamaha FZX motorcycle has features designed for riding.",
+      "signals": [
+        "placeable(oObj,at:oTarget), supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget), supportable(oObj,by:oSurface)": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The motorcycle's front wheel shows appropriate rolling and shadow consistency with its position.",
+      "signals": [
+        "wheel_rolling(motorcycle)",
+        "shadow_consistency(motorcycle)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(motorcycle)": 36.6667,
+        "wheel_rolling(motorcycle)": 6.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "45"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

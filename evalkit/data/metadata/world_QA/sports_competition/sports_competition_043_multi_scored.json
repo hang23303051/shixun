@@ -1,0 +1,208 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_043_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      16.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do participants show sudden changes in speed or direction?",
+      "signals": [
+        "trajectory_dir(person,axis)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,axis)": 38.3333,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the wheelchair-athlete maintain balance on their chair while moving forward?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "balance(oX)",
+        "balance(wheelchair-athlete)",
+        "wheel_rolling(wheelchair-athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "balance(wheelchair-athlete)": 7.1667,
+        "wheel_rolling(oX)": 6.0,
+        "wheel_rolling(wheelchair-athlete)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are all runners and wheelchair-athletes staying within designated lanes to avoid collisions?",
+      "signals": [
+        "collision(person, person)",
+        "collision(wheelchair-athlete, person)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(person, person)": 31.6667,
+        "collision(wheelchair-athlete, person)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do shadows of running participants align with their positions consistently throughout the clip?",
+      "signals": [
+        "balance(person), trajectory_dir(person,forward)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "balance(person), trajectory_dir(person,forward)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are spectators standing behind barriers near the road?",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Participants maintain continuous forward motion without sudden stops or interpenetration.",
+      "signals": [
+        "trajectory_dir(person,axis)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,axis)": 38.3333,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Wheelchair-athlete demonstrates balance and proper wheel rolling on the race course.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "balance(oX)",
+        "balance(wheelchair-athlete)",
+        "wheel_rolling(wheelchair-athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "balance(wheelchair-athlete)": 7.1667,
+        "wheel_rolling(oX)": 6.0,
+        "wheel_rolling(wheelchair-athlete)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Runners use their arms for propulsion while running on urban streets.",
+      "signals": [
+        "balance(person), trajectory_dir(person,forward)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.83,
+      "total_score_100": 65.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person), trajectory_dir(person,forward)": 35.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Spectators stand behind barriers near the road.",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "All participants, including wheelchair-athletes, stay within designated lanes.",
+      "signals": [
+        "collision(person, person)",
+        "collision(wheelchair-athlete, person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 38.0,
+      "total_score_100": 68.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(person, person)": 31.6667,
+        "collision(wheelchair-athlete, person)": 6.3333
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

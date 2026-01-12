@@ -1,0 +1,226 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_017_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      2.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the green can remain upright and stable throughout the sequence?",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the floating fruits maintain consistent positions relative to the can without sudden jumps or collisions across the clip?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(orange)",
+        "interpenetration(strawberry,blueberry)",
+        "trajectory_dir(strawberry,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "trajectory_dir(strawberry,axis)": 7.6667,
+        "size_inconsistency(orange)": 7.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(strawberry,blueberry)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the colors of the lemon slices, mint leaves, strawberries, and blueberries consistently bright against the green background?",
+      "signals": [
+        "material_optics(oA)",
+        "hue_histogram_jump(oX)",
+        "specular_highlight_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "specular_highlight_consistency(oX)": 7.3333,
+        "hue_histogram_jump(oX)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows on the green background match the light source direction for all objects in the scene?",
+      "signals": [
+        "shadow_consistency(can)",
+        "reflection_consistency(can)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(can)": 36.6667,
+        "reflection_consistency(can)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the center of mass of the can over its base during the entire 2.3 seconds?",
+      "signals": [
+        "center_of_mass_over_base(can)",
+        "balance(can)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(can)": 35.8333,
+        "center_of_mass_over_base(can)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The green can remains upright and stable throughout the sequence.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "center_of_mass_over_base(can)",
+        "balance(can)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "balance(can)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5,
+        "center_of_mass_over_base(can)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The floating fruits maintain consistent positions relative to the can, showing continuous motion.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The colors and textures of the objects show consistency throughout the scene.",
+      "signals": [
+        "material_optics(oA)",
+        "hue_histogram_jump(oX)",
+        "specular_highlight_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "specular_highlight_consistency(oX)": 7.3333,
+        "hue_histogram_jump(oX)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The size and trajectory of the floating objects remain consistent without sudden changes.",
+      "signals": [
+        "size_inconsistency(orange)",
+        "interpenetration(strawberry,blueberry)",
+        "trajectory_dir(strawberry,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(strawberry,axis)": 38.3333,
+        "size_inconsistency(orange)": 7.5,
+        "interpenetration(strawberry,blueberry)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow on the green background matches the light source direction and object positions.",
+      "signals": [
+        "shadow_consistency(can)",
+        "reflection_consistency(can)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(can)": 36.6667,
+        "reflection_consistency(can)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

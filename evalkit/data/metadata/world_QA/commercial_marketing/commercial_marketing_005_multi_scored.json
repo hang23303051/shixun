@@ -1,0 +1,193 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_005_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      17.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the laptop screen display a continuous image of shoes without frame discontinuity?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shoes on the screen remain in their designated positions without unexpected movement or disappearance?",
+      "signals": [
+        "continuity(shoe)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(shoe)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text 'WANTED $1 MILLION' legible and not exhibiting frame discontinuity across the clip?",
+      "signals": [
+        "frame_discontinuity(text)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(text)": 40.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shoe held by the person suddenly appear or disappear without a clear cause?",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person holding the laptop and phone maintain a consistent posture relative to the screen?",
+      "signals": [
+        "balance(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The laptop screen displays multiple shoes with consistent designs and tags.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shoes on the screen remain in their designated positions without unexpected movement.",
+      "signals": [
+        "continuity(shoe)",
+        "continuity(laptop)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 40.0,
+      "total_score_100": 73.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(shoe)": 36.6667,
+        "continuity(laptop)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'WANTED $1 MILLION' is legible and does not exhibit size inconsistency.",
+      "signals": [
+        "frame_discontinuity(text)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(text)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The objects (shoes, text) displayed on the screen do not exhibit material inconsistency or sudden changes.",
+      "signals": [
+        "material_optics(shoe)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(shoe)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person holding the phone maintains a consistent posture relative to the screen.",
+      "signals": [
+        "balance(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

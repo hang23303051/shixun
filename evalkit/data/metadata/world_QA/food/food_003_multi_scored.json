@@ -1,0 +1,211 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_003_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      11.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the rice bowl stay supported by the table surface without tipping or displacement?",
+      "signals": [
+        "continuity(t)",
+        "interpenetration(oA,oB)",
+        "support(rice-bowl,table)",
+        "balance(rice-bowl)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(t)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "balance(rice-bowl)": 7.1667,
+        "support(rice-bowl,table)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the spoon used to interact with both solid foods and liquids in the plate's contents?",
+      "signals": [
+        "tool_contact(spoon,food)",
+        "trajectory_dir(spoon,axis)",
+        "tool_contact(spoon,orange-juice)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(spoon,axis)": 38.3333,
+        "tool_contact(spoon,food)": 5.6667,
+        "tool_contact(spoon,orange-juice)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the chicken breast remain on the plate, safely within its bounds, throughout the clip?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(chicken-breast,plate)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "containment(chicken-breast,plate)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there no visible hot surfaces near the food items?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the rice maintain stability under the action of the spoon?",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The food items on the plate remain in place without sudden movement or displacement.",
+      "signals": [
+        "continuity(t)",
+        "interpenetration(oA,oB)",
+        "support(rice-bowl,table)",
+        "balance(rice-bowl)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(t)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "balance(rice-bowl)": 7.1667,
+        "support(rice-bowl,table)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The spoon interacts with the rice, making contact as it is used to mix or serve.",
+      "signals": [
+        "tool_contact(spoon,food)",
+        "trajectory_dir(spoon,axis)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(spoon,axis)": 38.3333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_contact(spoon,food)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The chicken breast remains on the plate and does not fall off during the scene.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The chicken breast is placed safely within the bounds of the plate, avoiding any risk of falling.",
+      "signals": [
+        "containment(chicken-breast,plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(chicken-breast,plate)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There is no visible hot surface contact between any object and a heat source.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

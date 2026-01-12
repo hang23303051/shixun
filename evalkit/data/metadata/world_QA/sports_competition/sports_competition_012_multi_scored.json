@@ -1,0 +1,236 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_012_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the female skater's leg extend outward without interpenetrating with the male skater?",
+      "signals": [
+        "balance(oX)",
+        "trajectory_dir(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the male skater hold the female skater continuously while they are close together on the ice?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "trajectory_dir(oX,axis)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the skaters maintain balance and avoid collision during their interaction?",
+      "signals": [
+        "balance(female-skater)",
+        "balance(male-skater)",
+        "trajectory_dir(female-skater,axis:y)",
+        "trajectory_dir(male-skater,axis:y)",
+        "balance(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(female-skater,axis:y)": 38.3333,
+        "trajectory_dir(male-skater,axis:y)": 7.6667,
+        "balance(female-skater)": 7.1667,
+        "balance(male-skater)": 7.1667,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the male skater support the female skater in a way that allows her to keep one leg extended forward safely?",
+      "signals": [
+        "collision(male-skater,female-skater)",
+        "support(male-skater,female-skater)",
+        "post_collision_change(female-skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(male-skater,female-skater)": 35.0,
+        "post_collision_change(female-skater)": 6.8333,
+        "collision(male-skater,female-skater)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the skaters' movements follow physical laws, such as maintaining consistent trajectories?",
+      "signals": [
+        "balance(oX)",
+        "trajectory_dir(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The skaters maintain balance and avoid body interpenetration during their performance.",
+      "signals": [
+        "balance(oX)",
+        "trajectory_dir(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The male skater supports the female skater continuously without collision hazards while holding hands.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "trajectory_dir(oX,axis)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The figure skaters' movements follow physical laws, maintaining consistent trajectories and avoiding collisions.",
+      "signals": [
+        "balance(female-skater)",
+        "balance(male-skater)",
+        "trajectory_dir(female-skater,axis:y)",
+        "trajectory_dir(male-skater,axis:y)",
+        "balance(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(female-skater,axis:y)": 38.3333,
+        "trajectory_dir(male-skater,axis:y)": 7.6667,
+        "balance(female-skater)": 7.1667,
+        "balance(male-skater)": 7.1667,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The male skater's arm support for the female skater avoids collision during their close interaction.",
+      "signals": [
+        "collision(male-skater,female-skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(male-skater,female-skater)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The male skater provides stable support to the female skater, allowing her leg to extend outward.",
+      "signals": [
+        "support(male-skater,female-skater)",
+        "post_collision_change(female-skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(male-skater,female-skater)": 35.0,
+        "post_collision_change(female-skater)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_053_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      12.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the floor support the roller-skaters for their skating task?",
+      "signals": [
+        "support(roller-skate,floor)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(roller-skate,floor)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, do the skaters maintain continuous motion without sudden stops?",
+      "signals": [
+        "continuity(skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(skater)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the wheels on all participants' skates roll consistently as they move forward?",
+      "signals": [
+        "wheel_rolling(roller-skate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(roller-skate)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there any material_optics anomalies in the wheel rolling of the skates?",
+      "signals": [
+        "wheel_rolling(skate)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(skate)": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "During the race, do the roller-skaters push off the starting line and keep a forward trajectory?",
+      "signals": [
+        "trajectory_dir(roller-skate,axis)",
+        "accel_sign(roller-skate,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(roller-skate,axis)": 38.3333,
+        "accel_sign(roller-skate,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Roller-skaters push off the starting line on a smooth wooden floor.",
+      "signals": [
+        "trajectory_dir(roller-skate,axis)",
+        "accel_sign(roller-skate,axis)",
+        "support(roller-skate,floor)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(roller-skate,axis)": 38.3333,
+        "accel_sign(roller-skate,axis)": 7.0,
+        "support(roller-skate,floor)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Skaters' wheels roll as they move forward, maintaining continuous motion.",
+      "signals": [
+        "wheel_rolling(roller-skate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(roller-skate)": 30.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Participants skate without interpenetration or sudden stops during the race.",
+      "signals": [
+        "continuity(skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(skater)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "All skates exhibit consistent wheel rolling motion throughout the scene.",
+      "signals": [
+        "wheel_rolling(skate)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(skate)": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Skaters maintain a forward trajectory and consistent speed as they race.",
+      "signals": [
+        "trajectory_dir(roller-skate,axis)",
+        "accel_sign(roller-skate,axis)",
+        "continuity(skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(roller-skate,axis)": 38.3333,
+        "continuity(skater)": 7.3333,
+        "accel_sign(roller-skate,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

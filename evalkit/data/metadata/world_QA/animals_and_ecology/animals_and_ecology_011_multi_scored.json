@@ -1,0 +1,203 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_011_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      19.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the cheetahs remain on the ground with their bodies supported by contact with the grass?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the carcass show continuity of its form and material properties, indicating it is intact?",
+      "signals": [
+        "biological_motion(oA)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hyena's movement follow natural biological motion when interacting with the carcass?",
+      "signals": [
+        "biological_motion(hyena)",
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "biological_motion": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the shadow of the hyena consistent with its position and light source?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hyena exhibit sudden changes in trajectory or unnatural physical properties while moving?",
+      "signals": [
+        "trajectory_dir(hyena,axis)",
+        "friction_sliding(hyena,on:carcass)",
+        "biological_motion(hyena)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hyena,axis)": 38.3333,
+        "biological_motion(hyena)": 7.6667,
+        "friction_sliding(hyena,on:carcass)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Two hyenas stand on all fours in a grassy field.",
+      "signals": [
+        "biological_motion(oA)",
+        "trajectory_dir(hyena,axis)",
+        "friction_sliding(hyena,on:carcass)",
+        "biological_motion(hyena)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "trajectory_dir(hyena,axis)": 7.6667,
+        "biological_motion(hyena)": 7.6667,
+        "friction_sliding(hyena,on:carcass)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A hyena interacts with a carcass, consistent with natural predator behavior.",
+      "signals": [
+        "biological_motion(hyena)",
+        "support(carcass,hyena)",
+        "friction_sliding(carcass,on:hyena)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "support(carcass,hyena)": 7.0,
+        "friction_sliding(carcass,on:hyena)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The carcass remains intact and does not change shape suddenly.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of the hyenas match their positions under sunlight.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Cheetahs are absent; only hyenas appear.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

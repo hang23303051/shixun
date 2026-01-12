@@ -1,0 +1,198 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_009_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 4,
+    "clip_range_sec": [
+      0.0,
+      8.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the car in the background stationary?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the child maintain balance while walking on the sidewalk?",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the adult hand reaching towards the child for interaction?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.0,
+      "total_score_100": 74.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Can the glass door be opened and supported by its frame?",
+      "signals": [
+        "openable",
+        "supportable"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.83,
+      "total_score_100": 61.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667,
+        "openable": 5.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the hand show contact with the ground?",
+      "signals": [
+        "cast_shadow_contact"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact": 37.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The car in the background is stationary, consistent with its position relative to the building and trees.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The child moves forward on the sidewalk without tripping over objects or uneven surfaces.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "continuity"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "balance(oX)": 7.1667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "An adult hand reaches towards the child's back, indicating interaction assistance.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.0,
+      "total_score_100": 64.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The glass door has a handle that allows it to be opened for entry.",
+      "signals": [
+        "openable",
+        "supportable"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.83,
+      "total_score_100": 61.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667,
+        "openable": 5.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the hand shows contact with the ground, indicating stable grasp.",
+      "signals": [
+        "cast_shadow_contact"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact": 37.5
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "a1",
+    "a2"
+  ]
+}

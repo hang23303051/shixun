@@ -1,0 +1,203 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_022_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      16.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the woman float or levitate on the bridge?",
+      "signals": [
+        "buoyancy_float(person,in:water)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.17,
+      "total_score_100": 34.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(person,in:water)": 34.1667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water surface reflect the building consistently without sudden changes?",
+      "signals": [
+        "continuity(water)",
+        "reflection_consistency(building_in_water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(building_in_water)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the woman's posture maintain balance during her walk?",
+      "signals": [
+        "balance(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the woman interpenetrate with the bridge structure?",
+      "signals": [
+        "continuity(woman)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(woman)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the path designed for walking, indicated by a railing?",
+      "signals": [
+        "support(walkway,railing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(walkway,railing)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The woman stands on the bridge, and the water surface reflects the landscape consistently.",
+      "signals": [
+        "buoyancy_float(person,in:water)",
+        "continuity(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "buoyancy_float(person,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The woman maintains a natural standing posture while walking along the bridge.",
+      "signals": [
+        "continuity(person)",
+        "balance(person)",
+        "balance(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "continuity(oX)": 7.3333,
+        "balance(person)": 7.1667,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The woman's body remains balanced as she walks without interpenetrating the bridge structure.",
+      "signals": [
+        "continuity(person)",
+        "balance(person)",
+        "continuity(woman)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "continuity(woman)": 7.3333,
+        "balance(person)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The building reflection in the water matches the actual scene with correct shadow consistency.",
+      "signals": [
+        "reflection_consistency(building_in_water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(building_in_water)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The path has a railing for support, allowing safe human use.",
+      "signals": [
+        "falling_hazard(walkway)",
+        "support(walkway,railing)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(walkway,railing)": 35.0,
+        "falling_hazard(walkway)": 6.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

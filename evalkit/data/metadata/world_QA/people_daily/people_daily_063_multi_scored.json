@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_063_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person place clothes into the suitcase?",
+      "signals": [
+        "continuity(person)",
+        "interpenetration(person,hand)",
+        "containment(person, suitcase)",
+        "action_phase(packing, phase)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "interpenetration(person,hand)": 7.1667,
+        "containment(person, suitcase)": 5.8333,
+        "action_phase(packing, phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the hand and yellow cloth moving continuously when placing it in the suitcase?",
+      "signals": [
+        "containment(oA,oB)",
+        "continuity(human-action)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(human-action)": 36.6667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the yellow cloth move downward as expected during placement?",
+      "signals": [
+        "trajectory_dir(object,on:object)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(object,on:object)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the hands handling the clothing without unnatural slip or interpenetration?",
+      "signals": [
+        "biological_motion(human-action)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(human-action)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person's hand maintain physical consistency with the yellow cloth during packing?",
+      "signals": [
+        "continuity(person)",
+        "interpenetration(person,hand)",
+        "biological_motion(human-action)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(human-action)": 38.3333,
+        "continuity(person)": 7.3333,
+        "interpenetration(person,hand)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person is packing clothes into a suitcase.",
+      "signals": [
+        "continuity(person)",
+        "interpenetration(person,hand)",
+        "containment(person, suitcase)",
+        "action_phase(packing, phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "interpenetration(person,hand)": 7.1667,
+        "containment(person, suitcase)": 5.8333,
+        "action_phase(packing, phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person's hand holds and places yellow cloth into the suitcase without interpenetration.",
+      "signals": [
+        "containment(oA,oB)",
+        "biological_motion(human-action)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(human-action)": 38.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Yellow cloth moves downward as it is placed into the suitcase.",
+      "signals": [
+        "continuity(human-action)",
+        "trajectory_dir(object,on:object)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(object,on:object)": 38.3333,
+        "continuity(human-action)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's body and hand maintain physical consistency without interpenetration.",
+      "signals": [
+        "continuity(person)",
+        "interpenetration(person,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "interpenetration(person,hand)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Clothes are placed into the suitcase during packing.",
+      "signals": [
+        "containment(person, suitcase)",
+        "action_phase(packing, phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.5,
+      "total_score_100": 94.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(person, suitcase)": 29.1667,
+        "action_phase(packing, phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

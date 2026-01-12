@@ -1,0 +1,208 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_001_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      19.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the pallet stay supported by the forklift forks without tilting or falling off?",
+      "signals": [
+        "balance(oX)",
+        "support(machine,pallet)",
+        "center_of_mass_over_base(pallet)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(machine,pallet)": 7.0,
+        "center_of_mass_over_base(pallet)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the truck move along a straight path in the warehouse with no sudden stops?",
+      "signals": [
+        "trajectory_dir(truck,axis)",
+        "accel_sign(truck,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(truck,axis)": 7.6667,
+        "accel_sign(truck,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the forklift carry the load forward while its blue light is on?",
+      "signals": [
+        "trajectory_dir(truck,axis)",
+        "state_change(truck,state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(truck,axis)": 38.3333,
+        "state_change(truck,state)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the yellow and green boxes securely held by the black forks of the lift?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the person holding papers during operation?",
+      "signals": [
+        "tool_contact(person,machine)",
+        "grasp_stability(person,papers)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.0,
+      "total_score_100": 34.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(person,machine)": 28.3333,
+        "grasp_stability(person,papers)": 5.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person uses the forklift to move and place large boxes in the warehouse.",
+      "signals": [
+        "tool_usage_correct(forklift,for:box)",
+        "action_phase(forklift,phase:lifting)",
+        "action_phase(forklift,phase:placing)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 39.83,
+      "total_score_100": 99.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(forklift,for:box)": 29.1667,
+        "action_phase(forklift,phase:lifting)": 5.3333,
+        "action_phase(forklift,phase:placing)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The heavy object on pallets remains stable, supported by the forks of the forklift.",
+      "signals": [
+        "support(machine,pallet)",
+        "center_of_mass_over_base(pallet)",
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(machine,pallet)": 7.0,
+        "center_of_mass_over_base(pallet)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The forklift's blue light indicates it is in an operational state.",
+      "signals": [
+        "state_change(truck,state)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(truck,state)": 37.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The forklift truck moves forward while carrying a load.",
+      "signals": [
+        "trajectory_dir(truck,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(truck,axis)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The forklift moves along designated warehouse paths without sudden acceleration.",
+      "signals": [
+        "trajectory_dir(truck,axis)",
+        "accel_sign(truck,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(truck,axis)": 38.3333,
+        "accel_sign(truck,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_046_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      11.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fan stay in contact with the hand during the transfer?",
+      "signals": [
+        "continuity(oX)",
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person holding the blue object stand upright without leaning back?",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the people and objects move consistently with their positions?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the motion of passing the fan smooth and continuous between hands?",
+      "signals": [
+        "biological_motion(oA)",
+        "hot_surface_contact(oObj,oSurface)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the pink shirt on the left side remain visible throughout the clip?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The fan remains in contact with the hand of the person holding it.",
+      "signals": [
+        "continuity(oX)",
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The students sit and stand safely, showing natural biological motion.",
+      "signals": [
+        "biological_motion(oA)",
+        "hot_surface_contact(oObj,oSurface)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Objects do not suddenly disappear or merge during the scene.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows consistently follow the movement and position of objects.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The handoff between the hands of the person holding the fan is smooth and continuous.",
+      "signals": [
+        "handoff_between_hands"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "handoff_between_hands": 26.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

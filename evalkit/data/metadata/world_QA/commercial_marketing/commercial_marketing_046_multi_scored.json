@@ -1,0 +1,230 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_046_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person's hand maintain a consistent grip on the white fabric without interpenetration?",
+      "signals": [
+        "continuity(person-coarse)",
+        "interpenetration(person-coarse,white_fabric)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person-coarse)": 36.6667,
+        "continuity(person)": 7.3333,
+        "interpenetration(person-coarse,white_fabric)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person standing safely near the fence in uneven terrain, with no risk of falling off an elevated position?",
+      "signals": [
+        "grasp_stability(person, bottle)",
+        "friction_sliding(bottle, hand)",
+        "biological_motion(person)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(bottle, hand)": 6.0,
+        "grasp_stability(person, bottle)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the white towel remain draped over the wooden rail and not pass through it or disappear suddenly?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person lean against the fence while keeping balance with one leg raised throughout the clip?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "continuity(person)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the action of adjusting clothing involve natural biological motion for raising the arm?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The white towel drapes over the wooden rail without interpenetration.",
+      "signals": [
+        "support(towel, fence)",
+        "deformation(towel)",
+        "interpenetration(towel, fence)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(towel)": 40.0,
+        "interpenetration(towel, fence)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(towel, fence)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person stands on uneven terrain, holding a water bottle near their mouth safely.",
+      "signals": [
+        "grasp_stability(person, bottle)",
+        "friction_sliding(bottle, hand)",
+        "biological_motion(person)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(bottle, hand)": 6.0,
+        "grasp_stability(person, bottle)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person leans on the fence with one leg raised and maintains balance throughout.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "continuity(person)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's hand adjusts the fabric of the clothing naturally.",
+      "signals": [
+        "biological_motion(oA)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The white towel remains in place on the fence, and the black backpack stays near the field's edge.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_013_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      16.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mayonnaise flow smoothly from the bottle onto the cheese without stopping?",
+      "signals": [
+        "pour_direction(mayonnaise,axis)",
+        "continuity(mayonnaise)",
+        "friction_sliding(mayonnaise,on:cheese)",
+        "tool_contact(sauce-bottle,mayonnaise)",
+        "support(bun,cheese)",
+        "support(bun,mayonnaise)",
+        "support(bun,lettuce)",
+        "support(bun,onion)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mayonnaise)": 36.6667,
+        "support(bun,cheese)": 7.0,
+        "support(bun,mayonnaise)": 7.0,
+        "support(bun,lettuce)": 7.0,
+        "support(bun,onion)": 7.0,
+        "friction_sliding(mayonnaise,on:cheese)": 6.0,
+        "pour_direction(mayonnaise,axis)": 5.6667,
+        "tool_contact(sauce-bottle,mayonnaise)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cheese slice stay on the patty and not disappear under it?",
+      "signals": [
+        "support(burger,table)",
+        "support(oA,oB)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(burger,table)": 7.0,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the lettuce maintain its shape with no unexpected tearing or deformation?",
+      "signals": [
+        "deformation(cheese)",
+        "biological_motion(lettuce)",
+        "material_optics(mayonnaise)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cheese)": 40.0,
+        "biological_motion(lettuce)": 7.6667,
+        "material_optics(mayonnaise)": 7.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the text 'DÉLICIEUX!' at the bottom of the frame static throughout the clip?",
+      "signals": [
+        "continuity(text)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any signs of hot surface contact or flame near the food items?",
+      "signals": [
+        "hot_surface_contact(burger,table)=false"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 34.17,
+      "total_score_100": 54.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(burger,table)=false": 34.1667
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The burger and its components remain stable on the paper without falling or interpenetrating.",
+      "signals": [
+        "support(burger,paper)",
+        "balance(burger)",
+        "continuity(burger)",
+        "shadow_consistency(burger)",
+        "cast_shadow_contact(burger,shadow)",
+        "support(bun,cheese)",
+        "support(bun,mayonnaise)",
+        "support(bun,lettuce)",
+        "support(bun,onion)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(burger,shadow)": 37.5,
+        "continuity(burger)": 7.3333,
+        "shadow_consistency(burger)": 7.3333,
+        "balance(burger)": 7.1667,
+        "support(burger,paper)": 7.0,
+        "support(bun,cheese)": 7.0,
+        "support(bun,mayonnaise)": 7.0,
+        "support(bun,lettuce)": 7.0,
+        "support(bun,onion)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cheese slice remains on the patty and does not suddenly disappear or detach.",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "support(burger,table)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "support(burger,table)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'DÉLICIEUX!' at the bottom of the frame is static and consistent in size.",
+      "signals": [
+        "continuity(text)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cursor icon moves smoothly towards the subscribe button without sudden jumps.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The food items do not exhibit any biological motion anomalies or material optics inconsistencies.",
+      "signals": [
+        "biological_motion(lettuce)",
+        "material_optics(mayonnaise)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lettuce)": 38.3333,
+        "material_optics(mayonnaise)": 7.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

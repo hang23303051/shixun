@@ -1,0 +1,220 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_042_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the book stay open and stable on the person's lap without sudden changes in position or state?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "continuity(oX)",
+        "continuity(book)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(book)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the text \"Q&A\" on the book cover keep a consistent size relative to the rest of the screen?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)",
+        "support(notebook,book)",
+        "containment(card,book)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "support(notebook,book)": 7.0,
+        "containment(card,book)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person maintain balance while holding the book and card with wet hair not posing a falling hazard?",
+      "signals": [
+        "balance(oX)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the notebook and card on the open book cover stay attached without unexpected movement or collision near natural light from the window?",
+      "signals": [
+        "support(notebook,table)",
+        "containment(card,notebook)",
+        "material_optics(plant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(plant)": 37.5,
+        "support(notebook,table)": 7.0,
+        "containment(card,notebook)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the plant show signs of unnatural movement or material optics anomalies?",
+      "signals": [
+        "continuity(book)",
+        "deformation(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(book)": 7.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The book remains open and stable on the person's lap.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "continuity(oX)",
+        "continuity(book)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(book)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The text \"I said it two words to describe your life...\" appears consistently at the top of the screen.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The plant leaves near the window show no signs of unnatural movement.",
+      "signals": [
+        "deformation(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The notebook and card on the open book cover stay attached without unexpected movement.",
+      "signals": [
+        "support(notebook,book)",
+        "containment(card,book)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(notebook,book)": 35.0,
+        "containment(card,book)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The wet hair of the person does not pose a falling hazard.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

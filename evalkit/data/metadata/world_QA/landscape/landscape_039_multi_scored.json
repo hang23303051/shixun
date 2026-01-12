@@ -1,0 +1,195 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_039_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      11.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sun's position and light direction follow its natural trajectory during sunset?",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "shadow_consistency(plant)",
+        "continuity(sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "shadow_consistency(plant)": 7.3333,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the clouds maintain consistent size relative to their distance from the sunlight source?",
+      "signals": [
+        "size_inconsistency(cloud)",
+        "shadow_consistency(cloud)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cloud)": 37.5,
+        "shadow_consistency(cloud)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the power lines static without signs of deformation or displacement?",
+      "signals": [
+        "rigid_transform(power_line)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(power_line)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the tree branches cast shadows that align with their shape and orientation?",
+      "signals": [
+        "shadow_consistency(tree_branch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tree_branch)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the clouds move consistently in the sky according to wind patterns?",
+      "signals": [
+        "accel_sign(cloud,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(cloud,axis)": 35.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The sun is low on the horizon, casting light rays in a downward direction.",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "shadow_consistency(plant)",
+        "continuity(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "shadow_consistency(plant)": 7.3333,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Clouds are illuminated from below, with shadows consistent with sunlight position.",
+      "signals": [
+        "size_inconsistency(cloud)",
+        "shadow_consistency(cloud)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cloud)": 37.5,
+        "shadow_consistency(cloud)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Power lines remain static and parallel to the ground throughout the scene.",
+      "signals": [
+        "rigid_transform(power_line)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(power_line)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Tree branches cast long shadows that align with their shape and orientation.",
+      "signals": [
+        "shadow_consistency(tree_branch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tree_branch)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Clouds move slowly across the sky, following a natural wind pattern.",
+      "signals": [
+        "accel_sign(cloud,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(cloud,axis)": 35.0
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_016_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person in blue shirt and jeans cap stand on grass without defying gravity?",
+      "signals": [
+        "continuity(cow)",
+        "buoyancy_float(person,in:grass)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cow)": 36.6667,
+        "buoyancy_float(person,in:grass)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do cow calves follow their mothers during grazing behavior, maintaining consistent sizes relative to each other?",
+      "signals": [
+        "biological_motion(calf)",
+        "size_inconsistency(cow)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(calf)": 38.3333,
+        "size_inconsistency(cow)": 7.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows of cows remain consistent with their positions across the clip as they move naturally?",
+      "signals": [
+        "shadow_consistency(cow)",
+        "continuity(cows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cow)": 36.6667,
+        "continuity(cows)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do cows exhibit natural biological motion while standing calmly or walking in the field?",
+      "signals": [
+        "biological_motion(cow)",
+        "continuity(cow)",
+        "continuity(calf)",
+        "balance(cow)",
+        "balance(calf)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cow)": 38.3333,
+        "continuity(cow)": 7.3333,
+        "continuity(calf)": 7.3333,
+        "balance(cow)": 7.1667,
+        "balance(calf)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any unexpected collisions between cows visible in the open field?",
+      "signals": [
+        "collision(cow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(cow)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Cows and calves stand naturally in the grassy field without sudden movement.",
+      "signals": [
+        "continuity(cow)",
+        "biological_motion(calf)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(calf)": 38.3333,
+        "continuity(cow)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "No unexpected collisions occur between cows in the open field.",
+      "signals": [
+        "collision(cow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(cow)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows of animals on the grass match their positions and light direction.",
+      "signals": [
+        "shadow_consistency(cow)",
+        "shadow_consistency(grass)",
+        "shadow_consistency(cows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cow)": 36.6667,
+        "shadow_consistency(grass)": 7.3333,
+        "shadow_consistency(cows)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The calf is smaller than the cow, maintaining consistent relative size.",
+      "signals": [
+        "size_inconsistency(cow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cow)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Cows and calves exhibit calm, natural biological motion in the field.",
+      "signals": [
+        "biological_motion(cow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cow)": 38.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

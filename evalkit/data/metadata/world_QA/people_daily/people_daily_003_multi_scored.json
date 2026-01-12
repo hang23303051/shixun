@@ -1,0 +1,205 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_003_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the metal ladder remain stable and upright while supporting person_2's weight?",
+      "signals": [
+        "rigid_transform(ladder)",
+        "support(ladder,tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(ladder)": 37.5,
+        "support(ladder,tree)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is person_2 climbing the ladder to reach a high branch of the tree?",
+      "signals": [
+        "support(ladder,tree)",
+        "tool_contact(ladder,person_2)",
+        "action_phase(person_2,phase:retrieving)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ladder,tree)": 35.0,
+        "tool_contact(ladder,person_2)": 5.6667,
+        "action_phase(person_2,phase:retrieving)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do both persons maintain balance on or near the ladder without falling hazards?",
+      "signals": [
+        "balance(person_2)",
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person_2)": 35.8333,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the tree branch not break under the combined weight of people and equipment?",
+      "signals": [
+        "balance(people+equipment,branch)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(people+equipment,branch)": 35.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does gravity act consistently on all objects, with no sudden changes in trajectory or acceleration?",
+      "signals": [
+        "accel_sign",
+        "accel_sign(ladder,axis:vertical)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign": 35.0,
+        "accel_sign(ladder,axis:vertical)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Person_2 climbs the ladder to reach a high branch of the tree.",
+      "signals": [
+        "support(ladder,tree)",
+        "tool_contact(ladder,person_2)",
+        "action_phase(person_2,phase:retrieving)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ladder,tree)": 35.0,
+        "tool_contact(ladder,person_2)": 5.6667,
+        "action_phase(person_2,phase:retrieving)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Person_2 maintains balance on the ladder while reaching for objects in the tree.",
+      "signals": [
+        "balance(person_2)",
+        "friction_sliding(ladder,on:tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person_2)": 35.8333,
+        "friction_sliding(ladder,on:tree)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The metal ladder remains stable and upright while supporting person_2's weight.",
+      "signals": [
+        "rigid_transform(ladder)",
+        "support(ladder,tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(ladder)": 37.5,
+        "support(ladder,tree)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The white bag moves with person_1’s body, maintaining continuity in its position.",
+      "signals": [
+        "continuity(bag)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bag)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Gravity acts consistently on all objects during the video.",
+      "signals": [
+        "accel_sign",
+        "accel_sign(ladder,axis:vertical)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign": 35.0,
+        "accel_sign(ladder,axis:vertical)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

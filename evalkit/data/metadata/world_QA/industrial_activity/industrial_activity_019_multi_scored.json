@@ -1,0 +1,201 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_019_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 3,
+    "clip_range_sec": [
+      0.0,
+      15.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the robot arm move the ball along the track without interpenetration with other objects?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the cable attached to the robot arm untangled and does the arm move smoothly on the conveyor belt?",
+      "signals": [
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(arm)",
+        "balance(arm)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(arm)": 7.3333,
+        "balance(arm)": 7.1667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the metal plate with pegs remain stationary on the ground while being supported by the platform?",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the platform support items as it moves over the conveyor belt designed for processing weight?",
+      "signals": [
+        "support(oA,oB)",
+        "support(belt,items)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "support(belt,items)": 7.0
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the red light indicator on the machine base consistent in its state throughout the operation?",
+      "signals": [
+        "state_change(indicator)"
+      ],
+      "content_score_60": 10,
+      "signal_score_40": 37.5,
+      "total_score_100": 47.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(indicator)": 37.5
+      },
+      "content_score_raw": "10"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The robot arm moves the ball along the track without interpenetration with other objects.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cable attached to the robot arm is not tangled or in danger of being caught.",
+      "signals": [
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The metal plate with pegs remains stationary on the ground and stable on the platform.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The platform supports and transports objects, including the conveyor belt system.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The conveyor belt supports the weight of items processed by the robotic arm.",
+      "signals": [
+        "support(belt,items)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(belt,items)": 35.0
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "a1"
+  ]
+}

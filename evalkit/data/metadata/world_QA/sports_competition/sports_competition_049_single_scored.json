@@ -1,0 +1,194 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_049_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do players avoid collisions with each other during play?",
+      "signals": [
+        "balance(oX)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the basketball follow a continuous trajectory without sudden changes in direction or speed?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are spectators seated in designated areas to avoid falling hazards?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 31.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the scoreboard at the bottom of the screen providing real-time score information?",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 37.5,
+      "total_score_100": 95.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do players' movements exhibit biological motion and action phase continuity?",
+      "signals": [
+        "biological_motion(oA)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The scoreboard at the bottom shows a score of 92 to 76 with 11:14 remaining.",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 37.5,
+      "total_score_100": 95.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Players move on the court without colliding, maintaining balance and proper support.",
+      "signals": [
+        "balance(oX)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The basketball follows a continuous trajectory as it is passed between players.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A player in white jumps for the ball while another runs towards him.",
+      "signals": [
+        "biological_motion(oA)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Spectators sit in the stands, watching the game from their designated areas.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 31.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "58"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

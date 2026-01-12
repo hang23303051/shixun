@@ -1,0 +1,208 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_048_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hand use tongs to place cooked meat into the slow cooker?",
+      "signals": [
+        "tool_contact(tongs,meat)",
+        "grasp_stability(tongs,meat)",
+        "hot_surface_contact(meat,slow-cooker)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(meat,slow-cooker)": 34.1667,
+        "tool_contact(tongs,meat)": 5.6667,
+        "grasp_stability(tongs,meat)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the metal tongs supporting the meat without it falling off during transfer?",
+      "signals": [
+        "hot_surface_contact(slow-cooker,meat)",
+        "tool_usage_correct(tongs,for:handling_hot_food)",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(slow-cooker,meat)": 34.1667,
+        "tool_usage_correct(tongs,for:handling_hot_food)": 5.8333,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the foil-lined tray positioned next to the open slow cooker lid?",
+      "signals": [
+        "tool_contact(tongs,meat)",
+        "handoff_between_hands(meat)",
+        "openable"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.83,
+      "total_score_100": 98.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(tongs,meat)": 28.3333,
+        "handoff_between_hands(meat)": 5.3333,
+        "openable": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the bottle cap closed, indicating no recent opening of the seasoning container?",
+      "signals": [
+        "friction_sliding",
+        "state_change"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change": 37.5,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the black cap on the white plastic jar?",
+      "signals": [
+        "state_change"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand uses tongs to place cooked meat into a slow-cooker.",
+      "signals": [
+        "tool_contact(tongs,meat)",
+        "grasp_stability(tongs,meat)",
+        "hot_surface_contact(meat,slow-cooker)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(meat,slow-cooker)": 34.1667,
+        "tool_contact(tongs,meat)": 5.6667,
+        "grasp_stability(tongs,meat)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The metal tongs support the meat, keeping it stable during transfer.",
+      "signals": [
+        "hot_surface_contact(slow-cooker,meat)",
+        "tool_usage_correct(tongs,for:handling_hot_food)",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(slow-cooker,meat)": 34.1667,
+        "tool_usage_correct(tongs,for:handling_hot_food)": 5.8333,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Meat is transferred from the slow-cooker to a foil-lined tray.",
+      "signals": [
+        "tool_contact(tongs,meat)",
+        "handoff_between_hands(meat)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 33.67,
+      "total_score_100": 63.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(tongs,meat)": 28.3333,
+        "handoff_between_hands(meat)": 5.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Sauce on the meat does not spill uncontrollably due to gravity.",
+      "signals": [
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bottle cap's position indicates it has been recently opened.",
+      "signals": [
+        "state_change"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 37.5,
+      "total_score_100": 77.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change": 37.5
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

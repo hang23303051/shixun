@@ -1,0 +1,195 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_036_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the yellow safety fence around the conveyor belt area present?",
+      "signals": [
+        "support(safety-fence,conveyor-belt-area)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(safety-fence,conveyor-belt-area)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the brown boxes move continuously along the metal roller conveyor belt without sudden stops?",
+      "signals": [
+        "continuity(box)",
+        "continuity(boxes-on-conveyor-belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(box)": 36.6667,
+        "continuity(boxes-on-conveyor-belt)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the metal rollers rotate consistently during the operation?",
+      "signals": [
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the box maintain its center of mass over the pallets while moving on the conveyor belt?",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the red lights on the machine consistent in their state during the operation?",
+      "signals": [
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The brown box maintains its structural integrity while moving on the conveyor belt.",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)",
+        "continuity(box)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(box)": 7.3333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The metal rollers rotate consistently, and the box moves continuously along the belt.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "continuity(boxes-on-conveyor-belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(boxes-on-conveyor-belt)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The center of mass of the box is over its base (pallets) to prevent tipping.",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The red lights indicate operational status, and the yellow fence ensures safety around the conveyor.",
+      "signals": [
+        "state_change(machine,from:off,to:on)",
+        "support(safety-fence,conveyor-belt-area)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(machine,from:off,to:on)": 37.5,
+        "support(safety-fence,conveyor-belt-area)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The machine transports brown boxes with 'gswx' labels and orange pallets.",
+      "signals": [
+        "placeable(box,on:conveyor-belt), placeable(pallets,on:conveyor-belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(box,on:conveyor-belt), placeable(pallets,on:conveyor-belt)": 25.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

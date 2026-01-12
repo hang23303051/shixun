@@ -1,0 +1,199 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_015_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the worker in blue overalls stand on the floor while operating the machine?",
+      "signals": [
+        "balance(worker-in-blue-overalls)",
+        "center_of_mass_over_base(worker-in-blue-overalls)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(worker-in-blue-overalls)": 35.8333,
+        "center_of_mass_over_base(worker-in-blue-overalls)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the platform of the machine support the worker in the black shirt and remain mounted on wheels?",
+      "signals": [
+        "support(worker-in-black-shirt,machine-with-white-frame)",
+        "support(machine-with-white-frame,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(worker-in-black-shirt,machine-with-white-frame)": 35.0,
+        "support(machine-with-white-frame,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the machine with a white frame stay stable as it is mounted on wheels during operation?",
+      "signals": [
+        "center_of_mass_over_base(machine-with-white-frame)",
+        "continuity(machine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(machine)": 36.6667,
+        "center_of_mass_over_base(machine-with-white-frame)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the workers' movements around the machine follow natural biological motion patterns?",
+      "signals": [
+        "biological_motion(worker)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(worker)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do workers interact with and adjust the machine's components during operation?",
+      "signals": [
+        "tool_contact(machine,worker-in-blue-overalls)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(machine,worker-in-blue-overalls)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The white metal frame of the machine provides a clear boundary for safe interaction and access by both workers.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "center_of_mass_over_base(machine-with-white-frame)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "center_of_mass_over_base(machine-with-white-frame)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The worker in blue overalls maintains balance while standing on the floor operating the machine.",
+      "signals": [
+        "balance(worker-in-blue-overalls)",
+        "center_of_mass_over_base(worker-in-blue-overalls)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(worker-in-blue-overalls)": 35.8333,
+        "center_of_mass_over_base(worker-in-blue-overalls)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The platform of the machine supports the worker in the black shirt, who is mounted on wheels.",
+      "signals": [
+        "support(worker-in-black-shirt,machine-with-white-frame)",
+        "support(machine-with-white-frame,ground)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(worker-in-black-shirt,machine-with-white-frame)": 35.0,
+        "support(machine-with-white-frame,ground)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "During the operation, workers interact with and adjust the machine's components using tools.",
+      "signals": [
+        "tool_contact(machine,worker-in-blue-overalls)",
+        "tool_usage_correct(tool,for:task)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(tool,for:task)": 29.1667,
+        "tool_contact(machine,worker-in-blue-overalls)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The machine's structure maintains physical continuity and stability during operation.",
+      "signals": [
+        "continuity(machine)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(machine)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_035_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      15.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the fish maintain appropriate size relative to the turtle?",
+      "signals": [
+        "biological_motion(turtle)",
+        "biological_motion(fish)",
+        "size_inconsistency(fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(turtle)": 38.3333,
+        "biological_motion(fish)": 7.6667,
+        "size_inconsistency(fish)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the turtle move in a right-facing direction without sudden changes?",
+      "signals": [
+        "buoyancy_float(turtle,in:water)",
+        "trajectory_dir(turtle,axis)",
+        "trajectory_dir(turtle,axis:horizontal),direction:right"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(turtle,axis)": 38.3333,
+        "trajectory_dir(turtle,axis:horizontal),direction:right": 7.6667,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the fish trail behind the turtle continuously and naturally?",
+      "signals": [
+        "continuity(fish)",
+        "friction_sliding(fish,on:turtle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fish)": 36.6667,
+        "friction_sliding(fish,on:turtle)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the fish exhibit natural motion without interpenetration or abrupt size changes?",
+      "signals": [
+        "biological_motion(fish)",
+        "interpenetration(fish,turtle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "interpenetration(fish,turtle)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the coral reef provide stable support for marine life?",
+      "signals": [
+        "continuity(turtle)",
+        "buoyancy_float(turtle,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(turtle)": 36.6667,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Fish follow the turtle, maintaining appropriate distance and orientation relative to the turtle.",
+      "signals": [
+        "biological_motion(fish)",
+        "trajectory_dir(fish,axis)",
+        "size_inconsistency(fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "trajectory_dir(fish,axis)": 7.6667,
+        "size_inconsistency(fish)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The sea turtle swims in an underwater environment with natural biological motion.",
+      "signals": [
+        "biological_motion(turtle)",
+        "biological_motion(fish)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(turtle)": 38.3333,
+        "biological_motion(fish)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The turtle's body maintains buoyancy in the water during its swimming motion.",
+      "signals": [
+        "buoyancy_float(turtle,in:water)",
+        "trajectory_dir(turtle,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(turtle,axis)": 38.3333,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The turtle moves towards the right side of the frame.",
+      "signals": [
+        "trajectory_dir(turtle,axis:horizontal),direction:right"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(turtle,axis:horizontal),direction:right": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Fish surrounding the turtle exhibit natural biological motion without sudden size changes or interpenetration.",
+      "signals": [
+        "biological_motion(fish)",
+        "interpenetration(fish,turtle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "interpenetration(fish,turtle)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

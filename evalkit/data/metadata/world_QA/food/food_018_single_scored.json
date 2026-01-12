@@ -1,0 +1,192 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_018_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      9.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the spatula maintain contact with the food in the pan?",
+      "signals": [
+        "tool_contact(light-blue-spatula,pan)",
+        "tool_contact(spatula,ingredients)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(light-blue-spatula,pan)": 28.3333,
+        "tool_contact(spatula,ingredients)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the brown seasoning powder poured into the hot pan without spillage?",
+      "signals": [
+        "pour_direction(powder,axis)",
+        "pour_direction(pan,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(powder,axis)": 28.3333,
+        "pour_direction(pan,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the spatula stir the ingredients continuously during cooking?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the ingredients remain within the boundaries of the pan while being stirred?",
+      "signals": [
+        "containment(pan,ingredients)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pan,ingredients)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the liquid in the pan keep its volume and not spill or leak?",
+      "signals": [
+        "leakage"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A blue spatula stirs the mixture in the red pan.",
+      "signals": [
+        "tool_contact(light-blue-spatula,pan)",
+        "tool_contact(spatula,ingredients)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(light-blue-spatula,pan)": 28.3333,
+        "tool_contact(spatula,ingredients)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ingredients move with the spatula, showing consistent material behavior.",
+      "signals": [
+        "continuity(brown-powder)",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(brown-powder)": 36.6667,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Brown seasoning powder is poured into the hot pan and mixed with other ingredients.",
+      "signals": [
+        "pour_direction(powder,axis)",
+        "pour_direction(pan,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(powder,axis)": 28.3333,
+        "pour_direction(pan,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ingredients remain within the boundaries of the pan without interpenetration.",
+      "signals": [
+        "containment(pan,ingredients)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pan,ingredients)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The liquid in the pan maintains its volume during stirring.",
+      "signals": [
+        "leakage"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "a1",
+    "a2",
+    "a3"
+  ]
+}

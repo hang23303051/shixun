@@ -1,0 +1,212 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_031_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train move along the track without colliding with the fence?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "interpenetration(oA,oB)",
+        "collision(train,fence)",
+        "collision(train,building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(train,fence)": 6.3333,
+        "collision(train,building)": 6.3333,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the train maintain a consistent speed and trajectory on the track?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "accel_sign(train,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the colors of the containers red, white, and blue throughout the video?",
+      "signals": [
+        "material_optics(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(train)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the containers show any signs of damage or deformation as the train moves?",
+      "signals": [
+        "deformation(train_container)",
+        "fracture(train_container)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(train_container)": 40.0,
+        "fracture(train_container)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the fence continuous from start to end?",
+      "signals": [
+        "frame_discontinuity(fence)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(fence)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train moves along the railway track with consistent motion.",
+      "signals": [
+        "trajectory_dir(train,railway_track)",
+        "accel_sign(train,forward)",
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,railway_track)": 38.3333,
+        "trajectory_dir(train,axis)": 7.6667,
+        "accel_sign(train,forward)": 7.0,
+        "accel_sign(train,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The train's wheels maintain contact with the tracks without interpenetration, and no collision occurs.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "interpenetration(oA,oB)",
+        "collision(train,fence)",
+        "collision(train,building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(train,fence)": 6.3333,
+        "collision(train,building)": 6.3333,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The building in the background maintains its structural integrity and position relative to the sky.",
+      "signals": [
+        "continuity(building)",
+        "balance(building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667,
+        "balance(building)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The containers on the train show no unexpected deformations or fractures.",
+      "signals": [
+        "deformation(train_container)",
+        "fracture(train_container)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(train_container)": 40.0,
+        "fracture(train_container)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The material optics properties of the train's body remain consistent throughout.",
+      "signals": [
+        "material_optics(train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(train)": 37.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

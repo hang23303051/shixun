@@ -1,0 +1,219 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_028_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      19.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a hand press flour onto chicken to remove excess?",
+      "signals": [
+        "tool_usage_correct(spoon,for:mixing)",
+        "tool_contact(whisk,bowl)",
+        "action_phase(mixing,phase:preparation)",
+        "containment(chicken,bowl)",
+        "tool_contact(hand,chicken)",
+        "action_phase(coating,phase:pressing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spoon,for:mixing)": 29.1667,
+        "containment(chicken,bowl)": 5.8333,
+        "tool_contact(whisk,bowl)": 5.6667,
+        "tool_contact(hand,chicken)": 5.6667,
+        "action_phase(mixing,phase:preparation)": 5.3333,
+        "action_phase(coating,phase:pressing)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is pepper distributed evenly on the all-purpose flour in the bowl while pressing it down?",
+      "signals": [
+        "tool_contact(spoon,flour)",
+        "action_phase(coating,phase)",
+        "tool_contact"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 39.33,
+      "total_score_100": 69.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spoon,flour)": 28.3333,
+        "tool_contact": 5.6667,
+        "action_phase(coating,phase)": 5.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are ingredients being mixed and prepared for baking without sudden changes or spillage?",
+      "signals": [
+        "action_phase(Task,PREPARATION)",
+        "continuity(Scene)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(Scene)": 36.6667,
+        "action_phase(Task,PREPARATION)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is flour mixed into an egg mixture using a hand?",
+      "signals": [
+        "tool_contact(Hand,EggMixture)",
+        "action_phase(Mixing,Phase1)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(Hand,EggMixture)": 28.3333,
+        "action_phase(Mixing,Phase1)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the action involve scooping flour from one bowl?",
+      "signals": [
+        "tool_contact(Hand,FLOUR)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 28.33,
+      "total_score_100": 28.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(Hand,FLOUR)": 28.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand presses flour onto chicken in a bowl to remove excess.",
+      "signals": [
+        "tool_usage_correct(spoon,for:mixing)",
+        "tool_contact(whisk,bowl)",
+        "action_phase(mixing,phase:preparation)",
+        "containment(chicken,bowl)",
+        "tool_contact(hand,chicken)",
+        "action_phase(coating,phase:pressing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spoon,for:mixing)": 29.1667,
+        "containment(chicken,bowl)": 5.8333,
+        "tool_contact(whisk,bowl)": 5.6667,
+        "tool_contact(hand,chicken)": 5.6667,
+        "action_phase(mixing,phase:preparation)": 5.3333,
+        "action_phase(coating,phase:pressing)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The left black bowl contains all-purpose flour and pepper.",
+      "signals": [
+        "tool_contact(spoon,flour)",
+        "action_phase(coating,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spoon,flour)": 28.3333,
+        "action_phase(coating,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Ingredients are being mixed for baking preparation.",
+      "signals": [
+        "action_phase(Task,PREPARATION)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "action_phase(Task,PREPARATION)": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Salt and pepper are added to flour in the bowl.",
+      "signals": [
+        "containment(bowl,flour)",
+        "containment(bowl,pepper)",
+        "tool_contact(spoon,flour)",
+        "action_phase(add,phase:preparation)",
+        "tool_contact"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(bowl,flour)": 29.1667,
+        "containment(bowl,pepper)": 5.8333,
+        "tool_contact(spoon,flour)": 5.6667,
+        "tool_contact": 5.6667,
+        "action_phase(add,phase:preparation)": 5.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A hand scoops flour from the left black bowl.",
+      "signals": [
+        "tool_contact(Hand,FLOUR)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 28.33,
+      "total_score_100": 28.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(Hand,FLOUR)": 28.3333
+      },
+      "content_score_raw": "0"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "a1",
+    "a2"
+  ]
+}

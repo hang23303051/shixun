@@ -1,0 +1,211 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_056_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      10.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the plastic bottle stay supported by the person's hands without floating or sinking?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the fish tank stable and securely placed on the table?",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the moss on the wooden surface remain static relative to other objects throughout the clip?",
+      "signals": [
+        "continuity",
+        "friction_sliding",
+        "collision"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "collision": 6.3333,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the person's hands interacting with objects in a natural grip and posture?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the clear plastic bag float due to buoyancy?",
+      "signals": [
+        "buoyancy_float"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The plastic bottle is partially submerged in water and remains stable.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The fish tank contains aquatic plants and appears securely placed.",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person's hands are interacting with objects on the table while maintaining a natural grip.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The moss on the table remains static unless interacted with.",
+      "signals": [
+        "continuity",
+        "friction_sliding"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The clear plastic bag is used for containing plants.",
+      "signals": [
+        "tool_contact",
+        "containment"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.83,
+      "total_score_100": 74.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment": 29.1667,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

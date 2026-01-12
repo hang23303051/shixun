@@ -1,0 +1,228 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_058_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cup stay supported by the hand without slipping?",
+      "signals": [
+        "containment(noodle-cup, noodle-cup)",
+        "friction_sliding(noodle, on:microwave)",
+        "tool_contact(chopsticks, noodle)",
+        "hot_surface_contact(person,noodle-cup)",
+        "friction_sliding(person,noodle-cup)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(person,noodle-cup)": 34.1667,
+        "friction_sliding(noodle, on:microwave)": 6.0,
+        "friction_sliding(person,noodle-cup)": 6.0,
+        "containment(noodle-cup, noodle-cup)": 5.8333,
+        "tool_contact(chopsticks, noodle)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, do the noodles keep a continuous flow relative to the chopsticks?",
+      "signals": [
+        "deformation(noodle)",
+        "continuity(noodle)",
+        "size_inconsistency(noodle)",
+        "interpenetration(noodle,cheese)",
+        "continuity(noodles)",
+        "interpenetration(noodles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(noodle)": 40.0,
+        "size_inconsistency(noodle)": 7.5,
+        "continuity(noodle)": 7.3333,
+        "continuity(noodles)": 7.3333,
+        "interpenetration(noodle,cheese)": 7.1667,
+        "interpenetration(noodles)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the chopsticks provide stable support for the noodle-cup system?",
+      "signals": [
+        "support(chopsticks,noodle-cup)",
+        "grasp_stability(chopsticks,noodle-cup)",
+        "tool_contact(chopsticks,noodle)",
+        "grasp_stability(hand, cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(chopsticks,noodle-cup)": 35.0,
+        "grasp_stability(chopsticks,noodle-cup)": 5.6667,
+        "tool_contact(chopsticks,noodle)": 5.6667,
+        "grasp_stability(hand, cup)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the noodles maintain a natural flow without sudden interpenetration?",
+      "signals": [
+        "continuity(noodles)",
+        "interpenetration(noodles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667,
+        "interpenetration(noodles)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the chopstick support show consistent size relative to the noodles?",
+      "signals": [
+        "support(chopsticks, noodles)",
+        "size_inconsistency(chopsticks)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(chopsticks)": 37.5,
+        "support(chopsticks, noodles)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Noodles remain connected to the cup during lifting.",
+      "signals": [
+        "containment(noodle-cup, noodle-cup)",
+        "friction_sliding(noodle, on:microwave)",
+        "tool_contact(chopsticks, noodle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(noodle, on:microwave)": 30.0,
+        "containment(noodle-cup, noodle-cup)": 5.8333,
+        "tool_contact(chopsticks, noodle)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Chopsticks provide stable support for noodle-cup system without tool-contact-related instability.",
+      "signals": [
+        "support(chopsticks,noodle-cup)",
+        "grasp_stability(chopsticks,noodle-cup)",
+        "tool_contact(chopsticks,noodle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(chopsticks,noodle-cup)": 35.0,
+        "grasp_stability(chopsticks,noodle-cup)": 5.6667,
+        "tool_contact(chopsticks,noodle)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Hand holding the cup is stable and does not show signs of slipping.",
+      "signals": [
+        "hot_surface_contact(person,noodle-cup)",
+        "friction_sliding(person,noodle-cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(person,noodle-cup)": 34.1667,
+        "friction_sliding(person,noodle-cup)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Noodles maintain a continuous and natural flow during lifting.",
+      "signals": [
+        "continuity(noodles)",
+        "interpenetration(noodles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667,
+        "interpenetration(noodles)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Noodles maintain continuity and do not suddenly interpenetrate or disintegrate.",
+      "signals": [
+        "continuity(noodles)",
+        "interpenetration(noodles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667,
+        "interpenetration(noodles)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_036_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the drone remain airborne without touching the ground?",
+      "signals": [
+        "collision(drone,field)",
+        "collision(drone,building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(drone,field)": 31.6667,
+        "collision(drone,building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the drone maintain a stable height during its hover?",
+      "signals": [
+        "trajectory_dir(drone,axis)",
+        "accel_sign(drone,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(drone,axis)": 38.3333,
+        "accel_sign(drone,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the landing pad visible on the field for takeoff and landing?",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the drone match its position above the ground?",
+      "signals": [
+        "shadow_consistency(drone)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(drone)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the open field free of obstacles around the designated area?",
+      "signals": [
+        "support(drone,field)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(drone,field)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The drone maintains a stable hover position with consistent altitude and orientation.",
+      "signals": [
+        "continuity(oX)",
+        "center_of_mass_over_base(oX)",
+        "shadow_consistency(oX)",
+        "trajectory_dir(drone,axis)",
+        "accel_sign(drone,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(drone,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "shadow_consistency(oX)": 7.3333,
+        "accel_sign(drone,axis)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The drone remains airborne, its multi-rotor arms attached throughout the operation.",
+      "signals": [
+        "collision(drone,field)",
+        "collision(drone,building)",
+        "rigid_transform(drone)",
+        "deformation(drone)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(drone)": 40.0,
+        "rigid_transform(drone)": 7.5,
+        "collision(drone,field)": 6.3333,
+        "collision(drone,building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The field provides an open space for the drone to hover above it using multiple rotors.",
+      "signals": [
+        "support(drone,field)",
+        "rigid_transform(drone)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(drone)": 37.5,
+        "support(drone,field)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue landing pad supports the drone's takeoff and landing safely.",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the drone on the ground matches its current position and orientation.",
+      "signals": [
+        "shadow_consistency(drone)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(drone)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_066_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the red knob and display panel of the control box remain attached during interaction?",
+      "signals": [
+        "rigid_transform",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the blue machine stay stable on the table without tilting or falling, supported by the table?",
+      "signals": [
+        "balance",
+        "support",
+        "support(table,blue_machine)",
+        "support(table,white_box)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "support": 7.0,
+        "support(table,blue_machine)": 7.0,
+        "support(table,white_box)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the remote control's buttons visible in their original position throughout the scene while a person operates machinery nearby with safety equipment?",
+      "signals": [
+        "continuity(remote_control)",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(remote_control)": 36.6667,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the cables properly routed between the white box and the blue machine to avoid tripping hazards?",
+      "signals": [
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the digital display on the blue device showing changing values as part of active operation?",
+      "signals": [
+        "tool_usage_correct",
+        "tool_usage_correct(remote_control,for:motor)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct": 29.1667,
+        "tool_usage_correct(remote_control,for:motor)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red knob and display panel of the control box are attached and functional.",
+      "signals": [
+        "rigid_transform",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The blue machine remains stable on the table without tilting or falling.",
+      "signals": [
+        "balance",
+        "support",
+        "support(table,blue_machine)",
+        "support(table,white_box)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "support": 7.0,
+        "support(table,blue_machine)": 7.0,
+        "support(table,white_box)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The red button and other controls on the remote control maintain continuity in their position.",
+      "signals": [
+        "continuity(remote_control)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(remote_control)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A person operates machinery in an industrial setting with a yellow hard hat visible in the background.",
+      "signals": [
+        "friction_sliding"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person adjusts settings on the control box.",
+      "signals": [
+        "tool_usage_correct"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct": 29.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

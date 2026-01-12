@@ -1,0 +1,197 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_064_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the knife make a cuttable progress on the surface of the flatbread while its blade is oriented away from the person's body?",
+      "signals": [
+        "cuttable_progress(flatbread)",
+        "blade_orientation_away(knife,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.83,
+      "total_score_100": 83.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(knife,hand)": 29.1667,
+        "cuttable_progress(flatbread)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "During lifting, does the tongs support the lifted piece without dropping it and make a clean cut through the food?",
+      "signals": [
+        "cuttable_progress",
+        "support"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 39.67,
+      "total_score_100": 79.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "After being sliced, does the pie remain on the board with one piece held by tongs?",
+      "signals": [
+        "continuity",
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "support": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the tongs and hand holding them stable while supporting the edge of the flatbread, with the spatula positioned away from the blade?",
+      "signals": [
+        "grasp_stability(tongs,flatbread)",
+        "support(cutting-board,flatbread)",
+        "blade_orientation_away"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting-board,flatbread)": 35.0,
+        "blade_orientation_away": 5.8333,
+        "grasp_stability(tongs,flatbread)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "During cutting, does the hand holding the knife maintain a safe distance from fingers to avoid injury?",
+      "signals": [
+        "blade_orientation_away",
+        "cuttable_progress"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The knife makes a cuttable progress on the flatbread's surface.",
+      "signals": [
+        "cuttable_progress(flatbread)",
+        "blade_orientation_away(knife,hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(knife,hand)": 29.1667,
+        "cuttable_progress(flatbread)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The knife makes a clean, continuous cut through the flatbread.",
+      "signals": [
+        "cuttable_progress"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 23.33,
+      "total_score_100": 63.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress": 23.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "One piece of flatbread is held by green tongs after being sliced.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The remaining part of the flatbread stays on the wooden board.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand holding the spatula keeps distance from the blade.",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

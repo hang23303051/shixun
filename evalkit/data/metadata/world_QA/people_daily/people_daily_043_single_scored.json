@@ -1,0 +1,193 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_043_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the tires remain in place on the structure?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person maintain balance while standing on the stacked tires?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the rope and pole setup secure for climbing with hand and foot placement on the tires?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.33,
+      "total_score_100": 87.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the top tire stay firm under the person's grip as they climb?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.67,
+      "total_score_100": 85.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the individual's feet protected by appropriate footwear?",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person maintains balance while hanging from the rope and interacting with the tires.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tire stack supports the person's weight without collapsing.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The support structure for the tire stack is stable and capable of supporting combined weight.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's hand grasps the top tire firmly for stability.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "During climbing, the tires roll and rotate as expected under the person's weight.",
+      "signals": [
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

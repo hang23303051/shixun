@@ -1,0 +1,201 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_050_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      13.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do toppings fall naturally onto the yogurt from above?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the toppings maintain their position without sudden displacement and does the yogurt not show signs of melting?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does chocolate sauce flow downward consistently with gravity during pouring?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are all food items in consistent size relative to each other throughout the clip?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is everything shown safe for consumption?",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 37.5,
+      "total_score_100": 96.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Toppings fall naturally onto the frozen yogurt from above.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The toppings on the frozen yogurt maintain their position without sudden displacement.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 40.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The ice cream does not show signs of sudden deformation or melting under the added toppings.",
+      "signals": [
+        "deformation(oX)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 40.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "During the video, toppings fall naturally from above onto the yogurt, following gravity.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 31.67,
+      "total_score_100": 90.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The toppings' trajectory is consistent with their falling direction, not violating gravity.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "59"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_014_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      16.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tram move along the track in a straight direction without sudden changes?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "continuity(train)",
+        "wheel_rolling(train)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "wheel_rolling(train)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the tree visible through the tram window stationary relative to the ground?",
+      "signals": [
+        "continuity(tree)",
+        "trajectory_dir(tree,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tree,axis)": 38.3333,
+        "continuity(tree)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the front window and doors of the tram transparent, allowing visibility inside and outside?",
+      "signals": [
+        "reflection_consistency(train_window)",
+        "shadow_consistency(train_window)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(train_window)": 36.6667,
+        "reflection_consistency(train_window)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do people on the sidewalk near the tram maintain a safe distance from the moving train?",
+      "signals": [
+        "friction_sliding(person,on:track)",
+        "prohibited_intersection(person,train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,train)": 36.6667,
+        "friction_sliding(person,on:track)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there an advertisement displayed on the side of the tram promoting something?",
+      "signals": [
+        "material_optics(advertisement)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(advertisement)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red-black tram moves along the track with consistent motion and orientation.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "continuity(train)",
+        "wheel_rolling(train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "accel_sign(train,axis)": 7.0,
+        "wheel_rolling(train)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tree visible through the tram window remains stationary relative to the ground.",
+      "signals": [
+        "continuity(tree)",
+        "trajectory_dir(tree,axis)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(tree,axis)": 38.3333,
+        "continuity(tree)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Objects in the scene, such as trees and buildings, exhibit continuity without sudden size inconsistency.",
+      "signals": [
+        "continuity(building)",
+        "size_inconsistency(tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(tree)": 37.5,
+        "continuity(building)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "An advertisement for \"Dairy of Milk\" is displayed on the side of the tram.",
+      "signals": [
+        "material_optics(advertisement)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(advertisement)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "People on the sidewalk near the tram track maintain a safe distance from the moving train.",
+      "signals": [
+        "friction_sliding(person,on:track)",
+        "prohibited_intersection(person,train)"
+      ],
+      "content_score_60": 18,
+      "signal_score_40": 40.0,
+      "total_score_100": 58.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(person,train)": 36.6667,
+        "friction_sliding(person,on:track)": 6.0
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

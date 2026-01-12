@@ -1,0 +1,216 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_043_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      13.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cake stay on the baking tray without falling off?",
+      "signals": [
+        "containment(oA,oB)",
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand at the edge of the frame interact safely with the food item?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the knife make a continuous cut through the cake during slicing?",
+      "signals": [
+        "cuttable_progress(oObj)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(cake_cutting_tool)",
+        "cuttable_progress(cake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cake_cutting_tool)": 36.6667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "cuttable_progress(oObj)": 4.6667,
+        "cuttable_progress(cake)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the knife used to cut the cake, not to remove toppings?",
+      "signals": [
+        "tool_contact(knife,cake)",
+        "cuttable_progress(cake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.0,
+      "total_score_100": 83.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,cake)": 28.3333,
+        "cuttable_progress(cake)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Can the cake be sliced using the knife?",
+      "signals": [
+        "cuttable_progress(cake)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 23.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(cake)": 23.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Sliced plums and almond slices rest on the cake batter.",
+      "signals": [
+        "containment(oA,oB)",
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Almonds and fruit toppings stay in place, showing no signs of sudden displacement.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The cake remains on the plate without falling off during cutting.",
+      "signals": [
+        "support(oA,oB)",
+        "cuttable_progress(oObj)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "cuttable_progress(oObj)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The knife makes a continuous cut through the dessert.",
+      "signals": [
+        "continuity(cake_cutting_tool)",
+        "cuttable_progress(cake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cake_cutting_tool)": 36.6667,
+        "cuttable_progress(cake)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The knife is used to cut the cake, not to remove toppings.",
+      "signals": [
+        "tool_contact(knife,cake)",
+        "cuttable_progress(cake)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 33.0,
+      "total_score_100": 63.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "tool_contact(knife,cake)": 28.3333,
+        "cuttable_progress(cake)": 4.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

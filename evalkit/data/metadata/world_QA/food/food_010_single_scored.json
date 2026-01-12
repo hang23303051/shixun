@@ -1,0 +1,194 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_010_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      5.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the wooden cutting board support the loaf of bread and two slices?",
+      "signals": [
+        "supportable"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the knife stationary on the cutting board throughout the clip?",
+      "signals": [
+        "rigid_transform刀具",
+        "continuity刀具"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.0,
+      "total_score_100": 78.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform刀具": 23.3333,
+        "continuity刀具": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the hands holding the bread slice positioned away from the sharp knife blade?",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Has the knife sliced through the bread, showing cuttable progress?",
+      "signals": [
+        "cuttable_progress"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 23.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress": 23.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bread slice held by the hand show interpenetration with other objects?",
+      "signals": [
+        "interpenetration",
+        "support面包片,切菜板",
+        "grasp_stability手,面包片"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "support面包片,切菜板": 4.6667,
+        "grasp_stability手,面包片": 4.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The wooden cutting board supports the loaf of bread and two slices.",
+      "signals": [
+        "supportable"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The knife on the cutting board shows cuttable_progress as it has sliced through the bread, remaining stationary.",
+      "signals": [
+        "cuttable_progress",
+        "rigid_transform刀具",
+        "continuity刀具"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.67,
+      "total_score_100": 82.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress": 23.3333,
+        "rigid_transform刀具": 4.6667,
+        "continuity刀具": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The hands holding the bread are positioned away from the sharp knife blade.",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 29.17,
+      "total_score_100": 65.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The butter pat is placed on a glass dish with consistent shadow and reflection.",
+      "signals": [
+        "cast_shadow_contact黄油,阴影",
+        "reflection_consistency玻璃容器"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 28.0,
+      "total_score_100": 28.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact黄油,阴影": 23.3333,
+        "reflection_consistency玻璃容器": 4.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bread slice is held by the hand without interpenetration with other objects.",
+      "signals": [
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

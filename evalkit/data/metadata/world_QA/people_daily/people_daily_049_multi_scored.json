@@ -1,0 +1,205 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_049_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      13.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man hold the cell-phone steadily in his hand without sudden size change?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)",
+        "size_inconsistency(cell-phone)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cell-phone)": 37.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the woman's posture remain natural and consistent during the conversation?",
+      "signals": [
+        "continuity(person)",
+        "frame_discontinuity(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(person)": 40.0,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the tassel on the graduation cap attached to it throughout the clip?",
+      "signals": [
+        "interpenetration(tassel,graduation_cap)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(tassel,graduation_cap)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the woman standing at a safe distance from the wall, avoiding collision risk?",
+      "signals": [
+        "collision(woman,wall)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(woman,wall)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the person on the right match their position consistently?",
+      "signals": [
+        "cast_shadow_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The man holds the cell-phone steadily in his right hand.",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)",
+        "size_inconsistency(cell-phone)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cell-phone)": 37.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(oA,oB)": 6.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The woman's posture and movement are continuous during the conversation.",
+      "signals": [
+        "continuity(person)",
+        "frame_discontinuity(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(person)": 40.0,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Both persons exhibit natural biological motion consistent with casual interaction.",
+      "signals": [
+        "biological_motion(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The tassel on the graduation cap remains attached to the cap throughout.",
+      "signals": [
+        "interpenetration(tassel,graduation_cap)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(tassel,graduation_cap)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The wooden ceiling material optics match its texture and lighting.",
+      "signals": [
+        "material_optics"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

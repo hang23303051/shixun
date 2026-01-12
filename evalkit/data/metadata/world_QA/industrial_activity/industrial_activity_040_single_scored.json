@@ -1,0 +1,203 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_040_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.8
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the machine transform a straight steel bar into rectangular shapes?",
+      "signals": [
+        "tool_usage_correct(machine,for:steel-bar)",
+        "tool_contact(metallic-straight-bar,black-metal-machine)",
+        "grasp_stability(orange-glove-worn hand,metallic-straight-bar)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(machine,for:steel-bar)": 29.1667,
+        "tool_contact(metallic-straight-bar,black-metal-machine)": 5.6667,
+        "grasp_stability(orange-glove-worn hand,metallic-straight-bar)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the operator's hands protected by gloves?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the movement of the hand and rod continuous and consistent with physical motion?",
+      "signals": [
+        "continuity",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the tool contact between the bending die and the metal rod occur without interpenetration or collision?",
+      "signals": [
+        "tool_contact",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the machine bend a metal rod into rectangular shapes?",
+      "signals": [
+        "tool_usage_correct"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The machine transforms a straight steel bar into rectangular shapes.",
+      "signals": [
+        "tool_usage_correct(machine,for:steel-bar)",
+        "tool_contact(metallic-straight-bar,black-metal-machine)",
+        "grasp_stability(orange-glove-worn hand,metallic-straight-bar)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(machine,for:steel-bar)": 29.1667,
+        "tool_contact(metallic-straight-bar,black-metal-machine)": 5.6667,
+        "grasp_stability(orange-glove-worn hand,metallic-straight-bar)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hand places and adjusts the metal rod on the machine with stable grasp.",
+      "signals": [
+        "continuity",
+        "friction_sliding",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "friction_sliding": 6.0,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The operator's hands are protected by gloves during handling of materials.",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The machine bends a metal rod into rectangular shapes.",
+      "signals": [
+        "tool_usage_correct"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The tool contact between the bending die and the metal rod occurs without interpenetration.",
+      "signals": [
+        "tool_contact",
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

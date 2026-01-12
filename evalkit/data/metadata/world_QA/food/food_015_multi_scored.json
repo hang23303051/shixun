@@ -1,0 +1,195 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_015_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      12.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the person cutting a red bell pepper?",
+      "signals": [
+        "cuttable_progress(bell-pepper)",
+        "containment(onion,plastic-bag)"
+      ],
+      "content_score_60": 5,
+      "signal_score_40": 33.83,
+      "total_score_100": 38.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(onion,plastic-bag)": 29.1667,
+        "cuttable_progress(bell-pepper)": 4.6667
+      },
+      "content_score_raw": "5"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the knife blade point away from the person's hand while they hold the green pepper?",
+      "signals": [
+        "blade_orientation_away(knife,hand)",
+        "finger_clearance(hand,knife)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,knife)": 34.1667,
+        "blade_orientation_away(knife,hand)": 5.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the sliced peppers on the table stationary without sudden movement?",
+      "signals": [
+        "continuity(table-top)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(table-top)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the knife maintain a straight trajectory as it cuts through the pepper?",
+      "signals": [
+        "trajectory_dir(knife,axis)",
+        "rigid_transform(knife)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(knife,axis)": 38.3333,
+        "rigid_transform(knife)": 7.5
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows of the sliced peppers match their position and shape on the table?",
+      "signals": [
+        "shadow_consistency(sliced_peppers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(sliced_peppers)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person is cutting a red bell pepper and holding an onion in the plastic bag.",
+      "signals": [
+        "cuttable_progress(bell-pepper)",
+        "containment(onion,plastic-bag)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 33.83,
+      "total_score_100": 88.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(onion,plastic-bag)": 29.1667,
+        "cuttable_progress(bell-pepper)": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The knife blade orientation keeps fingers clear of the hand, preventing injury.",
+      "signals": [
+        "blade_orientation_away(knife,hand)",
+        "finger_clearance(hand,knife)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,knife)": 34.1667,
+        "blade_orientation_away(knife,hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The objects on the table remain in place without sudden movement or interpenetration.",
+      "signals": [
+        "continuity(table-top)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(table-top)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The knife maintains a consistent trajectory and orientation while cutting the pepper.",
+      "signals": [
+        "trajectory_dir(knife,axis)",
+        "rigid_transform(knife)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(knife,axis)": 38.3333,
+        "rigid_transform(knife)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the sliced peppers on the table remains consistent with their position and shape.",
+      "signals": [
+        "shadow_consistency(sliced_peppers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(sliced_peppers)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

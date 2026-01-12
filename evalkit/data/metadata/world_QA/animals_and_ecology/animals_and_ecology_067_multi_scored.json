@@ -1,0 +1,246 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_067_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the frog's body and limbs show sudden size inconsistency or unnatural motion?",
+      "signals": [
+        "continuity(frog)",
+        "size_inconsistency(frog)",
+        "interpenetration(frog,hand)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "size_inconsistency(frog)": 7.5,
+        "continuity(frog)": 7.3333,
+        "interpenetration(frog,hand)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand support the leaf without causing it to fall, while keeping the frog on its finger?",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "shadow_consistency(oX)",
+        "grasp_stability(oHand,oObj)",
+        "slip(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "grasp_stability(oHand,oObj)": 5.6667,
+        "slip(oA,on:oB)": 5.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the frog remain entirely on the human finger without interpenetration throughout the clip?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the frog exhibit natural amphibian movement without harmful contact with the hand?",
+      "signals": [
+        "biological_motion(oA)",
+        "state_change(oObj,from:state,to:state)",
+        "grasp_stability(hand,frog)",
+        "prohibited_intersection(hand,frog)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "state_change(oObj,from:state,to:state)": 7.5,
+        "prohibited_intersection(hand,frog)": 7.3333,
+        "grasp_stability(hand,frog)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the frog move naturally on the leaf surface across the entire video?",
+      "signals": [
+        "biological_motion(frog)",
+        "continuity(frog)",
+        "material_optics(frog)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(frog)": 38.3333,
+        "material_optics(frog)": 7.5,
+        "continuity(frog)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The frog remains on the leaf without interpenetration or collision with other objects.",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(frog)",
+        "size_inconsistency(frog)",
+        "interpenetration(frog,hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(frog)": 37.5,
+        "continuity(oX)": 7.3333,
+        "continuity(frog)": 7.3333,
+        "interpenetration(frog,hand)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hand supports the leaf, not causing it to fall or collide with the frog.",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "shadow_consistency(oX)",
+        "grasp_stability(hand,frog)",
+        "prohibited_intersection(hand,frog)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "prohibited_intersection(hand,frog)": 7.3333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "grasp_stability(hand,frog)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The frog's biological motion is natural and consistent with typical amphibian behavior.",
+      "signals": [
+        "biological_motion(oA)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "state_change(oObj,from:state,to:state)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The frog remains on the human finger without interpenetration.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand supports the frog without slipping.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "slip(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.83,
+      "total_score_100": 83.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "slip(oA,on:oB)": 5.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

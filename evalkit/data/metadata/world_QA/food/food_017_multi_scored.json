@@ -1,0 +1,219 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_017_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      16.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person use a spatula to press down on bread in the frying pan?",
+      "signals": [
+        "tool_contact(spatula,frying-pan)",
+        "hot_surface_contact(butter,frying-pan)",
+        "tool_usage_correct(spatula,for:placing butter)",
+        "tool_contact(spatula,bread)",
+        "hot_surface_contact(bread,frying-pan)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(butter,frying-pan)": 34.1667,
+        "hot_surface_contact(bread,frying-pan)": 6.8333,
+        "tool_usage_correct(spatula,for:placing butter)": 5.8333,
+        "tool_contact(spatula,frying-pan)": 5.6667,
+        "tool_contact(spatula,bread)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the sandwich half being lifted by the spatula towards the person's mouth?",
+      "signals": [
+        "tool_usage_correct(spatula,for:eat_sandwich)",
+        "grasp_stability(hand,sandwich-half)",
+        "tool_contact(spatula,sandwich-half)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "tool_usage_correct(spatula,for:eat_sandwich)": 5.8333,
+        "grasp_stability(hand,sandwich-half)": 5.6667,
+        "tool_contact(spatula,sandwich-half)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the two halves of the grilled sandwich still visible on the cutting board without moving suddenly?",
+      "signals": [
+        "continuity(sandwich-half)",
+        "support(cutting-board,sandwich-half)",
+        "containment(filling,sandwich-half)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sandwich-half)": 36.6667,
+        "support(cutting-board,sandwich-half)": 7.0,
+        "containment(filling,sandwich-half)": 5.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the butter spread naturally on the bread as it melts and is manipulated?",
+      "signals": [
+        "continuity",
+        "deformation"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the cheese melted inside the pan, not touching any heat source directly?",
+      "signals": [
+        "hot_surface_contact(frying-pan,none)",
+        "balance"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "hot_surface_contact(frying-pan,none)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person uses a spatula to place butter into a frying pan and press down on bread.",
+      "signals": [
+        "tool_contact(spatula,frying-pan)",
+        "hot_surface_contact(butter,frying-pan)",
+        "tool_usage_correct(spatula,for:placing butter)",
+        "tool_contact(spatula,bread)",
+        "hot_surface_contact(bread,frying-pan)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(butter,frying-pan)": 34.1667,
+        "hot_surface_contact(bread,frying-pan)": 6.8333,
+        "tool_usage_correct(spatula,for:placing butter)": 5.8333,
+        "tool_contact(spatula,frying-pan)": 5.6667,
+        "tool_contact(spatula,bread)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person uses a spatula to lift half of a grilled sandwich towards their mouth.",
+      "signals": [
+        "tool_usage_correct(spatula,for:eat_sandwich)",
+        "grasp_stability(hand,sandwich-half)",
+        "tool_contact(spatula,sandwich-half)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spatula,for:eat_sandwich)": 29.1667,
+        "grasp_stability(hand,sandwich-half)": 5.6667,
+        "tool_contact(spatula,sandwich-half)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The two halves of the grilled sandwich remain in position on the cutting board.",
+      "signals": [
+        "continuity(sandwich-half)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sandwich-half)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hand holding the spatula moves naturally without interpenetration with other objects.",
+      "signals": [
+        "biological_motion(person)",
+        "grasp_stability(hand,sandwich-half)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "grasp_stability(hand,sandwich-half)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Butter spreads out, showing natural deformation as it is placed onto the bread.",
+      "signals": [
+        "deformation"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

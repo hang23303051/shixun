@@ -1,0 +1,230 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/sports_competition/sports_competition_010_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water splash consistently follow the direction of the oar's movement?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "friction_sliding(oA,on:oB)",
+        "tool_contact(oTool,oObj)",
+        "slosh_response(oV,amp)",
+        "trajectory_dir(oar,axis)",
+        "buoyancy_float(water,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oar,axis)": 38.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333,
+        "buoyancy_float(water,in:water)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the rower maintain balance and proper alignment with the boat?",
+      "signals": [
+        "balance(oX)",
+        "material_optics(oA)",
+        "balance(rower)",
+        "center_of_mass_over_base(rower)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "balance(oX)": 7.1667,
+        "balance(rower)": 7.1667,
+        "center_of_mass_over_base(rower)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the boat stay stable on the water surface without falling hazard during paddling?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "falling_hazard(oObj)",
+        "biological_motion(rower)",
+        "friction_sliding(rower,on:boat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(rower)": 38.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(rower,on:boat)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the oar maintain a consistent trajectory relative to the water surface throughout the motion?",
+      "signals": [
+        "trajectory_dir(oar,axis)",
+        "tool_contact(oar,water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oar,axis)": 38.3333,
+        "tool_contact(oar,water)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the oar used correctly for propelling the boat through the water?",
+      "signals": [
+        "tool_usage_correct(oar,for:rowing)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oar,for:rowing)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The water splash follows the direction of the oar's movement and maintains continuity.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "friction_sliding(oA,on:oB)",
+        "tool_contact(oTool,oObj)",
+        "slosh_response(oV,amp)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rower's body posture demonstrates balance without material optics distortion.",
+      "signals": [
+        "balance(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The boat remains stable on the water surface during the rowing action.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The water splashes consistently follow the direction of the oar's movement.",
+      "signals": [
+        "trajectory_dir(oar,axis)",
+        "buoyancy_float(water,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oar,axis)": 38.3333,
+        "buoyancy_float(water,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rower's body posture shows proper alignment with the boat.",
+      "signals": [
+        "balance(rower)",
+        "center_of_mass_over_base(rower)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(rower)": 35.8333,
+        "center_of_mass_over_base(rower)": 6.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

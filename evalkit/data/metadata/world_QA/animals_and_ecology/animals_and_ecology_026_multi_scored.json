@@ -1,0 +1,201 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/animals_and_ecology/animals_and_ecology_026_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      11.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do lions bite down on the caribou to immobilize it?",
+      "signals": [
+        "biological_motion(lion)",
+        "biological_motion(hyena)",
+        "action_phase(eating,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lion)": 38.3333,
+        "biological_motion(hyena)": 7.6667,
+        "action_phase(eating,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the prey's movement get restricted by the lion's jaws?",
+      "signals": [
+        "biological_motion(lion)",
+        "friction_sliding(prey,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lion)": 38.3333,
+        "friction_sliding(prey,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the ground support the weight of multiple animals without collapse?",
+      "signals": [
+        "support(ground,animal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ground,animal)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the blood and body part bitten by lions continuous across the clip?",
+      "signals": [
+        "continuity(blood)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(blood)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are hyenas also interacting with the same carcass as the lions?",
+      "signals": [
+        "biological_motion(lion)",
+        "biological_motion(hyena)",
+        "action_phase(eating,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lion)": 38.3333,
+        "biological_motion(hyena)": 7.6667,
+        "action_phase(eating,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Lions and hyenas interact with a caribou carcass in a natural setting.",
+      "signals": [
+        "biological_motion(lion)",
+        "biological_motion(hyena)",
+        "action_phase(eating,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lion)": 38.3333,
+        "biological_motion(hyena)": 7.6667,
+        "action_phase(eating,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The lion bites down hard on the prey to immobilize it.",
+      "signals": [
+        "biological_motion(lion)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lion)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Blood and body parts bitten by the lions show continuity without sudden disappearance.",
+      "signals": [
+        "continuity(blood)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(blood)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ground supports the weight of multiple animals without deformation.",
+      "signals": [
+        "support(ground,animal)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ground,animal)": 35.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lion's jaws apply force to restrict the prey's movement.",
+      "signals": [
+        "biological_motion(lion)",
+        "friction_sliding(prey,on:ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lion)": 38.3333,
+        "friction_sliding(prey,on:ground)": 6.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

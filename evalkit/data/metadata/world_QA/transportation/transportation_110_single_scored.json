@@ -1,0 +1,180 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_110_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 4,
+    "clip_range_sec": [
+      0.0,
+      8.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bus move forward with its wheels rolling consistently on the ground?",
+      "signals": [
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the bus maintaining a safe distance from the fence and power lines in front of it?",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the objects align correctly with their positions under the current lighting?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the bus following standard traffic rules near the road markings and signals?",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the open door at the back of the bus for passengers to enter or exit?",
+      "signals": [
+        "openable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(oContainer)": 25.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bus's wheels roll consistently on the ground without sudden changes in direction.",
+      "signals": [
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(oX)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bus maintains a safe distance from nearby fences and power lines to prevent collisions.",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The door of the bus is openable for passengers to enter or exit.",
+      "signals": [
+        "openable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(oContainer)": 25.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bus follows standard traffic rules near traffic signals and power lines.",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 30.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bus is designed to transport passengers along designated routes, indicated by road markings.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "a1",
+    "a5"
+  ]
+}

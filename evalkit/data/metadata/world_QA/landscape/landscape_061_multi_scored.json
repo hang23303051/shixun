@@ -1,0 +1,214 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_061_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sailboat on the right stay afloat in the water with its hull supported by buoyancy?",
+      "signals": [
+        "buoyancy_float(sailboat,in:water)",
+        "buoyancy_float(sailboat,right,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(sailboat,in:water)": 34.1667,
+        "buoyancy_float(sailboat,right,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the smaller sailboat maintain continuity of position relative to the larger boat and shore?",
+      "signals": [
+        "continuity(trees)",
+        "continuity(buildings)",
+        "continuity(small_sailboat,left)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(trees)": 36.6667,
+        "continuity(buildings)": 7.3333,
+        "continuity(small_sailboat,left)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water exhibit natural amplitude changes throughout the video?",
+      "signals": [
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oV,amp)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the boats remain placeable at their current positions without suddenly disappearing or merging with other objects?",
+      "signals": [
+        "supportable(oObj,by:oSurface)",
+        "placeable(oObj,at:oTarget)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "supportable(oObj,by:oSurface)": 5.3333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows cast by trees consistently align with their respective object shapes and light source direction?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The trees and buildings in the background remain stationary.",
+      "signals": [
+        "continuity(trees)",
+        "continuity(buildings)",
+        "deformation",
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "continuity(trees)": 7.3333,
+        "continuity(buildings)": 7.3333,
+        "interpenetration": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The sailboat is on the water surface, supported by the lake's body.",
+      "signals": [
+        "supportable(oObj,by:oSurface)",
+        "placeable(oObj,at:oTarget)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "supportable(oObj,by:oSurface)": 5.3333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The smaller sailboat maintains continuity of position relative to the larger boat and shore.",
+      "signals": [
+        "continuity(small_sailboat,left)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(small_sailboat,left)": 36.6667,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by fences align with their respective light sources and object shapes.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "friction_sliding(oA,on:oB)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The house and surrounding vegetation appear stable without signs of collapse.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

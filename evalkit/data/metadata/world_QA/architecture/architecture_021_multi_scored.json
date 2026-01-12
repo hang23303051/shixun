@@ -1,0 +1,232 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_021_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      19.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the armchair on the left stay in its position without moving?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of the plants and furniture align with the light source direction throughout the clip?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "reflection_consistency(oX)",
+        "shadow_consistency(outdoor-pool-area)",
+        "shadow_consistency(living-room)",
+        "shadow_consistency(bedroom-interior)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(outdoor-pool-area)": 7.3333,
+        "shadow_consistency(living-room)": 7.3333,
+        "shadow_consistency(bedroom-interior)": 7.3333,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the potted plants on the pergola remain supported by the surface below them?",
+      "signals": [
+        "continuity(outdoor-pool-area)",
+        "interpenetration(oA,oB)",
+        "support(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(outdoor-pool-area)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the armchair maintain balance on the solid floor, avoiding tipping?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "balance(oX)": 7.1667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any unexpected movements or collisions involving objects that violate safety norms?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The armchair and potted plants remain in their positions without sudden movement or disappearance.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Natural light from the large windows creates consistent shadows on the floor and pool deck.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "reflection_consistency(oX)",
+        "shadow_consistency(outdoor-pool-area)",
+        "shadow_consistency(living-room)",
+        "shadow_consistency(bedroom-interior)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(outdoor-pool-area)": 7.3333,
+        "shadow_consistency(living-room)": 7.3333,
+        "shadow_consistency(bedroom-interior)": 7.3333,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The armchair is placed stably on the solid wooden platform, maintaining balance.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The outdoor area with a plant and chair remains continuous and stable throughout the video.",
+      "signals": [
+        "continuity(outdoor-pool-area)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(outdoor-pool-area)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The potted plants on the pergola are supported by it, preventing falling hazards.",
+      "signals": [
+        "support(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

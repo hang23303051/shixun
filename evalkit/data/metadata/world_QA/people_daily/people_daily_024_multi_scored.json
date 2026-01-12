@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_024_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person standing on another's shoulders maintain balance without falling?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the candles stable and not flickering excessively near people?",
+      "signals": [
+        "size_inconsistency(light)",
+        "flame_proximity(candle, performer)",
+        "hot_surface_contact(performer, candle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(light)": 37.5,
+        "flame_proximity(candle, performer)": 6.8333,
+        "hot_surface_contact(performer, candle)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the performer in a white shirt keeping their hair away from open flames?",
+      "signals": [
+        "flame_proximity(hat,dist)",
+        "friction_sliding(table,on:floor)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(hat,dist)": 34.1667,
+        "friction_sliding(table,on:floor)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the objects on the table remain supported by the table surface throughout?",
+      "signals": [
+        "falling_hazard(table)",
+        "support(table,light)",
+        "balance(table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(table)": 35.8333,
+        "support(table,light)": 7.0,
+        "falling_hazard(table)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Can the individual stand safely on someone else's shoulders?",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person stands near a table with candles, maintaining a safe distance.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "flame_proximity(candle, performer)",
+        "hot_surface_contact(performer, candle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "flame_proximity(candle, performer)": 6.8333,
+        "hot_surface_contact(performer, candle)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The performer in the white shirt holds an object away from their body to avoid flame proximity.",
+      "signals": [
+        "flame_proximity(hat,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(hat,dist)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Candles on the table remain supported and do not fall or collide with other objects.",
+      "signals": [
+        "falling_hazard(table)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(table)": 31.6667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "People hold phones while standing at the table.",
+      "signals": [
+        "grasp_stability(hand, phone)",
+        "tool_usage_correct(phone, for: capturing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(phone, for: capturing)": 29.1667,
+        "grasp_stability(hand, phone)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A person stands on another person's shoulders, maintaining balance.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

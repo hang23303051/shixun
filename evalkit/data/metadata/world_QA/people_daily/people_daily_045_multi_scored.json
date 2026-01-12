@@ -1,0 +1,240 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_045_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the liquid flow smoothly from the bottle into the jigger without spillage?",
+      "signals": [
+        "tool_contact(jigger,hand)",
+        "tool_contact(jigger,container)",
+        "balance(jigger)",
+        "pour_direction(liquid,axis)",
+        "viscosity_effect(liquid)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(jigger)": 35.8333,
+        "viscosity_effect(liquid)": 6.8333,
+        "tool_contact(jigger,hand)": 5.6667,
+        "tool_contact(jigger,container)": 5.6667,
+        "pour_direction(liquid,axis)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the liquid transfer continuously from the bottle to the jigger and then pour into the shot-glass under gravity?",
+      "signals": [
+        "pour_direction(liquid,axis)",
+        "tool_contact(jigger,shot-glass)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(liquid)": 36.6667,
+        "pour_direction(liquid,axis)": 5.6667,
+        "tool_contact(jigger,shot-glass)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the ice cubes in the glass remain stable during pouring, with no spilling or interpenetration?",
+      "signals": [
+        "support(glass,ice)",
+        "support(ice,shot-glass)",
+        "containment(ice,shot-glass)",
+        "continuity(ice)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ice)": 36.6667,
+        "support(glass,ice)": 7.0,
+        "support(ice,shot-glass)": 7.0,
+        "containment(ice,shot-glass)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the jigger allow for precise measurement of a small volume of liquid as intended?",
+      "signals": [
+        "tool_usage_correct(jigger,for:measuring)",
+        "tool_usage_correct(jigger,for:measuring liquid)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(jigger,for:measuring)": 29.1667,
+        "tool_usage_correct(jigger,for:measuring liquid)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the open bottle handle securely on the bar mat support its weight without collapsing?",
+      "signals": [
+        "openable(container)",
+        "grasp_stability(hand,container)",
+        "spillage(liquid)",
+        "support(glass,by:bar mat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(glass,by:bar mat)": 35.0,
+        "grasp_stability(hand,container)": 5.6667,
+        "spillage(liquid)": 5.6667,
+        "openable(container)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person uses a jigger to measure and pour liquid from the bottle.",
+      "signals": [
+        "tool_usage_correct(jigger,for:measuring liquid)",
+        "tool_contact(jigger,liquid)",
+        "tool_contact(jigger,shot-glass)",
+        "tool_contact(ice,glass)",
+        "placeable(ice,at:glass)",
+        "pour_direction(liquid,axis)",
+        "viscosity_effect(liquid)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "viscosity_effect(liquid)": 34.1667,
+        "tool_usage_correct(jigger,for:measuring liquid)": 5.8333,
+        "tool_contact(jigger,liquid)": 5.6667,
+        "tool_contact(jigger,shot-glass)": 5.6667,
+        "tool_contact(ice,glass)": 5.6667,
+        "pour_direction(liquid,axis)": 5.6667,
+        "placeable(ice,at:glass)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Ice cubes in the shot-glass do not spill during handling.",
+      "signals": [
+        "support(ice,shot-glass)",
+        "containment(ice,shot-glass)",
+        "continuity(ice)",
+        "support(glass,ice)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ice)": 36.6667,
+        "support(ice,shot-glass)": 7.0,
+        "support(glass,ice)": 7.0,
+        "containment(ice,shot-glass)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Liquid flows from the Ritual Zero Alcohol bottle into the jigger, then transfers to the glass.",
+      "signals": [
+        "pour_direction(liquid,axis)",
+        "tool_contact(jigger,shot-glass)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(liquid,axis)": 28.3333,
+        "tool_contact(jigger,shot-glass)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The metal jigger maintains balance while measuring and pouring liquid.",
+      "signals": [
+        "tool_contact(jigger,hand)",
+        "tool_contact(jigger,container)",
+        "balance(jigger)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(jigger)": 35.8333,
+        "tool_contact(jigger,hand)": 5.6667,
+        "tool_contact(jigger,container)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The open bottle of Ritual Zero Alcohol is held securely without leakage.",
+      "signals": [
+        "openable(container)",
+        "grasp_stability(hand,container)",
+        "spillage(liquid)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,container)": 28.3333,
+        "spillage(liquid)": 5.6667,
+        "openable(container)": 5.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

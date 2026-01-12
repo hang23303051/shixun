@@ -1,0 +1,200 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/food/food_052_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      11.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sausage mixture stay contained within the piping tool without spillage?",
+      "signals": [
+        "pourable(oContainer)",
+        "tool_contact(oTool,oObj)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the fork's trajectory match the action of adding sauce to the food?",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the bell peppers placed on the plate without interpenetration?",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the white cream have a natural flow when being added to the dish?",
+      "signals": [
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do utensils and objects maintain physical consistency and avoid interpenetration?",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The sausage mixture is contained within the piping tool during pouring.",
+      "signals": [
+        "pourable(oContainer)",
+        "tool_contact(oTool,oObj)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The fork's trajectory matches adding sauce to the food.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bell peppers are placed on the plate without interpenetration.",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.83,
+      "total_score_100": 65.83,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The white cream flows naturally when added to the dish.",
+      "signals": [
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fork and piping tool maintain physical consistency without interpenetration.",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

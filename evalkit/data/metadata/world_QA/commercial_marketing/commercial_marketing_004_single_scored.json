@@ -1,0 +1,216 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/commercial_marketing/commercial_marketing_004_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the watch remain supported by the hand without floating or falling?",
+      "signals": [
+        "support(hand,watch)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(hand,watch)": 35.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the text 'THE WEAR YOUR FUTURE TENSE' consistently visible and in its position at the bottom of the image?",
+      "signals": [
+        "continuity(text)",
+        "shadow_consistency(hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text)": 36.6667,
+        "shadow_consistency(hand)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the watch stay on the hand without interpenetration, showing grasp stability as a small object is held?",
+      "signals": [
+        "interpenetration(hand,watch)",
+        "collision(hand,watch)",
+        "grasp_stability(hand,watch)",
+        "slip(hand,watch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(hand,watch)": 35.8333,
+        "collision(hand,watch)": 6.3333,
+        "grasp_stability(hand,watch)": 5.6667,
+        "slip(hand,watch)": 5.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadow of the hand and watch maintain consistency with their physical positions under the light source?",
+      "signals": [
+        "material_optics(watch)",
+        "shadow_consistency(watch)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(watch)": 37.5,
+        "shadow_consistency(watch)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Across the clip, does the phrase 'WEAR YOUR FUTURE' keep consistent size relative to the black background?",
+      "signals": [
+        "frame_discontinuity(text)",
+        "size_inconsistency(text)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(text)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "size_inconsistency(text)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The watch is held in the hand without interpenetration or collision.",
+      "signals": [
+        "support(hand,watch)",
+        "interpenetration(hand,watch)",
+        "collision(hand,watch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(hand,watch)": 35.8333,
+        "support(hand,watch)": 7.0,
+        "collision(hand,watch)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The text 'WEAR YOUR FUTURE' remains consistently printed on the black background.",
+      "signals": [
+        "continuity(text)",
+        "frame_discontinuity(text)",
+        "size_inconsistency(text)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(text)": 40.0,
+        "size_inconsistency(text)": 7.5,
+        "continuity(text)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the hand and watch maintains consistency with their physical positions.",
+      "signals": [
+        "shadow_consistency(hand)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(hand)": 36.6667,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The rose-gold watch face and black band maintain material optics and shadow consistency.",
+      "signals": [
+        "material_optics(watch)",
+        "shadow_consistency(watch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(watch)": 37.5,
+        "shadow_consistency(watch)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text 'THE WEAR YOUR FUTURE TENSE' at the bottom does not change position abruptly.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

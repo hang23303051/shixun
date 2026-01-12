@@ -1,0 +1,205 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_032_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the person bending over near a body of water?",
+      "signals": [
+        "falling_hazard(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(water)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the eel's motion look natural in its environment?",
+      "signals": [
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the blue pipe used to transfer contents between containers?",
+      "signals": [
+        "tool_usage_correct(pipe,for:transfer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(pipe,for:transfer)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water in the bucket show sloshing when moved?",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Can the blue pipe pour water into or out of containers?",
+      "signals": [
+        "tool_usage_correct"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person uses the blue pipe to transfer water and snakes from the pond into the white bucket.",
+      "signals": [
+        "tool_contact(pipe,pond)",
+        "tool_contact(pipe,bucket)",
+        "pour_direction(pond,axis:up)",
+        "leakage(bucket,from:pipe)",
+        "tool_usage_correct(pipe,for:transfer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage(bucket,from:pipe)": 29.1667,
+        "tool_usage_correct(pipe,for:transfer)": 5.8333,
+        "tool_contact(pipe,pond)": 5.6667,
+        "tool_contact(pipe,bucket)": 5.6667,
+        "pour_direction(pond,axis:up)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The snake in the bucket is inside without interpenetration with other objects.",
+      "signals": [
+        "tool_contact(pipe,water)",
+        "tool_contact(pipe,bucket)",
+        "action_phase(catch,phase)",
+        "containment(bucket,snake)",
+        "interpenetration(bucket,snake)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bucket,snake)": 35.8333,
+        "containment(bucket,snake)": 5.8333,
+        "tool_contact(pipe,water)": 5.6667,
+        "tool_contact(pipe,bucket)": 5.6667,
+        "action_phase(catch,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person bends over near a body of water, maintaining a safe distance from falling hazard.",
+      "signals": [
+        "falling_hazard(water)",
+        "falling_hazard"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(water)": 31.6667,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Snakes on the ground and in buckets move naturally.",
+      "signals": [
+        "biological_motion(snakes)",
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(snakes)": 38.3333,
+        "biological_motion": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The water in the bucket shows slosh response when moved.",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

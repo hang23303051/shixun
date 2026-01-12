@@ -1,0 +1,226 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_033_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      15.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water surface stay continuous and consistent with its surrounding environment?",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(person,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "buoyancy_float(person,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do people swimming or floating on their backs maintain a stable posture while wearing life jackets?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do swimmers near rocky edges avoid falling hazards by staying clear of unstable areas, maintaining support with the rock surfaces?",
+      "signals": [
+        "falling_hazard(rocks)",
+        "biological_motion(swimmer)",
+        "support(person,rock)",
+        "material_optics(rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(swimmer)": 38.3333,
+        "material_optics(rock)": 7.5,
+        "support(person,rock)": 7.0,
+        "falling_hazard(rocks)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do rocks in the scene maintain their physical properties and positions without sudden changes or interpenetration throughout the clip?",
+      "signals": [
+        "rigid_transform(rocks)",
+        "support(rocks,rocks)",
+        "rigid_transform(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(rocks)": 37.5,
+        "rigid_transform(oX)": 7.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(rocks,rocks)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the water remain in its natural state and exhibit continuity for objects within it?",
+      "signals": [
+        "continuity(water)",
+        "continuity(oX)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "continuity(oX)": 7.3333,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Yellow buoys on the string move in a straight line across the water.",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign",
+        "rigid_transform(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "rigid_transform(oX)": 7.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "People swim near rocky edges without falling into gaps or unstable areas.",
+      "signals": [
+        "support(person,rock)",
+        "material_optics(rock)",
+        "falling_hazard(rocks)",
+        "biological_motion(swimmer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(swimmer)": 38.3333,
+        "material_optics(rock)": 7.5,
+        "support(person,rock)": 7.0,
+        "falling_hazard(rocks)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The water surface is continuous and reflects rocks, with no sudden changes.",
+      "signals": [
+        "continuity(oX)",
+        "reflection_consistency(oX)",
+        "continuity(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(water)": 7.3333,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Water maintains buoyancy for swimmers and does not disappear from the pool.",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(person,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "buoyancy_float(person,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Swimmers wear life jackets that provide support while floating.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

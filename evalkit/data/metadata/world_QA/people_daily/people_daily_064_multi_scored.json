@@ -1,0 +1,218 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/people_daily/people_daily_064_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the drum set remain stable on its stand throughout the performance?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the shadows of the keyboardist and equipment consistent with their positions under the stage lighting?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "shadow_consistency(oX)",
+        "shadow_consistency(keyboardist)",
+        "material_optics(keyboard)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "material_optics(keyboard)": 7.5,
+        "shadow_consistency(oX)": 7.3333,
+        "shadow_consistency(keyboardist)": 7.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the performers maintain physical consistency without sudden disappearance or merging between frames?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the microphone properly supported by the singer's hand during his movement across the clip?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do all visible items, including people and instruments, show gravity effects that are physically plausible?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The drum set and keyboard remain stable on the stage.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Performers do not interpenetrate or suddenly disappear during the performance.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows of performers and equipment are consistent in size and position under lighting.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Stage lighting creates shadows that match the positions and material optics of objects.",
+      "signals": [
+        "shadow_consistency(keyboardist)",
+        "material_optics(keyboard)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(keyboard)": 37.5,
+        "shadow_consistency(keyboardist)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Gravity effects, such as standing posture, are consistently applied to all visible items.",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

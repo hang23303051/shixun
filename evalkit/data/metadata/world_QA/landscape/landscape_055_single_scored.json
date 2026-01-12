@@ -1,0 +1,205 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/landscape/landscape_055_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the moon maintain a consistent size and position relative to the horizon throughout the clip?",
+      "signals": [
+        "continuity(moon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(moon)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person walking near the water maintaining a safe distance from the edge of the dock?",
+      "signals": [
+        "continuity(person)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water surface reflect light consistently and support floating boats without sudden changes in texture or color?",
+      "signals": [
+        "buoyancy_float(boats,in:water)",
+        "material_optics(water)",
+        "reflection_consistency(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5,
+        "reflection_consistency(water)": 7.0,
+        "buoyancy_float(boats,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the dock and boats stationary, with the person not at risk of falling into the water due to instability or improper balance?",
+      "signals": [
+        "balance(dock)",
+        "buoyancy_float(boats,in:water)",
+        "balance(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dock)": 35.8333,
+        "balance(person)": 7.1667,
+        "buoyancy_float(boats,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there a continuous movement of a person wearing a red shirt along the dock?",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The moon maintains a consistent size and position relative to the horizon.",
+      "signals": [
+        "continuity(moon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(moon)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The dock and boats are stationary, with no signs of instability or risk of falling into the water.",
+      "signals": [
+        "balance(dock)",
+        "buoyancy_float(boats,in:water)",
+        "balance(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dock)": 35.8333,
+        "balance(person)": 7.1667,
+        "buoyancy_float(boats,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person walks along the dock safely, maintaining a distance from the edge.",
+      "signals": [
+        "continuity(person)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The water surface reflects light consistently, showing a natural state without sudden changes.",
+      "signals": [
+        "material_optics(water)",
+        "reflection_consistency(water)",
+        "buoyancy_float(boats,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5,
+        "reflection_consistency(water)": 7.0,
+        "buoyancy_float(boats,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The dock provides support for the person's weight as they stand on it.",
+      "signals": [
+        "support(person,dock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person,dock)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/architecture/architecture_026_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      17.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tall golden building maintain its shape and size throughout the clip?",
+      "signals": [
+        "continuity(e1)",
+        "continuity(e2)",
+        "size_inconsistency(e1)",
+        "size_inconsistency(e2)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(e1)": 37.5,
+        "size_inconsistency(e2)": 7.5,
+        "continuity(e1)": 7.3333,
+        "continuity(e2)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the people on the bridge move continuously without sudden jumps?",
+      "signals": [
+        "continuity(e1)",
+        "size_inconsistency(e1)",
+        "interpenetration(e2)",
+        "falling_hazard(e2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(e1)": 37.5,
+        "continuity(e1)": 7.3333,
+        "interpenetration(e2)": 7.1667,
+        "falling_hazard(e2)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the central skyscraper a single, unbroken structure from start to finish?",
+      "signals": [
+        "continuity(e1)",
+        "continuity(e2)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(e1)": 36.6667,
+        "continuity(e2)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do all objects in the scene have their center of mass over their base at all times?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "center_of_mass_over_base(e1)",
+        "center_of_mass_over_base(e2)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "center_of_mass_over_base(e1)": 6.5,
+        "center_of_mass_over_base(e2)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the text \"Like & Sub\" visible across the entire video?",
+      "signals": [
+        "size_inconsistency(\"Like & Sub\")"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(\"Like & Sub\")": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tall golden building remains a single continuous structure with consistent size and shape.",
+      "signals": [
+        "continuity(e1)",
+        "continuity(e2)",
+        "size_inconsistency(e1)",
+        "size_inconsistency(e2)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(e1)": 37.5,
+        "size_inconsistency(e2)": 7.5,
+        "continuity(e1)": 7.3333,
+        "continuity(e2)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Tall buildings in the scene remain upright without sudden collapse or floating.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(e1)",
+        "continuity(e2)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(e1)": 36.6667,
+        "continuity(e2)": 7.3333,
+        "balance(oX)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "People at the bottom of the frame maintain consistent positions relative to each other and the ground.",
+      "signals": [
+        "interpenetration(e2)",
+        "falling_hazard(e2)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(e2)": 35.8333,
+        "falling_hazard(e2)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text \"Like & Sub\" appears consistently on the screen throughout the video.",
+      "signals": [
+        "size_inconsistency(\"Like & Sub\")"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(\"Like & Sub\")": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Objects, including people and plants, maintain appropriate size and do not interpenetrate.",
+      "signals": [
+        "continuity(e1)",
+        "size_inconsistency(e1)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(e1)": 37.5,
+        "continuity(e1)": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

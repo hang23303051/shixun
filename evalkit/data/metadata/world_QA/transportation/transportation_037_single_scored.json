@@ -1,0 +1,214 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_037_single.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the 'No Trespassing' sign visible on the fence during the train's approach?",
+      "signals": [
+        "prohibited_intersection(fence,platform)",
+        "falling_hazard(train)",
+        "continuity(sign)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(fence,platform)": 36.6667,
+        "continuity(sign)": 7.3333,
+        "falling_hazard(train)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the green train move forward along the track without abrupt changes in speed or direction while approaching?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "trajectory_dir(train_left,axis)",
+        "accel_sign(train_left,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "trajectory_dir(train_left,axis)": 7.6667,
+        "accel_sign(train,axis)": 7.0,
+        "accel_sign(train_left,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the metal fence act as a barrier between the railway tracks and the surrounding area, preventing unauthorized entry?",
+      "signals": [
+        "support(fence,platform)",
+        "prohibited_intersection(fence,train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(fence,train)": 36.6667,
+        "support(fence,platform)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the platform edge marked with yellow number '3' near the left side of the frame?",
+      "signals": [
+        "containment(train,platform)",
+        "support(platform,train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,train)": 35.0,
+        "containment(train,platform)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow cast by the round object align consistently with its position relative to the sun throughout the clip?",
+      "signals": [
+        "shadow_consistency(round_object)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(round_object)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The green train moves forward along the track, while the red train in the distance is stationary.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "trajectory_dir(train_left,axis)",
+        "accel_sign(train_left,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "trajectory_dir(train_left,axis)": 7.6667,
+        "accel_sign(train,axis)": 7.0,
+        "accel_sign(train_left,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The metal fence separates the railway tracks from the surrounding area and prevents unauthorized entry.",
+      "signals": [
+        "support(fence,platform)",
+        "prohibited_intersection(fence,train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(fence,train)": 36.6667,
+        "support(fence,platform)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A 'No Trespassing' sign on the fence warns pedestrians of restricted access during the train's approach.",
+      "signals": [
+        "prohibited_intersection(fence,platform)",
+        "falling_hazard(train)",
+        "continuity(sign)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(fence,platform)": 36.6667,
+        "continuity(sign)": 7.3333,
+        "falling_hazard(train)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The platform edge has a yellow number '3' marking its designated position for safe boarding.",
+      "signals": [
+        "containment(train,platform)",
+        "support(platform,train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,train)": 35.0,
+        "containment(train,platform)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow cast by the round object aligns with its position relative to the sun.",
+      "signals": [
+        "shadow_consistency(round_object)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(round_object)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

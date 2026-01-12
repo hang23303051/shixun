@@ -1,0 +1,190 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/transportation/transportation_044_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      13.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the helicopter remain stable on the grassy surface with its landing skids?",
+      "signals": [
+        "trajectory_dir(helicopter,axis)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(helicopter,axis)": 38.3333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the main rotor blades of the helicopter in continuous motion?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person inside the helicopter stay seated without sudden movements?",
+      "signals": [
+        "support(person,helicopter)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person,helicopter)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person maintain a firm grip on the control stick while operating the helicopter?",
+      "signals": [
+        "grasp_stability",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the green fuel tank show slosh response when the helicopter moves?",
+      "signals": [
+        "slosh_response(green_container,amp)",
+        "slosh_response"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(green_container,amp)": 34.1667,
+        "slosh_response": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The helicopter is supported by its landing skids and remains stable on the grassy surface.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person inside the helicopter remains seated and does not exhibit any sudden or unsupported movements.",
+      "signals": [
+        "support(person,helicopter)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person,helicopter)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The main rotor blades of the helicopter are in continuous motion.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 21,
+      "signal_score_40": 36.67,
+      "total_score_100": 57.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The green liquid in the container exhibits slosh response when the helicopter moves.",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person operating the helicopter maintains a firm grip on the control stick.",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

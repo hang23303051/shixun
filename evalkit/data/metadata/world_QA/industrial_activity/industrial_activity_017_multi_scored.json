@@ -1,0 +1,206 @@
+{
+  "video": "/root/autodl-tmp/aiv/data/refvideo/industrial_activity/industrial_activity_017_multi.mp4",
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      10.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the green road roller compact the newly laid asphalt surface?",
+      "signals": [
+        "wheel_rolling(roadroller)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(roadroller)": 30.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the orange dump truck and green road roller move in a consistent forward direction along the designated path?",
+      "signals": [
+        "rigid_transform(truck)",
+        "rigid_transform(roadroller)",
+        "trajectory_dir(road,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(road,axis)": 38.3333,
+        "rigid_transform(truck)": 7.5,
+        "rigid_transform(roadroller)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the center of mass of the road roller remain over its base while its wheels roll on the ground?",
+      "signals": [
+        "center_of_mass_over_base(oX)",
+        "wheel_rolling(roller,on:road),wheel_rolling(dump_truck,on:road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.5,
+      "total_score_100": 88.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5,
+        "wheel_rolling(roller,on:road),wheel_rolling(dump_truck,on:road)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows of the construction vehicles align consistently with their positions relative to the light source?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency(roller),shadow_consistency(dump_truck)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(roller),shadow_consistency(dump_truck)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tractor maintain a safe distance from the other heavy machinery?",
+      "signals": [
+        "collision(tractor,roadroller)",
+        "collision(tractor,truck)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(tractor,roadroller)": 31.6667,
+        "collision(tractor,truck)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The orange dump truck and green road roller move forward on the asphalt.",
+      "signals": [
+        "rigid_transform(truck)",
+        "rigid_transform(roadroller)",
+        "trajectory_dir(road,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(road,axis)": 38.3333,
+        "rigid_transform(truck)": 7.5,
+        "rigid_transform(roadroller)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The yellow-and-green road roller compacts the newly laid asphalt surface with its wheels rolling naturally.",
+      "signals": [
+        "wheel_rolling(roadroller)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(roadroller)": 30.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows of the construction vehicles align consistently with their positions under the clear sky.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency(roller),shadow_consistency(dump_truck)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(roller),shadow_consistency(dump_truck)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The center of mass of the roadroller remains over its base, maintaining balance during movement.",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 32.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Wheels of the heavy machinery roll along the ground's surface.",
+      "signals": [
+        "wheel_rolling(roller,on:road),wheel_rolling(dump_truck,on:road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(roller,on:road),wheel_rolling(dump_truck,on:road)": 30.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

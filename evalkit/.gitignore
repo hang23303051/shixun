@@ -1,22 +1,26 @@
-# big data / local artifacts
-data/
+# ========= evalkit ignore =========
+
+# python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# outputs / caches
 outputs/
 results/
+*.tmp
+*.cache
+
+# model weights (不要提交权重)
 checkpoints/
+models/
+**/*.pth
+**/*.pt
+**/*.ckpt
+**/*.safetensors
 
-# videos
-*.mp4
-*.avi
-*.mov
+# third_party 内部权重（不要提交）
+third_party/transnetv2/TransNetV2/inference/transnetv2-weights/
 
-# model weights
-*.pth
-*.pt
-*.ckpt
-*.safetensors
-*.bin
-
-# caches
-__pycache__/
-*.pyc
-*.log
+# data：只忽略大目录，保留 metadata / example_models
+data/genvideo/
