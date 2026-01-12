@@ -1,12 +1,12 @@
----
 # Ref4D EvalKit
 
 `evalkit/` 是一个**可独立运行的评测工具包**：给定一组 **Ref4D 的参考侧元数据/证据**（已提供在 `data/metadata/`），以及你自己的 **生成视频**（放到 `data/genvideo/<modelname>/`），即可对 **Text-to-Video** 模型输出进行四维打分，并生成可对比的 CSV 结果表。
 
 四个维度：
-- **Semantic**：基础语义对齐（对象/属性/关系/绑定等）  
-- **Motion (RRM)**：运动一致性（方向/幅度/平滑 + freeze 惩罚）  
-- **Event**：事件时序一致性（EGA / ERel / ECR / S_event）  
+
+- **Semantic**：基础语义对齐（对象/属性/关系/绑定等）
+- **Motion (RRM)**：运动一致性（方向/幅度/平滑 + freeze 惩罚）
+- **Event**：事件时序一致性（EGA / ERel / ECR / S_event）
 - **World**：世界知识一致性（规则库 + VQA/断言打分）
 
 ---
@@ -37,7 +37,7 @@ evalkit/
 
 ## 2. 输入约定：如何放你的生成视频
 
-**必须按 sample_id 命名**（与 `data/metadata/ref4d_meta.jsonl` 一致）：
+**必须按 `sample_id` 命名**（与 `data/metadata/ref4d_meta.jsonl` 一致）：
 
 ```bash
 evalkit/data/genvideo/<modelname>/<sample_id>.mp4
@@ -82,14 +82,14 @@ evalkit/data/genvideo/modelB/*.mp4
 
 ```bash
 cd evalkit
-bash scripts/run_semantic_eval.sh 
+bash scripts/run_semantic_eval.sh
 ```
 
 如果你能看到输出写入 `outputs/semantic/`，说明最基本的环境/路径没问题。
 
 ---
 
-## 5. 分维度运行（推荐用 scripts/ 一键脚本）
+## 5. 分维度运行（推荐用 `scripts/` 一键脚本）
 
 > 这些脚本默认会扫描 `data/genvideo/` 下的所有模型目录进行评测。
 
@@ -100,13 +100,13 @@ cd evalkit
 bash scripts/run_semantic_eval.sh
 ```
 
-只评测某个模型（如果脚本支持 INCLUDE_MODELS）：
+只评测某个模型（如果脚本支持 `INCLUDE_MODELS`）：
 
 ```bash
 INCLUDE_MODELS=my_model bash scripts/run_semantic_eval.sh
 ```
 
-示例运行（仓库自带 example_models）：
+示例运行（仓库自带 `example_models`）：
 
 ```bash
 bash scripts/run_semantic_eval.sh --use-example
@@ -176,7 +176,7 @@ outputs/overall/ref4d_4d_scores.csv
 
 ## 6. 权重与环境说明
 
-### checkpoints/ 不入 git：你需要自己准备权重
+### 6.1 `checkpoints/` 不入 git：你需要自己准备权重
 
 `checkpoints/` 目录一般不提交到仓库（文件大、许可证复杂、下载源多）。
 请按脚本或 README 提示放在类似路径：
@@ -199,8 +199,6 @@ evalkit/checkpoints/
 * `scripts/download_motion_models.sh`
 * `scripts/download_event_models.sh`
 * （语义/世界知识若无脚本，需要你自行放置 MiniCPM/E5 权重）
-  
-各维度环境分别创建，请按相应yaml配置。
----
 
+各维度环境分别创建，请按相应 `envs/*.yml` 配置执行。
 
