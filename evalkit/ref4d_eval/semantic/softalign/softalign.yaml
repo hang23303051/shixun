@@ -1,6 +1,6 @@
 encoder:
   # 建议指向本地目录以避免网络波动
-  model_name_or_path: /root/autodl-tmp/aiv/models/e5-large-v2
+  model_name_or_path: /root/autodl-tmp/Ref4D-VideoBench/checkpoints/e5-large-v2
   device: cuda          # 或 cpu
   dtype: bf16           # bf16/fp16/fp32
   batch_size: 128

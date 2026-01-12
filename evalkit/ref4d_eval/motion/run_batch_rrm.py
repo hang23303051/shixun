@@ -16,10 +16,11 @@ Outputs a single CSV with atomic metrics and diagnostics:
 """
 
 from __future__ import annotations
-import os, sys, csv, glob, time, argparse, traceback, hashlib
+import os, sys, csv, glob, time, argparse, traceback, hashlib,json
 from typing import Dict, List, Tuple, Optional, Set
 import numpy as np
 from multiprocessing import Process
+
 
 # ---- 限制CPU线程，避免和 TAPIR/GPU 抢资源 ----
 os.environ.setdefault("OMP_NUM_THREADS", "1")
@@ -27,18 +28,26 @@ os.environ.setdefault("MKL_NUM_THREADS", "1")
 os.environ.setdefault("CUDA_DEVICE_MAX_CONNECTIONS", "1")
 
 # ---- 引入项目内模块 ----
-from motion_eval.preprocess.io_video import load_video_cv2, resample_video
-from motion_eval.rrm.subject_mask_rmm import build_fg_bg_masks_single, repair_masks_temporal
-from motion_eval.rrm.seeds_rmm import sample_fg_bg_points_strict
-from motion_eval.track_ate.tapir_infer import track_points_tapir
-from motion_eval.rrm.rrm_features import compute_all as rrm_compute_all
-from motion_eval.rrm.rrm_metrics import distances as rrm_distances, to_scores as rrm_to_scores, aggregate as rrm_aggregate
-from motion_eval.rrm.rrm_freeze import compute_frz as rrm_compute_frz
+from .preprocess.io_video import load_video_cv2, resample_video
+from .rrm.subject_mask_rmm import build_fg_bg_masks_single, repair_masks_temporal
+from .rrm.seeds_rmm import sample_fg_bg_points_strict
+from .track_ate.tapir_infer import track_points_tapir
+from .rrm.rrm_features import compute_all as rrm_compute_all
+from .rrm.rrm_metrics import distances as rrm_distances, to_scores as rrm_to_scores, aggregate as rrm_aggregate
+from .rrm.rrm_freeze import compute_frz as rrm_compute_frz
 import yaml
-
+from types import SimpleNamespace 
 
 # ---------------------------- helpers ----------------------------
-
+def _infer_sample_id(ref_path: str) -> str:
+    # ref_path 既可能是 /.../refvideo/xxx/000123.mp4
+    # 也可能是我们在 _scan_dataset_ref4d 里塞的 sample_id 字符串
+    basename = os.path.basename(ref_path)
+    name, ext = os.path.splitext(basename)
+    if ext:  # 有扩展名，当成文件路径
+        return name
+    return ref_path  # 直接就是 sample_id
+    
 def _load_and_resample(path: str, short_side: int, fps: int):
     frames, fps_src = load_video_cv2(path, bgr=True, return_fps=True)
     frames = resample_video(frames, short_side=short_side, fps=fps, src_fps=fps_src)
@@ -98,14 +107,81 @@ def _run_tapir_grouped(frames: List[np.ndarray], seeds_xy: np.ndarray, seeds_t0:
         tracks[idx, t, :] = xy
     return tracks, vis
 
+def _load_ref_cache(sample_id: str,
+                    ref_path: str,
+                    cache_root: str,
+                    short_side: int,
+                    fps: int):
+    """
+    从磁盘加载参考侧 motion_ref 缓存：
+      - 必须至少包含: hof, s, phi
+      - 若存在 frz_meta，则一并读出，用于无 refvideo 场景下计算 FRZ。
+    """
+    npz_path = os.path.join(cache_root, f"{sample_id}.npz")
+    if not os.path.isfile(npz_path):
+        raise FileNotFoundError(f"[ref.cache] missing cache for sample_id={sample_id}: {npz_path}")
+
+    data = np.load(npz_path, allow_pickle=True)
+
+    # 必需字段检查
+    for k in ("hof", "s", "phi"):
+        if k not in data.files:
+            raise KeyError(f"[ref.cache] {npz_path} missing key '{k}'")
+
+    pack_ref = SimpleNamespace(
+        hof=data["hof"],
+        s=data["s"],
+        phi=data["phi"],
+    )
+
+    # 读取 frz_meta（预计算的参考侧元信息）
+    frz_meta = None
+    if "frz_meta" in data.files:
+        # np.savez(..., frz_meta=np.array(frz_meta, dtype=object))
+        # 加载后是 0 维 object array，需要 .item() 解包成 python 对象（通常是 dict）
+        arr = data["frz_meta"]
+        if isinstance(arr, np.ndarray) and arr.dtype == object:
+            if arr.ndim == 0:
+                frz_meta = arr.item()
+            else:
+                # 防御性：如果存成了 1D 之类的，也取第一个
+                frz_meta = arr.reshape(-1)[0].item()
+        else:
+            # 理论上不会走到这里，兼容一下
+            frz_meta = arr
+
+    # 尝试加载参考帧（只有在 ref_path 真的是视频时才 decode）
+    frames_ref = None
+    name, ext = os.path.splitext(os.path.basename(ref_path))
+    if ext and os.path.isfile(ref_path):
+        frames_ref = _load_and_resample(ref_path, short_side, fps)
+
+    return {
+        "frames": frames_ref,
+        "pack": pack_ref,
+        "frz_meta": frz_meta,
+    }
+
 def _atomic_from_pair(ref_path: str, gen_path: str, cfg: dict, cache_ref: dict) -> Dict[str, float]:
     """
     计算一对 (ref, gen) 的原子项与诊断。
     cache_ref: 以 sample_id 为 key，缓存 {'frames', 'pack', 'masks_fg', 'masks_bg'}（单样本一致的参考端）
     """
+
+    # ------------ dataset & ref 模式 -------------
+    dataset_cfg = cfg.get("dataset", {}) or {}
+    dataset_fmt = dataset_cfg.get("format", "legacy")
+
+    ref_cfg   = cfg.get("ref", {}) or {}
+    ref_mode  = ref_cfg.get("mode", "video")      # "video" | "cached"
+    cache_root = ref_cfg.get("cache_root", None)  # cached 模式下的根目录（如 data/metadata/motion_ref/rrm_448x8）
+
+    # 统一 sample_id 推断：既兼容 ref_path 是真实路径，也兼容 ref4d 模式下 ref_path=sample_id 的占位符
+    sid = _infer_sample_id(ref_path)
+
     # --- cfg pieces ---
     ss  = int(cfg.get("sample", {}).get("short_side", 448))
-    fps = int(cfg.get("sample", {}).get("fps", 12))
+    fps = int(cfg.get("sample", {}).get("fps", 8))
 
     cfg_subject = cfg.get("subject", cfg.get("cfg_subject", {})) or {}
     tr = cfg.get("tracking", {}) or {}
@@ -143,46 +219,70 @@ def _atomic_from_pair(ref_path: str, gen_path: str, cfg: dict, cache_ref: dict) 
         roi_on_empty=str(frz_cfg.get("roi_on_empty", "union")),
     )
 
-    # ---------------- reference (cache by sample_id) ----------------
-    sample_id = os.path.splitext(os.path.basename(ref_path))[0]
+    # ---------------- reference (cache by sample_id + ref.mode) ----------------
+    sample_id = sid
     if sample_id not in cache_ref:
-        frames_ref = _load_and_resample(ref_path, ss, fps)
-        masks_fg_ref, masks_bg_ref = build_fg_bg_masks_single(frames_ref, ref_path, cfg_subject)
-        masks_fg_ref = _ensure_bool_list(masks_fg_ref); masks_bg_ref = _ensure_bool_list(masks_bg_ref)
-        if do_repair:
-            masks_fg_ref, masks_bg_ref, _ = repair_masks_temporal(
-                masks_fg_ref, masks_bg_ref,
-                max_skip=rep_max_skip, dilate_iters=rep_dilate_it, min_area_px=rep_min_area
-            )
-        # 批量专用：在撒点前做“内域为空”→ None 的预筛，避免边界裁切报错
-        masks_fg_ref, masks_bg_ref = _sanitize_masks_for_sampling(masks_fg_ref, masks_bg_ref, border)
+        if ref_mode == "video":
+            # ref4d + video 模式下，如果 ref_path 不是视频路径，直接给出明确报错
+            name, ext = os.path.splitext(os.path.basename(ref_path))
+            if dataset_fmt == "ref4d" and not ext:
+                raise RuntimeError(
+                    f"[ref.mode=video] dataset.format=ref4d 且 ref='{ref_path}' 不是视频路径；"
+                    f"请提供参考视频路径或在配置中改为 ref.mode='cached'。"
+                )
 
-        # 参考端撒点（关键帧 t0_stride；跳过 None）
-        seeds_ref = sample_fg_bg_points_strict(
-            masks_fg_ref, masks_bg_ref,
-            num_fg=num_fg, num_bg=num_bg,
-            border=border, edge_bonus=edge_bonus,
-            min_tex=min_tex, frames_bgr=frames_ref,
-            t0_stride=t0_stride, t0_offset=t0_offset,
-        )
-        # 跟踪
-        tracks_fg_ref, vis_fg_ref = _run_tapir_grouped(frames_ref, seeds_ref["fg_xy"], seeds_ref["fg_t0"], cfg_tapir)
-        tracks_bg_ref, vis_bg_ref = _run_tapir_grouped(frames_ref, seeds_ref["bg_xy"], seeds_ref["bg_t0"], cfg_tapir)
-        # 特征（带纹理权重）
-        _r_ref, pack_ref = rrm_compute_all(
-            tracks_fg_ref, vis_fg_ref, tracks_bg_ref, vis_bg_ref,
-            dir_bins=dir_bins,
-            wtex_fg=seeds_ref.get("fg_wtex", None),
-            wtex_bg=seeds_ref.get("bg_wtex", None),
-        )
-        cache_ref[sample_id] = {
-            "frames": frames_ref,
-            "pack": pack_ref,
-            "masks_fg": masks_fg_ref, "masks_bg": masks_bg_ref,
-        }
-    else:
-        frames_ref = cache_ref[sample_id]["frames"]
-        pack_ref   = cache_ref[sample_id]["pack"]
+            frames_ref = _load_and_resample(ref_path, ss, fps)
+            masks_fg_ref, masks_bg_ref = build_fg_bg_masks_single(frames_ref, ref_path, cfg_subject)
+            masks_fg_ref = _ensure_bool_list(masks_fg_ref); masks_bg_ref = _ensure_bool_list(masks_bg_ref)
+            if do_repair:
+                masks_fg_ref, masks_bg_ref, _ = repair_masks_temporal(
+                    masks_fg_ref, masks_bg_ref,
+                    max_skip=rep_max_skip, dilate_iters=rep_dilate_it, min_area_px=rep_min_area
+                )
+            # 批量专用：在撒点前做“内域为空”→ None 的预筛，避免边界裁切报错
+            masks_fg_ref, masks_bg_ref = _sanitize_masks_for_sampling(masks_fg_ref, masks_bg_ref, border)
+
+            # 参考端撒点（关键帧 t0_stride；跳过 None）
+            seeds_ref = sample_fg_bg_points_strict(
+                masks_fg_ref, masks_bg_ref,
+                num_fg=num_fg, num_bg=num_bg,
+                border=border, edge_bonus=edge_bonus,
+                min_tex=min_tex, frames_bgr=frames_ref,
+                t0_stride=t0_stride, t0_offset=t0_offset,
+            )
+            # 跟踪
+            tracks_fg_ref, vis_fg_ref = _run_tapir_grouped(
+                frames_ref, seeds_ref["fg_xy"], seeds_ref["fg_t0"], cfg_tapir
+            )
+            tracks_bg_ref, vis_bg_ref = _run_tapir_grouped(
+                frames_ref, seeds_ref["bg_xy"], seeds_ref["bg_t0"], cfg_tapir
+            )
+            # 特征（带纹理权重）
+            _r_ref, pack_ref = rrm_compute_all(
+                tracks_fg_ref, vis_fg_ref, tracks_bg_ref, vis_bg_ref,
+                dir_bins=dir_bins,
+                wtex_fg=seeds_ref.get("fg_wtex", None),
+                wtex_bg=seeds_ref.get("bg_wtex", None),
+            )
+            cache_ref[sample_id] = {
+                "frames": frames_ref,
+                "pack": pack_ref,
+                "masks_fg": masks_fg_ref, "masks_bg": masks_bg_ref,
+            }
+
+        elif ref_mode == "cached":
+            if not cache_root:
+                raise ValueError("ref.mode='cached' 但未在配置中设置 ref.cache_root")
+            # 从 data/metadata/motion_ref/... 读取 hof/s/phi；若 ref_path 是视频路径则顺便 decode 一次帧
+            cache_ref[sample_id] = _load_ref_cache(sample_id, ref_path, cache_root, ss, fps)
+
+        else:
+            raise ValueError(f"Unknown ref.mode: {ref_mode}")
+
+    frames_ref = cache_ref[sample_id].get("frames", None)
+    pack_ref   = cache_ref[sample_id]["pack"]
+    frz_meta   = cache_ref[sample_id].get("frz_meta", None)
+
 
     # ---------------- generated ----------------
     frames_gen = _load_and_resample(gen_path, ss, fps)
@@ -202,8 +302,12 @@ def _atomic_from_pair(ref_path: str, gen_path: str, cfg: dict, cache_ref: dict) 
         min_tex=min_tex, frames_bgr=frames_gen,
         t0_stride=t0_stride, t0_offset=t0_offset,
     )
-    tracks_fg_gen, vis_fg_gen = _run_tapir_grouped(frames_gen, seeds_gen["fg_xy"], seeds_gen["fg_t0"], cfg_tapir)
-    tracks_bg_gen, vis_bg_gen = _run_tapir_grouped(frames_gen, seeds_gen["bg_xy"], seeds_gen["bg_t0"], cfg_tapir)
+    tracks_fg_gen, vis_fg_gen = _run_tapir_grouped(
+        frames_gen, seeds_gen["fg_xy"], seeds_gen["fg_t0"], cfg_tapir
+    )
+    tracks_bg_gen, vis_bg_gen = _run_tapir_grouped(
+        frames_gen, seeds_gen["bg_xy"], seeds_gen["bg_t0"], cfg_tapir
+    )
     _r_gen, pack_gen = rrm_compute_all(
         tracks_fg_gen, vis_fg_gen, tracks_bg_gen, vis_bg_gen,
         dir_bins=dir_bins,
@@ -220,8 +324,53 @@ def _atomic_from_pair(ref_path: str, gen_path: str, cfg: dict, cache_ref: dict) 
     S = rrm_to_scores(D, sc_lmb)
     S_motion = float(rrm_aggregate(S, 0.0, sc_alpha, 0.0))  # 基础分（不衰减），便于对比
 
+
     # ---------------- freeze penalty (FRZ) ----------------
-    frz, frz_diag = rrm_compute_frz(frames_ref, frames_gen, pack_ref.s, pack_gen.s, **frz_kwargs)
+# 注意：这里有三种情况：
+#   1) 有 frames_ref 且无预计算 frz_meta           -> 走老的 full 模式（用 frames_ref + s_ref 在线算 meta）
+#   2) 有 frames_ref 且有 frz_meta                 -> 优先用 frz_meta（保证与预计算脚本一致），frames_ref 只做 sanity
+#   3) 无 frames_ref 但有 frz_meta（开源无 refvideo）-> 完全用 frz_meta + frames_gen + s_gen 算 FRZ
+#   4) 无 frames_ref 且无 frz_meta                  -> 无法计算，退化为“不惩罚”
+    median_s_ref_fallback = 0.0
+    try:
+        median_s_ref_fallback = float(np.median(pack_ref.s))
+    except Exception:
+        pass
+    
+    if frz_meta is not None:
+        # 这里依赖 rrm_freeze.compute_frz 支持一个可选参数 refside_meta（下面第 3 步会修改）
+        frz, frz_diag = rrm_compute_frz(
+            frames_ref,      # 可以是 None（开源场景），也可以是真实参考帧（legacy）
+            frames_gen,
+            pack_ref.s,
+            pack_gen.s,
+            refside_meta=frz_meta,
+            **frz_kwargs,
+        )
+    else:
+        if frames_ref is None:
+            # 既没有 refvideo，也没有 frz_meta，只能彻底退化（开源不应该出现这种情况）
+            frz = 0.0
+            frz_diag = {
+                "RF": 0.0,
+                "LS": 0.0,
+                "median_s_ref": median_s_ref_fallback,
+                "uniq_ratio_mean": 0.0,
+                "uniq_ratio_min": 0.0,
+                "uniq_ratio_max": 0.0,
+            }
+        else:
+            # 兼容老逻辑：在有 refvideo 的环境里可以直接在线算 FRZ
+            frz, frz_diag = rrm_compute_frz(
+                frames_ref,
+                frames_gen,
+                pack_ref.s,
+                pack_gen.s,
+                **frz_kwargs,
+            )
+            # 确保 median_s_ref 至少有 fallback
+            frz_diag.setdefault("median_s_ref", median_s_ref_fallback)
+
 
     # 叠上 FRZ 的衰减
     S_motion_w_frz = float(rrm_aggregate(S, frz, sc_alpha, sc_eta))
@@ -240,6 +389,7 @@ def _atomic_from_pair(ref_path: str, gen_path: str, cfg: dict, cache_ref: dict) 
         "S_motion_w_frz": float(S_motion_w_frz),
     }
     return out
+
 
 
 def _scan_dataset(base: str):
@@ -274,6 +424,42 @@ def _scan_dataset(base: str):
     # 仅保留有生成视频的样本
     sample_map = {sid:info for sid,info in sample_map.items() if model_map.get(sid)}
     model_map  = {sid:lst  for sid,lst  in model_map.items()  if lst}
+    return sample_map, model_map
+    
+def _scan_dataset_ref4d(base: str, meta_path: str):
+    """从 ref4d_meta.jsonl + data/genvideo/*/*.mp4 扫描样本 & 模型。"""
+    meta_file = os.path.join(base, meta_path)
+
+    # 1) 读 meta，收集 sample_id -> theme
+    sample_map = {}
+    with open(meta_file, "r", encoding="utf-8") as f:
+        for ln in f:
+            ln = ln.strip()
+            if not ln:
+                continue
+            js = json.loads(ln)
+            sid = str(js["sample_id"])
+            theme = js.get("theme", "unknown")
+            # 这里 ref 先存一个占位符（sample_id），后面 ref_mode=cached 会用到
+            sample_map[sid] = {"ref": sid, "theme": theme}
+
+    # 2) 扫描 data/genvideo 下有哪些模型、哪些 sid 有视频
+    gen_root = os.path.join(base, "data", "genvideo")
+    model_map = {sid: [] for sid in sample_map.keys()}
+
+    for model_dir in sorted(glob.glob(os.path.join(gen_root, "*"))):
+        if not os.path.isdir(model_dir):
+            continue
+        modelname = os.path.basename(model_dir)
+        for sid in list(sample_map.keys()):
+            gp = os.path.join(model_dir, f"{sid}.mp4")
+            if os.path.isfile(gp):
+                model_map[sid].append((modelname, gp))
+
+    # 3) 过滤掉没有任何生成视频的 sample
+    sample_map = {sid: info for sid, info in sample_map.items() if model_map.get(sid)}
+    model_map = {sid: lst for sid, lst in model_map.items() if lst}
+
     return sample_map, model_map
 
 
@@ -367,11 +553,19 @@ def main():
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--force", action="store_true", help="覆盖重算；若不指定则复用已有CSV中的结果（含额外列）")
     args = ap.parse_args()
-
+    base_dir = os.path.abspath(args.base)
     with open(args.cfg, "r", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
 
-    sample_map, model_map = _scan_dataset(args.base)
+    dataset_cfg = cfg.get("dataset", {}) or {}
+    fmt = dataset_cfg.get("format", "legacy")
+
+    if fmt == "ref4d":
+       meta_path = dataset_cfg.get("meta_path", "data/metadata/ref4d_meta.jsonl")
+       sample_map, model_map = _scan_dataset_ref4d(base_dir, meta_path)
+    else:
+       sample_map, model_map = _scan_dataset(base_dir)
+
     all_sids = sorted(sample_map.keys())
     if not all_sids:
         print("No samples found. Check ref/gen directories.", file=sys.stderr)

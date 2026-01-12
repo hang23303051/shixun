@@ -26,8 +26,12 @@ def _load_local_torch_tapir_model():
     """
     import sys, types, importlib.util
 
-    _BASE = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                         "..", "..", "third_party", "tapnet", "tapnet"))
+    # __file__ = ref4d_eval/motion/track_ate/tapir_infer.py
+    # -> .. -> ref4d_eval
+    # -> .. -> Ref4D-VideoBench
+    # 因此要用 "..", "..", ".." 才能回到仓库根目录
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+    _BASE = os.path.join(repo_root, "third_party", "tapnet", "tapnet")
     _TORCH_DIR  = os.path.join(_BASE, "torch")
     _TORCH_FILE = os.path.join(_TORCH_DIR, "tapir_model.py")
     if not os.path.isfile(_TORCH_FILE):
@@ -51,17 +55,21 @@ def _load_local_torch_tapir_model():
     return mod
 
 
+
 def _load_sibling_module(basename: str):
     """
     从 torch 目录旁加载同名文件，如 inference.py / inference_utils.py。
     不存在则返回 None。
     """
     import importlib.util
-    _BASE = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                         "..", "..", "third_party", "tapnet", "tapnet"))
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+    _BASE = os.path.join(repo_root, "third_party", "tapnet", "tapnet")
     _TORCH_DIR  = os.path.join(_BASE, "torch")
-    cand = [os.path.join(_TORCH_DIR, f"{basename}.py"),
-            os.path.join(_TORCH_DIR, f"{basename}_utils.py")]
+
+    cand = [
+        os.path.join(_TORCH_DIR, f"{basename}.py"),
+        os.path.join(_TORCH_DIR, f"{basename}_utils.py"),
+    ]
     for p in cand:
         if os.path.isfile(p):
             spec = importlib.util.spec_from_file_location(f"tapnet.torch.{basename}", p)

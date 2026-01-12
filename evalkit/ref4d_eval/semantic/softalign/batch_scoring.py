@@ -12,7 +12,7 @@
 """
 
 import argparse
-import sys
+import os, sys
 from pathlib import Path
 import json
 from datetime import datetime
@@ -23,7 +23,17 @@ try:
 except Exception:
     tqdm = None
 
+
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+SEMANTIC_DIR = os.path.dirname(_THIS_DIR)               # .../ref4d_eval/semantic
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SEMANTIC_DIR)))  # .../Ref4D-VideoBench
+
+for p in (REPO_ROOT, SEMANTIC_DIR):
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
 from softalign.api import build_api
+
 
 
 def iter_models(gen_root: Path, multi_model: bool):

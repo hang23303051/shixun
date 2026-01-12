@@ -81,7 +81,7 @@ def main():
 
     # ---------- 1) 读取/统一采样 ----------
     ss = int(cfg.get("sample", {}).get("short_side", 448))
-    fps = int(cfg.get("sample", {}).get("fps", 12))
+    fps = int(cfg.get("sample", {}).get("fps", ))
     frames_ref = _load_and_resample(args.ref, ss, fps)
     frames_gen = _load_and_resample(args.gen, ss, fps)
 

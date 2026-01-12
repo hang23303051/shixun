@@ -65,21 +65,61 @@ def _wasserstein_1d_from_samples(x: np.ndarray, y: np.ndarray) -> float:
     yq = np.quantile(ys, q, method="linear")
     return float(np.mean(np.abs(xq - yq)))
 
-def _phi_to_vec(phi: Any) -> np.ndarray:
+def _phi_to_vec(arr: Any) -> np.ndarray:
     """
-    将 phi 标准化为 1D 向量：
-      - scalar -> [scalar]
-      - dict   -> 按 key 排序取值
-      - array  -> ravel()
+    将 phi 特征统一成 1D 向量，兼容几种情况：
+      - None                        -> [0.]
+      - 标量                        -> [scalar]
+      - np.ndarray / list / tuple   -> 展平后的向量
+      - 0-d object array (np.savez/load 后包了一层 dict) -> .item() 解包
+      - dict                        -> 递归收集其中所有数值（含嵌套 list/ndarray/dict）
+
+    这样既兼容“直接在线计算”的 pack.phi，也兼容从缓存 npz 里读出的 dict / object-array 形式。
     """
-    if isinstance(phi, dict):
-        keys = sorted(list(phi.keys()))
-        vec = np.array([phi[k] for k in keys], dtype=np.float64)
-        return vec.reshape(-1)
-    arr = np.asarray(phi)
-    if arr.ndim == 0:
-        return np.array([float(arr)], dtype=np.float64)
-    return arr.astype(np.float64).ravel()
+
+    # 1) 没有 phi 的情况
+    if arr is None:
+        return np.zeros(1, dtype=np.float64)
+
+    # 2) np.savez / np.load 后常见的：0 维 object array，里面包着一个 dict
+    if isinstance(arr, np.ndarray) and arr.dtype == object and arr.ndim == 0:
+        arr = arr.item()
+
+    # 3) dict：把其中所有能转成 float 的东西 flatten 出来
+    if isinstance(arr, dict):
+        vals: List[float] = []
+
+        def _collect(v: Any):
+            if v is None:
+                return
+            if isinstance(v, dict):
+                # key 排序保证稳定性
+                for k in sorted(v.keys()):
+                    _collect(v[k])
+            elif isinstance(v, (list, tuple, np.ndarray)):
+                vv = np.asarray(v, dtype=np.float64).reshape(-1)
+                vals.extend(vv.tolist())
+            else:
+                # 尝试当标量处理
+                try:
+                    vals.append(float(v))
+                except Exception:
+                    # 非数字字段直接丢掉，例如字符串 tag
+                    pass
+
+        _collect(arr)
+        if not vals:
+            return np.zeros(1, dtype=np.float64)
+        return np.asarray(vals, dtype=np.float64)
+
+    # 4) list / tuple / ndarray：正常展平
+    if isinstance(arr, (list, tuple, np.ndarray)):
+        vec = np.asarray(arr, dtype=np.float64).reshape(-1)
+        if vec.size == 0:
+            return np.zeros(1, dtype=np.float64)
+        return vec
+
+        return np.zeros(1, dtype=np.float64)
 
 def _l1_prob_dist(a: np.ndarray, b: np.ndarray, eps: float = 1e-8) -> float:
     """

@@ -7,7 +7,7 @@ repro:
 # ---------- sampling / windowing ----------
 sampling:
   short_edge: 448
-  fps: 12
+  fps: 8
 
 windowing:
   window_sec: 6.0

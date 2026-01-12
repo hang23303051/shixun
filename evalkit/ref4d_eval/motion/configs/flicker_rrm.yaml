@@ -15,7 +15,7 @@ weights: /root/autodl-tmp/aigc_motion_eval/weights/gmflow/gmflow_sintel-0c07dcb3
 
 # ---- 重采样与预处理（统一对所有模型生效）----
 short_side: 448          # 解码后按短边等比缩放到该尺寸
-fps: 12                  # 目标 FPS；实际取 min(src_fps_四舍五入, fps) 避免时间上采样
+fps: 8                  # 目标 FPS；实际取 min(src_fps_四舍五入, fps) 避免时间上采样
 pad_multiple: 8          # <<< 关键：右下零填充到 8 的倍数（与 GMFlow 对齐），统计只在原图区域
 
 # ---- 遮挡/低置信门控（前后向一致性）----

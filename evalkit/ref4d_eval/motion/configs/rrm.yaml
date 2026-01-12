@@ -1,9 +1,16 @@
 # configs/rrm.yaml
 # Alignment-Free RRM — 仅做单端主体/背景掩码与点跟踪，三项指标 + FRZ 两项
+dataset:
+  format: legacy          
+  meta_path: data/metadata/ref4d_meta.jsonl
+
+ref:
+  mode: video          # "video" | "cached"
+  cache_root: data/metadata/motion_ref/rrm_448x8
 
 sample:
   short_side: 448         # 统一短边
-  fps: 12                 # 统一 FPS
+  fps: 8                 # 统一 FPS
 
 # ---- 主体/背景掩码（单端） ----
 # subject_mask_rmm.py 会把以下路径写入环境变量供 GroundingDINO / SAM2 使用

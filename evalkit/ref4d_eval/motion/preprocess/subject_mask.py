@@ -292,12 +292,28 @@ def _detect_boxes_grounding_dino(
 
 # ---------------- SAM2 (Video Predictor) ----------------
 def _build_sam2_predictor_from_env():
+    # 1) 确定 sam2 的 python 根目录
+    sam2_pydir = os.environ.get("SAM2_PYDIR", "").strip()
+
+    if not sam2_pydir:
+        # 若环境变量没设，则从当前文件位置推断仓库根目录
+        # subject_mask.py 位于: <repo_root>/ref4d_eval/motion/preprocess/subject_mask.py
+        here = os.path.dirname(__file__)
+        repo_root = os.path.abspath(os.path.join(here, "..", "..", ".."))
+        candidate = os.path.join(repo_root, "third_party", "sam2")
+        if os.path.isdir(candidate):
+            sam2_pydir = candidate
+
+    if sam2_pydir and sam2_pydir not in sys.path:
+        sys.path.append(sam2_pydir)
+
     try:
-        sys.path.append(os.environ.get("SAM2_PYDIR", ""))  # 可选：third_party/sam2
         from sam2.build_sam import build_sam2_video_predictor
     except Exception as e:
-        raise RuntimeError(f"[subject_mask] SAM2 import failed: {e}")
+        # 这里直接抛清晰的错误信息，方便你之后排查
+        raise RuntimeError(f"[subject_mask] SAM2 import failed: {e} (SAM2_PYDIR={sam2_pydir!r})")
 
+    # 2) 读取 CFG / CKPT（由 build_subject_masks 事先写入环境变量）
     cfg_env = os.environ.get("SAM2_CFG_NAME", "").strip()
     ckpt = os.environ.get("SAM2_CHECKPOINT", "") or os.environ.get("SAM2_CKPT", "")
     if not ckpt or not os.path.exists(ckpt):
@@ -305,11 +321,13 @@ def _build_sam2_predictor_from_env():
 
     candidates: List[str] = []
     if cfg_env:
+        # 优先使用环境变量显式提供的配置
         candidates.append(cfg_env)
         if cfg_env.endswith(".yaml"):
             base = cfg_env.replace(".yaml", "")
             if "/" in base and not base.startswith("configs/"):
                 candidates.append("configs/" + base)
+    # 最后兜底：使用 sam2.1_hiera_l 默认配置
     candidates.append("configs/sam2.1/sam2.1_hiera_l")
 
     last_err = None
@@ -323,6 +341,7 @@ def _build_sam2_predictor_from_env():
             _log("[ERR]", repr(e))
             last_err = e
     raise RuntimeError(f"[subject_mask] build_sam2_video_predictor failed. Last error: {repr(last_err)}")
+
 
 def _boxes_to_pos_points(boxes_xyxy: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
     if boxes_xyxy is None or len(boxes_xyxy) == 0:
