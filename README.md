@@ -154,12 +154,12 @@ DEFAULT_FROM_EMAIL = f'Ref4D <{EMAIL_HOST_USER}>'
 
 **如果使用其他邮箱服务商：**
 
-| 邮箱服务商 | SMTP 服务器 | 端口 |
-|---------|-----------|-----|
-| QQ邮箱   | smtp.qq.com | 587 |
-| 163邮箱  | smtp.163.com | 465 |
-| Gmail   | smtp.gmail.com | 587 |
-| Outlook | smtp.office365.com | 587 |
+| 邮箱服务商 | SMTP 服务器        | 端口 |
+| ---------- | ------------------ | ---- |
+| QQ邮箱     | smtp.qq.com        | 587  |
+| 163邮箱    | smtp.163.com       | 465  |
+| Gmail      | smtp.gmail.com     | 587  |
+| Outlook    | smtp.office365.com | 587  |
 
 修改 `EMAIL_HOST` 和 `EMAIL_PORT` 即可。
 
@@ -467,37 +467,114 @@ App running at:
 
 ---
 
+---
+
+## ⚡ 异步任务配置 (Celery + Redis)
+
+本项目使用 Celery 处理由 **云雾API中转站** 提供的视频生成评测任务。
+
+### 1️⃣ 安装 Redis
+
+- **Windows**: 推荐使用 [Memurai](https://www.memurai.com/) 或下载 [Microsoft Archive Redis](https://github.com/microsoftarchive/redis/releases)。
+- **Linux**: `sudo apt install redis-server`
+
+确保 Redis 服务已启动 (默认端口 6379)。
+
+### 2️⃣ 安装 Celery
+
+在虚拟环境中安装 Celery 和 Redis 客户端：
+
+```bash
+pip install celery redis eventlet
+# eventlet 用于 Windows 下的兼容性支持
+```
+
+### 3️⃣ 配置 Celery
+
+项目的 `backend/backend/settings.py` 已配置 Celery，默认连接本机 Redis：
+
+```python
+CELERY_BROKER_URL = config('CELERY_BROKER_URL', default='redis://localhost:6379/0')
+CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND', default='redis://localhost:6379/0')
+```
+
+如需修改，请在 `.env` 文件中添加：
+
+```ini
+CELERY_BROKER_URL=redis://:password@localhost:6379/0
+CELERY_RESULT_BACKEND=redis://:password@localhost:6379/0
+```
+
+### 4️⃣ 启动 Celery Worker
+
+**Windows 环境（必须使用 eventlet）：**
+
+```bash
+# 激活虚拟环境
+venv\Scripts\activate
+
+# 进入 backend 目录
+cd backend
+
+# 启动 worker
+celery -A backend worker -l info -P eventlet
+```
+
+**Linux 环境：**
+
+```bash
+cd backend
+celery -A backend worker -l info
+```
+
+---
+
+## ☁️ API 服务说明
+
+**Ref4D 平台的核心视频生成与评测功能由 [云雾API中转站](https://api.yunwu.ai) 提供技术支持。**
+
+- **高可用性**：通过云雾API中转站，我们确保了与全球主流视频生成模型的高速、稳定连接。
+- **模型支持**：支持 Sora, Runway Gen-2, Pika 等前沿模型的实时调用与评测。
+- **配置方式**：请在 `.env` 文件中配置您的云雾 API Key：
+  ```ini
+  YUNWU_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  ```
+
+---
+
+---
+
 ## API 接口文档
 
 ### 账户模块 (`/api/account/`)
 
-| 方法 | 端点 | 说明 |
-|-----|------|------|
-| POST | `/register/` | 用户注册 |
-| POST | `/login/` | 用户登录 |
-| POST | `/logout/` | 用户登出 |
-| GET | `/check-login/` | 检查登录状态 |
-| GET | `/profile/` | 获取用户信息 |
-| PUT | `/profile/` | 更新用户信息 |
+| 方法 | 端点            | 说明         |
+| ---- | --------------- | ------------ |
+| POST | `/register/`    | 用户注册     |
+| POST | `/login/`       | 用户登录     |
+| POST | `/logout/`      | 用户登出     |
+| GET  | `/check-login/` | 检查登录状态 |
+| GET  | `/profile/`     | 获取用户信息 |
+| PUT  | `/profile/`     | 更新用户信息 |
 
 ### 数据模块 (`/api/data/`)
 
-| 方法 | 端点 | 说明 |
-|-----|------|------|
-| GET | `/refdata/` | 获取参考数据集 |
-| GET | `/refdata/themes/` | 获取主题统计 |
-| GET | `/refdata/by_theme/?theme=<theme>` | 按主题筛选 |
-| GET | `/gendata/` | 获取生成数据 |
-| GET | `/gendata/by_model/?model_name=<name>` | 按模型筛选 |
+| 方法 | 端点                                   | 说明           |
+| ---- | -------------------------------------- | -------------- |
+| GET  | `/refdata/`                            | 获取参考数据集 |
+| GET  | `/refdata/themes/`                     | 获取主题统计   |
+| GET  | `/refdata/by_theme/?theme=<theme>`     | 按主题筛选     |
+| GET  | `/gendata/`                            | 获取生成数据   |
+| GET  | `/gendata/by_model/?model_name=<name>` | 按模型筛选     |
 
 ### 模型模块 (`/api/model/`)
 
-| 方法 | 端点 | 说明 |
-|-----|------|------|
-| GET | `/models/` | 获取模型列表 |
-| GET | `/models/<id>/` | 获取模型详情 |
-| GET | `/models/ranking/?dimension=<dimension>` | 获取排行榜 |
-| GET | `/models/<id>/scores/` | 获取模型评分 |
+| 方法 | 端点                                     | 说明         |
+| ---- | ---------------------------------------- | ------------ |
+| GET  | `/models/`                               | 获取模型列表 |
+| GET  | `/models/<id>/`                          | 获取模型详情 |
+| GET  | `/models/ranking/?dimension=<dimension>` | 获取排行榜   |
+| GET  | `/models/<id>/scores/`                   | 获取模型评分 |
 
 **排行榜维度参数：**
 - `total` - 总分排行
@@ -508,10 +585,10 @@ App running at:
 
 ### 评测模块 (`/api/eval/`)
 
-| 方法 | 端点 | 说明 |
-|-----|------|------|
-| POST | `/submit/` | 提交评测任务 |
-| GET | `/status/<task_id>/` | 查询评测状态 |
+| 方法 | 端点                        | 说明                   |
+| ---- | --------------------------- | ---------------------- |
+| POST | `/submit/`                  | 提交评测任务           |
+| GET  | `/status/<task_id>/`        | 查询评测状态           |
 | POST | `/mock-complete/<task_id>/` | 模拟评测完成（仅测试） |
 
 ---
@@ -520,25 +597,25 @@ App running at:
 
 ### User 表（用户）
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| email | VARCHAR (主键) | 邮箱地址 |
-| username | VARCHAR | 用户名 |
-| password | VARCHAR | 密码（加密） |
-| avatar | VARCHAR | 头像路径 |
-| created_at | DATETIME | 创建时间 |
-| updated_at | DATETIME | 更新时间 |
+| 字段       | 类型           | 说明         |
+| ---------- | -------------- | ------------ |
+| email      | VARCHAR (主键) | 邮箱地址     |
+| username   | VARCHAR        | 用户名       |
+| password   | VARCHAR        | 密码（加密） |
+| avatar     | VARCHAR        | 头像路径     |
+| created_at | DATETIME       | 创建时间     |
+| updated_at | DATETIME       | 更新时间     |
 
 ### RefData 表（参考数据集）
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| video_id | VARCHAR (主键) | 视频ID |
-| theme | VARCHAR | 主题分类（9个） |
-| shot_type | VARCHAR | 镜头类型（single/multi） |
-| prompt | TEXT | 提示词 |
-| video_file | VARCHAR | 视频文件路径 |
-| created_at | DATETIME | 创建时间 |
+| 字段       | 类型           | 说明                     |
+| ---------- | -------------- | ------------------------ |
+| video_id   | VARCHAR (主键) | 视频ID                   |
+| theme      | VARCHAR        | 主题分类（9个）          |
+| shot_type  | VARCHAR        | 镜头类型（single/multi） |
+| prompt     | TEXT           | 提示词                   |
+| video_file | VARCHAR        | 视频文件路径             |
+| created_at | DATETIME       | 创建时间                 |
 
 **9个主题分类：**
 1. animals_and_ecology - 动物与生态
@@ -553,36 +630,36 @@ App running at:
 
 ### GenData 表（生成数据）
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| video_id | VARCHAR | 视频ID |
-| theme | VARCHAR | 主题分类 |
-| shot_type | VARCHAR | 镜头类型 |
-| model_name | VARCHAR | 模型名称 |
-| prompt | TEXT | 提示词 |
-| video_file | VARCHAR | 视频文件路径 |
-| created_at | DATETIME | 创建时间 |
+| 字段       | 类型     | 说明         |
+| ---------- | -------- | ------------ |
+| video_id   | VARCHAR  | 视频ID       |
+| theme      | VARCHAR  | 主题分类     |
+| shot_type  | VARCHAR  | 镜头类型     |
+| model_name | VARCHAR  | 模型名称     |
+| prompt     | TEXT     | 提示词       |
+| video_file | VARCHAR  | 视频文件路径 |
+| created_at | DATETIME | 创建时间     |
 
 ### Model 表（模型信息）
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| name | VARCHAR (唯一) | 模型名称 |
-| description | TEXT | 模型简介 |
-| publisher | VARCHAR | 发布者 |
-| parameters | VARCHAR | 参数规模 |
-| is_open_source | BOOLEAN | 是否开源 |
-| release_date | DATE | 发布时间 |
-| official_website | VARCHAR | 官网链接 |
-| semantic_score | FLOAT | 语义一致性得分 |
-| temporal_score | FLOAT | 时序一致性得分 |
-| motion_score | FLOAT | 运动属性得分 |
-| reality_score | FLOAT | 真实性得分 |
-| total_score | FLOAT | 总分 |
-| tester_type | VARCHAR | 测试者类型（admin/user） |
-| tester_name | VARCHAR | 测试者姓名 |
-| created_at | DATETIME | 创建时间 |
-| updated_at | DATETIME | 更新时间 |
+| 字段             | 类型           | 说明                     |
+| ---------------- | -------------- | ------------------------ |
+| name             | VARCHAR (唯一) | 模型名称                 |
+| description      | TEXT           | 模型简介                 |
+| publisher        | VARCHAR        | 发布者                   |
+| parameters       | VARCHAR        | 参数规模                 |
+| is_open_source   | BOOLEAN        | 是否开源                 |
+| release_date     | DATE           | 发布时间                 |
+| official_website | VARCHAR        | 官网链接                 |
+| semantic_score   | FLOAT          | 语义一致性得分           |
+| temporal_score   | FLOAT          | 时序一致性得分           |
+| motion_score     | FLOAT          | 运动属性得分             |
+| reality_score    | FLOAT          | 真实性得分               |
+| total_score      | FLOAT          | 总分                     |
+| tester_type      | VARCHAR        | 测试者类型（admin/user） |
+| tester_name      | VARCHAR        | 测试者姓名               |
+| created_at       | DATETIME       | 创建时间                 |
+| updated_at       | DATETIME       | 更新时间                 |
 
 ---
 
@@ -773,12 +850,12 @@ module.exports = {
 
 ### 配置文件说明
 
-| 文件 | 说明 | Git 状态 |
-|------|------|---------|
-| `.env` | 存储真实密码和密钥 | ❌ 不上传 |
-| `.env.example` | 配置模板和示例 | ✅ 上传 |
-| `requirements.txt` | Python 依赖列表 | ✅ 上传 |
-| `package.json` | Node.js 依赖列表 | ✅ 上传 |
+| 文件               | 说明               | Git 状态 |
+| ------------------ | ------------------ | -------- |
+| `.env`             | 存储真实密码和密钥 | ❌ 不上传 |
+| `.env.example`     | 配置模板和示例     | ✅ 上传   |
+| `requirements.txt` | Python 依赖列表    | ✅ 上传   |
+| `package.json`     | Node.js 依赖列表   | ✅ 上传   |
 
 ---
 

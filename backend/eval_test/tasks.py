@@ -220,9 +220,16 @@ def generate_all_videos(task_id, api_url, api_key, model_name):
 def run_scoring_algorithm(task_id, model_name):
     """运行打分算法"""
     try:
+        # 从环境变量读取评分模式
+        import os
+        scoring_mode = os.getenv('REF4D_SCORING_MODE', 'SIMULATION')
+        logger.info(f'[Task {task_id}] 评分模式: {scoring_mode}')
+        
         gendata_list = GenData.objects.filter(model_name=model_name)
         refdata_dict = {r.video_id: r for r in RefData.objects.all()}
-        scorer = VideoScoring()
+        
+        # 使用环境变量中的mode
+        scorer = VideoScoring(mode=scoring_mode)
         scores = scorer.evaluate_model(gendata_list, refdata_dict)
         return scores
     except Exception as e:
@@ -232,3 +239,4 @@ def run_scoring_algorithm(task_id, model_name):
             'semantic': 80.0, 'temporal': 75.0,
             'motion': 82.0, 'reality': 78.0, 'total': 78.8
         }
+

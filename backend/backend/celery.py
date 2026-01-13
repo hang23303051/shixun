@@ -2,8 +2,22 @@
 Celery配置文件
 """
 import os
+from pathlib import Path
 from celery import Celery
 from django.conf import settings
+
+# ⭐ 加载.env文件(确保环境变量在Celery启动时生效)
+from dotenv import load_dotenv
+# 找到项目根目录的.env文件
+# backend/backend/celery.py -> backend/backend/ -> backend/ -> 项目根目录/
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+env_path = BASE_DIR / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
+    print(f"✅ Celery已加载.env: {env_path}")
+    print(f"   REF4D_SCORING_MODE = {os.getenv('REF4D_SCORING_MODE', 'NOT_SET')}")
+else:
+    print(f"⚠️  未找到.env文件: {env_path}")
 
 # 设置Django settings模块
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
